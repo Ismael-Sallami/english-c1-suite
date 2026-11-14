@@ -1,0 +1,9 @@
+# Editor and OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Stray logs or node artifacts
+node_modules/
+*.log

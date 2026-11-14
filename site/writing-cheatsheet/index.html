@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>ISE Digital · Writing C1 — Chuleta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=block" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1f1420;
+    --plum:#50144b;
+    --plum-2:#7a2d73;
+    --plum-soft:#f3e6f1;
+    --amber:#d98e04;
+    --amber-soft:#fdf1d8;
+    --paper:#fbf8f3;
+    --line:#e3d6e1;
+    --muted:#6b5a69;
+    --bad:#b42318;
+    --good:#1d6b3a;
+  }
+  @page{
+    size:A4;
+    margin:8mm 7mm 9mm;
+    @bottom-left{content:"ISE Digital · Writing C1";font:600 7pt 'IBM Plex Mono',monospace;color:#9b8a99}
+    @bottom-right{content:counter(page) " / " counter(pages);font:600 7pt 'IBM Plex Mono',monospace;color:#9b8a99}
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{
+    font-family:'IBM Plex Sans Condensed',sans-serif;
+    font-size:7.85pt;line-height:1.24;color:var(--ink);
+    background:#fff;
+  }
+
+  /* ---------- cabecera ---------- */
+  .masthead{
+    display:grid;grid-template-columns:auto 1fr auto;gap:5mm;align-items:end;
+    padding:0 0 3mm;margin-bottom:3mm;border-bottom:2.2pt solid var(--plum);
+  }
+  .masthead h1{
+    font-family:'Fraunces',serif;font-weight:900;font-size:25pt;line-height:.9;color:var(--plum);
+    letter-spacing:-.02em;
+  }
+  .masthead h1 em{font-style:normal;color:var(--amber)}
+  .masthead .sub{font-size:8.4pt;color:var(--muted);max-width:92mm;line-height:1.25}
+  .legend{display:flex;gap:2mm;font:600 6.6pt 'IBM Plex Mono',monospace}
+  .legend span{display:inline-flex;align-items:center;gap:1mm}
+
+  /* ---------- mosaico ---------- */
+  .mosaic{column-count:3;column-gap:2.6mm}
+  .tile{
+    break-inside:avoid;display:block;margin:0 0 2.4mm;
+    background:#fffdfb;border:0.6pt solid var(--line);border-radius:2mm;overflow:hidden;
+  }
+  .tile > h2{
+    display:flex;align-items:center;gap:1.6mm;
+    font-family:'Fraunces',serif;font-weight:800;font-size:10.2pt;line-height:1.05;letter-spacing:-.01em;
+    padding:1.5mm 2.2mm 1.3mm;background:var(--plum-soft);color:var(--plum);
+  }
+  .tile.dark > h2{background:var(--plum);color:#fff}
+  .tile.amber > h2{background:var(--amber-soft);color:#7a4b00}
+  .tile .body{padding:1.5mm 2.2mm 1.8mm}
+  .tag{
+    font:600 6pt 'IBM Plex Mono',monospace;letter-spacing:.04em;
+    padding:.35mm 1.1mm;border-radius:.8mm;flex:none;
+  }
+  .t1{background:var(--plum);color:#fff}
+  .t2{background:var(--amber);color:#fff}
+  .tall{background:#fff;color:var(--plum);border:0.6pt solid var(--plum)}
+  .tile.dark .tall{border-color:#fff;color:#fff;background:transparent}
+
+  h3{font:600 6.7pt 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--plum-2);margin:1.3mm 0 .5mm}
+  h3:first-child{margin-top:0}
+  ul{list-style:none}
+  li{padding-left:2.4mm;position:relative;margin:.35mm 0}
+  li::before{content:"";position:absolute;left:.4mm;top:1.45mm;width:1mm;height:1mm;border-radius:50%;background:var(--amber)}
+  b,strong{font-weight:700;color:var(--plum)}
+  .k{font-weight:700;color:var(--amber)}           /* palabra clave de la estructura */
+  .x{color:var(--muted);font-style:italic}           /* ejemplo/nota */
+  .note{font-size:7.4pt;color:var(--muted);margin-top:1mm;line-height:1.25}
+
+  /* esqueleto de parrafos */
+  .steps{counter-reset:s}
+  .steps > div{
+    counter-increment:s;display:grid;grid-template-columns:4.2mm 1fr;gap:1.4mm;
+    padding:1mm 0;border-top:0.5pt dashed var(--line);
+  }
+  .steps > div:first-child{border-top:0}
+  .steps > div::before{
+    content:counter(s);font:700 7pt 'IBM Plex Mono',monospace;color:#fff;background:var(--plum);
+    width:4.2mm;height:4.2mm;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:.2mm;
+  }
+  .steps .w{float:right;font:600 6.4pt 'IBM Plex Mono',monospace;color:var(--amber);margin-left:1mm}
+  .steps p{margin:0}
+
+  /* tablas compactas */
+  table{width:100%;border-collapse:collapse;font-size:7.8pt}
+  td,th{padding:.7mm 1mm;vertical-align:top;border-top:0.5pt solid var(--line);text-align:left}
+  tr:first-child td,tr:first-child th{border-top:0}
+  th{font:600 6.4pt 'IBM Plex Mono',monospace;color:var(--plum-2);text-transform:uppercase;white-space:nowrap;width:1%}
+  .swap td:first-child{color:var(--bad);text-decoration:line-through;text-decoration-thickness:.6pt;white-space:nowrap;width:1%}
+  .swap td:last-child{color:var(--good)}
+  .err td:first-child{color:var(--bad);white-space:nowrap}
+  .err td:last-child{color:var(--good)}
+
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1.6mm}
+  .fact{border:0.6pt solid var(--line);border-radius:1.4mm;padding:1.4mm 1.8mm;background:#fff}
+  .fact .n{white-space:nowrap;font-family:'Fraunces',serif;font-weight:900;font-size:14pt;line-height:1;color:var(--plum)}
+  .fact .n small{font-size:7pt;color:var(--muted);font-weight:600}
+  .fact .l{font-size:7.3pt;color:var(--muted);line-height:1.2;margin-top:.5mm}
+  .chips{display:flex;flex-wrap:wrap;gap:.9mm}
+  .chips span{background:var(--plum-soft);color:var(--plum);border-radius:.8mm;padding:.3mm 1.2mm;font-size:7.6pt}
+  .dark .body{background:var(--plum);color:#f6eaf4}
+  .dark .body b,.dark .body strong{color:#ffd27a}
+  .dark h3{color:#e7b9e1}
+  .dark li::before{background:#ffd27a}
+  .check li::before{content:"□";background:none;width:auto;height:auto;top:0;left:0;color:var(--plum);font-size:7.5pt}
+  .check li{padding-left:3.2mm}
+  .span-all{column-span:all}
+  .errgrid{display:grid;grid-template-columns:1fr 1fr;gap:.6mm 2mm}
+  .errgrid div{display:flex;flex-direction:column;border-top:0.5pt solid var(--line);padding-top:.5mm}
+  .errgrid s{color:var(--bad);text-decoration-thickness:.6pt;font-size:7.4pt}
+  .errgrid span{color:var(--good);font-weight:600;font-size:7.6pt}
+
+  /* ---------- barra de navegacion en pantalla (oculta al imprimir) ---------- */
+  .suite-toolbar{
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+    padding:8px 12px;margin-bottom:10px;border-radius:10px;
+    background:var(--paper);border:1.5pt solid var(--plum);
+    font:600 9pt 'IBM Plex Sans Condensed',sans-serif;
+  }
+  .suite-toolbar .grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .suite-btn{
+    display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;
+    border:1pt solid var(--line);background:#fff;color:var(--plum);text-decoration:none;cursor:pointer;
+    font:600 8.8pt 'IBM Plex Sans Condensed',sans-serif;
+  }
+  .suite-btn:hover{background:var(--plum-soft);border-color:var(--plum)}
+  .suite-btn.primary{background:var(--plum);color:#fff;border-color:var(--plum)}
+  .suite-btn.primary:hover{background:var(--plum-2)}
+  @media screen{
+    body{max-width:1240px;margin:0 auto;padding:12px 14px 28px}
+  }
+  @media print{
+    .suite-toolbar{display:none!important}
+  }
+</style>
+</head>
+<body>
+
+<nav class="suite-toolbar" aria-label="Navegación de English C1 Suite">
+  <div class="grp">
+    <a class="suite-btn" href="../">← Suite C1</a>
+    <a class="suite-btn" href="../writing-library/">Biblioteca de Writings</a>
+    <a class="suite-btn" href="../aptis/">Simulador Aptis C1</a>
+  </div>
+  <div class="grp">
+    <button type="button" class="suite-btn" onclick="window.print()">Imprimir / A4</button>
+    <a class="suite-btn primary" href="./Writing_ISE_Digital_C1.pdf" download>Descargar PDF</a>
+  </div>
+</nav>
+
+<header class="masthead">
+  <h1>Writing <em>C1</em><br>ISE Digital</h1>
+  <p class="sub">Chuleta esquemática: estructura de cada tipo de texto, frases comodín para abrir cada párrafo, estructuras de nivel C1 y conectores. Sirve para cualquier tema.</p>
+  <div class="legend">
+    <span><i class="tag t1">T1</i>online comm.</span>
+    <span><i class="tag t2">T2</i>from sources</span>
+    <span><i class="tag tall">ALL</i>ambas</span>
+  </div>
+</header>
+
+<main class="mosaic">
+  <!-- ===== MAPA ===== -->
+  <section class="tile dark">
+    <h2><i class="tag tall">ALL</i>El módulo en 30 segundos</h2>
+    <div class="body">
+      <div class="facts">
+        <div class="fact" style="background:#6a2563;border-color:#7d3a75"><div class="n" style="color:#fff">70 <small style="color:#e7b9e1">máx. 90</small></div><div class="l" style="color:#e7b9e1">T1 · ~5 min · peso ×1</div></div>
+        <div class="fact" style="background:#6a2563;border-color:#7d3a75"><div class="n" style="color:#fff">250 <small style="color:#e7b9e1">máx. 300</small></div><div class="l" style="color:#e7b9e1">T2 · ~35 min · peso ×1,5</div></div>
+      </div>
+      <h3>T1 · te sale UNA de tres</h3>
+      <ul>
+        <li><b>A · Foro</b> (discussion board): opinión + reaccionar a otros.</li>
+        <li><b>B · Email</b>: pedir, sugerir, ofrecer o disculparte.</li>
+        <li><b>C · Chat de grupo</b>: responder a compañeros + 2 funciones.</li>
+      </ul>
+      <h3>T2 · essay o report (formal)</h3>
+      <ul>
+        <li>2–3 textos fuente → usa ideas de <b>todos</b> + <b>tus ideas</b>.</li>
+        <li><b>Nunca</b> copies 4+ palabras seguidas.</li>
+      </ul>
+      <h3>Te corrigen</h3>
+      <ul>
+        <li>T1: <b>Content · Language · Style</b></li>
+        <li>T2: <b>Content &amp; organisation · Use of sources · Language · Style</b></li>
+        <li>Bandas 0–5. Cubrir los 2 bullets es obligatorio: si te falta uno, máx. banda 3.</li>
+        <li>Empieza Writing cuando queden <b>40 min</b>. Sin corrector ortográfico.</li>
+      </ul>
+    </div>
+  </section>
+  <!-- ===== T1 FORO ===== -->
+  <section class="tile">
+    <h2><i class="tag t1">T1·A</i>Foro de discusión</h2>
+    <div class="body">
+      <div class="steps">
+        <div><p><span class="w">~15</span><b>Reacciona</b> al post por su nombre y di tu postura.</p></div>
+        <div><p><span class="w">~35</span><b>Tu argumento</b> + razón/ejemplo. Resuelve el bullet 1.</p></div>
+        <div><p><span class="w">~20</span><b>Bullet 2</b> (propuesta / pregunta) + abre al resto.</p></div>
+      </div>
+      <h3>Abrir</h3>
+      <ul>
+        <li>I partly agree with you, <i>Jordan</i>, but…</li>
+        <li>You raise a fair point, although I'd argue that…</li>
+        <li>I can see where you're coming from; however, …</li>
+        <li>Building on what <i>Sam</i> said, …</li>
+      </ul>
+      <h3>Cerrar</h3>
+      <ul>
+        <li>What do the rest of you think?</li>
+        <li>Has anyone else experienced this?</li>
+      </ul>
+      <p class="note">Registro neutro. Menciona a <b>otros participantes</b>: lo pide la tarea.</p>
+    </div>
+  </section>
+  <!-- ===== T1 CHAT ===== -->
+  <section class="tile">
+    <h2><i class="tag t1">T1·C</i>Chat de grupo</h2>
+    <div class="body">
+      <div class="steps">
+        <div><p><span class="w">~15</span><b>Responde</b> al último mensaje (tranquiliza, muestra acuerdo…).</p></div>
+        <div><p><span class="w">~30</span><b>Bullet 1</b>: propón un plan o reparte tareas.</p></div>
+        <div><p><span class="w">~25</span><b>Bullet 2</b>: pide algo concreto + plazo.</p></div>
+      </div>
+      <h3>Frases</h3>
+      <ul>
+        <li>Don't worry, <i>Lilly</i> — if we split the work, we'll be fine.</li>
+        <li>How about we divide it up? I'll take care of…</li>
+        <li>Would someone mind…? / Could one of you…?</li>
+        <li>Shall we aim to have it done by Friday?</li>
+        <li>Sounds good to me! / Count me in.</li>
+      </ul>
+      <p class="note">Contracciones OK. Mete <b>una</b> estructura C1 aunque sea informal: <span class="x">“Should anyone need help, just shout.”</span></p>
+    </div>
+  </section>
+  <!-- ===== T1 EMAIL ===== -->
+  <section class="tile">
+    <h2><i class="tag t1">T1·B</i>Email</h2>
+    <div class="body">
+      <div class="steps">
+        <div><p><span class="w">~15</span><b>Saludo + motivo</b> en 1 frase.</p></div>
+        <div><p><span class="w">~40</span><b>Bullet 1 y bullet 2</b>, un bloque corto para cada uno.</p></div>
+        <div><p><span class="w">~15</span><b>Siguiente paso</b> + despedida.</p></div>
+      </div>
+      <table>
+        <tr><th></th><td><b>Formal</b> (profesor, jefe)</td><td><b>Informal</b> (compañero)</td></tr>
+        <tr><th>Saludo</th><td>Dear Dr Smith,</td><td>Hi Alex,</td></tr>
+        <tr><th>Motivo</th><td>I am writing regarding…</td><td>Just a quick message about…</td></tr>
+        <tr><th>Pedir</th><td>I was wondering whether you could…<br>Would it be possible to…?</td><td>Could you possibly…?<br>Any chance you could…?</td></tr>
+        <tr><th>Disculpa</th><td>Please accept my apologies for…</td><td>Sorry about…, I completely forgot.</td></tr>
+        <tr><th>Ofrecer</th><td>I would be happy to…</td><td>I can easily… if that helps.</td></tr>
+        <tr><th>Cierre</th><td>I look forward to hearing from you.<br>Kind regards,</td><td>Let me know what you think!<br>Cheers,</td></tr>
+      </table>
+    </div>
+  </section>
+  <!-- ===== ESSAY ===== -->
+  <section class="tile">
+    <h2><i class="tag t2">T2</i>Essay (argumentativo)</h2>
+    <div class="body">
+      <div class="steps">
+        <div><p><span class="w">40</span><b>Intro</b>: contexto + parafrasea la pregunta + <b>tesis clara</b>.</p></div>
+        <div><p><span class="w">70</span><b>Argumento 1</b> + fuente (Text A) + tu ejemplo.</p></div>
+        <div><p><span class="w">70</span><b>Contraargumento</b> + fuente (Text B) → <b>refútalo o matízalo</b>.</p></div>
+        <div><p><span class="w">40</span><b>Tu idea propia</b> / matiz + Text C.</p></div>
+        <div><p><span class="w">30</span><b>Conclusión</b>: postura + condición o recomendación. Nada nuevo.</p></div>
+      </div>
+      <p class="note">“To what extent do you agree?” → postura <b>matizada</b>: <span class="x">“…largely agree, provided that…”</span></p>
+    </div>
+  </section>
+  <!-- ===== PLANTILLA ===== -->
+  <section class="tile">
+    <h2><i class="tag t2">T2</i>Esqueleto de essay listo para rellenar</h2>
+    <div class="body" style="font-size:7.7pt;line-height:1.32">
+      <p><b>¶1</b> Whether <span class="k">[tema]</span> has become a matter of considerable debate. While some maintain that <span class="k">[A]</span>, others contend that <span class="k">[B]</span>. This essay will argue that <span class="k">[tesis]</span>, provided that <span class="k">[condición]</span>.</p>
+      <p style="margin-top:1mm"><b>¶2</b> One compelling argument in favour of <span class="k">[X]</span> is that… As the writer of Text A points out, <span class="k">[parafraseo]</span>. A case in point is <span class="k">[ejemplo]</span>.</p>
+      <p style="margin-top:1mm"><b>¶3</b> On the other hand, Text B warns that… Admittedly, … Nevertheless, <span class="k">[refutación]</span>.</p>
+      <p style="margin-top:1mm"><b>¶4</b> What is often overlooked, however, is <span class="k">[idea propia]</span>. This view is echoed in Text C, which…</p>
+      <p style="margin-top:1mm"><b>¶5</b> On balance, <span class="k">[postura]</span>. Only by <span class="k">[-ing]</span> can we <span class="k">[resultado]</span>.</p>
+    </div>
+  </section>
+  <!-- ===== REPORT ===== -->
+  <section class="tile">
+    <h2><i class="tag t2">T2</i>Report (informe)</h2>
+    <div class="body">
+      <div class="steps">
+        <div><p><span class="w">10</span><b>Título</b>: <span class="x">Report on…</span> + destinatario si lo hay.</p></div>
+        <div><p><span class="w">35</span><b>1. Introduction</b>: objetivo + en qué se basa.</p></div>
+        <div><p><span class="w">70</span><b>2. Benefits / Findings</b> (Text A + C).</p></div>
+        <div><p><span class="w">65</span><b>3. Challenges / Concerns</b> (Text B).</p></div>
+        <div><p><span class="w">70</span><b>4. Recommendations</b>: 2–3 medidas concretas (pueden ir en viñetas) + conclusión.</p></div>
+      </div>
+      <p class="note">Usa <b>encabezados</b>. Tono impersonal (pasiva, <i>it is recommended</i>). Las viñetas solo en recomendaciones.</p>
+    </div>
+  </section>
+  <!-- ===== INTRO ===== -->
+  <section class="tile">
+    <h2><i class="tag t2">T2</i>Frases para la introducción</h2>
+    <div class="body">
+      <h3>Essay · contexto</h3>
+      <ul>
+        <li>Whether <span class="k">X</span> should <span class="k">Y</span> has become a matter of considerable debate.</li>
+        <li>It is often argued that…, yet this view overlooks…</li>
+        <li>Few would dispute that…; what remains unclear is…</li>
+        <li>In recent years, there has been growing concern about…</li>
+      </ul>
+      <h3>Essay · tesis</h3>
+      <ul>
+        <li>This essay will argue that…</li>
+        <li>While there are clear advantages, I firmly believe that…</li>
+        <li>I largely agree with this statement, provided that…</li>
+      </ul>
+      <h3>Report</h3>
+      <ul>
+        <li>The aim of this report is to assess whether…</li>
+        <li>This report examines… and makes recommendations on…</li>
+        <li>It draws on three sources: …</li>
+      </ul>
+    </div>
+  </section>
+  <!-- ===== PARRAFOS ===== -->
+  <section class="tile">
+    <h2><i class="tag t2">T2</i>Abrir cada párrafo</h2>
+    <div class="body">
+      <h3>Argumento</h3>
+      <ul>
+        <li>One compelling argument in favour of… is that…</li>
+        <li>Perhaps the most significant benefit is…</li>
+        <li>A further consideration is…</li>
+      </ul>
+      <h3>Contraargumento</h3>
+      <ul>
+        <li>On the other hand, critics point out that…</li>
+        <li>That said, it would be naive to ignore…</li>
+        <li>Opponents of this view contend that…</li>
+      </ul>
+      <h3>Conceder → refutar</h3>
+      <ul>
+        <li><span class="k">Admittedly</span>, … <span class="k">Nevertheless</span>, …</li>
+        <li>While this may be true to some extent, …</li>
+        <li>This argument, however, fails to take into account…</li>
+      </ul>
+      <h3>Ejemplo / prueba</h3>
+      <ul>
+        <li>A case in point is…</li>
+        <li>This is clearly illustrated by…</li>
+      </ul>
+      <h3>Report · secciones</h3>
+      <ul>
+        <li>The evidence suggests that…</li>
+        <li>A major drawback, however, is…</li>
+        <li>Particular attention should be paid to…</li>
+      </ul>
+    </div>
+  </section>
+  <!-- ===== FUENTES ===== -->
+  <section class="tile amber">
+    <h2><i class="tag t2">T2</i>Citar las fuentes sin copiar</h2>
+    <div class="body">
+      <ul>
+        <li>According to <b>Text A</b>, …</li>
+        <li>As the writer of <b>Text B</b> points out / warns, …</li>
+        <li><b>Text C</b> highlights / illustrates the fact that…</li>
+        <li>This view is echoed in Text C, which…</li>
+        <li>Both texts agree that…, <span class="k">whereas</span> Text B…</li>
+        <li>In contrast to Text A, Text B suggests that…</li>
+        <li>Drawing on Text A, it could be argued that…</li>
+      </ul>
+      <h3>Verbos para referir</h3>
+      <div class="chips"><span>argue</span><span>claim</span><span>maintain</span><span>contend</span><span>acknowledge</span><span>emphasise</span><span>warn</span><span>note</span><span>suggest</span><span>question</span></div>
+      <h3>Parafrasear: 4 trucos</h3>
+      <ul>
+        <li><b>Sinónimos</b>: <span class="x">costly → expensive</span></li>
+        <li><b>Cambiar la categoría de la palabra</b>: <span class="x">reduce → a reduction in</span></li>
+        <li><b>Activa ↔ pasiva</b></li>
+        <li><b>Reordenar</b>: empieza por la consecuencia</li>
+      </ul>
+      <p class="note">Usa <b>todas</b> las fuentes: ignorar una te baja de banda. Combínalas (“Both texts…”).</p>
+    </div>
+  </section>
+  <!-- ===== CONCLUSION ===== -->
+  <section class="tile">
+    <h2><i class="tag t2">T2</i>Conclusión y recomendaciones</h2>
+    <div class="body">
+      <h3>Conclusión</h3>
+      <ul>
+        <li>All things considered, …</li>
+        <li>On balance, the advantages outweigh the drawbacks, provided that…</li>
+        <li>In light of the above, it seems clear that…</li>
+        <li>Ultimately, the key lies in…</li>
+      </ul>
+      <h3>Recomendar (report)</h3>
+      <ul>
+        <li>It is <span class="k">recommended that</span> the council <span class="k">(should) introduce</span>… <span class="x">(subjuntivo: sin -s)</span></li>
+        <li>The council would be well advised to…</li>
+        <li>Priority should be given to…</li>
+        <li>A more effective approach would be to…</li>
+        <li>Steps should be taken to ensure that…</li>
+      </ul>
+    </div>
+  </section>
+  <!-- ===== INVERSIONES ===== -->
+  <section class="tile dark">
+    <h2><i class="tag tall">ALL</i>Inversiones</h2>
+    <div class="body">
+      <p class="note" style="color:#e7b9e1;margin:0 0 1mm">Adverbio negativo/restrictivo + <b>auxiliar + sujeto</b> + verbo</p>
+      <ul>
+        <li><b>Not only</b> does it reduce costs, <b>but</b> it <b>also</b>…</li>
+        <li><b>Never</b> before has… been so…</li>
+        <li><b>Rarely / Seldom</b> do we consider…</li>
+        <li><b>Not until</b> … <b>did</b> people realise…</li>
+        <li><b>Only when / Only by</b> -ing <b>can</b> we…</li>
+        <li><b>Under no circumstances</b> should…</li>
+        <li><b>Little</b> do they realise that…</li>
+        <li><b>No sooner</b> had… <b>than</b>… / <b>Hardly</b> had… <b>when</b>…</li>
+        <li><b>So</b> serious is the problem <b>that</b>…</li>
+      </ul>
+      <h3>Condicionales invertidas</h3>
+      <ul>
+        <li><b>Should</b> you need help, … <span style="opacity:.75">(= if you need)</span></li>
+        <li><b>Were</b> the council <b>to</b> invest, … <span style="opacity:.75">(= if it invested)</span></li>
+        <li><b>Had</b> we known, we <b>would have</b>… </li>
+        <li><b>Were it not for</b> / <b>Had it not been for</b>…</li>
+      </ul>
+    </div>
+  </section>
+  <!-- ===== CLEFT / ENFASIS ===== -->
+  <section class="tile">
+    <h2><i class="tag tall">ALL</i>Cleft y énfasis</h2>
+    <div class="body">
+      <ul>
+        <li><span class="k">What</span> concerns me most <span class="k">is</span> (the fact) that…</li>
+        <li><span class="k">It is</span> the cost <span class="k">that</span> worries residents, not…</li>
+        <li><span class="k">The reason why</span>… <span class="k">is that</span>…</li>
+        <li><span class="k">All</span> (that) we need <span class="k">is</span>…</li>
+        <li><span class="k">What</span> the council should do <span class="k">is</span> invest…</li>
+        <li><span class="k">The thing is</span>, … <span class="x">(T1 informal)</span></li>
+      </ul>
+      <h3>Énfasis</h3>
+      <ul>
+        <li>It <span class="k">does</span> seem that… / This <span class="k">does</span> matter.</li>
+        <li><span class="k">by far</span> the most…, <span class="k">considerably / far</span> more…</li>
+        <li><span class="k">the very</span> people who…</li>
+      </ul>
+    </div>
+  </section>
+  <!-- ===== OTRAS ESTRUCTURAS ===== -->
+  <section class="tile">
+    <h2><i class="tag tall">ALL</i>Más estructuras C1</h2>
+    <div class="body">
+      <h3>Concesivas</h3>
+      <ul>
+        <li><span class="k">Much as</span> I support…, I…</li>
+        <li><span class="k">Tempting as it may be</span>, …</li>
+        <li><span class="k">However</span> appealing it <span class="k">may</span> seem, …</li>
+        <li><span class="k">Despite / In spite of</span> + -ing / the fact that…</li>
+      </ul>
+      <h3>Impersonales y pasiva</h3>
+      <ul>
+        <li><span class="k">It is widely believed / argued that</span>…</li>
+        <li>X <span class="k">is thought / said to</span> have…</li>
+        <li><span class="k">It has been suggested that</span>…</li>
+      </ul>
+      <h3>Oraciones de participio</h3>
+      <ul>
+        <li><span class="k">Having considered</span> both sides, …</li>
+        <li><span class="k">Faced with</span> rising costs, many…</li>
+        <li><span class="k">Given that</span> …, it is hardly surprising…</li>
+      </ul>
+      <h3>Condicionales C1</h3>
+      <ul>
+        <li><span class="k">Provided / As long as</span> + presente</li>
+        <li>Mixta: If we <span class="k">had acted</span> earlier, we <span class="k">wouldn't be</span>…</li>
+        <li><span class="k">Otherwise</span>, … / <span class="k">Unless</span> …, …</li>
+      </ul>
+      <h3>Comparativas</h3>
+      <ul>
+        <li><span class="k">The more</span> …, <span class="k">the less</span> …</li>
+        <li><span class="k">not nearly as</span> … <span class="k">as</span> / <span class="k">nowhere near as</span></li>
+      </ul>
+      <h3>Relativas que enlazan</h3>
+      <ul>
+        <li>…, <span class="k">which means that</span>…</li>
+        <li>…, <span class="k">most of whom</span> / <span class="k">none of which</span>…</li>
+      </ul>
+      <h3>Matizar (hedging)</h3>
+      <div class="chips"><span>arguably</span><span>to some extent</span><span>tend to</span><span>it would appear that</span><span>there is little doubt that</span><span>in many cases</span></div>
+    </div>
+  </section>
+  <!-- ===== CONECTORES ===== -->
+  <section class="tile">
+    <h2><i class="tag tall">ALL</i>Conectores por función</h2>
+    <div class="body">
+      <table>
+        <tr><th>Añadir</th><td>furthermore · moreover · what is more · in addition to + -ing · not to mention</td></tr>
+        <tr><th>Contraste</th><td>however · nevertheless · nonetheless · whereas · while · conversely · even so</td></tr>
+        <tr><th>Causa</th><td>owing to / due to + noun · since · given that · in view of · as a result of</td></tr>
+        <tr><th>Efecto</th><td>consequently · as a result · hence · thus · therefore · which leads to</td></tr>
+        <tr><th>Finalidad</th><td>so as to · in order to · with a view to + -ing · so that</td></tr>
+        <tr><th>Ejemplo</th><td>for instance · such as · notably · a case in point is</td></tr>
+        <tr><th>Énfasis</th><td>indeed · in fact · above all · particularly · not least</td></tr>
+        <tr><th>Condición</th><td>provided that · as long as · unless · on condition that</td></tr>
+        <tr><th>Orden</th><td>firstly · to begin with · subsequently · finally</td></tr>
+        <tr><th>Resumen</th><td>in short · all in all · on balance · to sum up</td></tr>
+      </table>
+      <p class="note"><b>On the contrary</b> ≠ <i>on the other hand</i>: solo para negar lo anterior. <b>Besides</b> es informal.</p>
+    </div>
+  </section>
+  <!-- ===== VOCAB UPGRADE ===== -->
+  <section class="tile">
+    <h2><i class="tag tall">ALL</i>Sube el vocabulario</h2>
+    <div class="body">
+      <table class="swap">
+        <tr><td>big</td><td>significant · substantial · considerable</td></tr>
+        <tr><td>show</td><td>demonstrate · illustrate · reveal</td></tr>
+        <tr><td>think</td><td>maintain · contend · be convinced that</td></tr>
+        <tr><td>problem</td><td>issue · drawback · challenge · concern</td></tr>
+        <tr><td>good</td><td>beneficial · valuable · worthwhile</td></tr>
+        <tr><td>bad</td><td>detrimental · harmful · counterproductive</td></tr>
+        <tr><td>important</td><td>crucial · vital · essential · key</td></tr>
+        <tr><td>help</td><td>facilitate · foster · contribute to</td></tr>
+        <tr><td>get</td><td>obtain · gain · acquire</td></tr>
+        <tr><td>a lot of</td><td>a great deal of (U) · numerous (C)</td></tr>
+        <tr><td>more and more</td><td>increasingly · a growing number of</td></tr>
+      </table>
+      <h3>Colocaciones</h3>
+      <div class="chips"><span>play a key role in</span><span>pose a threat to</span><span>raise awareness of</span><span>take measures to</span><span>meet the needs of</span><span>have a detrimental effect on</span><span>strike a balance between</span><span>address the issue</span><span>bridge the gap</span><span>draw attention to</span><span>come at a cost</span></div>
+    </div>
+  </section>
+  <!-- ===== ERRORES ===== -->
+  <section class="tile">
+    <h2><i class="tag tall">ALL</i>Errores típicos (hispanohablantes)</h2>
+    <div class="body">
+      <div class="errgrid"><div><s>I am agree</s><span>I agree</span></div><div><s>people is</s><span>people are</span></div><div><s>the society / the nature</s><span>society / nature (en general)</span></div><div><s>make a research</s><span>do / carry out research</span></div><div><s>informations · advices</s><span>information · advice (incontables)</span></div><div><s>discuss about · explain me</s><span>discuss X · explain to me</span></div><div><s>depend of</s><span>depend on</span></div><div><s>in the other hand</s><span>on the other hand</span></div><div><s>according to me</s><span>in my view</span></div><div><s>actually = actualmente</s><span>currently / nowadays</span></div><div><s>eventually = eventualmente</s><span>possibly · occasionally</span></div><div><s>more cheaper</s><span>cheaper / far cheaper</span></div><div><s>It's important to + que</s><span>It is essential that sb <i>do</i> sth</span></div></div>
+    </div>
+  </section>
+  <!-- ===== CHECKLIST ===== -->
+  <section class="tile amber">
+    <h2><i class="tag tall">ALL</i>Últimos 2 minutos</h2>
+    <div class="body">
+      <ul class="check">
+        <li>¿He respondido a los <b>dos</b> bullets / todas las partes?</li>
+        <li>¿Palabras dentro del rango? (T1 60–90 · T2 230–300)</li>
+        <li>T2: ¿uso <b>todas</b> las fuentes + ideas propias?</li>
+        <li>T2: ¿ningún trozo de 4+ palabras copiado?</li>
+        <li>¿Registro coherente (foro/chat ≠ report)?</li>
+        <li>¿Párrafos claros, encabezados si es un report?</li>
+        <li>¿1 inversión + 1 cleft + 1 participio?</li>
+        <li>¿Revisado: -s de 3.ª persona, artículos y plurales?</li>
+      </ul>
+    </div>
+  </section>
+</main>
+</body>
+</html>

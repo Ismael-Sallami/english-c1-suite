@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblioteca de Writings · ISE Digital</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2350144b'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23f2b33d' font-family='Georgia' font-weight='700'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f1ea; --bg-2:#efe7dc; --card:#fffdf9; --ink:#22161f; --muted:#76646f; --line:#e4d8d0;
+  --plum:#50144b; --plum-2:#7a2d73; --plum-soft:#f2e3ef;
+  --amber:#c27c00; --amber-bg:#fdecc4;
+  --teal:#0f6e74; --teal-bg:#d7eeee;
+  --green:#2c6e3f; --green-bg:#e0f0e2;
+  --red:#b42318; --red-bg:#fde4e1;
+  --shadow:0 1px 2px rgba(60,20,50,.06),0 8px 24px -12px rgba(60,20,50,.18);
+  --serif:'Newsreader',Georgia,serif; --ui:'IBM Plex Sans Condensed',system-ui,sans-serif; --mono:'IBM Plex Mono',monospace; --display:'Fraunces',Georgia,serif;
+}
+:root[data-theme="dark"]{
+  --bg:#17101a; --bg-2:#1f1622; --card:#241a27; --ink:#efe6ee; --muted:#ab98a7; --line:#3a2c3c;
+  --plum:#e3a6dc; --plum-2:#d08bc8; --plum-soft:#3a2338;
+  --amber:#f2b33d; --amber-bg:#4a3510; --teal:#6fd0d4; --teal-bg:#123c3e; --green:#8fd39f; --green-bg:#173a22; --red:#ff8f84; --red-bg:#4a1c18;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#17101a; --bg-2:#1f1622; --card:#241a27; --ink:#efe6ee; --muted:#ab98a7; --line:#3a2c3c;
+    --plum:#e3a6dc; --plum-2:#d08bc8; --plum-soft:#3a2338;
+    --amber:#f2b33d; --amber-bg:#4a3510; --teal:#6fd0d4; --teal-bg:#123c3e; --green:#8fd39f; --green-bg:#173a22; --red:#ff8f84; --red-bg:#4a1c18;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:var(--ui); color:var(--ink); background:var(--bg);
+  background-image:radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--plum) 9%, transparent) 1px, transparent 0);
+  background-size:18px 18px;
+  min-height:100vh;
+}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+
+/* ---------------- layout ---------------- */
+.app{display:grid;grid-template-columns:310px 1fr;min-height:100vh}
+aside.lib{
+  position:sticky;top:0;height:100vh;overflow:auto;
+  background:color-mix(in srgb, var(--card) 88%, transparent);
+  border-right:1px solid var(--line); backdrop-filter:blur(6px);
+  display:flex;flex-direction:column;
+}
+.brand{padding:22px 20px 14px;border-bottom:1px solid var(--line)}
+.brand h1{font-family:var(--display);font-weight:900;font-size:27px;line-height:.95;margin:0;color:var(--plum);letter-spacing:-.02em}
+.brand h1 span{color:var(--amber)}
+.brand p{margin:8px 0 0;font-size:13px;color:var(--muted);line-height:1.35}
+.progress{padding:14px 20px;border-bottom:1px solid var(--line)}
+.progress .bar{height:6px;border-radius:99px;background:var(--bg-2);overflow:hidden;margin-top:7px}
+.progress .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--plum),var(--amber));border-radius:99px;transition:width .5s}
+.progress .row{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
+.progress .row b{color:var(--ink)}
+.continue{margin-top:10px;width:100%;border:1px dashed var(--plum-2);background:transparent;color:var(--plum);border-radius:10px;padding:8px 10px;font-weight:600;font-size:13px;text-align:left;display:block;line-height:1.35}
+.continue:hover{background:var(--plum-soft)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;padding:12px 20px;border-bottom:1px solid var(--line)}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:4px 10px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--plum);color:var(--card);border-color:var(--plum)}
+.list{padding:8px 10px 30px;flex:1}
+.group{font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:14px 10px 6px}
+.item{
+  display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:start;width:100%;
+  text-align:left;border:0;background:transparent;border-radius:10px;padding:8px 10px;
+}
+.item:hover{background:var(--bg-2)}
+.item[aria-current="true"]{background:var(--plum-soft)}
+.item .dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--line);margin-top:2px}
+.item.read .dot{background:var(--green);border-color:var(--green)}
+.item .t{font-size:13.5px;font-weight:600;line-height:1.25}
+.item .m{font-size:11.5px;color:var(--muted);margin-top:2px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.item .fav{color:var(--amber);font-size:13px}
+.badge{font:600 10px var(--mono);padding:1px 6px;border-radius:5px;letter-spacing:.03em}
+.b-off{background:var(--teal-bg);color:var(--teal)}
+.b-mod{background:var(--amber-bg);color:var(--amber)}
+.b-t{background:var(--plum);color:var(--card)}
+
+main{padding:28px clamp(16px,4vw,56px) 120px;max-width:1180px;width:100%}
+.topbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:18px}
+.tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px}
+.tabs button{border:0;background:transparent;padding:7px 12px;border-radius:9px;font-weight:600;font-size:13.5px;color:var(--muted)}
+.tabs button[aria-selected="true"]{background:var(--plum);color:var(--card)}
+.tools{display:flex;gap:6px;flex-wrap:wrap}
+.tool{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:7px 10px;font-size:13px;font-weight:600;display:inline-flex;gap:6px;align-items:center}
+.tool[aria-pressed="true"]{border-color:var(--plum);color:var(--plum);background:var(--plum-soft)}
+.hamb{display:none}
+
+/* ---------------- texto ---------------- */
+.head{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;margin-bottom:16px}
+.kicker{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font:600 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.head h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,38px);line-height:1.02;letter-spacing:-.02em;margin:8px 0 0;color:var(--ink)}
+.head .acts{display:flex;gap:6px}
+.btn-icon{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:9px 12px;font-weight:700;font-size:13px;display:inline-flex;gap:6px;align-items:center}
+.btn-icon.on{background:var(--green-bg);color:var(--green);border-color:var(--green)}
+.btn-icon.fav.on{background:var(--amber-bg);color:var(--amber);border-color:var(--amber)}
+
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;align-items:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+.prompt{padding:16px 18px;margin-bottom:16px}
+.prompt > summary{cursor:pointer;font:600 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--plum-2);list-style:none;display:flex;justify-content:space-between}
+.prompt > summary::after{content:"＋";font-size:14px}
+.prompt[open] > summary::after{content:"－"}
+.prompt .ptext{font-family:var(--serif);font-size:16.5px;line-height:1.5;margin:10px 0 6px}
+.prompt ul{margin:4px 0 8px;padding-left:20px;font-family:var(--serif);font-size:16px}
+.prompt .meta{font-size:12.5px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap}
+.thread{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.msg{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}
+.av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:var(--plum-2);font-size:14px}
+.msg.teacher .av{background:var(--teal)}
+.bubble{background:var(--bg-2);border-radius:4px 14px 14px 14px;padding:8px 12px;font-family:var(--serif);font-size:15.5px;line-height:1.45}
+.bubble b{font-family:var(--ui);font-size:12.5px;color:var(--plum-2);display:block;margin-bottom:2px}
+.group-title{font-weight:700;font-size:13px;background:var(--plum);color:var(--card);padding:6px 10px;border-radius:8px;display:inline-block}
+.sources{display:grid;gap:8px;margin-top:10px}
+.src{border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.src summary{cursor:pointer;font-weight:600;font-size:13.5px;list-style:none;font-family:var(--ui);color:var(--ink)}
+.src summary::-webkit-details-marker,.prompt > summary::-webkit-details-marker{display:none}
+.src summary b{background:#a8509f;color:#fff;border-radius:5px;padding:1px 7px;margin-right:6px;font-size:12px}
+.src p{font-family:var(--serif);font-size:15px;line-height:1.5;margin:8px 0 2px;color:var(--ink)}
+
+/* mapa */
+.map{padding:14px 16px;margin-bottom:16px;overflow:auto}
+.map h3,.side h3{font:600 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--plum-2);margin:0 0 10px}
+.flow{display:flex;align-items:stretch;gap:0;min-width:max-content}
+.node{
+  border:1.5px solid var(--plum-2);background:var(--card);border-radius:10px;padding:7px 10px;
+  font-size:12.5px;font-weight:600;max-width:150px;line-height:1.2;text-align:left;
+}
+.node small{display:block;font:600 10px var(--mono);color:var(--amber);margin-bottom:2px}
+.node:hover{background:var(--plum-soft)}
+.arrow{display:flex;align-items:center;padding:0 2px;color:var(--plum-2)}
+.arrow svg{width:28px;height:14px}
+
+/* texto */
+.text{padding:26px clamp(16px,3vw,34px) 30px}
+.para{position:relative;display:grid;grid-template-columns:118px 1fr;gap:16px;padding:10px 0;border-top:1px dashed var(--line);scroll-margin-top:90px}
+.para:first-child{border-top:0}
+.role{font:600 10.5px var(--mono);letter-spacing:.03em;text-transform:uppercase;color:var(--plum-2);line-height:1.35;padding-top:6px}
+.role .num{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--plum);color:var(--card);margin-bottom:5px;font-size:10.5px;cursor:pointer;border:0}
+.para.bookmarked .num{background:var(--amber)}
+.para.bookmarked::before{content:"";position:absolute;right:-8px;top:-1px;width:14px;height:26px;background:var(--amber);clip-path:polygon(0 0,100% 0,100% 100%,50% 75%,0 100%)}
+.prose{font-family:var(--serif);font-size:19px;line-height:1.72;color:var(--ink)}
+.prose h4{font-family:var(--ui);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:4px 0 4px;color:var(--plum)}
+.s{border-radius:4px;transition:background .15s}
+.s:hover,.s.pinned{background:color-mix(in srgb, var(--amber) 14%, transparent)}
+.es{display:none;font-family:var(--ui);font-size:14.5px;line-height:1.5;color:var(--muted);border-left:3px solid var(--amber);padding:2px 0 2px 10px;margin:6px 0 2px}
+body.show-es .es{display:block}
+.no-struct .role{visibility:hidden}
+.no-struct .para{grid-template-columns:0 1fr;gap:0}
+
+/* marcas */
+.mk{position:relative;cursor:help;border-radius:3px;padding:0 1px}
+.mk.c1{background:var(--amber-bg);box-shadow:inset 0 -2px 0 var(--amber)}
+.mk.link{color:var(--plum);font-weight:600;box-shadow:inset 0 -2px 0 color-mix(in srgb, var(--plum) 45%, transparent)}
+.mk.src{background:var(--teal-bg);box-shadow:inset 0 -2px 0 var(--teal)}
+.mk.voc{text-decoration:underline dotted var(--green);text-decoration-thickness:2px;text-underline-offset:4px}
+.mk.err{text-decoration:underline wavy var(--red);text-decoration-thickness:1.4px;text-underline-offset:4px;background:var(--red-bg)}
+body.off-c1 .mk.c1, body.off-link .mk.link, body.off-src .mk.src, body.off-voc .mk.voc, body.off-err .mk.err{background:none;box-shadow:none;text-decoration:none;color:inherit;font-weight:inherit;cursor:text}
+body.clean .mk{background:none!important;box-shadow:none!important;text-decoration:none!important;color:inherit!important;font-weight:inherit!important}
+
+.tip{
+  position:fixed;z-index:50;max-width:330px;pointer-events:none;
+  background:var(--ink);color:var(--card);border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.4;
+  box-shadow:0 12px 30px -8px rgba(0,0,0,.45);opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s;
+}
+.tip.on{opacity:1;transform:none}
+.tip .k{font:600 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.75;display:block;margin-bottom:3px}
+.tip .fix{display:block;margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.2);font-weight:600}
+.tip .fix::before{content:"✓ ";color:#8fd39f}
+
+/* dock de traduccion */
+.dock[hidden]{display:none}
+.dock{
+  position:fixed;left:310px;right:0;bottom:0;z-index:40;
+  background:color-mix(in srgb, var(--card) 94%, transparent);backdrop-filter:blur(8px);
+  border-top:1px solid var(--line);padding:12px clamp(16px,4vw,56px);
+  display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;min-height:62px;
+}
+.dock .lbl{font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.dock .tr{font-size:16px;line-height:1.4;color:var(--ink)}
+.dock .tr.empty{color:var(--muted);font-style:italic;font-size:14px}
+
+/* lateral */
+.side{display:flex;flex-direction:column;gap:14px;position:sticky;top:20px}
+.side .card{padding:14px 16px}
+.score{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;margin-bottom:9px;font-size:13px}
+.score .lb{font-weight:600}
+.score .val{font:600 12px var(--mono);color:var(--plum)}
+.score .track{grid-column:1/-1;display:flex;gap:3px}
+.score .track i{flex:1;height:7px;border-radius:3px;background:var(--bg-2)}
+.score .track i.f{background:var(--plum)}
+.score .track i.f.hi{background:var(--green)}
+.score .track i.f.lo{background:var(--red)}
+.legend-list{display:grid;gap:6px;font-size:13px}
+.legend-list button{display:flex;align-items:center;gap:8px;border:0;background:transparent;padding:3px 0;text-align:left}
+.legend-list .sw{display:inline-block;min-width:44px;text-align:center;font-family:var(--serif);font-size:14px}
+.legend-list button[aria-pressed="false"]{opacity:.4}
+.notes{margin:0;padding-left:18px;font-size:14px;line-height:1.45}
+.notes li{margin-bottom:6px}
+.notes b{color:var(--plum)}
+.rationale{font-family:var(--serif);font-size:14.5px;line-height:1.5;color:var(--ink);margin-top:8px}
+.side details summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--plum-2)}
+.wc{font:600 12px var(--mono);color:var(--muted)}
+.navfoot{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+.navfoot button{flex:1;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 14px;text-align:left;font-size:13px;color:var(--muted)}
+.navfoot button b{display:block;color:var(--ink);font-size:14.5px;margin-top:2px}
+.navfoot button:last-child{text-align:right}
+.navfoot button:disabled{opacity:.35;cursor:default}
+
+/* banco de frases */
+.bank-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+.search{flex:1;min-width:200px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:10px 14px;font:inherit;font-size:15px;color:var(--ink)}
+.bank{columns:3 260px;column-gap:14px}
+.bk{break-inside:avoid;margin:0 0 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+.bk .ph{font-family:var(--serif);font-size:17px;font-weight:600;line-height:1.3}
+.bk .nt{font-size:13.5px;color:var(--muted);margin-top:4px;line-height:1.4}
+.bk .from{margin-top:8px;font-size:11.5px;border:0;background:transparent;padding:0;color:var(--plum-2);font-weight:600;text-align:left}
+.bk.c1{border-top:4px solid var(--amber)} .bk.link{border-top:4px solid var(--plum)} .bk.voc{border-top:4px solid var(--green)} .bk.src{border-top:4px solid var(--teal)} .bk.err{border-top:4px solid var(--red)}
+.bk .fixline{margin-top:4px;font-size:14px;color:var(--green);font-weight:600}
+.bk .ph.bad{text-decoration:line-through;text-decoration-color:var(--red);color:var(--muted)}
+
+/* compara */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.compare .card{padding:16px}
+.compare select{width:100%;padding:9px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;margin-bottom:10px}
+.compare .prose{font-size:16.5px}
+.compare .mini-score{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.compare .mini-score span{font:600 11px var(--mono);background:var(--plum-soft);color:var(--plum);border-radius:6px;padding:2px 7px}
+
+.toast{position:fixed;top:18px;right:18px;z-index:60;background:var(--plum);color:var(--card);padding:10px 14px;border-radius:12px;font-weight:600;font-size:14px;box-shadow:var(--shadow);opacity:0;transform:translateY(-6px);transition:.2s;pointer-events:none}
+.toast.on{opacity:1;transform:none}
+
+.enter{animation:rise .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.enter{animation:none}*{transition:none!important}}
+
+@media (max-width:1100px){.grid{grid-template-columns:1fr}.side{position:static}}
+@media (max-width:860px){
+  .app{grid-template-columns:1fr}
+  aside.lib{position:fixed;inset:0 20% 0 0;z-index:70;transform:translateX(-105%);transition:transform .25s;height:100vh;box-shadow:var(--shadow)}
+  body.lib-open aside.lib{transform:none}
+  .hamb{display:inline-flex}
+  .dock{left:0}
+  .para{grid-template-columns:1fr;gap:4px}
+  .role{padding-top:0}
+  .prose{font-size:17.5px}
+  .compare{grid-template-columns:1fr}
+  .head{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="lib" aria-label="Biblioteca">
+    <div class="brand">
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+        <a class="chip" href="../" style="text-decoration:none">← Suite C1</a>
+        <a class="chip" href="../writing-cheatsheet/" style="text-decoration:none">Chuleta C1</a>
+      </div>
+      <h1>Writing<br><span>Library</span></h1>
+      <p>Respuestas oficiales puntuadas por Trinity y modelos C1 anotados. Pasa el ratón por cualquier frase para traducirla.</p>
+    </div>
+    <div class="progress">
+      <div class="row"><span>Leídos</span><b id="progTxt">0 / 0</b></div>
+      <div class="bar"><i id="progBar" style="width:0"></i></div>
+      <button class="continue" id="continueBtn" hidden></button>
+    </div>
+    <div class="filters" role="group" aria-label="Filtros">
+      <button class="chip" data-f="all" aria-pressed="true">Todos</button>
+      <button class="chip" data-f="forum" aria-pressed="false">Foro</button>
+      <button class="chip" data-f="email" aria-pressed="false">Email</button>
+      <button class="chip" data-f="chat" aria-pressed="false">Chat</button>
+      <button class="chip" data-f="essay" aria-pressed="false">Essay</button>
+      <button class="chip" data-f="report" aria-pressed="false">Report</button>
+      <button class="chip" data-f="fav" aria-pressed="false">★ Guardados</button>
+      <button class="chip" data-f="unread" aria-pressed="false">Sin leer</button>
+    </div>
+    <nav class="list" id="list"></nav>
+  </aside>
+
+  <main id="main">
+    <div class="topbar">
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="tool hamb" id="hamb" aria-label="Abrir biblioteca">☰ Biblioteca</button>
+        <div class="tabs" role="tablist">
+          <button role="tab" data-view="read" aria-selected="true">Leer</button>
+          <button role="tab" data-view="bank" aria-selected="false">Banco de frases</button>
+          <button role="tab" data-view="compare" aria-selected="false">Comparar</button>
+        </div>
+      </div>
+      <div class="tools">
+        <button class="tool" id="tEs" aria-pressed="false" title="Mostrar la traducción bajo cada frase (T)">ES bajo cada frase</button>
+        <button class="tool" id="tStruct" aria-pressed="true" title="Etiquetas de función de cada párrafo">Estructura</button>
+        <button class="tool" id="tClean" aria-pressed="false" title="Leer sin anotaciones (L)">Modo limpio</button>
+        <button class="tool" id="tTheme" title="Cambiar tema">◐</button>
+      </div>
+    </div>
+    <section id="view"></section>
+  </main>
+</div>
+
+<div class="dock" id="dock" aria-live="polite">
+  <span class="lbl">Traducción</span>
+  <span class="tr empty" id="dockTr">Pasa el ratón por una frase (o tócala) para ver su traducción.</span>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="toast" id="toast"></div>
+
+<script src="data_oficial.js"></script>
+<script src="data_modelos.js"></script>
+<script>
+(() => {
+  'use strict';
+  const W = window.WRITINGS || [];
+  const TYPE = {
+    forum: { es: 'Foro', task: 'T1 · A' }, email: { es: 'Email', task: 'T1 · B' }, chat: { es: 'Chat de grupo', task: 'T1 · C' },
+    essay: { es: 'Essay', task: 'T2' }, report: { es: 'Report', task: 'T2' },
+  };
+  const KIND = {
+    c1: { es: 'Estructura C1', sw: 'Aa' }, link: { es: 'Conector', sw: 'Aa' }, src: { es: 'Uso de fuentes', sw: 'Aa' },
+    voc: { es: 'Vocabulario', sw: 'Aa' }, err: { es: 'Error', sw: 'Aa' },
+  };
+  const ORDER = ['forum', 'email', 'chat', 'essay', 'report'];
+
+  /* ---------- almacenamiento seguro ---------- */
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('wlib_' + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem('wlib_' + k, JSON.stringify(v)); } catch { /* sin almacenamiento */ } },
+  };
+  const state = {
+    read: new Set(store.get('read', [])),
+    fav: new Set(store.get('fav', [])),
+    marks: store.get('bookmarks', {}),
+    last: store.get('last', null),
+    filter: 'all',
+    view: 'read',
+    current: null,
+    layers: store.get('layers', { c1: true, link: true, src: true, voc: true, err: true }),
+  };
+  const save = () => {
+    store.set('read', [...state.read]); store.set('fav', [...state.fav]);
+    store.set('bookmarks', state.marks); store.set('layers', state.layers);
+  };
+
+  /* ---------- utilidades ---------- */
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const words = (w) => w.paras.flatMap((p) => p.sents.map((s) => s[0])).join(' ').split(/\s+/).filter((x) => x && !/^[•—-]$/.test(x)).length;
+  const byId = (id) => W.find((w) => w.id === id);
+  const band = (w) => {
+    if (!w.scores) return null;
+    const v = Object.values(w.scores);
+    return (v.reduce((a, [s, m]) => a + s / m, 0) / v.length);
+  };
+  const toast = (msg) => { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('on'), 1600); };
+
+  /* aplica las marcas a una frase (sin solapamientos, priorizando las largas) */
+  function markup(sentence, marks) {
+    const hits = [];
+    marks.forEach((m, mi) => {
+      const ph = m[0]; if (!ph) return;
+      let from = 0, i;
+      while ((i = sentence.indexOf(ph, from)) !== -1) { hits.push({ s: i, e: i + ph.length, mi }); from = i + ph.length; }
+    });
+    hits.sort((a, b) => a.s - b.s || (b.e - b.s) - (a.e - a.s));
+    const out = []; let pos = 0;
+    for (const h of hits) {
+      if (h.s < pos) continue;
+      out.push(esc(sentence.slice(pos, h.s)));
+      const [ph, k] = marks[h.mi];
+      out.push(`<span class="mk ${k}" data-m="${h.mi}">${esc(sentence.slice(h.s, h.e))}</span>`);
+      pos = h.e;
+    }
+    out.push(esc(sentence.slice(pos)));
+    return out.join('');
+  }
+
+  /* ---------- lista lateral ---------- */
+  function renderList() {
+    const list = $('#list');
+    const pass = (w) => state.filter === 'all' || w.type === state.filter || (state.filter === 'fav' && state.fav.has(w.id)) || (state.filter === 'unread' && !state.read.has(w.id));
+    let html = '';
+    for (const t of ORDER) {
+      const items = W.filter((w) => w.type === t && pass(w));
+      if (!items.length) continue;
+      html += `<div class="group">${TYPE[t].task} · ${TYPE[t].es}</div>`;
+      for (const w of items) {
+        const b = band(w);
+        html += `<button class="item ${state.read.has(w.id) ? 'read' : ''}" data-id="${w.id}" aria-current="${state.current === w.id}">
+          <span class="dot" aria-hidden="true"></span>
+          <span><span class="t">${esc(w.title)}</span>
+            <span class="m">${w.origin === 'official' ? '<span class="badge b-off">OFICIAL</span>' : '<span class="badge b-mod">MODELO C1</span>'}
+            ${b !== null ? `<span>nota ${Math.round(b * 100)}%</span>` : ''}<span>${words(w)} w</span></span></span>
+          <span class="fav">${state.fav.has(w.id) ? '★' : ''}</span>
+        </button>`;
+      }
+    }
+    list.innerHTML = html || '<p style="padding:12px;color:var(--muted)">Nada con este filtro.</p>';
+    $('#progTxt').textContent = `${state.read.size} / ${W.length}`;
+    $('#progBar').style.width = `${(state.read.size / W.length) * 100}%`;
+    const cb = $('#continueBtn');
+    const last = state.last && byId(state.last);
+    if (last) {
+      const bm = state.marks[last.id];
+      cb.hidden = false;
+      cb.innerHTML = `🔖 Continuar: <b style="color:var(--ink)">${esc(last.title)}</b>${bm !== undefined ? ` · ¶${bm + 1}` : ''}`;
+    } else cb.hidden = true;
+  }
+
+  /* ---------- vista de lectura ---------- */
+  function scoreBlock(w) {
+    if (!w.scores) return '';
+    return Object.entries(w.scores).map(([k, [v, max]]) => {
+      const cls = v / max >= .8 ? 'hi' : v / max < .5 ? 'lo' : '';
+      return `<div class="score"><span class="lb">${esc(k)}</span><span class="val">${v} / ${max}</span>
+        <span class="track">${Array.from({ length: max }, (_, i) => `<i class="${i < v ? 'f ' + cls : ''}"></i>`).join('')}</span></div>`;
+    }).join('');
+  }
+
+  function promptBlock(p) {
+    if (!p) return '';
+    const thread = (p.thread || []).map((m) => `<div class="msg ${m.role === 'teacher' ? 'teacher' : ''}"><span class="av">${esc(m.who.charAt(0))}</span>
+      <div class="bubble"><b>${esc(m.who)}</b>${esc(m.text)}</div></div>`).join('');
+    const sources = (p.sources || []).map((s) => `<details class="src"><summary><b>${esc(s.label)}</b>${esc(s.title)}</summary><p>${esc(s.content)}</p></details>`).join('');
+    return `<details class="card prompt" open><summary>Consigna</summary>
+      <p class="ptext">${esc(p.text)}</p>
+      ${p.bullets ? `<ul>${p.bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}
+      ${p.groupTitle ? `<span class="group-title">${esc(p.groupTitle)}</span>` : ''}
+      ${thread ? `<div class="thread">${thread}</div>` : ''}
+      ${sources ? `<div class="sources">${sources}</div>` : ''}
+      <div class="meta"><span>⏱ ${esc(p.words || '')}</span>${p.origin ? `<span>Fuente: ${esc(p.origin)}</span>` : ''}</div>
+    </details>`;
+  }
+
+  function renderRead(id) {
+    const w = byId(id) || W[0];
+    state.current = w.id; state.last = w.id; store.set('last', w.id);
+    const idx = W.indexOf(w);
+    const prev = W[idx - 1], next = W[idx + 1];
+    const bm = state.marks[w.id];
+    const nodes = w.paras.map((p, i) => `${i ? '<span class="arrow" aria-hidden="true"><svg viewBox="0 0 28 14"><path d="M1 7h22M18 2l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' : ''}
+      <button class="node" data-go="${i}"><small>¶${i + 1}</small>${esc(p.role)}</button>`).join('');
+    const paras = w.paras.map((p, i) => `
+      <div class="para ${bm === i ? 'bookmarked' : ''}" id="p${i}">
+        <div class="role"><button class="num" data-bm="${i}" title="Poner el marcapáginas aquí">${i + 1}</button><br>${esc(p.role)}</div>
+        <div class="prose">${p.heading ? `<h4>${esc(p.heading)}</h4>` : ''}${p.sents.map((s, si) =>
+          `<span class="s" data-p="${i}" data-s="${si}">${markup(s[0], w.marks || [])}</span> <span class="es">${esc(s[1])}</span>`).join('')}</div>
+      </div>`).join('');
+    const counts = {}; (w.marks || []).forEach((m) => { counts[m[1]] = (counts[m[1]] || 0) + 1; });
+    const legend = Object.entries(KIND).filter(([k]) => counts[k]).map(([k, v]) =>
+      `<button data-layer="${k}" aria-pressed="${state.layers[k] !== false}"><span class="sw mk ${k}">${v.sw}</span>${v.es} <span class="wc">${counts[k]}</span></button>`).join('');
+
+    $('#view').innerHTML = `
+      <div class="enter">
+        <div class="head">
+          <div>
+            <div class="kicker"><span class="badge b-t">${TYPE[w.type].task}</span><span>${TYPE[w.type].es}</span>·
+              ${w.origin === 'official' ? '<span class="badge b-off">RESPUESTA OFICIAL DE CANDIDATO</span>' : '<span class="badge b-mod">MODELO C1 (PROPIO)</span>'}
+              <span class="wc">· ${words(w)} palabras</span></div>
+            <h2>${esc(w.title)}</h2>
+          </div>
+          <div class="acts">
+            <button class="btn-icon fav ${state.fav.has(w.id) ? 'on' : ''}" id="favBtn">${state.fav.has(w.id) ? '★ Guardado' : '☆ Guardar'}</button>
+            <button class="btn-icon ${state.read.has(w.id) ? 'on' : ''}" id="readBtn">${state.read.has(w.id) ? '✓ Leído' : 'Marcar leído'}</button>
+          </div>
+        </div>
+        <div class="grid">
+          <div>
+            ${promptBlock(w.prompt)}
+            <div class="card map"><h3>Mapa del texto · pulsa para saltar</h3><div class="flow">${nodes}</div></div>
+            <article class="card text ${$('#tStruct').getAttribute('aria-pressed') === 'false' ? 'no-struct' : ''}" id="article">${paras}</article>
+            <div class="navfoot">
+              <button ${prev ? `data-id="${prev.id}"` : 'disabled'}>← Anterior<b>${prev ? esc(prev.title) : '—'}</b></button>
+              <button ${next ? `data-id="${next.id}"` : 'disabled'}>Siguiente →<b>${next ? esc(next.title) : '—'}</b></button>
+            </div>
+          </div>
+          <aside class="side">
+            ${w.scores ? `<div class="card"><h3>Nota del examinador</h3>${scoreBlock(w)}
+              <details><summary>Justificación oficial (inglés)</summary><p class="rationale">${esc(w.rationale)}</p></details></div>` : ''}
+            <div class="card"><h3>Claves de este texto</h3><ul class="notes">${(w.notes || []).map((n) => `<li>${n}</li>`).join('')}</ul></div>
+            <div class="card"><h3>Capas · pulsa para ocultar</h3><div class="legend-list">${legend}</div>
+              <p class="wc" style="margin:10px 0 0">Pasa el ratón por lo subrayado para ver la explicación. Pulsa ① ② … para poner el marcapáginas.</p></div>
+          </aside>
+        </div>
+      </div>`;
+    applyLayers();
+    renderList();
+    if (bm !== undefined) setTimeout(() => $('#p' + bm)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60);
+    else window.scrollTo({ top: 0 });
+  }
+
+  function applyLayers() {
+    for (const k of Object.keys(KIND)) document.body.classList.toggle('off-' + k, state.layers[k] === false);
+  }
+
+  /* ---------- banco de frases ---------- */
+  function renderBank(q = '', kind = 'all') {
+    const items = [];
+    W.forEach((w) => (w.marks || []).forEach((m) => items.push({ w, m })));
+    const seen = new Set();
+    const filtered = items.filter(({ m }) => {
+      const key = m[0].toLowerCase() + m[1];
+      if (seen.has(key)) return false; seen.add(key);
+      if (kind !== 'all' && m[1] !== kind) return false;
+      if (!q) return true;
+      const s = (m[0] + ' ' + m[2] + ' ' + (m[3] || '')).toLowerCase();
+      return s.includes(q.toLowerCase());
+    });
+    const kinds = ['all', 'c1', 'link', 'voc', 'src', 'err'];
+    $('#view').innerHTML = `<div class="enter">
+      <div class="head"><div><div class="kicker">${filtered.length} entradas sacadas de ${W.length} textos</div><h2>Banco de frases</h2></div></div>
+      <div class="bank-tools">
+        <input class="search" id="bankQ" placeholder="Buscar: “not only”, “however”, “sin embargo”…" value="${esc(q)}">
+        <div class="tabs">${kinds.map((k) => `<button data-kind="${k}" aria-selected="${k === kind}">${k === 'all' ? 'Todo' : KIND[k].es}</button>`).join('')}</div>
+      </div>
+      <div class="bank">${filtered.map(({ w, m }) => `<div class="bk ${m[1]}">
+        <div class="ph ${m[1] === 'err' ? 'bad' : ''}">${esc(m[0])}</div>
+        ${m[3] ? `<div class="fixline">→ ${esc(m[3])}</div>` : ''}
+        <div class="nt">${m[2]}</div>
+        <button class="from" data-id="${w.id}">${TYPE[w.type].es} · ${esc(w.title)} ↗</button></div>`).join('')}</div></div>`;
+    const inp = $('#bankQ');
+    inp.addEventListener('input', () => { const pos = inp.selectionStart; renderBank(inp.value, kind); const n = $('#bankQ'); n.focus(); n.setSelectionRange(pos, pos); });
+    $('#view').querySelectorAll('[data-kind]').forEach((b) => b.addEventListener('click', () => renderBank($('#bankQ').value, b.dataset.kind)));
+  }
+
+  /* ---------- comparar ---------- */
+  function renderCompare(a, b) {
+    const pairs = { 'of-email-3': 'of-email-4', 'of-chat-5': 'of-chat-6', 'of-essay-1': 'of-essay-3', 'of-report-5': 'of-report-7', 'of-forum-2': 'mo-forum-tracking' };
+    a = a || 'of-report-5'; b = b || pairs[a] || 'of-report-7';
+    const opt = (sel) => W.map((w) => `<option value="${w.id}" ${w.id === sel ? 'selected' : ''}>${TYPE[w.type].es} · ${esc(w.title)}</option>`).join('');
+    const col = (id, side) => {
+      const w = byId(id);
+      return `<div class="card"><select data-side="${side}">${opt(id)}</select>
+        <div class="mini-score">${w.scores ? Object.entries(w.scores).map(([k, [v, m]]) => `<span>${esc(k)} ${v}/${m}</span>`).join('') : '<span>Modelo C1</span>'}<span>${words(w)} palabras</span></div>
+        ${w.paras.map((p, i) => `<p class="prose" style="margin:0 0 10px"><span class="wc">¶${i + 1} ${esc(p.role)}</span><br>${p.heading ? `<b>${esc(p.heading)}</b><br>` : ''}${p.sents.map((s) => `<span class="s" data-id="${w.id}">${markup(s[0], w.marks || [])}</span>`).join(' ')}</p>`).join('')}
+        <ul class="notes">${(w.notes || []).slice(0, 2).map((n) => `<li>${n}</li>`).join('')}</ul></div>`;
+    };
+    $('#view').innerHTML = `<div class="enter"><div class="head"><div><div class="kicker">misma consigna, distinta nota</div><h2>Comparar</h2></div></div>
+      <p style="margin:-6px 0 16px;color:var(--muted)">Pon lado a lado una respuesta floja y una de nota alta para ver qué cambia.</p>
+      <div class="compare">${col(a, 'a')}${col(b, 'b')}</div></div>`;
+    $('#view').querySelectorAll('select').forEach((s) => s.addEventListener('change', () => {
+      const na = $('#view select[data-side="a"]').value, nb = $('#view select[data-side="b"]').value; renderCompare(na, nb);
+    }));
+    renderCompare.cur = [a, b];
+  }
+
+  function setView(v, id) {
+    state.view = v;
+    document.querySelectorAll('[data-view]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.view === v)));
+    if (v === 'read') renderRead(id || state.current || state.last || W[0].id);
+    else if (v === 'bank') renderBank();
+    else renderCompare();
+    document.body.classList.remove('lib-open');
+    $('#dock').hidden = v !== 'read';
+    $('#dockTr').textContent = 'Pasa el ratón por una frase (o tócala) para ver su traducción.';
+    $('#dockTr').classList.add('empty');
+  }
+
+  /* ---------- tooltips y traducción ---------- */
+  const tip = $('#tip'), dockTr = $('#dockTr');
+  function findWriting(el) {
+    const sid = el.closest('[data-id]')?.dataset.id;
+    return state.view === 'read' ? byId(state.current) : byId(sid);
+  }
+  document.addEventListener('mouseover', (e) => {
+    const mk = e.target.closest('.mk');
+    if (mk && !document.body.classList.contains('clean') && !document.body.classList.contains('off-' + [...mk.classList].find((c) => KIND[c]))) {
+      const w = findWriting(mk); const m = w && w.marks[+mk.dataset.m];
+      if (m) {
+        tip.innerHTML = `<span class="k">${KIND[m[1]].es}</span>${m[2]}${m[3] ? `<span class="fix">${esc(m[3])}</span>` : ''}`;
+        tip.classList.add('on');
+        const r = mk.getBoundingClientRect();
+        const x = Math.min(window.innerWidth - 340, Math.max(10, r.left));
+        tip.style.left = x + 'px';
+        tip.style.top = (r.top > 140 ? r.top - tip.offsetHeight - 10 : r.bottom + 10) + 'px';
+      }
+    }
+    const s = e.target.closest('.s[data-p]');
+    if (s && state.view === 'read') {
+      const w = byId(state.current); const sent = w.paras[+s.dataset.p].sents[+s.dataset.s];
+      dockTr.textContent = sent[1]; dockTr.classList.remove('empty');
+    }
+  });
+  document.addEventListener('mouseout', (e) => { if (e.target.closest('.mk')) tip.classList.remove('on'); });
+  window.addEventListener('scroll', () => tip.classList.remove('on'), { passive: true });
+
+  /* ---------- clics ---------- */
+  document.addEventListener('click', (e) => {
+    const t = e.target;
+    const item = t.closest('.item, .navfoot button[data-id], .from');
+    if (item) { setView('read', item.dataset.id); return; }
+    if (t.closest('#continueBtn')) { setView('read', state.last); return; }
+    const tab = t.closest('[data-view]'); if (tab) { setView(tab.dataset.view); return; }
+    const chip = t.closest('.chip');
+    if (chip) { state.filter = chip.dataset.f; document.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', String(c === chip))); renderList(); return; }
+    const go = t.closest('.node'); if (go) { $('#p' + go.dataset.go)?.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    const bmb = t.closest('[data-bm]');
+    if (bmb) {
+      const i = +bmb.dataset.bm;
+      if (state.marks[state.current] === i) { delete state.marks[state.current]; toast('Marcapáginas quitado'); }
+      else { state.marks[state.current] = i; toast(`🔖 Marcapáginas en el párrafo ${i + 1}`); }
+      save();
+      document.querySelectorAll('.para').forEach((p, pi) => p.classList.toggle('bookmarked', state.marks[state.current] === pi));
+      renderList(); return;
+    }
+    const layer = t.closest('[data-layer]');
+    if (layer) { const k = layer.dataset.layer; state.layers[k] = state.layers[k] === false; layer.setAttribute('aria-pressed', String(state.layers[k])); applyLayers(); save(); return; }
+    if (t.closest('#readBtn')) {
+      const id = state.current; state.read.has(id) ? state.read.delete(id) : state.read.add(id); save();
+      const on = state.read.has(id); const b = $('#readBtn'); b.classList.toggle('on', on); b.textContent = on ? '✓ Leído' : 'Marcar leído';
+      if (on) toast('✓ Marcado como leído'); renderList(); return;
+    }
+    if (t.closest('#favBtn')) {
+      const id = state.current; state.fav.has(id) ? state.fav.delete(id) : state.fav.add(id); save();
+      const on = state.fav.has(id); const b = $('#favBtn'); b.classList.toggle('on', on); b.textContent = on ? '★ Guardado' : '☆ Guardar';
+      renderList(); return;
+    }
+    const s = t.closest('.s[data-p]');
+    if (s) { document.querySelectorAll('.s.pinned').forEach((x) => x.classList.remove('pinned')); s.classList.add('pinned'); }
+  });
+
+  const toggleTool = (id, cls, onDefault) => {
+    const b = $(id);
+    b.addEventListener('click', () => {
+      const on = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', String(on));
+      if (cls === 'no-struct') $('#article')?.classList.toggle('no-struct', !on);
+      else document.body.classList.toggle(cls, on);
+      store.set('tool_' + id, on);
+    });
+    const saved = store.get('tool_' + id, onDefault);
+    if (saved !== onDefault) b.click();
+  };
+  toggleTool('#tEs', 'show-es', false);
+  toggleTool('#tClean', 'clean', false);
+  toggleTool('#tStruct', 'no-struct', true);
+
+  const applyTheme = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  applyTheme(store.get('theme', null));
+  $('#tTheme').addEventListener('click', () => {
+    const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    const next = dark ? 'light' : 'dark'; applyTheme(next); store.set('theme', next);
+  });
+  $('#hamb').addEventListener('click', () => document.body.classList.toggle('lib-open'));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.target.matches('input, select, textarea')) return;
+    if (state.view === 'read' && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+      const i = W.findIndex((w) => w.id === state.current) + (e.key === 'ArrowRight' ? 1 : -1);
+      if (W[i]) setView('read', W[i].id);
+    }
+    if (e.key === 't' || e.key === 'T') $('#tEs').click();
+    if (e.key === 'l' || e.key === 'L') $('#tClean').click();
+  });
+
+  // Orden de la biblioteca: por tipo; dentro, los oficiales primero.
+  W.sort((a, b) => ORDER.indexOf(a.type) - ORDER.indexOf(b.type) || (a.origin === b.origin ? 0 : a.origin === 'official' ? -1 : 1));
+  setView('read', state.last && byId(state.last) ? state.last : W[0].id);
+})();
+</script>
+</body>
+</html>

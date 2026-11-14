@@ -1,0 +1,14 @@
+# Artificial Intelligence: A Catalyst for Innovation or a Threat to Human Autonomy?
+
+Guion mejorado (~480 palabras, ~3:45 min). Editable.
+
+Good morning. Let me start with a question: when was the last time you asked an AI tool for help? For most of us, the honest answer is probably "today". That's precisely why I chose this topic. As someone who hopes to work in this field, I'm genuinely excited about AI, but I must admit I'm also a little uneasy. So, over the next few minutes, I'd like to explore whether AI is a catalyst for innovation or a threat to our autonomy. I'll look first at its promise, then at the risks, and finally I'll tell you where I stand.
+
+Let's start with the promise. What impresses me most about AI is not chatbots, but what it's achieving in science. In 2024, the Nobel Prize in Chemistry was awarded partly for AlphaFold, a system that predicts the structure of proteins, a problem that had kept biologists busy for fifty years. In medicine, a large Swedish trial found that AI-supported breast cancer screening detected around twenty per cent more cancers, while almost halving radiologists' workload. Crucially, the AI didn't replace the doctors; it worked alongside them. As for jobs, some roles will inevitably disappear. However, the World Economic Forum expects that, by 2030, far more jobs will have been created than lost. Had we rejected every technology that threatened jobs, we would still be writing everything by hand.
+
+That said, there is a darker side, and this is where autonomy comes in. The first risk is deception. In 2024, an employee at the engineering firm Arup transferred around twenty-five million dollars after a video call with what appeared to be the company's finance director. Every other person on that call was a deepfake. If we can no longer trust what we see and hear, how can we make free, informed decisions? The second risk is subtler: we may simply stop thinking for ourselves. A small study from MIT suggested that students who wrote essays with ChatGPT showed lower brain engagement and remembered less of their own work. It's a bit like a muscle: if you never train it, it gets weaker. What worries me is not that AI thinks for us, but that we might happily let it.
+
+So, is AI a catalyst or a threat? Having weighed up both sides, I'd argue it's neither. It's an amplifier: it amplifies whatever we bring to it, our curiosity, but also our laziness and our bad intentions. That's why regulation matters. The EU's AI Act, the world's first comprehensive AI law, is a promising start, since it bans the most dangerous uses and demands transparency. But laws alone won't be enough. Only if we learn to use AI critically will it remain a tool that serves us, rather than one that replaces our judgement.
+
+That brings me to the end of my presentation. Do you have any questions or comments on the points I've raised?
+
