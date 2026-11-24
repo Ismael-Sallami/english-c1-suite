@@ -15,5 +15,3 @@ __pycache__/
 server/rubrics/*.txt
 docs/booklet.txt
 docs/ejemplo_c1c2.txt
-# Audios: se suben cuando termine la generación
-site/ise-digital/audio/

@@ -42,7 +42,8 @@ JOBS_DIR = DATA_DIR / "jobs"
 MODEL = os.environ.get("ISE_GRADER_MODEL", "gemini-4-hydrogen-high")
 AGY = os.environ.get("AGY_BIN") or shutil.which("agy") or str(Path.home() / ".local/bin/agy")
 GRADE_TIMEOUT = int(os.environ.get("ISE_GRADE_TIMEOUT", "600"))
-WHISPER_MODEL = os.environ.get("ISE_WHISPER_MODEL", "medium.en")
+WHISPER_MODEL = os.environ.get("ISE_WHISPER_MODEL", "small.en")
+WHISPER_DEVICE = os.environ.get("ISE_WHISPER_DEVICE", "cpu")  # "cuda" solo si hay CUDA 12 y VRAM libre
 
 # Rúbrica oficial completa (single-column, Trinity 2025) por tarea.
 TASK_RUBRIC = {
@@ -246,10 +247,14 @@ def get_whisper():
         if _WHISPER is None:
             from faster_whisper import WhisperModel  # type: ignore
             threads = int(os.environ.get("ISE_THREADS", "2"))  # nunca todos los núcleos
-            try:
-                _WHISPER = WhisperModel(WHISPER_MODEL, device="cuda", compute_type="int8_float16")
-            except Exception:
-                _WHISPER = WhisperModel("small.en", device="cpu", compute_type="int8", cpu_threads=threads)
+            if WHISPER_DEVICE == "cuda":
+                try:
+                    _WHISPER = WhisperModel(WHISPER_MODEL, device="cuda", compute_type="int8_float16")
+                except Exception:
+                    _WHISPER = None
+            if _WHISPER is None:
+                _WHISPER = WhisperModel(WHISPER_MODEL if WHISPER_DEVICE == "cpu" else "small.en",
+                                        device="cpu", compute_type="int8", cpu_threads=threads)
         return _WHISPER
 
 
@@ -258,8 +263,14 @@ def transcribe(data: bytes, suffix: str) -> dict:
         f.write(data)
         path = f.name
     try:
+        # Decodificar con ffmpeg (evita incompatibilidades de PyAV): 16 kHz mono float32.
+        import numpy as np
+        raw = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-threads", "1", "-i", path,
+                              "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                             capture_output=True, check=True).stdout
+        audio = np.frombuffer(raw, np.int16).astype(np.float32) / 32768.0
         model = get_whisper()
-        segments, info = model.transcribe(path, language="en", vad_filter=True, beam_size=5)
+        segments, info = model.transcribe(audio, language="en", vad_filter=True, beam_size=5)
         text = " ".join(s.text.strip() for s in segments).strip()
         return {"text": text, "duration": round(info.duration, 1)}
     finally:
