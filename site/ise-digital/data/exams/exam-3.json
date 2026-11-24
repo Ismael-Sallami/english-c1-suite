@@ -1,0 +1,1037 @@
+{
+  "id": "exam-3",
+  "title": "Mock Exam 3",
+  "theme": "Education and society: tuition and access, lifelong learning, standardised testing, volunteering, gap years, humanities degrees, peer tutoring, group projects, outdoor learning, student societies and language exchange",
+  "levelling": [
+    {
+      "type": "synonym",
+      "prompt": "reluctant",
+      "options": [
+        "eager",
+        "unwilling",
+        "anxious",
+        "exhausted"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "complete",
+      "prompt": "If I ___ about the strike, I would have booked an earlier train.",
+      "options": [
+        "knew",
+        "had known",
+        "would know",
+        "have known"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "synonym",
+      "prompt": "scarce",
+      "options": [
+        "abundant",
+        "hidden",
+        "rare",
+        "useful"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "synonym",
+      "prompt": "mitigate",
+      "options": [
+        "alleviate",
+        "worsen",
+        "postpone",
+        "demonstrate"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "complete",
+      "prompt": "She suggested that the committee ___ the proposal before the vote.",
+      "options": [
+        "reconsiders",
+        "would reconsider",
+        "reconsider",
+        "reconsidering"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "synonym",
+      "prompt": "ubiquitous",
+      "options": [
+        "hostile",
+        "ancient",
+        "obscure",
+        "widespread"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "synonym",
+      "prompt": "obsolete",
+      "options": [
+        "outdated",
+        "unnecessary",
+        "reliable",
+        "hidden"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "complete",
+      "prompt": "Not until the results were published ___ how serious the error had been.",
+      "options": [
+        "the team realised",
+        "did the team realise",
+        "the team did realise",
+        "had the team realised"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "synonym",
+      "prompt": "ephemeral",
+      "options": [
+        "short-lived",
+        "fragile",
+        "decorative",
+        "harmful"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "complete",
+      "prompt": "The new policy, ___ details remain unclear, has met with widespread criticism.",
+      "options": [
+        "which",
+        "that its",
+        "of which the",
+        "whose"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "synonym",
+      "prompt": "equivocal",
+      "options": [
+        "emphatic",
+        "honest",
+        "ambiguous",
+        "hostile"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "complete",
+      "prompt": "By the time she graduates, she ___ four years abroad.",
+      "options": [
+        "will spend",
+        "is spending",
+        "will have spent",
+        "would spend"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "synonym",
+      "prompt": "obdurate",
+      "options": [
+        "obvious",
+        "stubborn",
+        "dutiful",
+        "hesitant"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "complete",
+      "prompt": "He is said ___ the whole manuscript in a single sitting.",
+      "options": [
+        "having written",
+        "to write it",
+        "writing",
+        "to have written"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "complete",
+      "prompt": "I'd rather you ___ anything to the press until we have spoken.",
+      "options": [
+        "don't say",
+        "didn't say",
+        "won't say",
+        "not say"
+      ],
+      "answer": 1
+    }
+  ],
+  "speaking": {
+    "t1": {
+      "questions": [
+        "Do you prefer to learn new things on your own or together with other people? Why?",
+        "Some people believe that everyone should be able to study at university for free. What is your view?",
+        "What, in your opinion, makes a really good teacher, and can that quality be taught?"
+      ]
+    },
+    "t2": {
+      "followups": [
+        "What would you say is the most important point you made, and why?",
+        "How do you think opinions on this topic might differ between generations?",
+        "If you could change one thing about the topic you have just described, what would it be?"
+      ]
+    },
+    "t3": {
+      "partner": "your course tutor",
+      "situation": "You are the student representative for your year and have spent two months organising a talk by a well-known guest speaker, to be held next Thursday in the main lecture theatre. Over a hundred students have signed up. You meet your course tutor, who has some news about the event. You must explain how disappointed students will be, and discuss what could be done.",
+      "partnerLine": "Thanks for coming in at such short notice. I'm afraid I have some unwelcome news about next Thursday. The speaker's office has been in touch, and she is no longer able to travel. I know how much work you've put into this, so I wanted to tell you in person.",
+      "newInfo": "There is one possibility. A colleague of hers, a younger researcher, has offered to give the talk in her place, but only on the following Tuesday, when the lecture theatre is free but many students have classes. The department could also stream a recording of the original speaker's talk, but without any live questions. I'll need your recommendation by tomorrow.",
+      "newTask": "React to this new information and tell your tutor which option you would recommend, giving your reasons."
+    },
+    "t4": {
+      "title": "Learning outside the classroom",
+      "instructions": "Listen to two people talking about outdoor learning programmes in primary schools. Summarise the main points: What benefits do they see in this kind of programme? What reservations do they have?",
+      "speakers": [
+        {
+          "name": "Rosa",
+          "voice": "female"
+        },
+        {
+          "name": "Ben",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Rosa",
+          "text": "I've been reading about this forest school programme, where primary children spend one day a week outdoors, whatever the weather. And honestly, my first reaction was, well, that sounds lovely, but is it actually education?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "Ha, I had exactly the same reaction at first. But I spoke to one of the teachers last week, and she said the difference was striking. Children who can't sit still in a classroom, apparently, become the ones who take the lead outside. They build shelters, they argue about how to do it, and then they sort it out between themselves."
+        },
+        {
+          "speaker": "Rosa",
+          "text": "That's the part I find convincing, you know, problem solving that isn't on a worksheet. Though I do wonder about the measurable side of things. Parents want to know whether their children are learning to read, not whether they can light a fire."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Sure, but the programme doesn't replace literacy lessons, it sits alongside them. And there's some evidence that attendance and confidence improve, which then feeds back into the rest of the week. Teachers say the pupils come back into class calmer, more willing to speak up."
+        },
+        {
+          "speaker": "Rosa",
+          "text": "Mm. Although, evidence from schools that volunteered for a scheme might be a bit rosy, no? Enthusiastic teachers tend to get enthusiastic results."
+        },
+        {
+          "speaker": "Ben",
+          "text": "That's fair, I'll give you that. And then there's the cost. Waterproofs for every child, extra staff for safety, transport to a suitable site. Schools in poorer areas simply can't absorb that."
+        },
+        {
+          "speaker": "Rosa",
+          "text": "Which is the real irony, because the children who'd benefit most from green space are often the ones with the least access to it at home."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Exactly. So I'd say it's a good idea held back by funding rather than by any flaw in the idea itself."
+        },
+        {
+          "speaker": "Rosa",
+          "text": "I'd go along with that, mostly. I'd still want clearer evidence before saying every school should do it. But I'd happily see more trials, particularly if they included schools that weren't already keen."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Well, that sounds sensible. More trials, honest reporting of the results, and perhaps a bit of money from the people who talk so much about pupil wellbeing."
+        },
+        {
+          "speaker": "Rosa",
+          "text": "Ha, now that is optimistic. But yes, worth a try. I'd certainly rather see the money spent there than on another leaflet about resilience."
+        }
+      ],
+      "followup": "Do you think schools should spend more time teaching outside the classroom? Why, or why not?"
+    }
+  },
+  "listening": [
+    {
+      "type": "conversation",
+      "title": "Peer tutoring",
+      "context": "Two university students, Priya and Dan, are chatting after a training session for peer tutors.",
+      "plays": 2,
+      "previewSeconds": 25,
+      "speakers": [
+        {
+          "name": "Priya",
+          "voice": "female"
+        },
+        {
+          "name": "Dan",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Priya",
+          "text": "So, how did your first peer-tutoring session go? You looked a bit frazzled when you came out."
+        },
+        {
+          "speaker": "Dan",
+          "text": "Honestly, I'm not sure. I'd prepared a whole handout on integration by parts, right, and the first-year I was paired with, Callum, took one look at it and said he didn't actually need the method. He needed to know why he kept getting lost halfway through."
+        },
+        {
+          "speaker": "Priya",
+          "text": "Ah. So the problem wasn't the maths as such."
+        },
+        {
+          "speaker": "Dan",
+          "text": "Not really. It was more that he'd memorised the steps without any sense of what they were for. Which, to be fair, is exactly what I did in my first year, so I could hardly judge him."
+        },
+        {
+          "speaker": "Priya",
+          "text": "And what did you do? Scrap the handout?"
+        },
+        {
+          "speaker": "Dan",
+          "text": "Well, I sort of put it aside and asked him to talk me through a problem out loud. Which was painful for both of us for about ten minutes, but then he spotted his own mistake before I'd said a word. That was quite a moment, actually."
+        },
+        {
+          "speaker": "Priya",
+          "text": "That's the bit I love about it. When I started I thought my job was to explain things better than the lecturers. Turns out it's mostly about keeping my mouth shut."
+        },
+        {
+          "speaker": "Dan",
+          "text": "Easier said than done. But the training day did warn us, didn't it? The coordinator kept going on about resisting the urge to rescue people."
+        },
+        {
+          "speaker": "Priya",
+          "text": "She did, though I thought she overdid it a bit. There are times when someone is genuinely stuck and a quick nudge is kinder than silence."
+        },
+        {
+          "speaker": "Dan",
+          "text": "Fair point. Where do you draw the line, then?"
+        },
+        {
+          "speaker": "Priya",
+          "text": "If they've been stuck for more than a couple of minutes and they're starting to look miserable, I give a hint, not an answer. Something like, what happens if you rewrite it as a product, rather than showing them."
+        },
+        {
+          "speaker": "Dan",
+          "text": "Right. I might try that. What worries me more, honestly, is the paperwork. We're meant to log every session, and I can't see who actually reads those logs."
+        },
+        {
+          "speaker": "Priya",
+          "text": "Apparently the department uses them to decide whether to keep funding the scheme, so it's worth doing, however tedious. Which reminds me, I'd better get mine in before Friday."
+        },
+        {
+          "speaker": "Priya",
+          "text": "Anyway, you'll be fine. Callum came back for a second session, didn't he?"
+        },
+        {
+          "speaker": "Dan",
+          "text": "He did, yes. Booked it before he left. That's something."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Why did Dan set aside his handout?",
+          "options": [
+            "Callum had already mastered the technique",
+            "Dan realised the handout contained mistakes",
+            "Callum's difficulty lay in not grasping the purpose of the method",
+            "The coordinator had told tutors not to use handouts"
+          ],
+          "answer": 2,
+          "explanation": "Callum 'didn't actually need the method. He needed to know why he kept getting lost'; he had memorised steps without knowing what they were for."
+        },
+        {
+          "q": "What is Priya's opinion of the coordinator's advice?",
+          "options": [
+            "It is sound in principle but applied too rigidly",
+            "It is unrealistic and should be ignored",
+            "It is more useful to new tutors than experienced ones",
+            "It contradicts what the department expects"
+          ],
+          "answer": 0,
+          "explanation": "She says 'I thought she overdid it a bit. There are times when ... a quick nudge is kinder than silence.'"
+        },
+        {
+          "q": "What does Priya do when a student is struggling?",
+          "options": [
+            "She waits until the student asks directly",
+            "She demonstrates the full solution",
+            "She moves on to an easier problem",
+            "She offers a prompt that points them towards a method"
+          ],
+          "answer": 3,
+          "explanation": "'I give a hint, not an answer', e.g. 'what happens if you rewrite it as a product'."
+        },
+        {
+          "q": "Why does Priya consider the session logs worth completing?",
+          "options": [
+            "Tutors are assessed on them",
+            "They influence whether the scheme continues to be funded",
+            "Students can read them to prepare for the next session",
+            "They help the coordinator choose pairs"
+          ],
+          "answer": 1,
+          "explanation": "'the department uses them to decide whether to keep funding the scheme, so it's worth doing'."
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "title": "Tuition fees and access to university",
+      "context": "Three people take part in a radio discussion about the cost of university and who gets to go.",
+      "plays": 2,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Helen",
+          "voice": "female"
+        },
+        {
+          "name": "Marcus",
+          "voice": "male"
+        },
+        {
+          "name": "Amara",
+          "voice": "female"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Helen",
+          "text": "Welcome to Campus Voices. Today we're discussing the cost of university and who gets to go. With me are Marcus Odell, an economist who studies higher-education funding, and Amara Nwosu, vice-president of the national students' union. Marcus, let me start with you. The government has just announced a review of tuition fees. Is there any version of this that actually helps access?"
+        },
+        {
+          "speaker": "Marcus",
+          "text": "Well, I'd begin by questioning the premise a little. The evidence is that fees themselves have not deterred many applicants from poorer backgrounds, at least not in the headline numbers. Participation has risen. What really matters is what students pay back and when, and that's where the system is, frankly, a bit of a muddle."
+        },
+        {
+          "speaker": "Amara",
+          "text": "With respect, Marcus, that's a rather comfortable view. Participation has risen, yes, but look at who drops out in the first year, and look at where they study. A lot of students from low-income families choose a university within commuting distance, not because it's the best fit but because they can't afford rent. That's a narrowing of access that never shows up in the application figures."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "That's a fair challenge, and I'd concede the point about geography. But I'd say that's a maintenance problem rather than a tuition problem. If you scrapped fees tomorrow, you wouldn't fix it. In fact, you might make it worse, because the money would have to come from somewhere, and in the past that has meant capping places."
+        },
+        {
+          "speaker": "Helen",
+          "text": "So you're saying free tuition could actually reduce access?"
+        },
+        {
+          "speaker": "Marcus",
+          "text": "It can, in practice. Countries that abolished fees entirely often ended up rationing places, and rationing tends to favour applicants with the strongest grades, who are disproportionately better off."
+        },
+        {
+          "speaker": "Amara",
+          "text": "I don't buy that as inevitable, though. It's a question of political will. And there's something else being missed here, which is the psychological side. Debt aversion is real. A seventeen-year-old whose parents have never borrowed a penny hears 'forty thousand pounds' and simply switches off, however many times you explain that repayments depend on income."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "I'd agree the messaging has been poor. Though I'd be wary of treating that as proof the system is unfair. Perhaps the answer is better advice in schools, not a different funding model."
+        },
+        {
+          "speaker": "Helen",
+          "text": "Amara, is that realistic? Schools are stretched as it is."
+        },
+        {
+          "speaker": "Amara",
+          "text": "It's realistic if it's funded, but that's rather the point, isn't it? Advice is the first thing to go when budgets get squeezed. I'd rather see grants for living costs, aimed at those who need them, than another leaflet."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "Targeted grants, I can get behind. That's actually where I'd put the money, if I were advising the minister. Not on lowering the headline fee, which mostly benefits graduates who'll earn well anyway."
+        },
+        {
+          "speaker": "Helen",
+          "text": "So, a rare point of agreement?"
+        },
+        {
+          "speaker": "Amara",
+          "text": "A partial one. I'd still say fees should come down, but yes, support for living costs is where the damage is being done."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "And I'd add that we should be honest that nobody has a perfect model. Every system trades something off."
+        },
+        {
+          "speaker": "Helen",
+          "text": "On that note, we'll take a short break. When we come back, we'll hear from a mature student who returned to study at forty-five."
+        }
+      ],
+      "questions": [
+        {
+          "q": "What is Marcus's initial view of tuition fees?",
+          "options": [
+            "They have caused a sharp fall in applications",
+            "They have not been the main factor putting poorer applicants off",
+            "They are fair but badly explained",
+            "They should be scrapped as soon as possible"
+          ],
+          "answer": 1,
+          "explanation": "'fees themselves have not deterred many applicants from poorer backgrounds ... Participation has risen.'"
+        },
+        {
+          "q": "What point does Amara make about students who study close to home?",
+          "options": [
+            "Access is being restricted in ways the application figures conceal",
+            "They tend to choose weaker universities on purpose",
+            "They are more likely to leave without a degree than others",
+            "They would prefer lower fees to cheaper housing"
+          ],
+          "answer": 0,
+          "explanation": "'a narrowing of access that never shows up in the application figures.'"
+        },
+        {
+          "q": "According to Marcus, why might abolishing fees backfire?",
+          "options": [
+            "Wealthy students would stop applying",
+            "Universities would refuse to admit poorer students",
+            "Funding pressures could lead to fewer places being available",
+            "Graduates would stop repaying loans"
+          ],
+          "answer": 2,
+          "explanation": "'the money would have to come from somewhere, and in the past that has meant capping places.'"
+        },
+        {
+          "q": "Why does Amara mention a seventeen-year-old?",
+          "options": [
+            "To argue that young people misunderstand loans because of poor teaching",
+            "To suggest that parents should lend money to students",
+            "To prove that income-based repayment is unfair",
+            "To show that fear of debt can deter students whatever the repayment terms"
+          ],
+          "answer": 3,
+          "explanation": "He 'simply switches off, however many times you explain that repayments depend on income.'"
+        },
+        {
+          "q": "What does Amara imply by 'that's rather the point, isn't it?'",
+          "options": [
+            "Schools are not interested in giving advice",
+            "Advice cannot be relied on because it is not protected when money is short",
+            "Marcus has misunderstood the role of schools",
+            "Advice is more costly than grants"
+          ],
+          "answer": 1,
+          "explanation": "'Advice is the first thing to go when budgets get squeezed.'"
+        },
+        {
+          "q": "What do Marcus and Amara agree on?",
+          "options": [
+            "Money for living costs should be targeted at those who need it",
+            "Fees should be lowered for all students",
+            "Schools must provide more careers advice",
+            "Free tuition would improve access"
+          ],
+          "answer": 0,
+          "explanation": "Marcus: 'Targeted grants, I can get behind.' Amara: 'support for living costs is where the damage is being done.'"
+        }
+      ]
+    },
+    {
+      "type": "talk",
+      "title": "Standardised testing",
+      "context": "A lecturer, Fiona Reyes, gives a talk on standardised testing; a head teacher, Jonah, then responds.",
+      "plays": 1,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Fiona",
+          "voice": "female"
+        },
+        {
+          "name": "Jonah",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Fiona",
+          "text": "Good afternoon, everyone. I want to spend the next few minutes on a topic that tends to generate more heat than light: standardised testing. Let me begin with the case in its favour. A common exam offers something rare in education, which is a shared yardstick. When thousands of pupils sit the same paper, marked to the same criteria, you can compare schools, track change over time and, crucially, spot a school that is quietly failing its pupils, however glowing its own reports. Before such tests existed, admission often depended on who you knew, so standardisation was, in part, a democratising reform."
+        },
+        {
+          "speaker": "Fiona",
+          "text": "But the picture is more complicated. Researchers have long noted what is sometimes called Campbell's law: the more weight you attach to a measure, the more it distorts the very thing it measures. In classrooms, that shows up as teaching to the test. One study I find telling followed a group of schools where results rose sharply over five years. Yet when the same pupils were given an unfamiliar, low-stakes assessment, the gains largely vanished. They hadn't learnt more; they'd learnt the format."
+        },
+        {
+          "speaker": "Fiona",
+          "text": "There's also the question of what we leave out. Tests handle recall and procedure well. They handle collaboration, curiosity and persistence rather badly. And those are precisely the qualities employers say they struggle to find. So where does that leave us? I'd argue for neither abolition nor the status quo. Tests are a blunt instrument, but blunt instruments have their uses. The sensible course is to reduce what rides on any single result, to combine tests with coursework and teacher judgement, and to be honest with families about what a score can and can't tell them. Anything else, I suspect, simply invites the distortions we're trying to avoid."
+        },
+        {
+          "speaker": "Jonah",
+          "text": "Thanks, Fiona. So, if I've understood, standardised tests have genuine value as a common measure, and historically they helped open up access. But when too much depends on them, schools adapt to the test itself, which the study you described showed, and important skills go unassessed. Your suggestion was a middle path rather than scrapping them: lower stakes, coursework alongside, and franker communication with parents. I'd add one thing. As a head teacher, I find the hardest part of that is the communication. Parents have been taught for years to see a number as a verdict, and unlearning that takes time. But I'd certainly agree that simply leaving things as they are looks hard to defend."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Why does Fiona mention the period before standardised tests existed?",
+          "options": [
+            "To argue that admission is fairer today than before",
+            "To criticise earlier methods of marking",
+            "To show that the tests had a fairness-promoting purpose",
+            "To suggest that schools were once more honest"
+          ],
+          "answer": 2,
+          "explanation": "'admission often depended on who you knew, so standardisation was, in part, a democratising reform.'"
+        },
+        {
+          "q": "What is the purpose of the study Fiona describes?",
+          "options": [
+            "To prove that pupils learn little at school",
+            "To illustrate that higher scores may reflect familiarity with the format",
+            "To show that low-stakes tests are unreliable",
+            "To demonstrate that results improve over five years"
+          ],
+          "answer": 1,
+          "explanation": "Gains 'largely vanished' on an unfamiliar assessment: 'they'd learnt the format.'"
+        },
+        {
+          "q": "What does Fiona say about what tests fail to capture?",
+          "options": [
+            "They exclude pupils who struggle with recall",
+            "They are biased against creative pupils",
+            "They ignore the teacher's judgement entirely",
+            "They overlook qualities that employers value"
+          ],
+          "answer": 3,
+          "explanation": "They handle 'collaboration, curiosity and persistence rather badly', qualities employers 'struggle to find'."
+        },
+        {
+          "q": "What approach does Fiona recommend?",
+          "options": [
+            "Keeping tests but making each result carry less weight",
+            "Abolishing tests in favour of coursework",
+            "Keeping the current system with better marking",
+            "Replacing national tests with local ones"
+          ],
+          "answer": 0,
+          "explanation": "'reduce what rides on any single result' and combine tests with coursework and teacher judgement."
+        },
+        {
+          "q": "What does Jonah see as the main difficulty in putting Fiona's ideas into practice?",
+          "options": [
+            "Persuading teachers to design coursework",
+            "Finding enough funding for new assessments",
+            "Changing how parents interpret test scores",
+            "Convincing pupils to take tests seriously"
+          ],
+          "answer": 2,
+          "explanation": "'Parents have been taught for years to see a number as a verdict, and unlearning that takes time.'"
+        },
+        {
+          "q": "How would you describe Jonah's response to Fiona's talk?",
+          "options": [
+            "Largely supportive, with a reservation about implementation",
+            "Polite but fundamentally opposed",
+            "Entirely uncritical",
+            "Doubtful about the study she cited"
+          ],
+          "answer": 0,
+          "explanation": "He summarises her view accurately, agrees that the status quo is hard to defend, and adds a practical concern."
+        }
+      ]
+    },
+    {
+      "type": "talk",
+      "title": "The gap year",
+      "context": "A professor, Ian Calder, gives a talk about gap years; a student, Nadia, then responds.",
+      "plays": 1,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Ian",
+          "voice": "male"
+        },
+        {
+          "name": "Nadia",
+          "voice": "female"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Ian",
+          "text": "Hello, everyone. The gap year has a slightly curious reputation. To some, it's a rite of passage; to others, a year of avoidable idleness bankrolled by indulgent parents. I want to suggest that both caricatures miss the point, because what a gap year does depends almost entirely on how it is structured. Take the data first. A longitudinal study following several thousand students found that those who took a year out before university were, on average, more likely to complete their degrees and reported higher motivation in their first term. Now, I'd urge caution. The students who take gap years are often those with the resources and confidence to do so, so we may be looking at a selection effect rather than a benefit of the year itself. Researchers have tried to control for this, with partial success."
+        },
+        {
+          "speaker": "Ian",
+          "text": "What seems to matter is purposeful engagement. Students who spent the year in sustained work, whether paid employment or a long-term placement, described real gains in independence and in clarity about what they wanted to study. Those who drifted, or whose year consisted largely of short, expensive trips abroad, showed little difference from their peers. There's a certain irony here: the most photogenic gap years tend to be the least transformative. The cost is the obvious sticking point. A year without income, or worse, a year of costly travel, is simply unavailable to many. Some universities now offer deferred entry with funded placements, which strikes me as a promising way to widen who benefits. My own view, then, is that the question shouldn't be whether students should take a gap year, but what this year is for, and who gets to have one."
+        },
+        {
+          "speaker": "Nadia",
+          "text": "Thank you, Ian. I took a gap year myself, so I found that fascinating. If I'm following, you're not against gap years, but you're sceptical of the claim that they automatically produce better students, since those who take them may have had advantages already. And you'd say what counts is sustained, purposeful activity rather than travel for its own sake. What struck me was your last point about access. In my case, I worked in a warehouse for ten months, which was hardly glamorous, but it did exactly what you describe. It's a pity that kind of year doesn't get talked about, because it's the version most students could realistically manage."
+        }
+      ],
+      "questions": [
+        {
+          "q": "What is Ian's main purpose in his opening remarks?",
+          "options": [
+            "To condemn gap years as wasteful",
+            "To suggest that common stereotypes oversimplify the issue",
+            "To defend gap years against parents",
+            "To introduce a study he disagrees with"
+          ],
+          "answer": 1,
+          "explanation": "'both caricatures miss the point, because what a gap year does depends almost entirely on how it is structured.'"
+        },
+        {
+          "q": "Why does Ian urge caution about the study's findings?",
+          "options": [
+            "Students who take gap years may already be advantaged",
+            "The study sample was too small",
+            "Motivation is hard to measure",
+            "The students completed degrees in different subjects"
+          ],
+          "answer": 0,
+          "explanation": "'we may be looking at a selection effect rather than a benefit of the year itself.'"
+        },
+        {
+          "q": "What does Ian mean by 'the most photogenic gap years tend to be the least transformative'?",
+          "options": [
+            "Photography is a good way to record learning",
+            "Students who travel enjoy their year less",
+            "Work placements look dull but cost more",
+            "The most impressive-looking trips are often the least beneficial"
+          ],
+          "answer": 3,
+          "explanation": "Short, expensive trips abroad 'showed little difference from their peers'."
+        },
+        {
+          "q": "How does Ian suggest access to gap years could be widened?",
+          "options": [
+            "By lowering university fees",
+            "By giving every student a travel grant",
+            "By funded placements combined with deferred university entry",
+            "By banning expensive trips"
+          ],
+          "answer": 2,
+          "explanation": "'deferred entry with funded placements ... a promising way to widen who benefits.'"
+        },
+        {
+          "q": "What does Nadia imply by describing her warehouse job as 'hardly glamorous'?",
+          "options": [
+            "She regrets not travelling",
+            "It was valuable despite lacking the appeal of travel",
+            "The job gave her little useful experience",
+            "She disagrees with Ian's view of work placements"
+          ],
+          "answer": 1,
+          "explanation": "It 'did exactly what you describe': the sustained, purposeful kind of year."
+        },
+        {
+          "q": "What can be inferred about Ian's closing question?",
+          "options": [
+            "He is more interested in purpose and fairness than in a yes-or-no answer",
+            "He thinks gap years should be compulsory",
+            "He believes the data is conclusive",
+            "He is unsure whether gap years matter at all"
+          ],
+          "answer": 0,
+          "explanation": "'what this year is for, and who gets to have one.'"
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "type": "single",
+      "title": "In defence of the 'useless' degree",
+      "genre": "article",
+      "text": "Every September, a familiar ritual unfolds. Newly minted graduates in philosophy, history or comparative literature are cornered at family gatherings by an uncle who wants to know, with the air of a man enquiring about a leaking roof, what exactly they intend to do with it. The question is not entirely unreasonable. Tuition is costly, and the humanities are routinely held up by politicians as evidence of a higher-education sector that has lost touch with the labour market.\n\nYet the data tell a less gloomy story than the rhetoric suggests. Surveys of mid-career earnings show that humanities graduates start behind their engineering counterparts but narrow the gap considerably within fifteen years, and many end up in management, law, publishing and the civil service. It would be tempting to conclude that the humanities are, after all, a sound financial investment. I would resist that conclusion, not because it is false but because it concedes too much. To defend a subject purely in terms of salary is to accept that salary is the proper measure of an education, and once that is granted, the argument is already half lost.\n\nWhat the humanities do offer is harder to put on a spreadsheet. A student who spends three years learning to read a hostile source against the grain, to hold two incompatible interpretations in mind without rushing to settle them, or to write a paragraph that someone else will actually finish, acquires habits of thought that no short course in 'critical thinking' can reproduce. These are slow skills, and they mature in ways visible only in retrospect, which is partly why they are so easily undervalued.\n\nNone of this means the humanities are above criticism. Too many departments have been slow to explain what they do, preferring a wounded silence to a clear account. Some courses are narrow to the point of self-parody. But the remedy for a poorly argued case is a better one, not abandonment. If a society decides it no longer needs people who can interrogate its stories, it will not stop being governed by them; it will merely lose the ability to notice.",
+      "questions": [
+        {
+          "q": "What is the purpose of the opening paragraph?",
+          "options": [
+            "To introduce a widespread scepticism that the writer goes on to examine",
+            "To mock relatives who criticise graduates",
+            "To describe how graduates feel at family events",
+            "To show that politicians are right about the humanities"
+          ],
+          "answer": 0,
+          "explanation": "The uncle's question is called 'not entirely unreasonable' and the paragraph ends with the political criticism the article then tackles."
+        },
+        {
+          "q": "Why does the writer say that the salary argument 'concedes too much'?",
+          "options": [
+            "The earnings data is unreliable",
+            "Humanities graduates in fact earn less than claimed",
+            "It ignores the cost of tuition",
+            "It treats earnings as the right way to judge the value of study"
+          ],
+          "answer": 3,
+          "explanation": "'To defend a subject purely in terms of salary is to accept that salary is the proper measure of an education.'"
+        },
+        {
+          "q": "Why does the writer describe humanities skills as 'slow'?",
+          "options": [
+            "Students take longer to graduate",
+            "They develop gradually and are hard to see at the time",
+            "Employers are slow to recognise them",
+            "They can only be learnt in three years"
+          ],
+          "answer": 1,
+          "explanation": "'they mature in ways visible only in retrospect, which is partly why they are so easily undervalued.'"
+        },
+        {
+          "q": "What is the writer's attitude to humanities departments?",
+          "options": [
+            "Dismissive of most courses on offer",
+            "Convinced they need no reform",
+            "Critical of their communication but unwilling to abandon the subjects",
+            "Resigned to their decline"
+          ],
+          "answer": 2,
+          "explanation": "Departments prefer 'a wounded silence', yet 'the remedy for a poorly argued case is a better one, not abandonment.'"
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Back to the classroom at fifty-two",
+      "genre": "blog",
+      "text": "Last spring I enrolled on an evening course in data analysis. I am fifty-two, I run a small bookbinding workshop, and the last time I sat in a classroom my chief concern was whether anyone had noticed my trainers. I should say at the outset that I did not do this out of any grand conviction about 'lifelong learning', a phrase I had always associated with leaflets and well-meaning councils. The truth is more mundane: my supplier switched to an online ordering system I couldn't make sense of, and I was tired of asking my nephew for help.\n\nWhat I hadn't anticipated was how humbling the first weeks would be. My classmates, mostly in their twenties, absorbed in a few minutes what took me an hour. I found myself doing something I hadn't done in decades: admitting, out loud, that I didn't understand. And, curiously, nothing terrible happened. The tutor, a patient woman called Ines, simply explained it again, differently. It struck me that I had spent thirty years in a trade where I was the one with the answers, and I had quietly lost the habit of being a beginner.\n\nThere are, of course, practical obstacles that no amount of enthusiasm can wish away. The course ran on Tuesday and Thursday evenings, which meant my workshop closed early twice a week. Fees were reduced for people over fifty, but only thanks to a regional scheme which, I later discovered, is under threat from budget cuts. Several people in my class were there only because their employer had paid; I doubt many would have come otherwise. If lifelong learning is to mean anything, it can't depend on whether you happen to work somewhere generous or live somewhere with a scheme.\n\nWould I recommend it? Yes, with a caveat. The new skills are useful, but they are not the point. What I've gained is a looser relationship with my own ignorance, and a sense that the person I was at forty need not be the final draft. Though I confess I'm still not sure what to do with the spreadsheets.",
+      "questions": [
+        {
+          "q": "Why did the writer sign up for the course?",
+          "options": [
+            "He had long believed in lifelong learning",
+            "He needed to deal with a practical problem at work",
+            "A local council had encouraged him",
+            "His nephew had recommended it"
+          ],
+          "answer": 1,
+          "explanation": "He was 'tired of asking my nephew for help' with the new ordering system; it was not 'grand conviction'."
+        },
+        {
+          "q": "What does the writer suggest by 'nothing terrible happened'?",
+          "options": [
+            "His fear of admitting ignorance proved unfounded",
+            "The tutor was unusually strict",
+            "He was surprised that he kept up with the class",
+            "He felt relieved when the course ended"
+          ],
+          "answer": 0,
+          "explanation": "He admitted he didn't understand and the tutor 'simply explained it again'."
+        },
+        {
+          "q": "What point does the writer make in the third paragraph?",
+          "options": [
+            "Employers should pay for all courses",
+            "Evening classes are inconvenient for workers",
+            "Regional schemes work better than national ones",
+            "Opportunities to learn depend too much on personal circumstances"
+          ],
+          "answer": 3,
+          "explanation": "'it can't depend on whether you happen to work somewhere generous or live somewhere with a scheme.'"
+        },
+        {
+          "q": "What does the writer value most about the experience?",
+          "options": [
+            "The ability to analyse data",
+            "The friendships he made",
+            "A changed attitude towards not knowing things",
+            "A better understanding of his supplier"
+          ],
+          "answer": 2,
+          "explanation": "'a looser relationship with my own ignorance'; skills 'are not the point'."
+        }
+      ]
+    },
+    {
+      "type": "paired",
+      "title": "Group projects at university",
+      "textA": {
+        "title": "Why group projects punish the conscientious",
+        "genre": "opinion column",
+        "text": "Ask any graduate to name the most dreaded phrase of their degree and a surprising number will say 'group assessment'. Universities defend it with a familiar litany: employers want teamwork, collaboration is the currency of the modern workplace, and so on. Yet what students describe is rather different. A project is divided into four parts; three are completed with reasonable diligence, one is not; and the mark, awarded collectively, is the same for everyone. The student who stayed up until three in the morning to knit the fragments into a coherent whole receives exactly what the one who sent a single paragraph the day before receives.\n\nDefenders will say that this is precisely what working life is like. I'm not convinced. In a job, a colleague's laziness has consequences for them: reviews, promotion, ultimately employment. At university, those incentives are largely absent, and the conscientious simply absorb the cost. This teaches a lesson, certainly, though not the one intended: that diligence is a liability and that the sensible response is to do slightly less than your teammates.\n\nSome departments have tried peer assessment, in which members rate one another's contribution. In principle, a neat fix. In practice, I've heard of friends colluding to give identical scores, and of quieter students marked down for 'poor communication' by those who simply talked over them. Nor does it help that the students who most dread group work are often those with the most to lose: international students working in a second language, or those juggling jobs and unable to meet at ten at night.\n\nI'm not suggesting we abolish collaboration. But if we assess it, we must assess it fairly, and that means individual accountability within the collective task."
+      },
+      "textB": {
+        "title": "Friction is the point",
+        "genre": "lecturer's blog",
+        "text": "I have supervised group projects for fifteen years, and I'm tired of hearing them dismissed as an administrative convenience. It's true that some are badly designed; mine were, for a long time. But the response to bad design shouldn't be to retreat into solo assignments, which have their own pathologies, not least that they reward those already confident working alone.\n\nWhat changed my practice was a simple observation: conflict in a team is not a failure of the exercise but its subject matter. Students who never negotiate a disagreement, never cover for a colleague's illness, never discover that their brilliant plan is incompatible with someone else's, have missed what groups can teach. So I stopped treating friction as something to be eliminated and began treating it as something to be examined.\n\nPractically, this means three changes. First, only part of the mark is collective; the rest rests on an individual reflective report in which each student explains what they contributed and what they would do differently. Second, I check in with each group at fixed points rather than at the end, so that problems surface while they can still be addressed. Third, I am open about the fact that the grade is not the point; the process is, and the report is where that process becomes visible.\n\nNone of this is perfect. A determined free-rider can still do damage, and I've had to mediate several unhappy stand-offs. But I've also seen students who began the term barely speaking to each other end it with a respect for one another's strengths that surprised even them. That, to me, is worth more than a tidy mark scheme."
+      },
+      "questions": [
+        {
+          "q": "What is the writer of Text A's attitude to the claim that group work mirrors working life?",
+          "options": [
+            "Persuaded, but critical of how it is assessed",
+            "Unconvinced, because the consequences for slackers differ",
+            "Indifferent, since employers value teamwork",
+            "Hostile to the idea that employers want teamwork"
+          ],
+          "answer": 1,
+          "explanation": "'In a job, a colleague's laziness has consequences for them ... At university, those incentives are largely absent.'"
+        },
+        {
+          "q": "What does Text A suggest about peer assessment?",
+          "options": [
+            "It sounds sensible but is open to abuse and unfairness",
+            "It should replace group marks entirely",
+            "It is helpful mainly for international students",
+            "It is used by too few departments"
+          ],
+          "answer": 0,
+          "explanation": "'In principle, a neat fix. In practice ... colluding ... quieter students marked down.'"
+        },
+        {
+          "q": "What idea appears in both texts?",
+          "options": [
+            "Group projects should be abolished",
+            "Students should choose their own teams",
+            "Individual contribution should play a part in assessing group work",
+            "Free-riding is rare in practice"
+          ],
+          "answer": 2,
+          "explanation": "A calls for 'individual accountability within the collective task'; B uses an 'individual reflective report'."
+        },
+        {
+          "q": "How would the writer of Text B respond to the complaint in Text A about conflict and unfairness?",
+          "options": [
+            "By admitting group projects should be optional",
+            "By claiming free-riders are not a real problem",
+            "By suggesting students ignore the marks",
+            "By arguing that handling disagreement is part of what students learn"
+          ],
+          "answer": 3,
+          "explanation": "'conflict in a team is not a failure of the exercise but its subject matter.'"
+        },
+        {
+          "q": "Who would Text B be most useful for?",
+          "options": [
+            "Lecturers designing group assessments",
+            "Students applying for jobs",
+            "Employers recruiting graduates",
+            "Students dealing with a free-rider"
+          ],
+          "answer": 0,
+          "explanation": "It describes practical changes to supervision and marking: individual reports, check-ins, openness about the process."
+        }
+      ]
+    },
+    {
+      "type": "paired",
+      "title": "Volunteering and who benefits",
+      "textA": {
+        "title": "Volunteering and graduate outcomes: summary of findings",
+        "genre": "report",
+        "text": "This report draws on interviews with 240 graduates, three years after leaving university, to examine the relationship between volunteering during study and subsequent employment. Respondents who had volunteered regularly, defined here as at least two hours a week over a minimum of six months, were more likely to be in graduate-level employment than those who had not, and the difference persisted after accounting for degree subject and institution.\n\nThe mechanisms appear to be several. First, volunteering generates evidence of skills that degree transcripts cannot: responsibility for others, reliability, the capacity to take initiative within an unfamiliar organisation. Employers interviewed for the study frequently remarked that such evidence carried weight precisely because it was unrequired. Second, volunteering widens students' networks beyond their peer group, in several cases leading directly to job offers. Third, a small number of respondents reported that the experience had clarified their career direction, prompting them to change course before they had invested years in the wrong path.\n\nHowever, the findings should be read with care. Students who volunteer are not a random sample; they tend to have more free time and fewer financial pressures, and the association with employment may partly reflect advantages that precede volunteering. Moreover, the benefits were not evenly distributed. Graduates from lower-income backgrounds were less likely to have volunteered at all, and when they did, the roles tended to be less visible to employers, such as informal caring or community work not recorded on a CV.\n\nWe therefore recommend that universities formally recognise volunteering within the curriculum, offer small stipends to remove financial barriers, and help students articulate in applications the value of unpaid work they already do. Without such steps, there is a risk that volunteering, far from levelling the field, will entrench existing inequalities."
+      },
+      "textB": {
+        "title": "What nobody tells you about volunteering",
+        "genre": "blog",
+        "text": "I spent my second year volunteering at a refugee advice centre, three evenings a week, and I would not trade it. I want to say that first, because what follows may sound ungrateful. I learned more about listening in those months than in any seminar, and I met people whose resilience put my own complaints into proportion.\n\nBut I've grown wary of the way volunteering is now sold to students. Careers advisers speak of it as a line on a CV, a 'differentiator', and I watched friends choose placements less for the cause than for how impressive they would look. One acquaintance spent a fortnight at an overseas orphanage, was photographed holding a child, and left. I doubt anyone there remembers her name. There's something uncomfortable about a system in which the beneficiary of someone's generosity is, in practice, the volunteer.\n\nThen there's the matter of who can afford it. I could give up evenings because my parents covered my rent. My flatmate, who worked at a supermarket, could not, and she was no less keen. When I mentioned my placement in an interview, the panel visibly warmed. She, with a perfectly good record of reliability behind a till, got no such response.\n\nI don't want to put anyone off. The centre needed us, and what we did mattered. But I'd ask students to be honest with themselves about their motives, and I'd ask employers to stop treating unpaid work as a proxy for character. Plenty of people are generous and simply have nobody paying their rent. If we want a culture of service, we should start by making it possible for everyone to take part, rather than rewarding those for whom it was already easy."
+      },
+      "questions": [
+        {
+          "q": "What is the purpose of the final paragraph of Text A?",
+          "options": [
+            "To summarise the interview method",
+            "To warn students against unpaid work",
+            "To propose ways of preventing volunteering from deepening inequality",
+            "To challenge the report's own conclusions"
+          ],
+          "answer": 2,
+          "explanation": "It recommends recognition, stipends and help with applications, 'Without such steps ... entrench existing inequalities.'"
+        },
+        {
+          "q": "Which concern is raised in both texts?",
+          "options": [
+            "Volunteering should be compulsory",
+            "Students from poorer backgrounds have less opportunity to volunteer",
+            "Volunteers often receive poor training",
+            "Careers advisers overrate volunteering"
+          ],
+          "answer": 1,
+          "explanation": "A: lower-income graduates 'less likely to have volunteered'; B: the flatmate who worked at a supermarket 'could not'."
+        },
+        {
+          "q": "How would the writer of Text B view the employers' reaction reported in Text A?",
+          "options": [
+            "As unfair to equally reliable candidates who could not volunteer",
+            "As evidence that volunteers are more reliable",
+            "As proof that placements widen networks",
+            "As a sign that employers misunderstand charities"
+          ],
+          "answer": 0,
+          "explanation": "Employers prize unrequired work, while B's flatmate with 'a perfectly good record of reliability' got no response; B asks employers to stop treating it as 'a proxy for character'."
+        },
+        {
+          "q": "Why does the writer of Text B say 'I would not trade it'?",
+          "options": [
+            "To suggest that he regrets nothing about his career",
+            "To discourage others from doubting volunteering",
+            "To prove that the centre needed him",
+            "To make clear that the criticism comes from a positive experience"
+          ],
+          "answer": 3,
+          "explanation": "He adds 'because what follows may sound ungrateful'."
+        },
+        {
+          "q": "In Text A, 'entrench' most nearly means",
+          "options": [
+            "make more firmly established",
+            "bring to light",
+            "cause to disappear",
+            "protect from criticism"
+          ],
+          "answer": 0,
+          "explanation": "Volunteering could 'entrench existing inequalities', i.e. fix them more deeply rather than level the field."
+        }
+      ]
+    }
+  ],
+  "writing": {
+    "t1": {
+      "version": "chat",
+      "platform": "Group chat: University Societies Committee, Year 2",
+      "instructions": "You are a member of your university's Debating Society committee. The committee is planning its stand and a social event for Welcome Week. Read the group chat and write a reply to the group. In your reply you should respond to both bullet points below.",
+      "bullets": [
+        "say which of the two event ideas you support and explain why",
+        "suggest how the society could attract students who do not usually join societies"
+      ],
+      "thread": [
+        {
+          "author": "Marta",
+          "role": "Chair",
+          "text": "Right, Welcome Week is three weeks away. We have budget for one event beyond the stall. Option 1 is a quick-fire debate night, where newcomers can speak for sixty seconds on a silly motion. Option 2 is a quiet 'meet the committee' coffee morning. Thoughts?"
+        },
+        {
+          "author": "Joel",
+          "role": "Treasurer",
+          "text": "Coffee morning is cheaper and less stressful, but last year only about twelve people turned up. A debate night needs a bigger room and a microphone."
+        },
+        {
+          "author": "Sana",
+          "role": "Secretary",
+          "text": "Honestly, my worry is that the people who'd benefit most from joining are the ones who'd never walk up to a stall. How do we reach them?"
+        }
+      ]
+    },
+    "t2": {
+      "genre": "report",
+      "title": "Report for the Student Experience Committee: should the university continue its language-exchange scheme?",
+      "instructions": "Your university runs a language-exchange scheme in which students are paired with a partner to practise each other's languages. The Student Experience Committee must decide whether to continue and expand it. Write a report for the committee evaluating the scheme and recommending what should happen next. You should use headings. You MUST use ideas from the texts AND your own ideas. You MUST NOT copy from the texts.",
+      "sources": [
+        {
+          "label": "A",
+          "title": "Language-exchange scheme: end-of-year survey",
+          "type": "survey summary",
+          "text": "Of 310 participants surveyed, 72 per cent said their speaking confidence had improved, and 64 per cent said they had made at least one friend from another country. However, only 41 per cent were still meeting their partner after the first term. The most common reasons for stopping were timetable clashes (38 per cent), a mismatch of language level (27 per cent) and a lack of structure for sessions (19 per cent). Students who attended the optional launch event were twice as likely to keep meeting. Only 9 per cent of participants were postgraduates, and fewer than one in five came from the university's mature-student population, although both groups had expressed interest at registration. Staff time devoted to the scheme amounted to roughly four hours a week."
+        },
+        {
+          "label": "B",
+          "title": "Eight months of tandem Spanish",
+          "type": "blog post",
+          "text": "I signed up expecting to practise Spanish and, in the end, I learned more about Chile than about verbs. My partner, Camila, and I met every Wednesday in the library cafe. Some weeks we barely managed a coherent conversation; other weeks we talked for two hours about housing, football and her grandmother's cooking. I'll admit the first month was awkward because nobody told us what we were supposed to do, and Camila, who is a patient soul, still had to spend half the time explaining words I should have known. We invented our own routine: half an hour in each language, with a theme chosen in advance. That helped enormously. The scheme itself, I think, could do more to share ideas like that, perhaps through a short guide for newcomers or a noticeboard of conversation topics. And it would be good if it counted for something. I put in about a hundred hours and have nothing to show for it officially."
+        },
+        {
+          "label": "C",
+          "title": "'Informal learning needs a light touch'",
+          "type": "interview extract",
+          "text": "Dr Helen Okoye, who researches language acquisition, was asked whether universities should formalise exchange schemes. 'There's a tension,' she said. 'The great strength of tandem learning is that it's voluntary and relaxed. The moment you attach grades or compulsory logbooks, people start performing for the assessor rather than talking to their partner. That said, doing nothing isn't the answer either. Pairing is the delicate step. If you match a near-beginner with a fluent speaker, one of them gets nothing out of it. A short training session and a few suggested activities cost very little, and I'd put money there before I put money into certificates. In my experience, the schemes that survive are the ones where participants feel looked after at the start and then left alone.'"
+        }
+      ]
+    }
+  }
+}

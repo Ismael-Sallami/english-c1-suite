@@ -1,0 +1,97 @@
+[
+ {
+  "id": "exam-1",
+  "title": "Mock Exam 1",
+  "theme": "Technology and work: hybrid working, the gig economy, digital detox, automation, cybersecurity, AI in education and the workplace, online learning, older workers and technology, social media and recruitment, coding in schools",
+  "t1": "forum",
+  "t2": "essay",
+  "listening": [
+   "Back to the office?",
+   "The gig economy: freedom or fiction?",
+   "Rethinking the digital detox",
+   "Will robots take our jobs?"
+  ],
+  "reading": [
+   "Cybersecurity: the weakest link is rarely where you think",
+   "The essay is dead. Long live the essay?",
+   "Artificial intelligence at work",
+   "Learning online"
+  ]
+ },
+ {
+  "id": "exam-2",
+  "title": "Mock Exam 2",
+  "theme": "Environment & cities: urban green spaces, car-free city centres, food waste, rewilding, fast fashion, climate anxiety, renewable energy transition, allotments vs housing, zero-waste shops",
+  "t1": "email",
+  "t2": "report",
+  "listening": [
+   "The pocket park proposal",
+   "Car-free city centres",
+   "Why we throw food away",
+   "Rewilding Britain's uplands"
+  ],
+  "reading": [
+   "The true cost of a five-pound dress",
+   "Learning to live with the weather in our heads",
+   "Powering down the old grid",
+   "Who is the city's green space for?"
+  ]
+ },
+ {
+  "id": "exam-3",
+  "title": "Mock Exam 3",
+  "theme": "Education and society: tuition and access, lifelong learning, standardised testing, volunteering, gap years, humanities degrees, peer tutoring, group projects, outdoor learning, student societies and language exchange",
+  "t1": "chat",
+  "t2": "report",
+  "listening": [
+   "Peer tutoring",
+   "Tuition fees and access to university",
+   "Standardised testing",
+   "The gap year"
+  ],
+  "reading": [
+   "In defence of the 'useless' degree",
+   "Back to the classroom at fifty-two",
+   "Group projects at university",
+   "Volunteering and who benefits"
+  ]
+ },
+ {
+  "id": "exam-4",
+  "title": "Mock Exam 4",
+  "theme": "Health and science: citizen science, student mental health, nutrition myths, the placebo effect, sleep science, sport science, ageing populations, wearable trackers, burnout, health advice online",
+  "t1": "forum",
+  "t2": "essay",
+  "listening": [
+   "Citizen science",
+   "Student mental health",
+   "Nutrition myths",
+   "The placebo effect"
+  ],
+  "reading": [
+   "The tyranny of eight hours",
+   "Marginal gains and their discontents",
+   "Living longer: opportunity or burden?",
+   "Tracking our own bodies"
+  ]
+ },
+ {
+  "id": "exam-5",
+  "title": "Mock Exam 5",
+  "theme": "Culture and media: music streaming and artists' pay, overtourism, bilingualism and language learning, misinformation and media literacy, influencers, the vinyl revival, repatriation of museum artefacts, machine translation",
+  "t1": "email",
+  "t2": "essay",
+  "listening": [
+   "Playing for pennies",
+   "The limits of tourism",
+   "What speaking two languages does to the mind",
+   "Beyond 'fake news'"
+  ],
+  "reading": [
+   "The appeal of the awkward",
+   "Life in the frame",
+   "Should museums return their collections?",
+   "Translation technology and language learning"
+  ]
+ }
+]

@@ -1,0 +1,2356 @@
+{
+ "topics": [
+  {
+   "id": "inversion",
+   "title": "Negative & conditional inversion",
+   "level": "C1",
+   "summary": "Inversión del sujeto tras adverbios negativos y en condicionales formales.",
+   "theory": "**Inversión** = auxiliar + sujeto + verbo. Se usa en registro formal/escrito para dar énfasis.\n\n**Tras adverbios negativos o restrictivos** (al inicio de frase):\n- `Never / Rarely / Seldom / Hardly ever / Little / Nowhere`\n- `Not only ... but also`, `No sooner ... than`, `Hardly/Scarcely ... when`\n- `Under no circumstances`, `On no account`, `At no time`, `Only when / Only after / Only then / Only by`\n- Si no hay auxiliar, se añade **do/does/did**: `Rarely does he complain.`\n\n**Condicionales sin *if*:**\n- `Should you need help, call me.` (= If you should need)\n- `Were I you, I would accept.` (= If I were you)\n- `Had we known, we would have left earlier.` (= If we had known)\n\n**Ojo:** en `No sooner had I sat down than...` usamos **than** (no *when*); con `hardly/scarcely` usamos **when**. Tras `Not only` se invierte la primera cláusula, no la segunda. Con `So + adj` / `Such + be` también hay inversión: `So tired was she that...`",
+   "examples": [
+    "Never have I seen such a spectacular view.",
+    "Not only did she win the award, but she also donated the prize money.",
+    "No sooner had we arrived than it started to rain.",
+    "Under no circumstances should you open this door.",
+    "Had I known about the delay, I would have taken the train.",
+    "Only after the results were published did people realise the scale of the problem."
+   ],
+   "commonMistakes": [
+    "*Never I have seen this before -> Never have I seen this before.",
+    "*Not only she was late, but ... -> Not only was she late, but ...",
+    "*No sooner had he left when ... -> No sooner had he left than ...",
+    "*Rarely he goes out -> Rarely does he go out.",
+    "*Only when I arrived, I realised -> Only when I arrived did I realise."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "Not only ___ late, but he also forgot the report.",
+     "options": [
+      "he was",
+      "was he",
+      "he is",
+      "did he"
+     ],
+     "answer": 1,
+     "explanation": "Tras 'Not only' al inicio: inversión con be -> 'was he'."
+    },
+    {
+     "type": "mc",
+     "prompt": "No sooner had she left ___ the phone rang.",
+     "options": [
+      "when",
+      "than",
+      "that",
+      "as"
+     ],
+     "answer": 1,
+     "explanation": "'No sooner ... than'; 'hardly ... when'."
+    },
+    {
+     "type": "mc",
+     "prompt": "___ you need further assistance, please contact reception.",
+     "options": [
+      "Would",
+      "Should",
+      "Did",
+      "Might"
+     ],
+     "answer": 1,
+     "explanation": "Condicional formal de 'if you should need' -> 'Should you need'."
+    },
+    {
+     "type": "mc",
+     "prompt": "Only after the meeting ___ the real reason for the delay.",
+     "options": [
+      "I learnt",
+      "did I learn",
+      "I did learn",
+      "had I learnt"
+     ],
+     "answer": 1,
+     "explanation": "Tras 'Only after + cláusula' se invierte la principal: 'did I learn'."
+    },
+    {
+     "type": "gap",
+     "prompt": "Little ___ (she / know) what was about to happen.",
+     "answers": [
+      "did she know"
+     ],
+     "explanation": "'Little' con sentido negativo exige inversión con did."
+    },
+    {
+     "type": "gap",
+     "prompt": "___ (I / be) in your position, I would think twice. (formal)",
+     "answers": [
+      "Were I",
+      "were I"
+     ],
+     "explanation": "Condicional 2 invertido: 'Were I in your position'."
+    },
+    {
+     "type": "gap",
+     "prompt": "Seldom ___ (we / see) such dedication in young people.",
+     "answers": [
+      "do we see"
+     ],
+     "explanation": "'Seldom' + inversión con do en presente simple."
+    },
+    {
+     "type": "transform",
+     "prompt": "I had no idea he was the CEO. (IDEA)",
+     "keyword": "IDEA",
+     "start": "Little",
+     "answers": [
+      "Little idea did I have that he was the CEO",
+      "Little idea had I that he was the CEO"
+     ],
+     "explanation": "'Little idea did I have' = inversión con adverbio negativo."
+    },
+    {
+     "type": "transform",
+     "prompt": "If you should change your mind, let me know. (SHOULD)",
+     "keyword": "SHOULD",
+     "start": "Should",
+     "answers": [
+      "Should you change your mind, let me know",
+      "Should you change your mind, please let me know"
+     ],
+     "explanation": "Si se omite 'if', 'should' pasa al inicio."
+    },
+    {
+     "type": "transform",
+     "prompt": "She not only lost her job but also her house. (ONLY)",
+     "keyword": "ONLY",
+     "start": "Not",
+     "answers": [
+      "Not only did she lose her job, but she also lost her house",
+      "Not only did she lose her job but also her house",
+      "Not only did she lose her job, but also her house"
+     ],
+     "explanation": "Not only + did + sujeto + infinitivo."
+    }
+   ]
+  },
+  {
+   "id": "cleft-sentences",
+   "title": "Cleft sentences (it / what / all)",
+   "level": "C1",
+   "summary": "Estructuras de hendidura para enfatizar información concreta.",
+   "theory": "Las **cleft sentences** dividen una frase en dos partes para enfatizar un elemento.\n\n**It-cleft:** `It + be + elemento enfatizado + that/who ...`\n- `It was Maria who solved the problem.`\n- `It was only after midnight that we got home.`\n\n**Wh-cleft (pseudo-cleft):** `What + sujeto + verbo + be + elemento`\n- `What I need is a long holiday.`\n- `What she did was (to) complain to the manager.` (tras *do* el infinitivo puede llevar o no *to*)\n\n**Reverse wh-cleft:** `A long holiday is what I need.`\n\n**All-cleft:** `All I want is a bit of peace.` (= lo único que...)\n\n**Otras:** `The reason why ... is that ...`; `The thing that annoys me is ...`; `The place where ...`.\n\n**Cuidado:**\n- Con persona usamos `who` o `that`; con cosas, `that` (no *which*).\n- En it-cleft, el verbo *be* concuerda en tiempo con el contexto: `It was John that broke it.`\n- Tras `The reason is` usamos `that` (no *because*): `The reason is that we lacked funds.`",
+   "examples": [
+    "It was the lack of funding that caused the project to fail.",
+    "What really bothers me is the constant noise.",
+    "All I want is a quiet weekend.",
+    "It wasn't until 2019 that she moved abroad.",
+    "What we did was (to) book the tickets in advance.",
+    "The reason why he resigned was that he felt undervalued."
+   ],
+   "commonMistakes": [
+    "*The reason is because ... -> The reason is that ...",
+    "*It was John which called me -> It was John who/that called me.",
+    "*What I need it is a rest -> What I need is a rest.",
+    "*It was yesterday when I saw him -> It was yesterday that I saw him."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "___ I admire most about her is her patience.",
+     "options": [
+      "That",
+      "What",
+      "Which",
+      "It"
+     ],
+     "answer": 1,
+     "explanation": "Wh-cleft: 'What I admire most ... is'."
+    },
+    {
+     "type": "mc",
+     "prompt": "It was in 2015 ___ the company relocated.",
+     "options": [
+      "when",
+      "which",
+      "that",
+      "what"
+     ],
+     "answer": 2,
+     "explanation": "It-cleft con tiempo: 'that'."
+    },
+    {
+     "type": "mc",
+     "prompt": "The reason he left was ___ he felt undervalued.",
+     "options": [
+      "because",
+      "that",
+      "why",
+      "for"
+     ],
+     "answer": 1,
+     "explanation": "'The reason ... is/was that', no 'because'."
+    },
+    {
+     "type": "mc",
+     "prompt": "___ she wanted was a little recognition.",
+     "options": [
+      "All",
+      "Everything",
+      "It",
+      "The"
+     ],
+     "answer": 0,
+     "explanation": "'All she wanted was' = lo único que quería."
+    },
+    {
+     "type": "gap",
+     "prompt": "What I did ___ (be) call the police.",
+     "answers": [
+      "was"
+     ],
+     "explanation": "Wh-cleft con 'did' -> 'was (to) call'."
+    },
+    {
+     "type": "gap",
+     "prompt": "It wasn't ___ the end of the film that I realised who the culprit was.",
+     "answers": [
+      "until"
+     ],
+     "explanation": "'It wasn't until ... that' = no fue hasta..."
+    },
+    {
+     "type": "gap",
+     "prompt": "It was the manager ___ (who/that) first spotted the error.",
+     "answers": [
+      "who",
+      "that"
+     ],
+     "explanation": "Para personas: who o that."
+    },
+    {
+     "type": "transform",
+     "prompt": "I need a break more than anything. (WHAT)",
+     "keyword": "WHAT",
+     "start": "What",
+     "answers": [
+      "What I need is a break",
+      "What I need more than anything is a break"
+     ],
+     "explanation": "Wh-cleft: What + I need + is + elemento."
+    },
+    {
+     "type": "transform",
+     "prompt": "Nothing but the truth will satisfy me. (ALL)",
+     "keyword": "ALL",
+     "start": "All",
+     "answers": [
+      "All I want is the truth",
+      "All I want is the truth to be told",
+      "All that will satisfy me is the truth"
+     ],
+     "explanation": "'All' cleft con sentido de 'solo'."
+    },
+    {
+     "type": "transform",
+     "prompt": "Her arrogance annoys me most. (THING)",
+     "keyword": "THING",
+     "start": "The",
+     "answers": [
+      "The thing that annoys me most is her arrogance",
+      "The thing which annoys me most is her arrogance",
+      "The thing I find most annoying is her arrogance"
+     ],
+     "explanation": "'The thing that ... is'."
+    }
+   ]
+  },
+  {
+   "id": "mixed-conditionals",
+   "title": "Mixed conditionals & alternatives to if",
+   "level": "C1",
+   "summary": "Condicionales mixtos y conectores alternativos a if.",
+   "theory": "**Condicionales mixtos** combinan tiempos distintos:\n- **Pasado -> presente:** `If I had studied medicine, I would be a doctor now.` (if + past perfect, would + infinitivo)\n- **Presente -> pasado:** `If she were more organised, she wouldn't have missed the flight.` (if + past simple, would have + pp)\n\n**Alternativas a *if*:**\n- `provided / providing (that)`: condición necesaria. `Provided that you pay in advance, we'll reserve it.`\n- `as long as / so long as`: similar, más informal.\n- `supposing / suppose (that)`: hipótesis. `Supposing you lost your job, what would you do?`\n- `unless` = if ... not. `Unless you hurry, you'll miss it.` (no usar con *not*: *unless you don't*)\n- `but for + nombre` = sin / de no ser por. `But for your help, I would have failed.`\n- `otherwise` = si no, de lo contrario. `Leave now; otherwise you'll be late.`\n- `in case` = por si acaso (no es condicional: `Take an umbrella in case it rains.`)\n- `on condition that` (formal); `were it not for / had it not been for` (inversión).\n\n**Error típico:** usar *will* tras `if/provided/unless` para futuro: `*if it will rain`.",
+   "examples": [
+    "If I had taken that job, I would be living in Berlin now.",
+    "If he weren't so stubborn, he wouldn't have lost so many friends.",
+    "But for your support, the project would have collapsed.",
+    "We'll proceed provided that everyone agrees.",
+    "Supposing they refused, what would you do?",
+    "Had it not been for the storm, we would have arrived on time."
+   ],
+   "commonMistakes": [
+    "*If it will rain, we stay -> If it rains, we'll stay.",
+    "*Unless you don't pay -> Unless you pay.",
+    "*I'll take an umbrella if it rains (por si acaso) -> ... in case it rains.",
+    "*But for you help -> But for your help.",
+    "*If I would have known -> If I had known."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "If I ___ harder at school, I would have a better job now.",
+     "options": [
+      "studied",
+      "had studied",
+      "would study",
+      "have studied"
+     ],
+     "answer": 1,
+     "explanation": "Mixto 3->2: if + past perfect, would + infinitivo."
+    },
+    {
+     "type": "mc",
+     "prompt": "___ your advice, I would have made a terrible mistake.",
+     "options": [
+      "Without of",
+      "But for",
+      "Unless",
+      "Provided"
+     ],
+     "answer": 1,
+     "explanation": "'But for + nombre' = de no ser por."
+    },
+    {
+     "type": "mc",
+     "prompt": "You can borrow the car ___ you drive carefully.",
+     "options": [
+      "unless",
+      "otherwise",
+      "provided that",
+      "supposing"
+     ],
+     "answer": 2,
+     "explanation": "Condición necesaria: provided that."
+    },
+    {
+     "type": "mc",
+     "prompt": "Take a coat ___ it gets cold later.",
+     "options": [
+      "if",
+      "in case",
+      "unless",
+      "provided"
+     ],
+     "answer": 1,
+     "explanation": "'In case' = por si acaso."
+    },
+    {
+     "type": "gap",
+     "prompt": "Leave now; ___ you'll miss the train.",
+     "answers": [
+      "otherwise"
+     ],
+     "explanation": "'Otherwise' = si no."
+    },
+    {
+     "type": "gap",
+     "prompt": "If she ___ (be) less shy, she would have applied for the job last year.",
+     "answers": [
+      "were",
+      "was"
+     ],
+     "explanation": "Mixto presente -> pasado: if + past simple, would have + pp."
+    },
+    {
+     "type": "gap",
+     "prompt": "___ it not been for his quick thinking, the fire would have spread. (inversion)",
+     "answers": [
+      "Had"
+     ],
+     "explanation": "Had it not been for = if it hadn't been for."
+    },
+    {
+     "type": "transform",
+     "prompt": "If you don't hurry, you'll be late. (UNLESS)",
+     "keyword": "UNLESS",
+     "start": "Unless",
+     "answers": [
+      "Unless you hurry, you'll be late",
+      "Unless you hurry you will be late",
+      "Unless you hurry, you will be late"
+     ],
+     "explanation": "Unless = if ... not."
+    },
+    {
+     "type": "transform",
+     "prompt": "Thanks to her help, we finished on time. (BUT)",
+     "keyword": "BUT",
+     "start": "But",
+     "answers": [
+      "But for her help, we wouldn't have finished on time",
+      "But for her help we would not have finished on time"
+     ],
+     "explanation": "'But for' + nombre + would have + pp."
+    },
+    {
+     "type": "transform",
+     "prompt": "I didn't take the job, so I'm not rich now. (IF)",
+     "keyword": "IF",
+     "start": "If",
+     "answers": [
+      "If I had taken the job, I would be rich now",
+      "If I had taken the job, I'd be rich now"
+     ],
+     "explanation": "Mixto: past perfect + would + infinitivo."
+    }
+   ]
+  },
+  {
+   "id": "wish-if-only",
+   "title": "Wish / if only / it's (high) time / would rather",
+   "level": "C1",
+   "summary": "Deseos, arrepentimientos y preferencias con tiempos 'hacia atrás'.",
+   "theory": "Se usa el **tiempo verbal \"hacia atrás\"** para hablar de situaciones irreales:\n\n- **Presente irreal:** `I wish I had more time.` / `If only I knew the answer.` (past simple)\n- **Pasado irreal (arrepentimiento):** `I wish I hadn't said that.` / `If only we had left earlier.` (past perfect)\n- **Quejas/molestias sobre el futuro:** `I wish you would stop interrupting.` / `If only it would stop raining.` (wish + would; sujeto distinto, no se usa con *I wish I would*)\n- Con **were** para todas las personas en registro formal: `I wish I were taller.`\n\n**It's (high / about) time + past simple:** `It's high time you found a job.` (ya debería haber ocurrido)\n\n**Would rather:**\n- Mismo sujeto: `I'd rather stay at home.` (+ infinitivo sin *to*)\n- Sujeto distinto, presente/futuro: `I'd rather you stayed.` (past simple)\n- Sujeto distinto, pasado: `I'd rather you hadn't told her.`\n\n**Otras:** `suppose/supposing`, `as if / as though + past` (`He talks as if he owned the place`).\n\n**Error típico:** *I wish I would have*... -> `I wish I had`.",
+   "examples": [
+    "I wish I had more free time to travel.",
+    "If only I had listened to your advice.",
+    "I wish you would stop leaving your clothes everywhere.",
+    "It's high time the government took action.",
+    "I'd rather you didn't smoke in here.",
+    "He behaves as if he were the boss."
+   ],
+   "commonMistakes": [
+    "*I wish I would have studied -> I wish I had studied.",
+    "*It's time we go -> It's time we went.",
+    "*I'd rather you to stay -> I'd rather you stayed.",
+    "*I wish I will pass -> I hope I pass / I wish I could pass.",
+    "*I would rather to go -> I would rather go."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "I wish I ___ so much money last month.",
+     "options": [
+      "didn't spend",
+      "hadn't spent",
+      "wouldn't spend",
+      "haven't spent"
+     ],
+     "answer": 1,
+     "explanation": "Arrepentimiento pasado -> past perfect."
+    },
+    {
+     "type": "mc",
+     "prompt": "It's high time you ___ about your future.",
+     "options": [
+      "think",
+      "thought",
+      "will think",
+      "have thought"
+     ],
+     "answer": 1,
+     "explanation": "It's high time + past simple."
+    },
+    {
+     "type": "mc",
+     "prompt": "I'd rather you ___ anyone about this.",
+     "options": [
+      "don't tell",
+      "didn't tell",
+      "won't tell",
+      "not tell"
+     ],
+     "answer": 1,
+     "explanation": "Would rather + sujeto distinto + past simple."
+    },
+    {
+     "type": "mc",
+     "prompt": "I wish the neighbours ___ making so much noise.",
+     "options": [
+      "stopped",
+      "would stop",
+      "stop",
+      "had stop"
+     ],
+     "answer": 1,
+     "explanation": "Queja sobre conducta ajena: wish + would."
+    },
+    {
+     "type": "gap",
+     "prompt": "If only I ___ (know) the answer to that question!",
+     "answers": [
+      "knew"
+     ],
+     "explanation": "Presente irreal: past simple."
+    },
+    {
+     "type": "gap",
+     "prompt": "She talks as if she ___ (own) the company.",
+     "answers": [
+      "owned"
+     ],
+     "explanation": "as if + past simple para situación irreal."
+    },
+    {
+     "type": "gap",
+     "prompt": "I'd rather you ___ (not / smoke) in the house.",
+     "answers": [
+      "didn't smoke",
+      "did not smoke"
+     ],
+     "explanation": "would rather + sujeto distinto + didn't + infinitivo."
+    },
+    {
+     "type": "transform",
+     "prompt": "I regret not studying harder. (WISH)",
+     "keyword": "WISH",
+     "start": "I",
+     "answers": [
+      "I wish I had studied harder",
+      "I wish I'd studied harder"
+     ],
+     "explanation": "Arrepentimiento: wish + past perfect."
+    },
+    {
+     "type": "transform",
+     "prompt": "You should have started the project already. (TIME)",
+     "keyword": "TIME",
+     "start": "It's",
+     "answers": [
+      "It's high time you started the project",
+      "It's time you started the project",
+      "It is high time you started the project",
+      "It is time you started the project",
+      "It's about time you started the project",
+      "It is about time you started the project"
+     ],
+     "explanation": "It's (high) time + past simple."
+    },
+    {
+     "type": "transform",
+     "prompt": "I'd prefer you not to call me at work. (RATHER)",
+     "keyword": "RATHER",
+     "start": "I'd",
+     "answers": [
+      "I'd rather you didn't call me at work",
+      "I would rather you didn't call me at work",
+      "I would rather you did not call me at work",
+      "I'd rather you did not call me at work"
+     ],
+     "explanation": "Would rather + sujeto + past simple."
+    }
+   ]
+  },
+  {
+   "id": "passive-reporting",
+   "title": "Passive reporting structures",
+   "level": "C1",
+   "summary": "It is said that... / He is thought to...: pasivas impersonales.",
+   "theory": "Los verbos de opinión o información (**say, think, believe, report, know, expect, consider, claim, suppose, understand, allege**) permiten dos pasivas:\n\n**1. It + passive + that-clause** (impersonal):\n- `It is said that the company is losing money.`\n- `It was believed that he had fled.`\n\n**2. Sujeto + passive + to-infinitive:**\n- `The company is said to be losing money.` (infinitivo simple = mismo momento)\n- `She is thought to have left the country.` (infinitivo perfecto = antes)\n- `He is believed to be working abroad.` (infinitivo continuo = en curso)\n\n**Reglas:**\n- Si el hecho es anterior al verbo principal, usa **to have + pp**.\n- Si el verbo principal está en pasado: `He was said to have been ill.`\n- Muy usado en noticias y en writing formal para evitar atribuir la opinión a alguien concreto.\n- Otros: `be rumoured/reputed/alleged`: `He is alleged to have stolen it.`\n\n**Con *suppose*:** `be supposed to` suele significar obligación o expectativa: `You're supposed to arrive at 9.`\n\n**Error típico:** *It is said to be that...* o usar *that* con sujeto personal + infinitivo.",
+   "examples": [
+    "It is widely believed that the economy will recover next year.",
+    "The suspect is thought to have fled the country.",
+    "The building is reported to be on fire.",
+    "He is said to have been working on a new novel.",
+    "It was alleged that the minister had accepted bribes.",
+    "The new law is expected to come into force in March."
+   ],
+   "commonMistakes": [
+    "*It is said to be that ... -> It is said that ...",
+    "*He is thought have left -> He is thought to have left.",
+    "*She is believed leaving -> She is believed to be leaving.",
+    "*People say he to be rich -> He is said to be rich."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "The new bridge ___ to be the longest in Europe.",
+     "options": [
+      "says",
+      "is said",
+      "is saying",
+      "has said"
+     ],
+     "answer": 1,
+     "explanation": "Pasiva impersonal: is said to be."
+    },
+    {
+     "type": "mc",
+     "prompt": "He is believed ___ the country last week.",
+     "options": [
+      "to leave",
+      "to have left",
+      "leaving",
+      "having left"
+     ],
+     "answer": 1,
+     "explanation": "Acción anterior -> to have + pp."
+    },
+    {
+     "type": "mc",
+     "prompt": "It ___ that the factory will close.",
+     "options": [
+      "is rumoured",
+      "rumours",
+      "is rumouring",
+      "rumoured"
+     ],
+     "answer": 0,
+     "explanation": "It + pasiva + that."
+    },
+    {
+     "type": "mc",
+     "prompt": "They are thought ___ for a new house at the moment.",
+     "options": [
+      "to look",
+      "to have looked",
+      "to be looking",
+      "looking"
+     ],
+     "answer": 2,
+     "explanation": "Acción en curso -> to be + -ing."
+    },
+    {
+     "type": "gap",
+     "prompt": "The suspect is believed ___ (flee) the country two days ago.",
+     "answers": [
+      "to have fled"
+     ],
+     "explanation": "Acción anterior -> to have + pp."
+    },
+    {
+     "type": "gap",
+     "prompt": "It ___ (report) that several people were injured.",
+     "answers": [
+      "was reported",
+      "is reported",
+      "has been reported"
+     ],
+     "explanation": "Pasiva impersonal con that-clause."
+    },
+    {
+     "type": "gap",
+     "prompt": "Prices are expected ___ (rise) sharply next year.",
+     "answers": [
+      "to rise"
+     ],
+     "explanation": "expected + to-infinitive."
+    },
+    {
+     "type": "transform",
+     "prompt": "People say that he is a millionaire. (SAID)",
+     "keyword": "SAID",
+     "start": "He",
+     "answers": [
+      "He is said to be a millionaire"
+     ],
+     "explanation": "Sujeto + is said to + infinitivo."
+    },
+    {
+     "type": "transform",
+     "prompt": "They believe the thief entered through the window. (BELIEVED)",
+     "keyword": "BELIEVED",
+     "start": "The thief",
+     "answers": [
+      "The thief is believed to have entered through the window",
+      "The thief was believed to have entered through the window"
+     ],
+     "explanation": "Acción anterior -> to have entered."
+    },
+    {
+     "type": "transform",
+     "prompt": "It is thought that she is living in Canada. (BE)",
+     "keyword": "BE",
+     "start": "She",
+     "answers": [
+      "She is thought to be living in Canada"
+     ],
+     "explanation": "Acción en curso -> to be living."
+    }
+   ]
+  },
+  {
+   "id": "causative",
+   "title": "Causative have/get",
+   "level": "C1",
+   "summary": "Have/get something done y have somebody do.",
+   "theory": "La **causativa** indica que alguien hace algo **por nosotros** (o que algo nos pasa).\n\n**have + objeto + participio:**\n- `I had my car repaired.` (lo hizo otro)\n- `She's having her hair cut tomorrow.`\n\n**get + objeto + participio** (más informal): `I got my laptop fixed.` También para logros: `I finally got the report finished.`\n\n**have + persona + infinitivo sin to:** `The teacher had us rewrite the essay.`\n**get + persona + to-infinitivo:** `I got my brother to lend me his car.` (convencer)\n\n**Experiencias desagradables:** `He had his wallet stolen.` (= le robaron). No hay intención, solo afecta al sujeto.\n\n**Otros usos:**\n- Negativo con **won't have**: `I won't have you talking to me like that.` (no lo toleraré)\n- `have sb doing sth`: `She had us laughing all night.`\n- `get sth done` también = completar: `We need to get this finished.`\n\n**Errores típicos para hispanohablantes:**\n- Decir *I repaired my car* cuando lo hizo otro.\n- Olvidar el participio: *I had my hair to cut*.\n- Usar *to* tras *have*: *had him to do it*.",
+   "examples": [
+    "We're having the kitchen redesigned next month.",
+    "She had her handbag stolen on the train.",
+    "I'll get the mechanic to check the brakes.",
+    "The manager had everyone sign the new contract.",
+    "He got his essay marked by a native speaker.",
+    "I won't have you speaking to her like that."
+   ],
+   "commonMistakes": [
+    "*I cut my hair yesterday (en la peluquería) -> I had my hair cut.",
+    "*I had my car to repair -> I had my car repaired.",
+    "*She had him to leave -> She had him leave.",
+    "*I got him do it -> I got him to do it.",
+    "*I have fixed my phone (por otro) -> I have had my phone fixed."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "I need to ___ my passport renewed before the trip.",
+     "options": [
+      "make",
+      "have",
+      "do",
+      "let"
+     ],
+     "answer": 1,
+     "explanation": "have + objeto + participio."
+    },
+    {
+     "type": "mc",
+     "prompt": "She got her brother ___ her with the move.",
+     "options": [
+      "help",
+      "to help",
+      "helping",
+      "helped"
+     ],
+     "answer": 1,
+     "explanation": "get + persona + to-infinitivo."
+    },
+    {
+     "type": "mc",
+     "prompt": "The teacher had the students ___ the exercise again.",
+     "options": [
+      "to do",
+      "do",
+      "doing",
+      "done"
+     ],
+     "answer": 1,
+     "explanation": "have + persona + infinitivo sin to."
+    },
+    {
+     "type": "mc",
+     "prompt": "He ___ his wallet stolen at the airport.",
+     "options": [
+      "had",
+      "made",
+      "let",
+      "did"
+     ],
+     "answer": 0,
+     "explanation": "Experiencia desagradable: had + objeto + participio."
+    },
+    {
+     "type": "gap",
+     "prompt": "We're having our house ___ (paint) next week.",
+     "answers": [
+      "painted"
+     ],
+     "explanation": "have + objeto + participio."
+    },
+    {
+     "type": "gap",
+     "prompt": "I'll get the plumber ___ (come) tomorrow.",
+     "answers": [
+      "to come"
+     ],
+     "explanation": "get + persona + to + infinitivo."
+    },
+    {
+     "type": "gap",
+     "prompt": "She had the waiter ___ (bring) another menu.",
+     "answers": [
+      "bring"
+     ],
+     "explanation": "have + persona + infinitivo sin to."
+    },
+    {
+     "type": "transform",
+     "prompt": "A technician installed the new system for us. (HAD)",
+     "keyword": "HAD",
+     "start": "We",
+     "answers": [
+      "We had the new system installed by a technician",
+      "We had a technician install the new system",
+      "We had the new system installed"
+     ],
+     "explanation": "Causativa: had + objeto + participio."
+    },
+    {
+     "type": "transform",
+     "prompt": "I persuaded my colleague to cover my shift. (GOT)",
+     "keyword": "GOT",
+     "start": "I",
+     "answers": [
+      "I got my colleague to cover my shift"
+     ],
+     "explanation": "get + persona + to-infinitivo."
+    },
+    {
+     "type": "transform",
+     "prompt": "Someone broke into her flat while she was away. (HAD)",
+     "keyword": "HAD",
+     "start": "She",
+     "answers": [
+      "She had her flat broken into while she was away",
+      "She had her flat broken into"
+     ],
+     "explanation": "Experiencia desagradable con had + pp (broken into)."
+    }
+   ]
+  },
+  {
+   "id": "participle-clauses",
+   "title": "Participle clauses (-ing, -ed, having + pp)",
+   "level": "C1",
+   "summary": "Oraciones de participio para escribir de forma más densa y formal.",
+   "theory": "Las **participle clauses** acortan oraciones y dan estilo formal. El sujeto de la cláusula debe ser **el mismo** que el de la principal.\n\n**-ing (activo, simultáneo o causa):**\n- `Walking down the street, I bumped into an old friend.` (mientras caminaba)\n- `Feeling tired, she went to bed early.` (causa)\n\n**Having + pp (acción anterior):**\n- `Having finished the report, he went home.` (= After he had finished)\n- `Not having been informed, we missed the deadline.`\n\n**-ed / being + pp (pasivo):**\n- `Written in 1850, the novel is still popular.`\n- `Faced with a difficult choice, she asked for advice.`\n\n**Con conjunción:** `Before leaving, check the lights.` / `While waiting, we chatted.` / `Although exhausted, he kept going.`\n\n**Dangling participle (error):** `*Walking down the street, the rain started.` (¿quién caminaba?) -> `Walking down the street, I got caught in the rain.`\n\n**Otros:** `Generally speaking`, `Judging by`, `Considering that` son fijos y no exigen mismo sujeto.\n\n**Error típico en español:** usar gerundio de posterioridad: `*He left, arriving at 8` es mejorable con *and arrived*.",
+   "examples": [
+    "Having completed the course, she applied for a promotion.",
+    "Not knowing what to say, he remained silent.",
+    "Built in the 12th century, the castle attracts thousands of visitors.",
+    "Faced with mounting debts, the company went bankrupt.",
+    "Judging by the results, the campaign was a success.",
+    "Having been warned, they chose to ignore the advice."
+   ],
+   "commonMistakes": [
+    "*Walking home, the rain began -> Walking home, I got caught in the rain.",
+    "*Having finished, the door was locked -> Having finished, she locked the door.",
+    "*Knowing not what to do -> Not knowing what to do.",
+    "*Before to leave -> Before leaving.",
+    "*Being a student, the library is useful -> Being a student, I find the library useful."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "___ the report, she emailed it to her manager.",
+     "options": [
+      "Finishing",
+      "Having finished",
+      "Finished",
+      "To finish"
+     ],
+     "answer": 1,
+     "explanation": "Acción anterior -> having + pp."
+    },
+    {
+     "type": "mc",
+     "prompt": "___ in 1920, the hotel has been renovated many times.",
+     "options": [
+      "Building",
+      "Built",
+      "Having built",
+      "Being build"
+     ],
+     "answer": 1,
+     "explanation": "Participio pasado con sentido pasivo."
+    },
+    {
+     "type": "mc",
+     "prompt": "Which sentence is correct?",
+     "options": [
+      "Walking to work, my phone rang.",
+      "Walking to work, I heard my phone ring.",
+      "Walked to work, I heard my phone.",
+      "To walk to work, I heard my phone."
+     ],
+     "answer": 1,
+     "explanation": "El sujeto de la participle clause (I) debe coincidir."
+    },
+    {
+     "type": "mc",
+     "prompt": "___ what to do, they asked for help.",
+     "options": [
+      "Not knowing",
+      "Knowing not",
+      "Don't knowing",
+      "Not known"
+     ],
+     "answer": 0,
+     "explanation": "Negación: Not + -ing."
+    },
+    {
+     "type": "gap",
+     "prompt": "___ (not / tell) about the change, I turned up at the wrong time.",
+     "answers": [
+      "Not having been told",
+      "Not being told"
+     ],
+     "explanation": "Pasivo y negativo: Not having been told."
+    },
+    {
+     "type": "gap",
+     "prompt": "___ (live) abroad for years, she speaks four languages.",
+     "answers": [
+      "Having lived",
+      "Having been living"
+     ],
+     "explanation": "Acción anterior con resultado presente."
+    },
+    {
+     "type": "gap",
+     "prompt": "___ (compare) with last year, sales have fallen.",
+     "answers": [
+      "Compared"
+     ],
+     "explanation": "Participio pasado con sentido pasivo."
+    },
+    {
+     "type": "transform",
+     "prompt": "After he had checked the figures, he sent the invoice. (HAVING)",
+     "keyword": "HAVING",
+     "start": "Having",
+     "answers": [
+      "Having checked the figures, he sent the invoice"
+     ],
+     "explanation": "Having + pp para acción anterior."
+    },
+    {
+     "type": "transform",
+     "prompt": "Because she felt nervous, she forgot her speech. (FEELING)",
+     "keyword": "FEELING",
+     "start": "Feeling",
+     "answers": [
+      "Feeling nervous, she forgot her speech"
+     ],
+     "explanation": "-ing con sentido causal."
+    },
+    {
+     "type": "transform",
+     "prompt": "As it was written in a hurry, the essay contained many errors. (WRITTEN)",
+     "keyword": "WRITTEN",
+     "start": "Written",
+     "answers": [
+      "Written in a hurry, the essay contained many errors"
+     ],
+     "explanation": "Participio pasado pasivo."
+    }
+   ]
+  },
+  {
+   "id": "relative-advanced",
+   "title": "Relative clauses advanced",
+   "level": "C1",
+   "summary": "Whereby, in which, of whom, whose y comentarios con which.",
+   "theory": "En C1 se usan relativas más formales y complejas.\n\n**Preposición + whom/which** (formal): `The person to whom I spoke...` / `The report in which he explains...`\n- Informal: `The person I spoke to.` (preposición al final)\n\n**Cuantificador + of whom/which:** `She has three sons, two of whom are doctors.` / `Many books, most of which were old.`\n\n**whose** (posesivo, personas y cosas): `A company whose profits fell...`\n\n**whereby** = por el cual (sistema, acuerdo): `A system whereby citizens vote online.`\n\n**Which-comment clauses** (se refieren a toda la oración anterior, con coma): `He passed the exam, which surprised everyone.`\n\n**Defining vs non-defining:**\n- Defining (sin comas, *that* permitido): `The book that I read...`\n- Non-defining (con comas, nunca *that*): `My boss, who lives in Leeds, ...`\n\n**Reducción:** `The man (who was) standing there...`\n\n**Errores típicos:** *the man who I spoke to him*; usar *that* tras coma o tras preposición (*in that*); *what* como relativo (*the thing what*); omitir coma en non-defining. Tras *all, everything, something, anything*: `that`, no *which*: `everything that matters`.",
+   "examples": [
+    "She has two brothers, both of whom work in finance.",
+    "The reasons for which he resigned remain unclear.",
+    "We introduced a policy whereby staff may work from home.",
+    "He arrived late, which annoyed everyone.",
+    "The author, whose latest novel won an award, will visit us.",
+    "The project, most of which was funded by the EU, ended last year."
+   ],
+   "commonMistakes": [
+    "*The man who I spoke to him -> The man (who/that) I spoke to.",
+    "*All what he said -> All that he said.",
+    "*The book in that I found it -> The book in which I found it.",
+    "*My sister, that lives in Rome -> My sister, who lives in Rome.",
+    "*The people which live there -> The people who live there."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "The company, ___ founder retired last year, is expanding.",
+     "options": [
+      "who",
+      "which",
+      "whose",
+      "whom"
+     ],
+     "answer": 2,
+     "explanation": "Posesivo -> whose."
+    },
+    {
+     "type": "mc",
+     "prompt": "The professor, ___ lectures I attend, is retiring.",
+     "options": [
+      "whose",
+      "that",
+      "whom",
+      "which"
+     ],
+     "answer": 0,
+     "explanation": "whose lectures."
+    },
+    {
+     "type": "mc",
+     "prompt": "She has three children, two of ___ live abroad.",
+     "options": [
+      "who",
+      "which",
+      "whom",
+      "them"
+     ],
+     "answer": 2,
+     "explanation": "Cuantificador + of whom."
+    },
+    {
+     "type": "mc",
+     "prompt": "He failed his driving test again, ___ didn't surprise me.",
+     "options": [
+      "that",
+      "what",
+      "which",
+      "it"
+     ],
+     "answer": 2,
+     "explanation": "Which-comment clause."
+    },
+    {
+     "type": "gap",
+     "prompt": "The system ___ (por el cual) citizens can vote online is new.",
+     "answers": [
+      "whereby"
+     ],
+     "explanation": "Whereby = por el cual."
+    },
+    {
+     "type": "gap",
+     "prompt": "The person to ___ I spoke was very helpful.",
+     "answers": [
+      "whom"
+     ],
+     "explanation": "Preposición + whom."
+    },
+    {
+     "type": "gap",
+     "prompt": "There were fifty applicants, only five of ___ were interviewed.",
+     "answers": [
+      "whom"
+     ],
+     "explanation": "Cuantificador + of whom."
+    },
+    {
+     "type": "transform",
+     "prompt": "He spoke to a man. The man was rude. (WHOM)",
+     "keyword": "WHOM",
+     "start": "The man",
+     "answers": [
+      "The man to whom he spoke was rude"
+     ],
+     "explanation": "Preposición + whom."
+    },
+    {
+     "type": "transform",
+     "prompt": "They have two cars and one of them is electric. (WHICH)",
+     "keyword": "WHICH",
+     "start": "They",
+     "answers": [
+      "They have two cars, one of which is electric"
+     ],
+     "explanation": "one of which con coma."
+    },
+    {
+     "type": "transform",
+     "prompt": "He didn't turn up and that annoyed me. (WHICH)",
+     "keyword": "WHICH",
+     "start": "He",
+     "answers": [
+      "He didn't turn up, which annoyed me"
+     ],
+     "explanation": "Which-comment clause."
+    }
+   ]
+  },
+  {
+   "id": "modal-perfects",
+   "title": "Modal perfects & deduction",
+   "level": "C1",
+   "summary": "Must have, can't have, needn't have vs didn't need to.",
+   "theory": "**Deducción sobre el pasado (modal + have + pp):**\n- `must have` = casi seguro (afirmativa): `She must have missed the bus.`\n- `can't / couldn't have` = imposible: `He can't have known.`\n- `may / might / could have` = posible: `They might have left early.`\n- `might not have`: `She might not have received it.` (*mustn't have* no se usa para deducción)\n\n**Críticas y arrepentimiento:**\n- `should have / ought to have` = deberías haberlo hecho (y no): `You should have called.`\n- `shouldn't have`: `I shouldn't have said that.`\n- `could have` = podría haberlo hecho (y no): `You could have told me!`\n\n**needn't have vs didn't need to:**\n- `I needn't have brought a coat.` (lo traje y no hacía falta)\n- `I didn't need to bring a coat.` (no hacía falta; quizá lo traje, quizá no)\n\n**Deducción con continuo:** `He must have been working all night.`\n\n**Presente/futuro:** `must be`, `can't be`, `might be`.\n\n**Errores:** *must to have*; *cannot have + past form*: `*can't have went`; confundir *must have* con *had to*: `had to` = obligación pasada; `must have` = deducción.",
+   "examples": [
+    "She must have forgotten about the meeting.",
+    "He can't have finished already; it's only been ten minutes.",
+    "They might have taken a different route.",
+    "You should have told me you were ill.",
+    "I needn't have rushed; the train was late.",
+    "She must have been waiting for hours."
+   ],
+   "commonMistakes": [
+    "*He must had left -> He must have left.",
+    "*She can't have went -> She can't have gone.",
+    "*I mustn't have forgotten (deducción) -> I can't have forgotten.",
+    "*You should told me -> You should have told me.",
+    "*I needn't to have gone -> I needn't have gone."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "The lights are off. They ___ gone to bed.",
+     "options": [
+      "must have",
+      "need have",
+      "should",
+      "can't to have"
+     ],
+     "answer": 0,
+     "explanation": "Deducción afirmativa fuerte -> must have + pp."
+    },
+    {
+     "type": "mc",
+     "prompt": "He ___ have seen me; he walked right past without a word.",
+     "options": [
+      "can't",
+      "needn't",
+      "shouldn't",
+      "mustn't"
+     ],
+     "answer": 0,
+     "explanation": "Imposible lógico: can't have."
+    },
+    {
+     "type": "mc",
+     "prompt": "I took an umbrella but it didn't rain. I ___ it.",
+     "options": [
+      "mustn't have taken",
+      "needn't have taken",
+      "can't have taken",
+      "didn't need take"
+     ],
+     "answer": 1,
+     "explanation": "needn't have + pp: lo hice y no era necesario."
+    },
+    {
+     "type": "mc",
+     "prompt": "You ___ me you were coming! I could have prepared something.",
+     "options": [
+      "should have told",
+      "must have told",
+      "would told",
+      "needn't tell"
+     ],
+     "answer": 0,
+     "explanation": "Reproche -> should have + pp."
+    },
+    {
+     "type": "gap",
+     "prompt": "She ___ (must / work) all night; her eyes are red.",
+     "answers": [
+      "must have been working"
+     ],
+     "explanation": "Deducción con acción continua."
+    },
+    {
+     "type": "gap",
+     "prompt": "I ___ (not / need / worry); everything went fine.",
+     "answers": [
+      "needn't have worried",
+      "need not have worried"
+     ],
+     "explanation": "Preocupación innecesaria, ya hecha."
+    },
+    {
+     "type": "gap",
+     "prompt": "They ___ (can / not / see) us; the room was empty.",
+     "answers": [
+      "can't have seen",
+      "cannot have seen",
+      "couldn't have seen"
+     ],
+     "explanation": "Imposibilidad en el pasado."
+    },
+    {
+     "type": "transform",
+     "prompt": "It was unnecessary for you to buy the tickets. (NEEDN'T)",
+     "keyword": "NEEDN'T",
+     "start": "You",
+     "answers": [
+      "You needn't have bought the tickets",
+      "You need not have bought the tickets"
+     ],
+     "explanation": "needn't have + pp."
+    },
+    {
+     "type": "transform",
+     "prompt": "I'm sure she was upset by the news. (MUST)",
+     "keyword": "MUST",
+     "start": "She",
+     "answers": [
+      "She must have been upset by the news"
+     ],
+     "explanation": "Deducción con must have + pp."
+    },
+    {
+     "type": "transform",
+     "prompt": "It's impossible that he stole the money. (CAN'T)",
+     "keyword": "CAN'T",
+     "start": "He",
+     "answers": [
+      "He can't have stolen the money",
+      "He cannot have stolen the money",
+      "He couldn't have stolen the money"
+     ],
+     "explanation": "Imposible -> can't have + pp."
+    }
+   ]
+  },
+  {
+   "id": "future-advanced",
+   "title": "Future forms advanced",
+   "level": "C1",
+   "summary": "Be about to, be due to, be on the verge of, future perfect y continuous.",
+   "theory": "Más allá de *will* y *going to*:\n\n- **be about to + inf:** inminente. `The film is about to start.`\n- **be due to + inf:** previsto por horario. `The train is due to arrive at 6.`\n- **be on the verge / brink of + -ing:** al borde de. `She's on the verge of resigning.`\n- **be set to / be bound to / be likely to:** `They're set to win.` / `He's bound to complain.` (seguro)\n- **be to + inf** (oficial): `The President is to visit Spain next week.`\n- **Future continuous (will be + -ing):** acción en progreso en el futuro. `This time tomorrow I'll be flying to Rome.` También cortés: `Will you be using the car?`\n- **Future perfect (will have + pp):** completada antes de un momento futuro. `By 2030 they will have built the bridge.`\n- **Future perfect continuous:** duración hasta ese momento. `By June I'll have been working here for ten years.`\n- **Present continuous** para planes: `We're meeting at six.`\n- **Present simple** con horarios: `The exam starts at nine.`\n\n**Tras conjunciones de tiempo no usamos will:** `when she arrives`, `as soon as I finish`, `by the time you get there`.\n\n**Errores:** *when I will arrive*; confundir *be about to* con *be going to*.",
+   "examples": [
+    "The plane is due to land at 14:30.",
+    "The government is on the verge of collapse.",
+    "By the time you read this, I will have left.",
+    "This time next week I'll be lying on a beach.",
+    "She is about to announce her retirement.",
+    "By next year, we will have been living here for a decade."
+   ],
+   "commonMistakes": [
+    "*When I will arrive, I call you -> When I arrive, I'll call you.",
+    "*By next year I will live here ten years -> I will have been living here for ten years.",
+    "*I'm on the verge to cry -> on the verge of crying.",
+    "*The train is about arriving -> about to arrive.",
+    "*Will you using the car? -> Will you be using the car?"
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "The CEO ___ to announce the merger tomorrow.",
+     "options": [
+      "is about",
+      "is due",
+      "will have",
+      "is going"
+     ],
+     "answer": 1,
+     "explanation": "Be due to + inf = previsto."
+    },
+    {
+     "type": "mc",
+     "prompt": "By the time you arrive, we ___ dinner.",
+     "options": [
+      "will finish",
+      "will have finished",
+      "are finishing",
+      "will be finish"
+     ],
+     "answer": 1,
+     "explanation": "Acción completada antes de un momento futuro."
+    },
+    {
+     "type": "mc",
+     "prompt": "Don't call at eight; I ___ my son to bed.",
+     "options": [
+      "will put",
+      "will be putting",
+      "will have put",
+      "am put"
+     ],
+     "answer": 1,
+     "explanation": "Acción en progreso en el futuro."
+    },
+    {
+     "type": "mc",
+     "prompt": "She is ___ resigning, according to rumours.",
+     "options": [
+      "on the verge of",
+      "due of",
+      "about of",
+      "bound to"
+     ],
+     "answer": 0,
+     "explanation": "on the verge of + -ing."
+    },
+    {
+     "type": "gap",
+     "prompt": "By the end of this month, I ___ (work) here for 20 years.",
+     "answers": [
+      "will have been working",
+      "'ll have been working"
+     ],
+     "explanation": "Futuro perfecto continuo."
+    },
+    {
+     "type": "gap",
+     "prompt": "As soon as the film ___ (start), switch off your phones.",
+     "answers": [
+      "starts"
+     ],
+     "explanation": "Presente simple tras as soon as."
+    },
+    {
+     "type": "gap",
+     "prompt": "Look at those clouds! It's ___ to pour with rain.",
+     "answers": [
+      "about",
+      "going",
+      "bound",
+      "likely"
+     ],
+     "explanation": "Inminente: about to / going to."
+    },
+    {
+     "type": "transform",
+     "prompt": "The train will arrive at 5 pm according to the timetable. (DUE)",
+     "keyword": "DUE",
+     "start": "The train",
+     "answers": [
+      "The train is due to arrive at 5 pm",
+      "The train is due to arrive at 5 p.m.",
+      "The train is due to arrive at 5"
+     ],
+     "explanation": "be due to + inf."
+    },
+    {
+     "type": "transform",
+     "prompt": "She is almost on the point of crying. (VERGE)",
+     "keyword": "VERGE",
+     "start": "She",
+     "answers": [
+      "She is on the verge of crying",
+      "She's on the verge of crying",
+      "She is on the verge of tears"
+     ],
+     "explanation": "on the verge of + -ing."
+    },
+    {
+     "type": "transform",
+     "prompt": "Next Friday I will complete the course. (HAVE)",
+     "keyword": "HAVE",
+     "start": "By",
+     "answers": [
+      "By next Friday I will have completed the course",
+      "By next Friday I'll have completed the course"
+     ],
+     "explanation": "Futuro perfecto con by."
+    }
+   ]
+  },
+  {
+   "id": "emphasis-fronting",
+   "title": "Emphasis & fronting",
+   "level": "C1",
+   "summary": "Do-emphasis, so/such, nor/neither, fronting.",
+   "theory": "Para dar énfasis y estilo:\n\n**Do-emphasis:** `I do like your idea.` / `She did warn us.` (con *do/does/did* + infinitivo, en afirmativa)\n\n**So / such:**\n- `so + adj/adv`: `so quickly`; `such + (a) + adj + nombre`: `such a beautiful day`.\n- `so ... that` / `such ... that`: `It was such a hot day that we stayed in.`\n- Con inversión: `So beautiful was the view that...` / `Such was the noise that...`\n\n**Nor / neither / so + auxiliar + sujeto:**\n- `She doesn't smoke, nor do I.` / `Neither can he.`\n- `I love it, and so does she.`\n- Con negativa: `I haven't seen it. Neither have they.`\n\n**Fronting (colocar al inicio):**\n- Complementos: `Gone are the days when...` / `Beside the river stood a church.`\n- Objeto: `That I can't accept.`\n- Locativos + inversión: `On the table lay a note.` / `Here comes the bus.`\n\n**Otros énfasis:** `What's more`, `Not only that`, `at all` (`I didn't like it at all`), reflexivos (`I did it myself`), `ever` (`the best film ever`), `the very idea`.\n\n**Errores:** *so a nice day* (-> such a nice day); *Neither I do* (-> Neither do I); *also not*.",
+   "examples": [
+    "I do appreciate your help.",
+    "It was such a boring lecture that half the class fell asleep.",
+    "So heavy was the rain that the match was cancelled.",
+    "He doesn't speak French, nor does his wife.",
+    "On the hill stood an ancient castle.",
+    "Gone are the days when we could leave doors unlocked."
+   ],
+   "commonMistakes": [
+    "*It was so a nice day -> It was such a nice day.",
+    "*Neither I do -> Neither do I.",
+    "*I like it too and also she -> and so does she.",
+    "*She did went -> She did go.",
+    "*So much noise it was -> Such was the noise."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "It was ___ interesting film that we watched it twice.",
+     "options": [
+      "so",
+      "such an",
+      "so an",
+      "such"
+     ],
+     "answer": 1,
+     "explanation": "such + a/an + adj + nombre."
+    },
+    {
+     "type": "mc",
+     "prompt": "'I can't swim.' '___ can I.'",
+     "options": [
+      "So",
+      "Neither",
+      "Nor do",
+      "Either"
+     ],
+     "answer": 1,
+     "explanation": "Neither can I."
+    },
+    {
+     "type": "mc",
+     "prompt": "I ___ like the idea; it just needs some changes.",
+     "options": [
+      "do",
+      "did",
+      "am",
+      "have"
+     ],
+     "answer": 0,
+     "explanation": "Énfasis con do."
+    },
+    {
+     "type": "mc",
+     "prompt": "___ was the noise that nobody could sleep.",
+     "options": [
+      "So",
+      "Such",
+      "Very",
+      "Much"
+     ],
+     "answer": 1,
+     "explanation": "Such was the noise that..."
+    },
+    {
+     "type": "gap",
+     "prompt": "He didn't call and ___ (he / write).",
+     "answers": [
+      "nor did he write",
+      "neither did he write",
+      "nor did he"
+     ],
+     "explanation": "Nor + auxiliar + sujeto."
+    },
+    {
+     "type": "gap",
+     "prompt": "I ___ (tell) you to be careful, but you didn't listen.",
+     "answers": [
+      "did tell"
+     ],
+     "explanation": "Do-emphasis en pasado."
+    },
+    {
+     "type": "gap",
+     "prompt": "___ the speed of the car that nobody saw it pass. (such)",
+     "answers": [
+      "Such was"
+     ],
+     "explanation": "Inversión con Such was ... that."
+    },
+    {
+     "type": "transform",
+     "prompt": "The weather was so awful that we cancelled the picnic. (SUCH)",
+     "keyword": "SUCH",
+     "start": "It",
+     "answers": [
+      "It was such awful weather that we cancelled the picnic"
+     ],
+     "explanation": "such + adj + nombre incontable."
+    },
+    {
+     "type": "transform",
+     "prompt": "She doesn't eat meat. I don't either. (NOR)",
+     "keyword": "NOR",
+     "start": "She",
+     "answers": [
+      "She doesn't eat meat, nor do I",
+      "She doesn't eat meat nor do I"
+     ],
+     "explanation": "Nor + do + sujeto."
+    },
+    {
+     "type": "transform",
+     "prompt": "The old days when we had no phones have disappeared. (GONE)",
+     "keyword": "GONE",
+     "start": "Gone",
+     "answers": [
+      "Gone are the days when we had no phones"
+     ],
+     "explanation": "Fronting: Gone are the days when..."
+    }
+   ]
+  },
+  {
+   "id": "concession-linkers",
+   "title": "Concession & contrast linkers",
+   "level": "C1",
+   "summary": "Albeit, notwithstanding, whereas, even though, despite/in spite of.",
+   "theory": "Conectores de **concesión y contraste** esenciales en writing C1:\n\n- **although / even though / though** + cláusula: `Although it was raining, we went out.` (*even though* es más enfático; *though* también al final: `It's cheap. Not good, though.`)\n- **despite / in spite of** + nombre / -ing / `the fact that`: `Despite the rain...` / `In spite of being tired...` / `Despite the fact that he was tired...` (no *despite of*)\n- **whereas / while** = contraste entre dos hechos: `Sales rose, whereas profits fell.`\n- **albeit** (formal) + adj/adv/frase: `a solution, albeit imperfect`\n- **notwithstanding** (formal) + nombre: `Notwithstanding the risks, they proceeded.` Puede ir tras el nombre.\n- **however / nevertheless / nonetheless / even so**: conectores entre frases, con coma.\n- **much as / as much as** = aunque (formal): `Much as I admire her, I disagree.`\n- **while / whilst**: `Whilst I agree, I...`\n- **No matter how/what, however + adj**: `However hard he tried, he failed.`\n- **Granted (that)** / **admittedly**.\n\n**Puntuación:** `However,` va entre comas; *whereas* y *although* no llevan coma obligatoria tras ellos.\n\n**Errores:** *Although... but...*; *in spite of that he was...* (bien: *in spite of that, he*) ; *despite of*; *although of*.",
+   "examples": [
+    "Although the plan was risky, it paid off.",
+    "Despite having little experience, she got the job.",
+    "The first option is cheaper, whereas the second is more durable.",
+    "It was a good solution, albeit a temporary one.",
+    "Notwithstanding the objections, the proposal was approved.",
+    "Much as I respect her, I cannot agree."
+   ],
+   "commonMistakes": [
+    "*Although he was tired, but he continued -> Although he was tired, he continued.",
+    "*Despite of the rain -> Despite the rain.",
+    "*In spite of he was ill -> In spite of being ill / the fact that he was ill.",
+    "*Even if he was rich he was unhappy -> Even though...",
+    "*However he is rich, ... (contraste) -> However, he is rich / However rich he is, ..."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "___ the heavy traffic, we arrived on time.",
+     "options": [
+      "Although",
+      "Despite",
+      "However",
+      "Whereas"
+     ],
+     "answer": 1,
+     "explanation": "Despite + nombre."
+    },
+    {
+     "type": "mc",
+     "prompt": "He didn't get the job, ___ he had all the qualifications.",
+     "options": [
+      "despite",
+      "even though",
+      "in spite",
+      "notwithstanding"
+     ],
+     "answer": 1,
+     "explanation": "Even though + cláusula."
+    },
+    {
+     "type": "mc",
+     "prompt": "Some people prefer cities, ___ others love the countryside.",
+     "options": [
+      "whereas",
+      "despite",
+      "albeit",
+      "nonetheless"
+     ],
+     "answer": 0,
+     "explanation": "Contraste entre dos grupos."
+    },
+    {
+     "type": "mc",
+     "prompt": "It was an effective, ___ expensive, solution.",
+     "options": [
+      "whereas",
+      "albeit",
+      "despite",
+      "although of"
+     ],
+     "answer": 1,
+     "explanation": "Albeit + adj."
+    },
+    {
+     "type": "gap",
+     "prompt": "In spite ___ the fact that he was ill, he went to work.",
+     "answers": [
+      "of"
+     ],
+     "explanation": "In spite of the fact that."
+    },
+    {
+     "type": "gap",
+     "prompt": "___ hard he tried, he couldn't open the door.",
+     "answers": [
+      "However",
+      "No matter how"
+     ],
+     "explanation": "However + adj/adv + sujeto + verbo."
+    },
+    {
+     "type": "gap",
+     "prompt": "The results were good. ___, there is room for improvement.",
+     "answers": [
+      "However",
+      "Nevertheless",
+      "Nonetheless",
+      "Even so"
+     ],
+     "explanation": "Conector entre frases, con coma."
+    },
+    {
+     "type": "transform",
+     "prompt": "Even though she was exhausted, she kept working. (DESPITE)",
+     "keyword": "DESPITE",
+     "start": "Despite",
+     "answers": [
+      "Despite being exhausted, she kept working",
+      "Despite her exhaustion, she kept working",
+      "Despite the fact that she was exhausted, she kept working",
+      "Despite feeling exhausted, she kept working",
+      "Despite being tired, she kept working"
+     ],
+     "explanation": "Despite + -ing / nombre / the fact that."
+    },
+    {
+     "type": "transform",
+     "prompt": "The hotel was cheap, but it was very comfortable. (ALTHOUGH)",
+     "keyword": "ALTHOUGH",
+     "start": "Although",
+     "answers": [
+      "Although the hotel was cheap, it was very comfortable"
+     ],
+     "explanation": "Although + cláusula, sin 'but'."
+    },
+    {
+     "type": "transform",
+     "prompt": "The north has heavy rain; the south is very dry. (WHEREAS)",
+     "keyword": "WHEREAS",
+     "start": "Whereas",
+     "answers": [
+      "Whereas the north has heavy rain, the south is very dry",
+      "Whereas the north has heavy rain the south is very dry"
+     ],
+     "explanation": "Whereas para contraste."
+    }
+   ]
+  },
+  {
+   "id": "gerund-infinitive",
+   "title": "Gerund vs infinitive with meaning change",
+   "level": "C1",
+   "summary": "Verbos que cambian de significado con -ing o to + infinitivo.",
+   "theory": "Algunos verbos admiten ambas formas **con distinto significado**:\n\n- **remember / forget + -ing** = recuerdo/olvido algo pasado: `I remember locking the door.`\n  **+ to inf** = (no) hacer algo pendiente: `Remember to lock the door.`\n- **stop + -ing** = dejar de hacer: `She stopped smoking.`\n  **stop + to inf** = parar para hacer: `He stopped to buy water.`\n- **regret + -ing** = lamentar haber hecho: `I regret telling her.`\n  **regret + to inf** (formal) = lamentar comunicar: `We regret to inform you...`\n- **try + -ing** = probar como experimento: `Try restarting it.`\n  **try + to inf** = esforzarse: `I tried to open it but couldn't.`\n- **go on + -ing** = continuar; **go on + to inf** = pasar a hacer otra cosa: `She went on to become a judge.`\n- **mean + -ing** = implicar: `This means waiting.`; **mean + to inf** = tener intención: `I meant to call you.`\n- **used to + inf** (hábito pasado) vs **be/get used to + -ing** (estar acostumbrado).\n- **need + -ing** (pasivo): `The car needs washing.`; **need + to inf** (activo).\n- **like/prefer:** `I like swimming` (disfrute) vs `I like to swim on Sundays` (hábito/costumbre).\n\n**Siempre -ing:** enjoy, avoid, suggest, consider, admit, deny, risk, can't help, look forward to, be worth.\n**Siempre to inf:** decide, manage, afford, refuse, hope, agree, fail, tend.\n\n**Error típico:** *I look forward to see you* -> `to seeing`.",
+   "examples": [
+    "I'll never forget meeting her for the first time.",
+    "Don't forget to submit the form before Friday.",
+    "He stopped to talk to a neighbour.",
+    "If the printer jams, try switching it off and on again.",
+    "She went on to win three Olympic medals.",
+    "I'm sorry; I never meant to hurt you."
+   ],
+   "commonMistakes": [
+    "*I look forward to see you -> I look forward to seeing you.",
+    "*She stopped to smoke (dejó de fumar) -> She stopped smoking.",
+    "*I remember to post it yesterday -> I remember posting it.",
+    "*He suggested to go -> He suggested going.",
+    "*I'm used to wake up early -> I'm used to waking up early."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "I clearly remember ___ the letter, so it must be somewhere.",
+     "options": [
+      "to post",
+      "posting",
+      "post",
+      "to have post"
+     ],
+     "answer": 1,
+     "explanation": "Remember + -ing = recuerdo un hecho pasado."
+    },
+    {
+     "type": "mc",
+     "prompt": "Please remember ___ the lights before you leave.",
+     "options": [
+      "turning off",
+      "to turn off",
+      "turn off",
+      "you turn"
+     ],
+     "answer": 1,
+     "explanation": "Remember + to inf = tarea pendiente."
+    },
+    {
+     "type": "mc",
+     "prompt": "We regret ___ you that your application was unsuccessful.",
+     "options": [
+      "informing",
+      "to inform",
+      "inform",
+      "having informed"
+     ],
+     "answer": 1,
+     "explanation": "Fórmula formal: regret to inform."
+    },
+    {
+     "type": "mc",
+     "prompt": "After the interval, the speaker went on ___ about climate change.",
+     "options": [
+      "talking",
+      "to talking",
+      "talk",
+      "having talked"
+     ],
+     "answer": 0,
+     "explanation": "Go on + -ing = continuar."
+    },
+    {
+     "type": "gap",
+     "prompt": "He stopped ___ (smoke) five years ago.",
+     "answers": [
+      "smoking"
+     ],
+     "explanation": "Stop + -ing = dejar de."
+    },
+    {
+     "type": "gap",
+     "prompt": "I tried ___ (open) the window, but it was stuck.",
+     "answers": [
+      "to open"
+     ],
+     "explanation": "Try + to inf = intentar."
+    },
+    {
+     "type": "gap",
+     "prompt": "I'm really looking forward to ___ (see) you.",
+     "answers": [
+      "seeing"
+     ],
+     "explanation": "look forward to + -ing."
+    },
+    {
+     "type": "transform",
+     "prompt": "I didn't intend to offend anyone. (MEANT)",
+     "keyword": "MEANT",
+     "start": "I",
+     "answers": [
+      "I never meant to offend anyone",
+      "I didn't mean to offend anyone",
+      "I hadn't meant to offend anyone"
+     ],
+     "explanation": "mean to + inf = intención."
+    },
+    {
+     "type": "transform",
+     "prompt": "It's a pity that I told him the secret. (REGRET)",
+     "keyword": "REGRET",
+     "start": "I",
+     "answers": [
+      "I regret telling him the secret",
+      "I regret having told him the secret"
+     ],
+     "explanation": "regret + -ing."
+    },
+    {
+     "type": "transform",
+     "prompt": "She finished her speech and then began to answer questions. (WENT)",
+     "keyword": "WENT",
+     "start": "She",
+     "answers": [
+      "She went on to answer questions after her speech",
+      "She finished her speech and went on to answer questions"
+     ],
+     "explanation": "go on to + inf = pasar a otra acción."
+    }
+   ]
+  },
+  {
+   "id": "nominalisation",
+   "title": "Nominalisation & formal register",
+   "level": "C1",
+   "summary": "Convertir verbos y adjetivos en nombres para un estilo formal y denso.",
+   "theory": "La **nominalización** transforma verbos/adjetivos en nombres para dar un tono académico y conciso.\n\n**Verbo -> nombre:**\n- `decide -> decision`, `develop -> development`, `fail -> failure`, `increase -> an increase`, `arrive -> arrival`, `grow -> growth`\n- `Many people are unemployed` -> `Unemployment is a serious problem.`\n\n**Adjetivo -> nombre:** `important -> importance`, `able -> ability`, `safe -> safety`.\n\n**Ejemplo de transformación:**\n- Informal: `Prices rose quickly, so people spent less.`\n- Formal: `The rapid rise in prices led to a reduction in consumer spending.`\n\n**Estructuras útiles:**\n- `There has been a sharp increase in ...`\n- `The growth of ... has led to ...`\n- `A major factor contributing to ... is ...`\n- `The introduction of ... resulted in ...`\n\n**Otros rasgos formales:**\n- Evitar contracciones y phrasal verbs: `investigate` (no look into), `postpone` (no put off).\n- Pasivas y sujetos impersonales: `It can be argued that...`\n- Verbos formales: `obtain, require, demonstrate, indicate`.\n- Evitar `a lot of`, `get`, `things`.\n\n**Error típico:** nominalizar en exceso hace el texto pesado. Usa un buen equilibrio y evita traducciones literales (*the people who live in the cities* -> `urban residents`).",
+   "examples": [
+    "The introduction of a congestion charge led to a significant reduction in traffic.",
+    "There has been a steady increase in the number of remote workers.",
+    "Growing public awareness has prompted governments to act.",
+    "Failure to comply may result in a fine.",
+    "The unavailability of affordable housing is a major concern.",
+    "A key factor behind the decline is the lack of investment."
+   ],
+   "commonMistakes": [
+    "*The people that live in cities -> Urban residents.",
+    "*Many persons are unemployed -> Unemployment is high.",
+    "*Look into / put off (en formal) -> investigate / postpone.",
+    "*The decision of government was say -> The government's decision.",
+    "*The increase of prices -> The increase in prices."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "Choose the most formal option.",
+     "options": [
+      "They found out the reasons.",
+      "They ascertained the causes.",
+      "They got to know why.",
+      "They looked into why."
+     ],
+     "answer": 1,
+     "explanation": "Registro formal: ascertain, causes."
+    },
+    {
+     "type": "mc",
+     "prompt": "The ___ of new technology has transformed the industry.",
+     "options": [
+      "introduce",
+      "introduction",
+      "introducing of",
+      "introduced"
+     ],
+     "answer": 1,
+     "explanation": "Nominalización: introduction."
+    },
+    {
+     "type": "mc",
+     "prompt": "There has been a sharp increase ___ the number of complaints.",
+     "options": [
+      "of",
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 1,
+     "explanation": "increase in."
+    },
+    {
+     "type": "mc",
+     "prompt": "Which sentence is a nominalised version of 'People protested because prices rose'?",
+     "options": [
+      "Rising prices prompted protests.",
+      "People protested prices.",
+      "Prices protested rising.",
+      "The prices that rose protested."
+     ],
+     "answer": 0,
+     "explanation": "Nominalización: rising prices prompted protests."
+    },
+    {
+     "type": "gap",
+     "prompt": "The ___ (grow) of social media has changed how we communicate.",
+     "answers": [
+      "growth"
+     ],
+     "explanation": "Verbo -> nombre: growth."
+    },
+    {
+     "type": "gap",
+     "prompt": "Failure ___ (comply) with the rules may lead to dismissal.",
+     "answers": [
+      "to comply"
+     ],
+     "explanation": "Failure to + inf."
+    },
+    {
+     "type": "gap",
+     "prompt": "Many experts have expressed concern about the ___ (reduce) in funding.",
+     "answers": [
+      "reduction"
+     ],
+     "explanation": "Reduce -> reduction."
+    },
+    {
+     "type": "transform",
+     "prompt": "Because many students failed, the school changed the curriculum. (LED)",
+     "keyword": "LED",
+     "start": "The",
+     "answers": [
+      "The high failure rate led to a change in the curriculum",
+      "The failure of many students led to a change in the curriculum",
+      "The failure of many students led to the school changing the curriculum"
+     ],
+     "explanation": "Nominalización con led to."
+    },
+    {
+     "type": "transform",
+     "prompt": "Prices have risen sharply. (INCREASE)",
+     "keyword": "INCREASE",
+     "start": "There",
+     "answers": [
+      "There has been a sharp increase in prices",
+      "There has been a sharp rise in prices"
+     ],
+     "explanation": "There has been a sharp increase in + nombre."
+    },
+    {
+     "type": "transform",
+     "prompt": "People are more aware of the environment, so companies have changed. (AWARENESS)",
+     "keyword": "AWARENESS",
+     "start": "Growing",
+     "answers": [
+      "Growing awareness of the environment has led companies to change",
+      "Growing environmental awareness has led companies to change",
+      "Growing awareness of the environment has prompted companies to change"
+     ],
+     "explanation": "Nominalización: awareness."
+    }
+   ]
+  },
+  {
+   "id": "hedging",
+   "title": "Hedging & cautious language",
+   "level": "C1",
+   "summary": "Lenguaje prudente para evitar afirmaciones absolutas.",
+   "theory": "En C1 conviene **matizar** las afirmaciones, sobre todo en essays y discusión.\n\n**Verbos modales y semimodales:** `may, might, could, can be`; `tend to`, `appear to`, `seem to`\n- `Young people tend to be more adaptable.`\n- `The data appear to suggest a link.`\n\n**It-structures:**\n- `It would appear that...` / `It seems that...`\n- `It is (generally) believed / widely accepted that...`\n- `It could be argued that...`\n\n**Adverbios:** `arguably, presumably, apparently, broadly, largely, to some extent, in many cases, generally, relatively, virtually`\n- `This is arguably the most important factor.`\n\n**Cuantificadores:** `some, many, most (no all)`, `a number of`, `in the majority of cases`.\n\n**Otras fórmulas:** `To a certain degree`, `As far as I can tell`, `In my view`, `On the whole`, `Broadly speaking`, `There is evidence to suggest that...`, `This may well be due to...`.\n\n**Cómo evitar generalizaciones:**\n- `All teenagers are lazy.` -> `Many teenagers may appear less motivated.`\n- `This proves that...` -> `This suggests / indicates that...`\n- `Clearly/obviously` -> con cuidado.\n\n**Error típico:** abusar de *always/never/everyone/nobody* y *proves*; mezclar *maybe* en essays (mejor *perhaps*, *possibly*).",
+   "examples": [
+    "It would appear that the policy has had little effect.",
+    "Teenagers tend to spend more time online than adults.",
+    "This is arguably the most significant change in decades.",
+    "The results suggest that sleep may influence memory.",
+    "To some extent, the problem lies in poor planning.",
+    "There is evidence to suggest that exercise improves mood."
+   ],
+   "commonMistakes": [
+    "*This proves that -> This suggests that.",
+    "*All young people are lazy -> Many young people may seem less motivated.",
+    "*Maybe the reason is ... (essay) -> Perhaps / It may be that...",
+    "*Everybody agrees that -> Most people agree that...",
+    "*The study shows definitely -> The study appears to show..."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "Which sentence is most cautious?",
+     "options": [
+      "The new law will reduce crime.",
+      "The new law may help to reduce crime.",
+      "The new law reduces crime.",
+      "The new law definitely reduces crime."
+     ],
+     "answer": 1,
+     "explanation": "Hedging con may + help to."
+    },
+    {
+     "type": "mc",
+     "prompt": "Young people ___ to be more adaptable than older people.",
+     "options": [
+      "tend",
+      "are",
+      "must",
+      "do"
+     ],
+     "answer": 0,
+     "explanation": "Tend to = tendencia."
+    },
+    {
+     "type": "mc",
+     "prompt": "It ___ that the figures were inaccurate.",
+     "options": [
+      "would appear",
+      "is appear",
+      "will appearing",
+      "appears to"
+     ],
+     "answer": 0,
+     "explanation": "It would appear that..."
+    },
+    {
+     "type": "mc",
+     "prompt": "The study ___ a link between diet and mood.",
+     "options": [
+      "proves",
+      "suggests",
+      "confirms definitely",
+      "is"
+     ],
+     "answer": 1,
+     "explanation": "Hedging: suggests."
+    },
+    {
+     "type": "gap",
+     "prompt": "This is ___ (argue) the best solution available.",
+     "answers": [
+      "arguably"
+     ],
+     "explanation": "Adverbio de cautela: arguably."
+    },
+    {
+     "type": "gap",
+     "prompt": "The results ___ (appear) to confirm our theory.",
+     "answers": [
+      "appear",
+      "seem"
+     ],
+     "explanation": "Verbo de percepción cautelosa."
+    },
+    {
+     "type": "gap",
+     "prompt": "The government has, to a certain ___, solved the problem.",
+     "answers": [
+      "extent",
+      "degree"
+     ],
+     "explanation": "To a certain extent/degree."
+    },
+    {
+     "type": "transform",
+     "prompt": "People say that this causes cancer. (WOULD)",
+     "keyword": "WOULD",
+     "start": "It",
+     "answers": [
+      "It would appear that this causes cancer"
+     ],
+     "explanation": "It would appear that... = cautela."
+    },
+    {
+     "type": "transform",
+     "prompt": "Teenagers usually sleep late at weekends. (TEND)",
+     "keyword": "TEND",
+     "start": "Teenagers",
+     "answers": [
+      "Teenagers tend to sleep late at weekends"
+     ],
+     "explanation": "tend to + inf."
+    },
+    {
+     "type": "transform",
+     "prompt": "Perhaps this is the greatest problem in healthcare. (ARGUABLY)",
+     "keyword": "ARGUABLY",
+     "start": "This",
+     "answers": [
+      "This is arguably the greatest problem in healthcare"
+     ],
+     "explanation": "arguably en posición medial."
+    }
+   ]
+  },
+  {
+   "id": "articles-countability",
+   "title": "Articles & countability errors (Spanish speakers)",
+   "level": "C1",
+   "summary": "Errores típicos con artículos y nombres incontables.",
+   "theory": "Por influencia del español, los hispanohablantes cometen errores muy previsibles.\n\n**Incontables (no plural, no *a/an*):** `information, advice, news, furniture, luggage, research, equipment, traffic, progress, knowledge, evidence, homework, weather, work, accommodation`\n- *an information / informations* -> `a piece of information`\n- `some advice`, `a piece of advice`, `much/little`.\n\n**Artículo cero con generalizaciones:**\n- `Life is hard.` / `Society needs change.` / `Education is important.` / `Women earn less than men.` (no *the life*, *the society*)\n- `I love music.` pero `the music we heard last night` (específico).\n\n**Usar *the* cuando es único o ya mencionado:** `the Internet`, `the government`, `the environment`, `the economy`.\n\n**Sin artículo:** `go to school/university/hospital/work/bed/prison` (uso institucional); *go to the school* si es el edificio.\n\n**Otros:** `in/at/on` + períodos; `the poor / the elderly` (adjetivo + the); `a/an` con profesiones (`She is a doctor`).\n\n**Plural de ciertos nombres:** `the people are` (people es plural), `a police officer`, `the police are`.\n\n**Errores de lista:** *the money don't*; *the news are*; *many informations*; *a travel* (-> a journey / a trip); *a work* (-> a job).\n\n**Tip:** si en español dices «la sociedad» en general, en inglés suele ser `society`.",
+   "examples": [
+    "Society should invest more in education.",
+    "She gave me some useful advice.",
+    "The news is better than expected.",
+    "Furniture is expensive in this city.",
+    "Could you give me a piece of information?",
+    "The government has promised to protect the environment."
+   ],
+   "commonMistakes": [
+    "*Informations / an information -> information / a piece of information.",
+    "*The society is changing -> Society is changing.",
+    "*The life is hard -> Life is hard.",
+    "*The news are bad -> The news is bad.",
+    "*I need an advice -> I need some advice / a piece of advice."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "I need some ___ about the course.",
+     "options": [
+      "informations",
+      "information",
+      "an information",
+      "informing"
+     ],
+     "answer": 1,
+     "explanation": "Information es incontable."
+    },
+    {
+     "type": "mc",
+     "prompt": "___ is more important than money.",
+     "options": [
+      "The health",
+      "Health",
+      "A health",
+      "Healths"
+     ],
+     "answer": 1,
+     "explanation": "Generalización: sin artículo."
+    },
+    {
+     "type": "mc",
+     "prompt": "The news ___ shocking.",
+     "options": [
+      "were",
+      "was",
+      "are",
+      "have"
+     ],
+     "answer": 1,
+     "explanation": "News: incontable, singular."
+    },
+    {
+     "type": "mc",
+     "prompt": "He gave me ___ useful advice.",
+     "options": [
+      "a",
+      "an",
+      "some",
+      "the some"
+     ],
+     "answer": 2,
+     "explanation": "Advice incontable: some."
+    },
+    {
+     "type": "gap",
+     "prompt": "Could you give me ___ advice? (a piece of / some)",
+     "answers": [
+      "some",
+      "a piece of"
+     ],
+     "explanation": "Advice no lleva a/an."
+    },
+    {
+     "type": "gap",
+     "prompt": "Modern ___ is facing many challenges. (the society / society)",
+     "answers": [
+      "society"
+     ],
+     "explanation": "Sin artículo en generalizaciones."
+    },
+    {
+     "type": "gap",
+     "prompt": "We stayed in a lovely hotel; the ___ was excellent. (accommodation / accommodations)",
+     "answers": [
+      "accommodation"
+     ],
+     "explanation": "Incontable."
+    },
+    {
+     "type": "transform",
+     "prompt": "I need to buy new chairs and tables. (FURNITURE)",
+     "keyword": "FURNITURE",
+     "start": "I",
+     "answers": [
+      "I need to buy some new furniture",
+      "I need to buy new furniture",
+      "I need to buy some furniture"
+     ],
+     "explanation": "Furniture es incontable."
+    },
+    {
+     "type": "transform",
+     "prompt": "The people in general don't trust the politicians. (SOCIETY)",
+     "keyword": "SOCIETY",
+     "start": "Society",
+     "answers": [
+      "Society doesn't trust politicians",
+      "Society does not trust politicians",
+      "Society does not trust the politicians"
+     ],
+     "explanation": "Generalización: society sin the."
+    },
+    {
+     "type": "transform",
+     "prompt": "He gave me a good piece of advice. (ADVICE)",
+     "keyword": "ADVICE",
+     "start": "He",
+     "answers": [
+      "He gave me some good advice",
+      "He gave me good advice"
+     ],
+     "explanation": "Advice incontable."
+    }
+   ]
+  },
+  {
+   "id": "collocations-prepositions",
+   "title": "Collocations & dependent prepositions at C1",
+   "level": "C1",
+   "summary": "Colocaciones y preposiciones obligatorias en nivel avanzado.",
+   "theory": "Memoriza bloques, no palabras sueltas.\n\n**Verbo + preposición:**\n- `depend on`, `rely on`, `result in / result from`, `lead to`, `contribute to`, `account for`, `apologise for`, `benefit from`, `focus on`, `object to`, `succeed in`, `consist of`, `cope with`, `comply with`\n- `be aware of`, `be capable of`, `be responsible for`, `be accustomed to`, `be sceptical about`, `be reluctant to`, `be keen on`\n\n**Colocaciones con *make/do/take/raise/give*:**\n- `make a decision / progress / an effort / a mistake / a difference`\n- `do research / damage / business / harm`\n- `take into account / part in / advantage of / place / responsibility for`\n- `raise awareness / concerns / questions / the issue`\n- `give rise to / priority to / an example`\n- `pose a threat / a problem`; `play a role / a part`; `conduct a survey`; `reach a conclusion`; `bear in mind`\n\n**Adjetivo + nombre:** `heavy traffic, strong evidence, fierce competition, vital role, deep concern, widespread belief, major breakthrough`\n\n**Nombre + preposición:** `an increase in`, `a solution to`, `a reason for`, `an effect on`, `a lack of`, `demand for`, `access to`, `a cause of`, `damage to`.\n\n**Errores típicos:** *depend of*, *consist in* (por *of*), *the solution of the problem*, *interested of*, *marry with*, *discuss about* (no preposición), *emphasise on*.",
+   "examples": [
+    "The outcome depends on a number of factors.",
+    "We must take into account the cost of living.",
+    "The campaign aims to raise awareness of mental health.",
+    "Heavy traffic is a major cause of air pollution.",
+    "She succeeded in persuading the committee.",
+    "The report highlights a lack of access to clean water."
+   ],
+   "commonMistakes": [
+    "*depend of -> depend on",
+    "*discuss about -> discuss",
+    "*the solution of this problem -> the solution to this problem",
+    "*marry with -> marry",
+    "*consist in -> consist of"
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "The success of the project depends ___ teamwork.",
+     "options": [
+      "of",
+      "on",
+      "in",
+      "from"
+     ],
+     "answer": 1,
+     "explanation": "depend on."
+    },
+    {
+     "type": "mc",
+     "prompt": "The government should ___ more attention to education.",
+     "options": [
+      "make",
+      "give",
+      "do",
+      "put"
+     ],
+     "answer": 1,
+     "explanation": "give attention to / pay attention to."
+    },
+    {
+     "type": "mc",
+     "prompt": "Environmental groups are trying to ___ awareness of plastic waste.",
+     "options": [
+      "raise",
+      "rise",
+      "lift",
+      "arise"
+     ],
+     "answer": 0,
+     "explanation": "raise awareness."
+    },
+    {
+     "type": "mc",
+     "prompt": "The committee needs to ___ into account all opinions.",
+     "options": [
+      "take",
+      "make",
+      "put",
+      "bring"
+     ],
+     "answer": 0,
+     "explanation": "take into account."
+    },
+    {
+     "type": "gap",
+     "prompt": "The team is responsible ___ the design.",
+     "answers": [
+      "for"
+     ],
+     "explanation": "be responsible for."
+    },
+    {
+     "type": "gap",
+     "prompt": "There has been a significant increase ___ unemployment.",
+     "answers": [
+      "in"
+     ],
+     "explanation": "increase in."
+    },
+    {
+     "type": "gap",
+     "prompt": "All employees must comply ___ the safety rules.",
+     "answers": [
+      "with"
+     ],
+     "explanation": "comply with."
+    },
+    {
+     "type": "transform",
+     "prompt": "The new law will affect small businesses. (IMPACT)",
+     "keyword": "IMPACT",
+     "start": "The",
+     "answers": [
+      "The new law will have an impact on small businesses",
+      "The new law will have a major impact on small businesses",
+      "The new law will have a significant impact on small businesses",
+      "The new law will have a huge impact on small businesses"
+     ],
+     "explanation": "have an impact on."
+    },
+    {
+     "type": "transform",
+     "prompt": "We must consider the risks involved. (ACCOUNT)",
+     "keyword": "ACCOUNT",
+     "start": "We",
+     "answers": [
+      "We must take into account the risks involved",
+      "We must take the risks involved into account"
+     ],
+     "explanation": "take into account."
+    },
+    {
+     "type": "transform",
+     "prompt": "The accident was caused by human error. (RESULTED)",
+     "keyword": "RESULTED",
+     "start": "The",
+     "answers": [
+      "The accident resulted from human error"
+     ],
+     "explanation": "result from = ser consecuencia de."
+    }
+   ]
+  },
+  {
+   "id": "phrasal-idioms",
+   "title": "Phrasal verbs & idioms useful for C1 speaking/writing",
+   "level": "C1",
+   "summary": "Phrasal verbs e idioms naturales para hablar y escribir con fluidez.",
+   "theory": "Para el Speaking y el Writing, un pequeño repertorio bien usado vale más que muchas expresiones mal puestas.\n\n**Phrasal verbs muy útiles:**\n- `come up with` (idear), `put up with` (tolerar), `look into` (investigar), `carry out` (llevar a cabo), `bring about` (provocar), `set up` (fundar), `turn down` (rechazar), `cut down on` (reducir), `get away with` (salir impune), `back up` (apoyar), `point out` (señalar), `sum up` (resumir), `fall back on`, `catch on`, `phase out`, `make up for`, `live up to`.\n- **Separables:** `turn the offer down` / `turn it down` (el pronombre va en medio). **Inseparables:** `look into the matter`.\n\n**Idioms prácticos:**\n- `on the whole` (en general), `by and large`, `to some extent`\n- `a blessing in disguise`, `the tip of the iceberg`, `at the end of the day`, `a double-edged sword`, `once in a blue moon`, `in the long run`, `the last straw`, `a piece of cake`, `hit the nail on the head`, `break the ice`, `on the same page`, `a drop in the ocean`, `up in the air`\n\n**Uso:** en Writing formal prefiere verbos formales (`investigate`, `reduce`); en Speaking mezcla ambos registros.\n\n**Errores típicos:** romper el idiom (*the tip of the icebergs*), separar mal (*look the matter into*), usar *put up with* sin objeto, traducir literalmente (*it rains cats and dogs* se dice, pero no abuses).",
+   "examples": [
+    "We need to come up with a creative solution.",
+    "I can't put up with the noise any longer.",
+    "The company plans to phase out plastic packaging.",
+    "It was a blessing in disguise; losing that job led me to a better one.",
+    "On the whole, the project went smoothly.",
+    "These figures are only the tip of the iceberg."
+   ],
+   "commonMistakes": [
+    "*look the problem into -> look into the problem.",
+    "*turn down it -> turn it down.",
+    "*I'm agree -> I agree.",
+    "*the tip of the icebergs -> the tip of the iceberg.",
+    "*to put up -> to put up with (algo)."
+   ],
+   "exercises": [
+    {
+     "type": "mc",
+     "prompt": "We need to ___ with a better plan.",
+     "options": [
+      "come up",
+      "put up",
+      "get up",
+      "bring up"
+     ],
+     "answer": 0,
+     "explanation": "come up with = idear."
+    },
+    {
+     "type": "mc",
+     "prompt": "I can't ___ his rudeness any longer.",
+     "options": [
+      "put up with",
+      "put up for",
+      "bring up",
+      "cut down on"
+     ],
+     "answer": 0,
+     "explanation": "put up with = tolerar."
+    },
+    {
+     "type": "mc",
+     "prompt": "The company decided to ___ the old software gradually.",
+     "options": [
+      "phase out",
+      "phase in",
+      "point out",
+      "take after"
+     ],
+     "answer": 0,
+     "explanation": "phase out = eliminar gradualmente."
+    },
+    {
+     "type": "mc",
+     "prompt": "Losing that job was a ___ in disguise.",
+     "options": [
+      "fortune",
+      "blessing",
+      "luck",
+      "chance"
+     ],
+     "answer": 1,
+     "explanation": "a blessing in disguise."
+    },
+    {
+     "type": "gap",
+     "prompt": "She turned ___ the offer because the salary was too low.",
+     "answers": [
+      "down"
+     ],
+     "explanation": "turn down = rechazar."
+    },
+    {
+     "type": "gap",
+     "prompt": "We should look ___ the matter before deciding.",
+     "answers": [
+      "into"
+     ],
+     "explanation": "look into = investigar."
+    },
+    {
+     "type": "gap",
+     "prompt": "At the ___ of the day, it's your decision.",
+     "answers": [
+      "end"
+     ],
+     "explanation": "at the end of the day."
+    },
+    {
+     "type": "transform",
+     "prompt": "The police are investigating the case. (LOOKING)",
+     "keyword": "LOOKING",
+     "start": "The police",
+     "answers": [
+      "The police are looking into the case"
+     ],
+     "explanation": "look into = investigar."
+    },
+    {
+     "type": "transform",
+     "prompt": "I'm trying to reduce the amount of sugar I eat. (CUTTING)",
+     "keyword": "CUTTING",
+     "start": "I'm",
+     "answers": [
+      "I'm cutting down on sugar",
+      "I'm cutting down on the amount of sugar I eat",
+      "I'm trying to cut down on sugar",
+      "I'm trying to cut down on the amount of sugar I eat"
+     ],
+     "explanation": "cut down on = reducir."
+    },
+    {
+     "type": "transform",
+     "prompt": "I can't tolerate this noise. (PUT)",
+     "keyword": "PUT",
+     "start": "I",
+     "answers": [
+      "I can't put up with this noise",
+      "I cannot put up with this noise"
+     ],
+     "explanation": "put up with = tolerar."
+    }
+   ]
+  }
+ ]
+}

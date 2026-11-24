@@ -1,0 +1,1007 @@
+{
+ "id": "exam-2",
+ "title": "Mock Exam 2",
+ "theme": "Environment & cities: urban green spaces, car-free city centres, food waste, rewilding, fast fashion, climate anxiety, renewable energy transition, allotments vs housing, zero-waste shops",
+ "levelling": [
+  {
+   "type": "synonym",
+   "prompt": "ephemeral",
+   "options": [
+    "fragile",
+    "ancient",
+    "hollow",
+    "fleeting"
+   ],
+   "answer": 3
+  },
+  {
+   "type": "complete",
+   "prompt": "If the council ___ the scheme earlier, residents would not be facing such disruption now.",
+   "options": [
+    "approved",
+    "had approved",
+    "would approve",
+    "has approved"
+   ],
+   "answer": 1
+  },
+  {
+   "type": "synonym",
+   "prompt": "to mitigate",
+   "options": [
+    "to postpone",
+    "to confirm",
+    "to alleviate",
+    "to ignore"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "complete",
+   "prompt": "The report is thorough; ___, it fails to address the question of funding.",
+   "options": [
+    "nevertheless",
+    "moreover",
+    "likewise",
+    "therefore"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "synonym",
+   "prompt": "tenacious",
+   "options": [
+    "generous",
+    "persistent",
+    "reluctant",
+    "sensitive"
+   ],
+   "answer": 1
+  },
+  {
+   "type": "synonym",
+   "prompt": "ubiquitous",
+   "options": [
+    "rare",
+    "controversial",
+    "outdated",
+    "omnipresent"
+   ],
+   "answer": 3
+  },
+  {
+   "type": "complete",
+   "prompt": "Not until the data had been published ___ how serious the problem was.",
+   "options": [
+    "the public realised",
+    "realised the public",
+    "did the public realise",
+    "the public did realise"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "synonym",
+   "prompt": "to exacerbate",
+   "options": [
+    "to worsen",
+    "to illustrate",
+    "to measure",
+    "to simplify"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "complete",
+   "prompt": "She insisted that the committee ___ the proposal before the end of the month.",
+   "options": [
+    "reviews",
+    "reviewed",
+    "will review",
+    "review"
+   ],
+   "answer": 3
+  },
+  {
+   "type": "synonym",
+   "prompt": "to eschew",
+   "options": [
+    "to avoid deliberately",
+    "to embrace",
+    "to explain",
+    "to endorse"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "complete",
+   "prompt": "The new tram line, ___ construction began last spring, is already behind schedule.",
+   "options": [
+    "that",
+    "which",
+    "whose",
+    "of which the"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "synonym",
+   "prompt": "pragmatic",
+   "options": [
+    "idealistic",
+    "practical",
+    "hesitant",
+    "lavish"
+   ],
+   "answer": 1
+  },
+  {
+   "type": "complete",
+   "prompt": "I'd rather you ___ the results with anyone until the press release goes out.",
+   "options": [
+    "don't share",
+    "didn't share",
+    "won't share",
+    "haven't shared"
+   ],
+   "answer": 1
+  },
+  {
+   "type": "synonym",
+   "prompt": "disparate",
+   "options": [
+    "closely related",
+    "deeply desperate",
+    "essentially different",
+    "entirely hidden"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "complete",
+   "prompt": "Little ___ that the small experiment would reshape the entire policy.",
+   "options": [
+    "did they suspect",
+    "they suspected",
+    "they did suspect",
+    "suspected they"
+   ],
+   "answer": 0
+  }
+ ],
+ "speaking": {
+  "t1": {
+   "questions": [
+    "Do you think people in your area make enough effort to look after the environment? Why, or why not?",
+    "How has the way you or your family travel around town changed over the last few years?",
+    "Some people say individuals can do very little about climate change compared with governments and big companies. How far do you agree?"
+   ]
+  },
+  "t2": {
+   "followups": [
+    "What do you think is the most surprising or controversial aspect of what you've just told me?",
+    "How might attitudes towards this subject change over the next twenty years?",
+    "Is there anything about this topic that you feel is commonly misunderstood?"
+   ]
+  },
+  "t3": {
+   "partner": "your team leader",
+   "situation": "You work in the sustainability office of a large university. You have organised a 'Zero Waste Week' on campus, but the catering company has just told you it cannot supply the reusable containers you ordered. Your team leader has called you in to discuss what to do. You should explain the situation, suggest what could be done and respond to what your team leader says.",
+   "partnerLine": "Thanks for coming in. I've heard there's a problem with the containers for Zero Waste Week. Can you give me the picture, and tell me what you think we should do? The launch is only ten days away, so I'd like to hear your thinking.",
+   "newInfo": "That's helpful, thank you. Now, something else has just come up. The student union has offered to help, but they'd want to take over the publicity side of the week and put their own branding on everything. They're very enthusiastic, but it would mean we lose some control over the message.",
+   "newTask": "Tell your team leader what you think about the student union's offer and whether we should accept it."
+  },
+  "t4": {
+   "title": "Zero-waste shops",
+   "instructions": "Listen to two people talking about zero-waste shops. Summarise the main points: Why are some people enthusiastic about them? What problems do they face?",
+   "speakers": [
+    {
+     "name": "Nadia",
+     "voice": "female"
+    },
+    {
+     "name": "Callum",
+     "voice": "male"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Nadia",
+     "text": "So, Callum, you finally went to that new zero-waste shop on Mill Street, didn't you? I'm dying to hear what you made of it."
+    },
+    {
+     "speaker": "Callum",
+     "text": "Well, I went in with a fairly sceptical frame of mind, to be honest. I thought it'd be all preaching and no practicality. But I came out rather impressed. You take your own jars and bags, you weigh them, and you fill them with pretty much anything: pasta, lentils, washing-up liquid, even olive oil from a barrel."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "Right, and that's exactly what draws me to them. I mean, think about how much packaging we throw away without a second thought. When you buy only what you need, in the quantity you need, you cut out the waste at the source. And a lot of people I know say they end up binning far less food as well, because they're not stuck with a kilo of rice when a recipe calls for two hundred grams."
+    },
+    {
+     "speaker": "Callum",
+     "text": "That's a fair point. The owner told me that most of her regulars say the same. But, er, she was also quite candid about the downsides. Prices, for one. Because she buys in smaller batches from independent suppliers, she can't match what the big supermarkets charge, so some customers come once, feel a bit of sticker shock, and never return."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "Mm, I can see that. And I suppose it's inconvenient too, isn't it? You have to remember your containers, wash them, plan ahead. Not everyone has the time for that, especially people working long hours or looking after children."
+    },
+    {
+     "speaker": "Callum",
+     "text": "Exactly. She said that's the real hurdle, not so much the cost as the habit. Her feeling is that these shops will always be niche unless the larger chains start offering refill stations too, which, to be fair, a couple of them are now trialling."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "Which would be a double-edged sword, wouldn't it? On the one hand it normalises the idea; on the other, it could squeeze the little independents out. Still, I'd rather see more refilling than less."
+    },
+    {
+     "speaker": "Callum",
+     "text": "Oh, I agree. Anyway, I've signed up for her workshop on making your own cleaning products."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "Count me in, as long as I don't have to carry a jar home on the bus."
+    }
+   ],
+   "followup": "Would you be willing to change your shopping habits to reduce packaging, even if it cost you more time or money? Why, or why not?"
+  }
+ },
+ "listening": [
+  {
+   "type": "conversation",
+   "title": "The pocket park proposal",
+   "context": "Two colleagues, Mark and Julia, are chatting in the office kitchen about a plan to turn a disused car park into a small public park.",
+   "plays": 2,
+   "previewSeconds": 25,
+   "speakers": [
+    {
+     "name": "Mark",
+     "voice": "male"
+    },
+    {
+     "name": "Julia",
+     "voice": "female"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Mark",
+     "text": "Did you see the email about the car park behind the library? They're actually going to consult people on turning it into a pocket park."
+    },
+    {
+     "speaker": "Julia",
+     "text": "I did, yeah. I know you've been, well, lukewarm on the whole idea."
+    },
+    {
+     "speaker": "Mark",
+     "text": "Lukewarm's a bit strong. I just wonder whether it's the best use of the space. It's a stone's throw from the high street, and we're desperately short of parking. If you ask the traders, they'll tell you they're losing customers every week."
+    },
+    {
+     "speaker": "Julia",
+     "text": "Sure, but that's rather the argument for it, isn't it? Everyone assumes shops need cars, and then studies come along showing that people who walk or cycle in tend to spend less per visit but come far more often."
+    },
+    {
+     "speaker": "Mark",
+     "text": "Hm, I'd want to see our own figures first. Anyway, a tiny square of grass with three benches, is that really going to make any difference?"
+    },
+    {
+     "speaker": "Julia",
+     "text": "You'd be surprised. There was a project in Leeds, I think, where they put in one of these little parks on a derelict plot and the council reported that the antisocial behaviour in the surrounding streets dropped noticeably. The place just looks cared for."
+    },
+    {
+     "speaker": "Mark",
+     "text": "Right, though I suspect that depends heavily on who's keeping it cared for. That's my real worry, if I'm honest. The council's budget for maintenance is shrinking, and I can picture it going to seed within a couple of years."
+    },
+    {
+     "speaker": "Julia",
+     "text": "That's fair, and it's one of the things the consultation asks about. They're talking about getting local residents and the school involved in looking after it, a bit like the community garden on Albert Road."
+    },
+    {
+     "speaker": "Mark",
+     "text": "Ah, now that one has worked well, I'll give you that. Hm, so volunteers would do the planting and weeding?"
+    },
+    {
+     "speaker": "Julia",
+     "text": "Mostly, yes, with the council handling the heavy stuff, like pruning the trees."
+    },
+    {
+     "speaker": "Mark",
+     "text": "Okay, that does shift things a little. I suppose what bothers me is that we always seem to assume green means good, without asking who it actually serves."
+    },
+    {
+     "speaker": "Julia",
+     "text": "Which is precisely why you should fill in the survey. If you've got doubts, say so. Otherwise it'll just be the enthusiasts, like me, who respond."
+    },
+    {
+     "speaker": "Mark",
+     "text": "Fair enough. Send me the link, and I'll put my objections in writing. Mind you, if they do build it, I'm eating my lunch there every day."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is Mark's main reservation at the start of the conversation?",
+     "options": [
+      "He doubts that anyone would use the park.",
+      "He thinks the plan is too expensive.",
+      "He feels the library would lose visitors.",
+      "He believes the space is needed for something else."
+     ],
+     "answer": 3,
+     "explanation": "Mark wonders 'whether it's the best use of the space' because the town is 'desperately short of parking' and traders are losing customers."
+    },
+    {
+     "q": "Why does Julia mention the project in Leeds?",
+     "options": [
+      "to show that small parks can improve a neighbourhood",
+      "to prove that shops earn more when cars are banned",
+      "to criticise the way the council plans projects",
+      "to warn about the risks of derelict land"
+     ],
+     "answer": 0,
+     "explanation": "She says antisocial behaviour dropped 'noticeably' because the place 'looks cared for'."
+    },
+    {
+     "q": "What does Mark's comment about the community garden suggest?",
+     "options": [
+      "He is surprised that it has lasted so long.",
+      "He resents the time his neighbour spends there.",
+      "He now has more confidence in volunteer upkeep.",
+      "He thinks it should be replaced by a play area."
+     ],
+     "answer": 2,
+     "explanation": "'Ah, now that one has worked well, I'll give you that' shows he concedes volunteers can work."
+    },
+    {
+     "q": "What does Julia encourage Mark to do?",
+     "options": [
+      "campaign actively for the park",
+      "give his views in the consultation",
+      "speak to the traders about their fears",
+      "volunteer for the maintenance team"
+     ],
+     "answer": 1,
+     "explanation": "'You should fill in the survey. If you've got doubts, say so.'"
+    }
+   ]
+  },
+  {
+   "type": "discussion",
+   "title": "Car-free city centres",
+   "context": "A radio presenter, Helen, discusses car-free city centres with an urban planner, Dr Rahul Mehta, and a small-business owner, Gareth Lloyd.",
+   "plays": 2,
+   "previewSeconds": 30,
+   "speakers": [
+    {
+     "name": "Helen",
+     "voice": "female"
+    },
+    {
+     "name": "Rahul",
+     "voice": "male"
+    },
+    {
+     "name": "Gareth",
+     "voice": "male"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Helen",
+     "text": "Hello and welcome to Urban Matters. Today we're asking whether city centres are better off without cars. Several European cities have gone down that road, and our own council is mulling over a similar scheme. With me are Dr Rahul Mehta, an urban planner, and Gareth Lloyd, who runs a hardware shop in the centre. Rahul, let me start with you. What's the case in a nutshell?"
+    },
+    {
+     "speaker": "Rahul",
+     "text": "Well, the simplest way to put it is that streets are public space, and we've allowed one use of them, storing and moving private vehicles, to crowd out almost everything else. When you remove that, you free up room for cafés, trees, play, markets. And the evidence from places like Ghent or Pontevedra is pretty consistent: air quality improves, noise drops, and, contrary to what people fear, footfall tends to rise."
+    },
+    {
+     "speaker": "Helen",
+     "text": "Gareth, you look sceptical."
+    },
+    {
+     "speaker": "Gareth",
+     "text": "I'm not against the principle, Helen. I walk to work myself. But my customers buy paint, ladders, bags of compost. They're not carrying those home on the bus. If you take away the ability to pull up outside, you take away my business, it's as simple as that."
+    },
+    {
+     "speaker": "Rahul",
+     "text": "I do understand that, and I think it's the most legitimate objection there is. But the research tends to show that retailers overestimate how many of their customers arrive by car. In one survey in Bristol, traders guessed it was around sixty per cent, and the actual figure was closer to twenty."
+    },
+    {
+     "speaker": "Gareth",
+     "text": "Well, with respect, that may be true for coffee shops. It isn't true for me. And surveys don't pay the rent."
+    },
+    {
+     "speaker": "Helen",
+     "text": "So is there a way of squaring that circle? Rahul?"
+    },
+    {
+     "speaker": "Rahul",
+     "text": "There is. Few of the successful schemes are absolute bans. They tend to include delivery windows, in the early morning, say, plus blue-badge access and loading bays at the edges. And some cities offer a click-and-collect point just outside the zone."
+    },
+    {
+     "speaker": "Gareth",
+     "text": "Now that, I could live with. What I couldn't stand is a scheme that's announced overnight, with a few bollards and a leaflet. We had that with the one-way system, and it was a shambles for months."
+    },
+    {
+     "speaker": "Helen",
+     "text": "So communication matters as much as the design."
+    },
+    {
+     "speaker": "Gareth",
+     "text": "More, perhaps. People will put up with change if they feel it's being done with them rather than to them."
+    },
+    {
+     "speaker": "Rahul",
+     "text": "I'd agree, and I'd add that trials help enormously. Temporary closures at weekends, say. People discover they like the result, and opposition softens. In Oslo the initial reaction was bitterly hostile, and a few years later most residents wouldn't hear of going back."
+    },
+    {
+     "speaker": "Helen",
+     "text": "Though isn't there a risk that a car-free centre becomes a rather exclusive place? Higher rents, boutique shops, tourists, and the people who actually live nearby squeezed out?"
+    },
+    {
+     "speaker": "Rahul",
+     "text": "It's a real risk, and one that planners are sometimes too slow to acknowledge. Greening an area makes it more desirable, and unless there's some protection for affordable housing and small businesses, you can end up pricing out the very people you set out to help."
+    },
+    {
+     "speaker": "Gareth",
+     "text": "Which is exactly what I'm afraid of, frankly. Not the paving stones. The rent review that comes afterwards."
+    },
+    {
+     "speaker": "Helen",
+     "text": "That seems a rather sobering note to finish on, but also a useful one. Rahul, Gareth, thank you both."
+    },
+    {
+     "speaker": "Rahul",
+     "text": "Thank you."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What does Rahul identify as the basic problem with city streets?",
+     "options": [
+      "They are too narrow for modern traffic.",
+      "One use has come to dominate shared space.",
+      "They are poorly maintained by councils.",
+      "They discourage shops from opening."
+     ],
+     "answer": 1,
+     "explanation": "'We've allowed one use of them... to crowd out almost everything else.'"
+    },
+    {
+     "q": "Why does Gareth believe a car-free centre would hurt his business?",
+     "options": [
+      "Cyclists tend to be poor customers.",
+      "Parking charges would rise sharply.",
+      "His shop is too far from public transport.",
+      "His customers need to transport bulky goods."
+     ],
+     "answer": 3,
+     "explanation": "His customers buy 'paint, ladders, bags of compost' and cannot carry them on the bus."
+    },
+    {
+     "q": "What is the purpose of Rahul's reference to the Bristol survey?",
+     "options": [
+      "to prove that car-free zones always raise sales",
+      "to criticise the quality of research on the subject",
+      "to show that traders sometimes misjudge their customers",
+      "to suggest that Gareth's shop is unusual"
+     ],
+     "answer": 2,
+     "explanation": "Traders guessed sixty per cent arrived by car, 'the actual figure was closer to twenty'."
+    },
+    {
+     "q": "What does Gareth say about his objections to the scheme's introduction?",
+     "options": [
+      "He would accept it if it were introduced gradually with consultation.",
+      "He wants all vehicles banned from his street.",
+      "He doubts any consultation would take place.",
+      "He would back it only if rents were frozen."
+     ],
+     "answer": 0,
+     "explanation": "People accept change 'if they feel it's being done with them rather than to them'; he criticises the overnight one-way system."
+    },
+    {
+     "q": "What example does Rahul give of opposition to such schemes fading?",
+     "options": [
+      "Oslo",
+      "Ghent",
+      "Bristol",
+      "Pontevedra"
+     ],
+     "answer": 0,
+     "explanation": "'In Oslo the initial reaction was bitterly hostile, and a few years later most residents wouldn't hear of going back.'"
+    },
+    {
+     "q": "What concern do Rahul and Gareth share at the end?",
+     "options": [
+      "that tourists will stop visiting the centre",
+      "that deliveries will be delayed by bollards",
+      "that the scheme could drive up rents and displace people",
+      "that cyclists will not respect pedestrian areas"
+     ],
+     "answer": 2,
+     "explanation": "Rahul: 'pricing out the very people you set out to help'; Gareth: 'the rent review that comes afterwards'."
+    }
+   ]
+  },
+  {
+   "type": "talk",
+   "title": "Why we throw food away",
+   "context": "A food-policy researcher, Dr Alice Brennan, gives a short public lecture on household food waste. Afterwards the host, Daniel, sums up.",
+   "plays": 1,
+   "previewSeconds": 30,
+   "speakers": [
+    {
+     "name": "Alice",
+     "voice": "female"
+    },
+    {
+     "name": "Daniel",
+     "voice": "male"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Alice",
+     "text": "Good evening, everyone. I'd like to begin with an uncomfortable statistic. Roughly a third of all the food produced never gets eaten, and a surprisingly large share of that waste happens not in fields or factories but in our own kitchens. When I tell people this, they react with a kind of polite disbelief. Surely, they say, we're careful. And yet when my team asked households to keep a diary of what they discarded, the average family was binning the equivalent of several hundred pounds a year, much of it perfectly edible. So why does it happen? The popular explanation is carelessness, and that does play a part. But our research points to something subtler, which we've come to call the optimism problem. Most of us shop for the person we'd like to be, not the person we are. We buy the kale and the fresh herbs on Sunday with the best of intentions, and by Thursday, after a long day and a takeaway, they've wilted in the fridge. Nobody is behaving irrationally; it's simply that our plans are more ambitious than our evenings. The second culprit is confusion over dates. 'Best before' refers to quality; 'use by' refers to safety. Yet in our survey, more than half of respondents treated the two as interchangeable and threw away yoghurt that was still entirely fine. Now, one might expect rising prices to curb all this, but the picture is mixed. Households under real financial pressure do waste less, because they have to. For everyone else, a forgotten bag of salad barely registers. What does seem to work, interestingly, isn't guilt. Campaigns that wag a finger are forgotten within weeks. Practical tools do better: clearer labels, smaller packs, and above all planning meals for the week and sticking to a list. I'll stop there."
+    },
+    {
+     "speaker": "Daniel",
+     "text": "Thank you, Alice, that was fascinating. What struck me is how un-moralistic your conclusions are. You're not saying we're wasteful people, just that we're optimistic ones, and that the answer lies in making the sensible choice the easy choice. The date labels point was a surprise too; I'm fairly sure I've binned perfectly good cheese on that basis. I'd add, though, that the supermarkets surely have a part to play, with their multi-buy offers, and I hope that's something you'll come back to in a future talk. It was also a relief to hear that the answer isn't guilt, because frankly I've had enough of that from every direction. Meanwhile, I'm off to write a shopping list. Thank you all for coming."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What was Alice's purpose in mentioning the household diaries?",
+     "options": [
+      "to compare rich and poor families",
+      "to criticise a particular type of shopper",
+      "to show how households record purchases",
+      "to demonstrate that waste is larger than people believe"
+     ],
+     "answer": 3,
+     "explanation": "People reacted with 'polite disbelief', yet the average family binned 'several hundred pounds a year'."
+    },
+    {
+     "q": "What does Alice mean by 'the optimism problem'?",
+     "options": [
+      "People buy food for an idealised version of themselves.",
+      "People expect food prices to fall.",
+      "People trust best-before dates too much.",
+      "People assume supermarkets will waste less."
+     ],
+     "answer": 0,
+     "explanation": "'We shop for the person we'd like to be, not the person we are.'"
+    },
+    {
+     "q": "What does Alice imply about people who waste food because of optimism?",
+     "options": [
+      "They are acting irrationally.",
+      "They should feel guilty.",
+      "They are not simply being careless.",
+      "They are mostly wealthy."
+     ],
+     "answer": 2,
+     "explanation": "'Nobody is behaving irrationally; it's simply that our plans are more ambitious than our evenings', and carelessness is only part of it."
+    },
+    {
+     "q": "What did the survey reveal about date labels?",
+     "options": [
+      "Most people understand the difference between them.",
+      "Many people treat both labels as signalling danger.",
+      "Few people read the labels at all.",
+      "The labels are printed too small."
+     ],
+     "answer": 1,
+     "explanation": "More than half 'treated the two as interchangeable' and discarded food that was fine."
+    },
+    {
+     "q": "According to Alice, how far do rising prices reduce food waste?",
+     "options": [
+      "It has stopped waste entirely.",
+      "It makes people feel guilty.",
+      "It has no effect on anyone.",
+      "It affects only some households."
+     ],
+     "answer": 3,
+     "explanation": "'Households under real financial pressure do waste less... For everyone else, a forgotten bag of salad barely registers.'"
+    },
+    {
+     "q": "What does Daniel say he would like to hear more about?",
+     "options": [
+      "the survey methodology",
+      "the role of supermarkets",
+      "date-label legislation",
+      "cooking from leftovers"
+     ],
+     "answer": 1,
+     "explanation": "'The supermarkets surely have a part to play, with their multi-buy offers, and I hope that's something you'll come back to.'"
+    }
+   ]
+  },
+  {
+   "type": "talk",
+   "title": "Rewilding Britain's uplands",
+   "context": "An ecologist, Professor Ian Calder, talks about rewilding upland landscapes. A listener, Priya, then responds.",
+   "plays": 1,
+   "previewSeconds": 30,
+   "speakers": [
+    {
+     "name": "Ian",
+     "voice": "male"
+    },
+    {
+     "name": "Priya",
+     "voice": "female"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Ian",
+     "text": "Thank you. The word 'rewilding' has become something of a lightning rod, so let me say at the outset what it isn't. It isn't about sealing off a landscape and walking away, and it certainly isn't about turning farmers into villains. At its heart it means restoring natural processes and letting nature do more of the work. Take the uplands. For centuries we've kept them in a state of arrested development, grazed so heavily that trees can't establish and the soil is compacted. Visually it's beautiful, but ecologically it's thin. Where grazing pressure has been eased and native woodland allowed to return, the results can be startling. Within a decade, ground-nesting birds, insects and small mammals that had all but vanished began to reappear. The woodland also acts like a sponge. Rain that once ran off bare hillsides and into villages downstream is held back, and some projects now report measurably lower flood peaks. There's carbon too, though I'd urge caution there; claims about how much is stored are often wildly overstated. The harder questions are social. Rural communities have heard grand promises from outsiders before, and they are understandably wary. The schemes that have lasted are generally the ones where local people were partners from the start, with jobs in tourism, woodland management and monitoring. And then there's the thorny matter of reintroducing predators such as lynx. Ecologically the case is strong, but a farmer who lost lambs last spring is entitled to ask who pays. Another example is beavers, which in a few English catchments have built dams that slow streams and create wetlands within a couple of years, at almost no cost. Yet even there, landowners are anxious about waterlogged fields. So I'd say we need to be honest that there are trade-offs, and that no landscape can serve every purpose at once. That honesty, rather than evangelism, is what will win people over."
+    },
+    {
+     "speaker": "Priya",
+     "text": "That was a refreshing talk, because rewilding is so often presented as either a miracle or a menace. What I liked was your insistence on partnership: it seems to me the success of a scheme depends less on the science than on whether people feel they've been listened to. I'm also glad you cautioned about the carbon claims, as that argument is sometimes used rather glibly. I'm still not convinced about lynx, mind you, but I'd welcome a pilot with proper compensation. Thank you, Ian. I'll be taking that argument back to my own parish council, where this exact debate is simmering over a hill farm that has come up for sale. Some neighbours see it as a chance for something bold; others see the end of a way of life. Your point about being honest over trade-offs is, I think, exactly what both camps need to hear."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What does Ian say rewilding is fundamentally about?",
+     "options": [
+      "abandoning land completely",
+      "removing farmers from the uplands",
+      "allowing natural processes to operate",
+      "planting non-native forests"
+     ],
+     "answer": 2,
+     "explanation": "'Restoring natural processes and letting nature do more of the work.'"
+    },
+    {
+     "q": "What does Ian mean by describing the uplands as 'in a state of arrested development'?",
+     "options": [
+      "They have been neglected for centuries.",
+      "They are beautiful but ecologically limited.",
+      "They are developing too fast.",
+      "They are protected by law."
+     ],
+     "answer": 1,
+     "explanation": "Heavy grazing stops trees establishing: 'Visually beautiful, but ecologically it's thin.'"
+    },
+    {
+     "q": "What benefit of returning woodland does Ian mention?",
+     "options": [
+      "reduced flooding downstream",
+      "cheaper farming",
+      "higher tourist prices",
+      "warmer winters"
+     ],
+     "answer": 0,
+     "explanation": "Woodland acts 'like a sponge'; lower flood peaks reported."
+    },
+    {
+     "q": "What is Ian's attitude to claims about carbon storage?",
+     "options": [
+      "enthusiastic",
+      "dismissive",
+      "indifferent",
+      "cautious"
+     ],
+     "answer": 3,
+     "explanation": "'I'd urge caution there; claims... are often wildly overstated.'"
+    },
+    {
+     "q": "Why does Ian mention the farmer who lost lambs?",
+     "options": [
+      "to show reintroducing predators raises fair questions about cost",
+      "to argue that predators should not be reintroduced",
+      "to criticise farmers' attitudes",
+      "to suggest that lynx are harmless"
+     ],
+     "answer": 0,
+     "explanation": "'Entitled to ask who pays.'"
+    },
+    {
+     "q": "What is Priya's response to Ian's talk?",
+     "options": [
+      "She is persuaded about reintroducing lynx.",
+      "She rejects the notion of partnership.",
+      "She backs the talk, with a reservation about one aspect.",
+      "She thinks the carbon claims should be emphasised."
+     ],
+     "answer": 2,
+     "explanation": "She praises the talk but 'still not convinced about lynx'."
+    }
+   ]
+  }
+ ],
+ "reading": [
+  {
+   "type": "single",
+   "title": "The true cost of a five-pound dress",
+   "genre": "article",
+   "text": "There is a particular kind of optimism in a rail of five-pound dresses. Each garment seems to promise a version of the evening ahead, and at that price the promise barely feels like a purchase at all. That, of course, is precisely the point. Fast fashion has not merely lowered the price of clothing; it has altered our sense of what clothing is for, converting it from something we keep into something we sample.\n\nThe industry's logic is deceptively simple. Rather than two seasons a year, the leading online retailers now release thousands of new styles every week, producing them in small batches and adjusting to demand with astonishing speed. Such nimbleness requires suppliers to work to brutal deadlines and even more brutal margins, and it is invariably the workers at the bottom of the chain who absorb the strain, a fact that, though well documented, appears to have remarkably little effect on sales.\n\nThe environmental accounts are no less sobering. Producing a single cotton shirt can consume thousands of litres of water, while the synthetic fibres in many cheap garments shed microplastics at every wash. Yet perhaps the most telling statistic concerns longevity: by some estimates, a typical item is worn only seven or eight times before being discarded. Much of what is donated to charity shops proves unsellable, and is shipped abroad, sometimes ending up in vast dumps on the outskirts of cities that never asked for it.\n\nIt would be comforting to blame the shoppers, but that is too neat. Many of those who buy cheaply do so out of necessity rather than vanity, and sustainable alternatives remain, for the moment, the preserve of the comfortably off. What is needed is less a change of heart than a change of rules: longer warranties, honest labelling, and producers made financially liable for the waste they create. Several countries are already exploring such schemes.\n\nSome retailers have responded with 'conscious' ranges, which are reassuring in tone but often account for a sliver of total output. A cynic might say that this is merely the industry buying itself a better conscience at modest expense. The cynic may well be right. Still, the fashion for repair workshops and clothes-swapping events among the young suggests that attitudes are shifting, albeit unevenly. Whether they shift quickly enough to matter is, as ever, another question.",
+   "questions": [
+    {
+     "q": "What point does the writer make in the first paragraph?",
+     "options": [
+      "Low prices have changed how people think about clothing.",
+      "Cheap clothes are poor quality.",
+      "Shoppers are naturally optimistic.",
+      "Fast fashion is only popular at weekends."
+     ],
+     "answer": 0,
+     "explanation": "Fast fashion 'has altered our sense of what clothing is for, converting it from something we keep into something we sample'."
+    },
+    {
+     "q": "What does the writer imply about the suffering of garment workers?",
+     "options": [
+      "It is a hidden fact that few have heard of.",
+      "It is widely known but has done little to deter buyers.",
+      "It has led retailers to improve their suppliers' conditions.",
+      "It is exaggerated by campaigners."
+     ],
+     "answer": 1,
+     "explanation": "'A fact that, though well documented, appears to have remarkably little effect on sales.'"
+    },
+    {
+     "q": "What does the writer suggest in the fourth paragraph about responsibility for fast fashion?",
+     "options": [
+      "Shoppers deserve most of the blame.",
+      "Poorer consumers have more ethical choices than wealthier ones.",
+      "Charities should stop accepting donations.",
+      "Systemic reform is a better answer than urging individuals to change."
+     ],
+     "answer": 3,
+     "explanation": "Blaming shoppers is 'too neat'; 'less a change of heart than a change of rules'."
+    },
+    {
+     "q": "What is the writer's attitude to the retailers' 'conscious' ranges?",
+     "options": [
+      "admiring",
+      "hostile",
+      "sceptical",
+      "uncertain"
+     ],
+     "answer": 2,
+     "explanation": "They are 'a sliver of total output'; the cynic 'may well be right'."
+    }
+   ]
+  },
+  {
+   "type": "single",
+   "title": "Learning to live with the weather in our heads",
+   "genre": "blog",
+   "text": "A few weeks ago, a seventeen-year-old I mentor told me, quite matter-of-factly, that she wasn't sure she wanted children. When I asked why, she shrugged and said, 'Well, what would I be bringing them into?' I have been thinking about that shrug ever since.\n\nSurveys of young people across a dozen countries suggest she is far from unusual. Large majorities report feeling worried about climate change, and a substantial minority say the worry interferes with sleep, concentration or their plans for the future. The term 'climate anxiety' has entered the vocabulary, and, predictably, a backlash has followed: some commentators insist it is a fashionable label for ordinary teenage angst, others that it is a pathology invented by therapists in want of clients.\n\nI think both reactions miss the point. Anxiety is not a malfunction when it is a proportionate response to a genuine threat. What matters is whether the feeling leads somewhere. Psychologists who work with young people distinguish between worry that paralyses and worry that mobilises. The former, characterised by dread and a sense of futility, tends to push people into avoidance; the latter, though uncomfortable, can fuel the kind of purposeful engagement that makes a person feel less helpless.\n\nWhat, then, helps? Not, I'd argue, reassurance. Telling a teenager that 'it'll all be fine' is both unconvincing and faintly insulting, since she can read the same reports we do. Nor does relentless news consumption do any good, since it keeps the alarm ringing without offering a way to respond. The people who seem to cope best are those with some outlet for action, whether that's joining a local tree-planting group, campaigning, or simply changing what they eat, along with a trusted adult willing to listen without hurrying to fix.\n\nThere's also a quieter point about responsibility. It strikes me as unfair that a generation that did so little to cause the problem is being asked to carry so much of the emotional burden. If the adults in the room, schools, employers, governments, behaved as though they took the threat as seriously as the young do, the anxiety might feel less like a private affliction and more like a shared task.\n\nMy mentee, for the record, has joined a litter-picking group. She says it's not going to save the planet. She also says she sleeps better.",
+   "questions": [
+    {
+     "q": "Why does the writer begin with the story of the seventeen-year-old?",
+     "options": [
+      "to explain why she mentors teenagers",
+      "to illustrate a widespread feeling among the young",
+      "to criticise the teenager's attitude",
+      "to show that young people dislike children"
+     ],
+     "answer": 1,
+     "explanation": "The writer says 'she is far from unusual' and surveys back this up."
+    },
+    {
+     "q": "What is the writer's view of the 'backlash' against the term 'climate anxiety'?",
+     "options": [
+      "It misjudges the nature of the feeling.",
+      "It is justified by the evidence.",
+      "It was started by psychologists.",
+      "It is a harmless fashion."
+     ],
+     "answer": 0,
+     "explanation": "'I think both reactions miss the point. Anxiety is not a malfunction when it is a proportionate response.'"
+    },
+    {
+     "q": "What does the writer suggest about reassurance?",
+     "options": [
+      "It is most effective when it comes from experts.",
+      "It should be combined with news coverage.",
+      "It is unhelpful because young people are well informed.",
+      "It works better for older teenagers."
+     ],
+     "answer": 2,
+     "explanation": "'Unconvincing and faintly insulting, since she can read the same reports we do.'"
+    },
+    {
+     "q": "What is the purpose of the final paragraph?",
+     "options": [
+      "to prove that litter-picking solves the climate crisis",
+      "to criticise the mentee's decision",
+      "to suggest that sleep problems are unconnected to anxiety",
+      "to show how action can ease worry, even if it does not solve the problem"
+     ],
+     "answer": 3,
+     "explanation": "'It's not going to save the planet. She also says she sleeps better.'"
+    }
+   ]
+  },
+  {
+   "type": "paired",
+   "title": "Powering down the old grid",
+   "textA": {
+    "title": "Faster, bolder, now",
+    "genre": "opinion piece",
+    "text": "Every few months a new report tells us that the energy transition is going too slowly, and every few months we respond by publishing another strategy. I should like to propose a radical alternative: build things. Solar and wind are now the cheapest sources of new electricity in most of the world; the technology is no longer the obstacle. The obstacle is a planning system in which a wind farm can spend longer in consultation than it will spend generating power.\n\nOpponents will say that rapid deployment rides roughshod over local feeling, and there is truth in that. But the costs of delay are not borne equally either. Each year that a gas plant keeps running is a year of emissions that cannot be recalled, and the households most exposed to volatile fuel prices are, as ever, the poorest. Nor should we be seduced by the idea that we can wait for a perfect solution, whether hydrogen or fusion, while the imperfect ones sit in the queue.\n\nStorage and grid upgrades are real challenges, but they are engineering challenges, and engineers have a habit of solving problems once someone is paid to do so. What they cannot do is solve a problem that politicians refuse to commission. I'd rather we erred on the side of building too much clean capacity too soon than watch another decade slip away in the name of caution.\n\nThere is also a question of fairness that the cautious rarely confront. Communities that host infrastructure should certainly share in the benefits, through lower bills or ownership stakes, but sharing benefits is not the same as granting a veto. A country that allows every ridge to be defended against every turbine will end up defending its fossil fuel habit instead."
+   },
+   "textB": {
+    "title": "What the turbines meant to Eskdale",
+    "genre": "local report",
+    "text": "When the energy company proposed twelve turbines on the ridge above Eskdale, it was greeted with a mixture of enthusiasm and dread. Three years on, the picture is more textured than either side predicted. The farm now supplies the equivalent of around eight thousand homes, and a community fund, financed by a proportion of its revenue, has paid for a new village hall roof and an insulation programme for older residents.\n\nThat is not to say everyone is content. Some residents still resent the way the project was announced, with leaflets arriving after the key decisions had been taken, and several feel the visual impact on the ridge has been underestimated. A few shopkeepers complained of noisy construction traffic. 'It wasn't that we were against green energy,' one told us, 'it's that nobody asked what we'd like.'\n\nThe developers acknowledge that they could have consulted more widely. Their second proposal, now being discussed, includes a shared-ownership model in which villagers may buy a stake in the turbines. Early indications are promising: a public meeting last month drew over two hundred people and, for the first time, produced more questions about returns than about the view. If the transition is to be both quick and fair, Eskdale suggests, the quickest route may not be to hurry past the community but to bring it along.\n\nAmong the lessons the developers say they have learnt is the value of showing, rather than telling. A scale model of the ridge, with the turbines in place, was displayed in the pub for a fortnight and was, by several accounts, more persuasive than the glossy leaflets. Another is that benefits need to be tangible: villagers who saw a new roof on the hall were quicker to forgive the lorries than those who were merely promised future dividends."
+   },
+   "questions": [
+    {
+     "q": "What is the writer of Text A's main complaint?",
+     "options": [
+      "Renewable technology is not yet reliable.",
+      "Governments publish too few reports.",
+      "Gas plants are cheaper than wind farms.",
+      "Planning procedures hold back deployment unnecessarily."
+     ],
+     "answer": 3,
+     "explanation": "'A wind farm can spend longer in consultation than it will spend generating power.'"
+    },
+    {
+     "q": "How would the writer of Text A probably view the Eskdale residents' complaints about consultation?",
+     "options": [
+      "as justified and decisive",
+      "as understandable but outweighed by the costs of delay",
+      "as evidence that wind farms are unpopular",
+      "as an excuse promoted by gas companies"
+     ],
+     "answer": 1,
+     "explanation": "Opponents' point has 'truth in it' but 'the costs of delay are not borne equally either'."
+    },
+    {
+     "q": "What does the phrase 'more textured' in Text B suggest?",
+     "options": [
+      "The effects of the project are mixed and complex.",
+      "The project has been a clear success.",
+      "Opinions have become more polarised.",
+      "The report is based on little evidence."
+     ],
+     "answer": 0,
+     "explanation": "Reactions 'more textured than either side predicted': good and bad."
+    },
+    {
+     "q": "What view do both writers share?",
+     "options": [
+      "Local communities should be able to veto projects.",
+      "Wind farms should be publicly owned.",
+      "Speed in delivering clean energy is a worthwhile aim.",
+      "Energy storage is the main barrier."
+     ],
+     "answer": 2,
+     "explanation": "Text A urges us to 'build things' quickly; Text B concludes that the transition should be 'both quick and fair'."
+    },
+    {
+     "q": "Which issue does Text B raise that Text A largely overlooks?",
+     "options": [
+      "the cost of storage",
+      "the value of involving local people early",
+      "the need for emissions cuts",
+      "the role of hydrogen"
+     ],
+     "answer": 1,
+     "explanation": "Text B concludes the transition should 'bring [the community] along'; Text A stresses speed and treats consultation as an obstacle."
+    }
+   ]
+  },
+  {
+   "type": "paired",
+   "title": "Who is the city's green space for?",
+   "textA": {
+    "title": "Dig for the city",
+    "genre": "newspaper feature",
+    "text": "On a Saturday morning at the Linden Road allotments, the air smells of tomato leaves and woodsmoke. There are eighty-odd plots here, and a waiting list of nearly five hundred. 'I put my name down seven years ago,' says Mehmet, who has just been offered a half-plot, 'and I'd stopped believing it would happen.' He is not unusual: as more people want to grow their own produce, whether for taste, thrift or sheer stubbornness, demand has far outstripped supply.\n\nThe council's view is that land is limited, and the pressure from housing is relentless. But proponents of allotments argue that they deliver more than vegetables. Plots provide habitats for pollinators, cool the surrounding streets, soak up rainwater that would otherwise overload drains, and, perhaps most precious of all, create a sociable setting where neighbours who might never otherwise speak end up swapping seedlings and advice.\n\nThere is even a case that the space is productive in hard economic terms. A study by one university estimated that a well-tended plot can yield produce worth several hundred pounds a year, hardly a negligible sum for families squeezed by food prices. For gardeners like Mehmet, however, the point is less arithmetic than belonging. 'It's the only place where I feel like I'm doing something real,' he says, leaning on his spade.\n\nThe waiting lists, nevertheless, tell their own story. Campaigners point out that some neighbouring boroughs, which long ago gave up the struggle, now provide only a fraction of the plots per head that were available a generation ago. Once such land is built on, they argue, it is almost never replaced, whatever the promises made at the time, and the small, patient culture that grew up around it disappears with it."
+   },
+   "textB": {
+    "title": "The case for building on the margins",
+    "genre": "council briefing",
+    "text": "The borough faces a shortfall of some six thousand homes over the coming decade. In a densely developed area, there are few options: build higher on existing sites, convert commercial buildings, or release a limited amount of underused green land at the edge of the built area. This briefing sets out why the third option should not be dismissed out of hand.\n\nOpposition to any such release is understandable, and the council recognises the value that residents place on open space. However, not all green land is of equal worth. Several parcels identified in the review are poorly drained, inaccessible, or used by only a handful of people. Developing carefully selected parcels, on condition that equivalent green space is created or improved elsewhere, could provide homes while avoiding a net loss of recreation space.\n\nThe briefing therefore recommends a two-part approach: release a small number of sites, and use the proceeds to expand the allotment provision, plant street trees and improve existing parks. This, we believe, is the fairest way of reconciling two competing goods. Residents are invited to comment on the draft criteria until the end of next month.\n\nIt should be stressed that no decision has been taken. Any sites released would be subject to a full environmental assessment, including surveys of wildlife, and the scheme would be reviewed after five years to check that the promised improvements had been delivered. The council also accepts that trust in such commitments has been damaged by past experience, and has therefore proposed that an independent panel of residents oversee the use of the proceeds."
+   },
+   "questions": [
+    {
+     "q": "What is the main purpose of the first paragraph of Text A?",
+     "options": [
+      "to show the strength of demand for allotments",
+      "to describe the smell of the allotments",
+      "to criticise the council's waiting list",
+      "to explain how to apply for a plot"
+     ],
+     "answer": 0,
+     "explanation": "Eighty plots, waiting list of nearly five hundred."
+    },
+    {
+     "q": "What does 'less arithmetic than belonging' mean in Text A?",
+     "options": [
+      "Gardeners are poor at calculating costs.",
+      "Plots rarely repay their rent.",
+      "The social value matters more to gardeners than the financial return.",
+      "Mehmet dislikes the community."
+     ],
+     "answer": 2,
+     "explanation": "Money is mentioned, 'the point is less arithmetic than belonging'."
+    },
+    {
+     "q": "How does the council briefing (Text B) view the sites it proposes to release?",
+     "options": [
+      "as vital to the borough's ecology",
+      "as already allocated for housing",
+      "as too small to be useful",
+      "as of limited value in their current state"
+     ],
+     "answer": 3,
+     "explanation": "'Poorly drained, inaccessible, or used by only a handful of people.'"
+    },
+    {
+     "q": "What would the writers of both texts probably agree on?",
+     "options": [
+      "All unused land should be built on.",
+      "Green space provides benefits for the local community.",
+      "Allotments should be privately funded.",
+      "Housing is a less pressing issue than food."
+     ],
+     "answer": 1,
+     "explanation": "Text A lists benefits; Text B 'recognises the value residents place on open space'."
+    },
+    {
+     "q": "How might the writer of Text A react to the proposal in Text B?",
+     "options": [
+      "with enthusiasm, as it ends the waiting list",
+      "with concern that releasing land may reduce scarce growing space",
+      "with indifference, as allotments are unaffected",
+      "with approval for building on allotment sites"
+     ],
+     "answer": 1,
+     "explanation": "Text A stresses scarcity and 'pressure from housing'; Text B releases green land."
+    }
+   ]
+  }
+ ],
+ "writing": {
+  "t1": {
+   "version": "email",
+   "platform": "Email",
+   "instructions": "You are a member of your university's Environment Society. You have received the email below from the Head of Campus Services, who is asking for feedback on a plan to close the main campus road to cars. Write a reply email. You must: respond to the plan, and suggest a way of reducing the problems the plan may cause. Write about 150-180 words.",
+   "bullets": [
+    "Give your opinion on the plan to close the main campus road to cars",
+    "Suggest how the university could reduce the problems the plan may cause"
+   ],
+   "thread": [
+    {
+     "author": "Dr Fiona Marsh",
+     "role": "Head of Campus Services",
+     "text": "Dear members of the Environment Society,\n\nAs part of the university's sustainability strategy, we are considering closing Founders Road, the main route through campus, to all private vehicles from September. Only buses, bicycles and emergency vehicles would be allowed. We believe this would reduce pollution and make the campus safer and more pleasant, but we recognise that some staff, disabled students and those living off campus may be affected. Before we make a final decision, we would be grateful to hear your views, and any practical suggestions you may have for making the change work.\n\nKind regards,\nFiona Marsh"
+    }
+   ]
+  },
+  "t2": {
+   "genre": "report",
+   "title": "Report: Making our town centre greener and more sustainable",
+   "instructions": "Your town council has asked young residents to contribute to a report on how the town centre could become greener and more sustainable. Read the three sources below and write a report for the council. In your report, you should compare the approaches described, evaluate their strengths and weaknesses, and recommend what the council should do. You MUST use ideas from the texts AND your own ideas. You MUST NOT copy from the texts. Write about 250-300 words.",
+   "sources": [
+    {
+     "label": "A",
+     "title": "Green means growth",
+     "type": "article",
+     "text": "Local traders are often the first to object when a town proposes planting trees or pedestrianising streets, yet the evidence suggests they have little to fear. A study of twelve European towns found that streets with more greenery and wider pavements saw footfall rise by an average of fifteen per cent within two years. Shoppers stayed longer, spent more per visit and reported feeling safer. 'People don't linger on a road lined with parked cars,' says retail analyst Joanna Pike. 'But give them shade and a bench, and they'll stop for a coffee, and then they'll browse.' The upfront cost of landscaping can be high, but most towns recouped the investment within five years through higher business rates and reduced spending on pollution-related health problems. Critics counter that the figures are drawn from prosperous, tourist-friendly places, and may not translate to smaller, struggling high streets. Even so, Pike insists the principle holds: 'Pleasant places attract people, and people attract trade.'"
+    },
+    {
+     "label": "B",
+     "title": "Survey of town-centre residents",
+     "type": "survey summary",
+     "text": "A survey of 1,200 residents carried out last autumn asked what would most improve the town centre. Forty-one per cent chose 'more trees, planting and green spaces', while thirty-three per cent selected 'better public transport', and twenty-two per cent chose 'cheaper or more parking'. Only four per cent named a ban on cars. Among those aged under thirty, support for greening rose to fifty-eight per cent, whereas respondents over sixty-five were more likely to prioritise parking and access (thirty-nine per cent). Many comments expressed concern about the safety of cycling in the centre, and about the lack of shaded seating in summer. A recurring theme was maintenance: respondents wanted assurance that any new planting would be properly looked after, citing a flower bed in Market Square that has stood neglected for two years. Respondents with mobility difficulties said that they would support pedestrianisation only if drop-off points and accessible parking were retained nearby."
+    },
+    {
+     "label": "C",
+     "title": "The quiet success of Ashford's 'Living Streets'",
+     "type": "interview",
+     "text": "Interviewer: Ashford replaced a through road with planters, bike racks and seating three years ago. Was it controversial? Councillor Ruth Adeyemi: Very. The first six months were turbulent, with petitions and angry letters. But we kept the changes reversible, using movable planters and temporary paint, so that people could see the benefits without feeling anything was permanent. We also set up a residents' panel, which decided where the benches went. Interviewer: And now? Councillor Adeyemi: Air-quality readings have improved by nearly a fifth and two new cafés have opened. Mind you, it isn't flawless. Some traders say deliveries are harder, and rents on the street have risen, which worries me. We are looking at ways to protect small independent businesses, perhaps by capping rent increases for existing tenants. The lesson is that you can't impose a transformation; you have to let people grow into it."
+    }
+   ]
+  }
+ }
+}

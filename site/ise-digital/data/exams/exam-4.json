@@ -1,0 +1,1045 @@
+{
+ "id": "exam-4",
+ "title": "Mock Exam 4",
+ "theme": "Health and science: citizen science, student mental health, nutrition myths, the placebo effect, sleep science, sport science, ageing populations, wearable trackers, burnout, health advice online",
+ "levelling": [
+  {
+   "type": "synonym",
+   "prompt": "reluctant",
+   "options": [
+    "unwilling",
+    "eager",
+    "exhausted",
+    "unable"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "complete",
+   "prompt": "If I ___ the answer, I would gladly tell you.",
+   "options": [
+    "would know",
+    "knew",
+    "have known",
+    "know"
+   ],
+   "answer": 1
+  },
+  {
+   "type": "synonym",
+   "prompt": "mitigate",
+   "options": [
+    "aggravate",
+    "postpone",
+    "alleviate",
+    "conceal"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "complete",
+   "prompt": "The director insisted that every employee ___ the safety form before leaving.",
+   "options": [
+    "fills",
+    "filled",
+    "is filling",
+    "fill"
+   ],
+   "answer": 3
+  },
+  {
+   "type": "synonym",
+   "prompt": "ubiquitous",
+   "options": [
+    "omnipresent",
+    "ambiguous",
+    "superficial",
+    "notorious"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "complete",
+   "prompt": "No sooner ___ the results been published than critics began questioning them.",
+   "options": [
+    "did",
+    "had",
+    "have",
+    "were"
+   ],
+   "answer": 1
+  },
+  {
+   "type": "synonym",
+   "prompt": "candid",
+   "options": [
+    "cautious",
+    "courteous",
+    "frank",
+    "clumsy"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "complete",
+   "prompt": "I'd rather you ___ anything to the press until we have spoken to the lawyers.",
+   "options": [
+    "didn't say",
+    "don't say",
+    "won't say",
+    "not to say"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "synonym",
+   "prompt": "ephemeral",
+   "options": [
+    "fragile",
+    "short-lived",
+    "hollow",
+    "elaborate"
+   ],
+   "answer": 1
+  },
+  {
+   "type": "complete",
+   "prompt": "The new policy, ___ details remain unclear, will come into force in May.",
+   "options": [
+    "which",
+    "that",
+    "of which",
+    "whose"
+   ],
+   "answer": 3
+  },
+  {
+   "type": "synonym",
+   "prompt": "scrutinise",
+   "options": [
+    "examine closely",
+    "dismiss quickly",
+    "summarise briefly",
+    "imitate carefully"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "complete",
+   "prompt": "Were it not ___ her support, the whole project would have collapsed.",
+   "options": [
+    "for",
+    "by",
+    "with",
+    "from"
+   ],
+   "answer": 0
+  },
+  {
+   "type": "synonym",
+   "prompt": "obsolete",
+   "options": [
+    "unreliable",
+    "obscure",
+    "outdated",
+    "excessive"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "complete",
+   "prompt": "The minister is thought ___ resigned late last night, though nothing has been confirmed.",
+   "options": [
+    "to resign",
+    "having",
+    "to have",
+    "that he has"
+   ],
+   "answer": 2
+  },
+  {
+   "type": "synonym",
+   "prompt": "capricious",
+   "options": [
+    "stubborn",
+    "unpredictable",
+    "generous",
+    "meticulous"
+   ],
+   "answer": 1
+  }
+ ],
+ "speaking": {
+  "t1": {
+   "questions": [
+    "How do you usually unwind after a particularly stressful day?",
+    "How easy is it for you to get enough sleep, and what tends to get in the way?",
+    "Do you think people today are more health-conscious than previous generations were, or just more anxious about health?"
+   ]
+  },
+  "t2": {
+   "followups": [
+    "What made you choose that particular topic to talk about?",
+    "How do you think attitudes towards this topic might change over the next twenty years?",
+    "Is there anything about it that people often misunderstand?"
+   ]
+  },
+  "t3": {
+   "partner": "the events coordinator",
+   "situation": "You are a member of the student committee organising a Wellbeing Week at your university. You are meeting the events coordinator, who is helping you plan the programme. You have prepared a timetable with yoga sessions, a talk on sleep and a free breakfast every morning. You need to agree the final plan with the coordinator.",
+   "partnerLine": "Hello, thanks for coming in. I've looked at your draft timetable and I'm impressed overall. Before we finalise things, can you tell me which parts of the programme you think will matter most to students, and why?",
+   "newInfo": "I'm afraid I have some bad news. The faculty has just told me that the budget for Wellbeing Week has been cut by almost half, and the main hall will no longer be available on the Tuesday. We'll have to drop or change quite a lot.",
+   "newTask": "React to the news and suggest how the programme could be adapted, explaining which parts you would protect and why."
+  },
+  "t4": {
+   "title": "Burnout and remote work",
+   "instructions": "Listen to two colleagues talking about burnout among people who work from home. Summarise the main points: Why has remote working not solved the problem of exhaustion? What do they think employers should do about it?",
+   "speakers": [
+    {
+     "name": "Nadia",
+     "voice": "female"
+    },
+    {
+     "name": "Joe",
+     "voice": "male"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Nadia",
+     "text": "So, I read this survey over the weekend that said something like sixty per cent of remote workers feel more exhausted than they did in the office. Which surprised me, because I'd always assumed that not commuting would give everybody their lives back."
+    },
+    {
+     "speaker": "Joe",
+     "text": "Yeah, that's what we all thought, wasn't it? But I think what actually happened is that the commute used to work as a kind of buffer. You know, a bit of time to wind down between work mode and home mode. Now the laptop's sitting on the kitchen table and there's no clear moment when the day ends."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "Right, and I think that's the real culprit. It's not the hours themselves, necessarily, it's that work has leaked into every corner. I catch myself answering messages at ten at night, not because anybody's asked me to, but just because I can."
+    },
+    {
+     "speaker": "Joe",
+     "text": "Well, and that's the thing, nobody has to ask. There's this unspoken pressure to be visible, to prove you're not slacking off at home. So people reply instantly, they stay on calls longer than they need to, and, I mean, it's exhausting in a way that's hard to explain to somebody who hasn't felt it."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "No, I agree. That's where managers come in. A few companies have introduced what they call quiet hours, where nobody is expected to reply to anything after six, and meetings are capped at twenty-five minutes so people get a breather in between."
+    },
+    {
+     "speaker": "Joe",
+     "text": "Which sounds trivial but it isn't, because it changes the culture. If the boss is the one who goes offline, everyone else feels permitted to do the same."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "Exactly. Although I'd add that there's a risk of treating this as a perk. Burnout isn't solved by a free yoga subscription if the workload is unrealistic in the first place."
+    },
+    {
+     "speaker": "Joe",
+     "text": "Fair point. Wellbeing initiatives can be a bit of a sticking plaster. You've got to look at the actual demands people are under."
+    },
+    {
+     "speaker": "Nadia",
+     "text": "Yes, so, in short: clearer boundaries, a realistic workload, and leaders who model the behaviour they expect."
+    },
+    {
+     "speaker": "Joe",
+     "text": "Couldn't have put it better myself."
+    }
+   ],
+   "followup": "Some people argue that employers have no responsibility for their staff's wellbeing outside working hours. To what extent do you agree?"
+  }
+ },
+ "listening": [
+  {
+   "type": "conversation",
+   "title": "Citizen science",
+   "context": "Two friends, Priya and Tom, are chatting about a volunteer project Priya has joined.",
+   "plays": 2,
+   "previewSeconds": 25,
+   "speakers": [
+    {
+     "name": "Priya",
+     "voice": "female"
+    },
+    {
+     "name": "Tom",
+     "voice": "male"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Priya",
+     "text": "So I finally signed up for that river monitoring project I've been banging on about. You know, the one where volunteers test the water for nitrates and phosphates?"
+    },
+    {
+     "speaker": "Tom",
+     "text": "Oh, right, the citizen science thing. Honestly, Priya, I'm a bit torn about those. I mean, it's lovely that people get involved, but can you really trust data collected by enthusiastic amateurs with a plastic test kit?"
+    },
+    {
+     "speaker": "Priya",
+     "text": "That's the first thing everybody says, and, to be fair, it was my worry too. But the coordinators were really upfront about it. Every volunteer does a short training session, and then a random sample of readings gets checked against lab results. Apparently the discrepancy is smaller than you'd think."
+    },
+    {
+     "speaker": "Tom",
+     "text": "Hm, smaller than I'd think isn't exactly a ringing endorsement."
+    },
+    {
+     "speaker": "Priya",
+     "text": "Ha, no, fair enough. But here's the thing, it's the scale. A single university team could never sample two hundred sites every fortnight. Volunteers can. So you trade a bit of precision for sheer coverage, and when you're looking for patterns, like a spike after heavy rain, coverage matters more."
+    },
+    {
+     "speaker": "Priya",
+     "text": "And actually, one of the findings from our local stretch was that a farm drain nobody had flagged was leaking into the river. A volunteer noticed the readings jumped every Tuesday."
+    },
+    {
+     "speaker": "Tom",
+     "text": "Every Tuesday? That's oddly specific."
+    },
+    {
+     "speaker": "Priya",
+     "text": "Turned out to be when they cleaned out the milking sheds. The council's now investigating."
+    },
+    {
+     "speaker": "Tom",
+     "text": "Right, so that's genuinely useful. I'll admit I'd assumed it was mostly a feel-good exercise, a way for people to say they'd contributed to science."
+    },
+    {
+     "speaker": "Priya",
+     "text": "Well, I'd be lying if I said that wasn't part of the appeal for me. It's quite satisfying. But the other thing the coordinator said, which stuck with me, is that the real risk isn't bad data, it's volunteers drifting away after a few months. Retention is the headache."
+    },
+    {
+     "speaker": "Tom",
+     "text": "Why's that a bigger problem than accuracy?"
+    },
+    {
+     "speaker": "Priya",
+     "text": "Because you can correct for errors statistically, but you can't fill in a gap in a time series. If forty people stop turning up in winter, you lose the very months you need."
+    },
+    {
+     "speaker": "Tom",
+     "text": "Hmm. Maybe I should come along, then, if only to cover the winter."
+    },
+    {
+     "speaker": "Priya",
+     "text": "Ha! Now you're talking. First session's this Saturday. Bring wellies."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What was Tom's initial attitude towards citizen science projects?",
+     "options": [
+      "He doubted that untrained people could produce reliable data.",
+      "He thought they were too expensive to run properly.",
+      "He believed they damaged the places being studied.",
+      "He felt volunteers rarely had enough free time."
+     ],
+     "answer": 0,
+     "explanation": "Tom asks whether you can 'really trust data collected by enthusiastic amateurs with a plastic test kit?'"
+    },
+    {
+     "q": "Why does Priya say coverage can matter more than precision?",
+     "options": [
+      "Lab tests are too slow to detect pollution.",
+      "Patterns across many sites can only be spotted with large numbers of samples.",
+      "Volunteers are trained to a higher standard than researchers.",
+      "Small errors cancel themselves out over time."
+     ],
+     "answer": 1,
+     "explanation": "A university team could never sample 200 sites every fortnight; 'when you're looking for patterns... coverage matters more'."
+    },
+    {
+     "q": "What does the story about the Tuesday readings illustrate?",
+     "options": [
+      "Councils usually ignore volunteer findings.",
+      "Farms are the main cause of river pollution.",
+      "Volunteers should be trained to identify polluters.",
+      "Ordinary volunteers can uncover problems professionals had missed."
+     ],
+     "answer": 3,
+     "explanation": "A farm drain 'nobody had flagged' was found because a volunteer noticed readings jumped every Tuesday."
+    },
+    {
+     "q": "According to the coordinator, what is the greatest threat to the project?",
+     "options": [
+      "Inaccurate test kits",
+      "Volunteers losing interest over time",
+      "A lack of funding from the council",
+      "Disagreement with laboratory results"
+     ],
+     "answer": 1,
+     "explanation": "'The real risk isn't bad data, it's volunteers drifting away... Retention is the headache.'"
+    }
+   ]
+  },
+  {
+   "type": "discussion",
+   "title": "Student mental health",
+   "context": "A radio presenter chairs a discussion about mental health at university with a students' union officer and a researcher.",
+   "plays": 2,
+   "previewSeconds": 30,
+   "speakers": [
+    {
+     "name": "Helen",
+     "voice": "female"
+    },
+    {
+     "name": "Callum",
+     "voice": "male"
+    },
+    {
+     "name": "Aisha",
+     "voice": "female"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Helen",
+     "text": "Welcome to Campus Voices. Today we're looking at student mental health. With me are Callum Reid, welfare officer at the students' union, and Dr Aisha Rahman, who researches stress and coping in young adults. Callum, let's start with you. Universities say they've never invested more in counselling, yet waiting lists keep growing. What's going wrong?"
+    },
+    {
+     "speaker": "Callum",
+     "text": "Well, I think the honest answer is that we're treating the symptom. Counselling is vital, don't get me wrong, but if you've got three assessments landing in the same fortnight and a student is working twenty hours a week to cover rent, you can offer all the sessions you like, and you're still sending them back into the very thing that's making them ill. So, yes, more counsellors, but also a hard look at how courses are designed."
+    },
+    {
+     "speaker": "Helen",
+     "text": "Aisha, is that how the evidence looks to you?"
+    },
+    {
+     "speaker": "Aisha",
+     "text": "Partly. I'd want to be a little careful, actually. There's no question that distress is being reported more often, but a chunk of that rise is down to more students being willing to say so, which is, ironically, a good thing. And I do worry that when we label every spell of anxiety before an exam as a mental health problem, we may be eroding students' confidence that they can cope with ordinary stress. Some pressure is, well, part of learning."
+    },
+    {
+     "speaker": "Callum",
+     "text": "I'd push back on that. Nobody's saying a bit of nerves is a disorder. But \"it's normal stress\" can be a very convenient phrase for institutions that don't want to change anything."
+    },
+    {
+     "speaker": "Aisha",
+     "text": "Fair, and I'm not defending inertia. What I'm saying is that the response should be proportionate. Not everyone needs therapy; many need a bit of structure, some sleep, somebody to talk to on the corridor."
+    },
+    {
+     "speaker": "Helen",
+     "text": "Which brings us to peer support. A number of universities now train students as peer listeners. Does it work?"
+    },
+    {
+     "speaker": "Aisha",
+     "text": "The early findings are encouraging, particularly for loneliness, which is a huge driver. But, and this is important, the volunteers need supervision. Otherwise you're asking nineteen-year-olds to carry things that would challenge a professional."
+    },
+    {
+     "speaker": "Callum",
+     "text": "Absolutely. We've seen peer schemes burn out their own volunteers. It can't be a cheap substitute for proper services."
+    },
+    {
+     "speaker": "Helen",
+     "text": "So is there a risk that peer support becomes a way of cutting costs?"
+    },
+    {
+     "speaker": "Callum",
+     "text": "Frankly, yes. I've sat in meetings where it was floated in exactly those terms."
+    },
+    {
+     "speaker": "Aisha",
+     "text": "Which would be a false economy. If you train people well and back them up with professionals, it widens the net. If you don't, it just moves the problem around."
+    },
+    {
+     "speaker": "Helen",
+     "text": "Final question to both. If you could change one thing next year, what would it be? Callum?"
+    },
+    {
+     "speaker": "Callum",
+     "text": "Cap the number of deadlines in any two-week period. It costs almost nothing and it would make a noticeable difference."
+    },
+    {
+     "speaker": "Aisha",
+     "text": "Mine would be early, light-touch contact: a short check-in with every first-year in the first month, so that struggling students are noticed before they reach crisis point."
+    },
+    {
+     "speaker": "Helen",
+     "text": "Thank you both."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is Callum's main criticism of how universities respond to student distress?",
+     "options": [
+      "They employ too few counsellors.",
+      "They rely on counselling without addressing pressures built into courses.",
+      "They ignore students who work part-time.",
+      "They fail to publicise the services available."
+     ],
+     "answer": 1,
+     "explanation": "'We're treating the symptom... you're still sending them back into the very thing that's making them ill.'"
+    },
+    {
+     "q": "What does Aisha suggest about the reported rise in distress?",
+     "options": [
+      "It is exaggerated by the media.",
+      "It mainly affects first-year students.",
+      "It is partly explained by students being readier to speak openly.",
+      "It is caused by a decline in resilience."
+     ],
+     "answer": 2,
+     "explanation": "'A chunk of that rise is down to more students being willing to say so.'"
+    },
+    {
+     "q": "What concern does Aisha raise about labelling anxiety as a mental health problem?",
+     "options": [
+      "Students may stop seeking professional help.",
+      "Universities may spend too much on therapy.",
+      "Students may start to doubt their ability to handle everyday stress.",
+      "Staff may misdiagnose serious conditions."
+     ],
+     "answer": 2,
+     "explanation": "It may be 'eroding students' confidence that they can cope with ordinary stress'."
+    },
+    {
+     "q": "Why does Callum object to the phrase 'it's normal stress'?",
+     "options": [
+      "It is factually inaccurate.",
+      "It can excuse institutions from making changes.",
+      "It upsets students who are struggling.",
+      "It ignores the role of loneliness."
+     ],
+     "answer": 1,
+     "explanation": "It can be 'a very convenient phrase for institutions that don't want to change anything'."
+    },
+    {
+     "q": "What do both speakers say about peer support schemes?",
+     "options": [
+      "They should replace professional counselling.",
+      "They work best for first-year students.",
+      "They are too risky to be worth attempting.",
+      "They need professional backing and must not be used to save money."
+     ],
+     "answer": 3,
+     "explanation": "Aisha: volunteers 'need supervision'; Callum: 'It can't be a cheap substitute'; Aisha: 'a false economy'."
+    },
+    {
+     "q": "What is the purpose of Aisha's proposed change?",
+     "options": [
+      "To reduce the number of assessments",
+      "To identify struggling students at an early stage",
+      "To cut waiting lists for counselling",
+      "To train more peer listeners"
+     ],
+     "answer": 1,
+     "explanation": "A check-in with every first-year 'so that struggling students are noticed before they reach crisis point'."
+    }
+   ]
+  },
+  {
+   "type": "talk",
+   "title": "Nutrition myths",
+   "context": "A nutrition scientist gives a short talk to a student society; a society member then summarises it.",
+   "plays": 1,
+   "previewSeconds": 30,
+   "speakers": [
+    {
+     "name": "Dr Menon",
+     "voice": "male"
+    },
+    {
+     "name": "Sofia",
+     "voice": "female"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Dr Menon",
+     "text": "Good afternoon, everyone. I'd like to spend the next few minutes on nutrition myths, and I should say at the outset that I don't think myths persist because people are foolish. They persist because they're often a distorted version of something that was once reasonable. Take the idea that breakfast is the most important meal of the day. That slogan owes a good deal to cereal marketing in the early twentieth century. Observational studies do link breakfast eating with better health, but breakfast eaters also tend to smoke less, exercise more and sleep better, so it's very hard to isolate the meal itself. When researchers randomly assign people to eat or skip breakfast, the effect on weight is modest at best."
+    },
+    {
+     "speaker": "Dr Menon",
+     "text": "Then there's detox. Whole industries sell juices and teas that supposedly flush toxins out of the body. Now, your liver and kidneys already do this, continuously, and rather well, and no product has been shown to improve on them. If someone feels better after a juice cleanse, the likelier explanation is that they've given up alcohol and ultra-processed food for a week."
+    },
+    {
+     "speaker": "Dr Menon",
+     "text": "A third myth concerns fat. For decades dietary fat was cast as the villain, and the food industry responded by producing low-fat products loaded with sugar. We now know that the type of fat matters far more than the quantity, which rather complicates the old advice."
+    },
+    {
+     "speaker": "Dr Menon",
+     "text": "What these cases share, I think, is an appetite for simple rules. Nutrition is messy. Studies often rely on people remembering accurately what they ate, which, as we all know, they don't. So when a headline promises certainty, that should itself raise suspicion. My advice is to treat any single study with caution, to look for consistency across different kinds of evidence, and to be wary of anyone who is selling the solution. Thank you."
+    },
+    {
+     "speaker": "Sofia",
+     "text": "Thanks very much, Ravi. So, if I've followed you correctly, the point isn't really that people are gullible. It's that myths tend to grow out of half-truths and catchy slogans. Breakfast is a good example, because the evidence gets tangled up with lifestyle, and the detox claims overlook what our organs already do for us. The fat story is interesting too, because it shows how well-meant advice can end up producing sugary products nobody intended. I suppose the takeaway is to be sceptical of anything that sounds too certain, and to weigh the whole body of evidence rather than getting carried away by one headline."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What does the speaker suggest about why nutrition myths persist?",
+     "options": [
+      "Journalists deliberately simplify research.",
+      "They often begin as distorted versions of reasonable ideas.",
+      "People prefer believing advice from industry.",
+      "Scientists fail to explain their findings clearly."
+     ],
+     "answer": 1,
+     "explanation": "'They're often a distorted version of something that was once reasonable.'"
+    },
+    {
+     "q": "Why does the speaker mention that breakfast eaters smoke less and exercise more?",
+     "options": [
+      "To show that breakfast improves lifestyle habits",
+      "To criticise the way the studies were funded",
+      "To explain why cause and effect is hard to establish",
+      "To argue that skipping breakfast is harmful"
+     ],
+     "answer": 2,
+     "explanation": "These other factors make it 'very hard to isolate the meal itself'."
+    },
+    {
+     "q": "What is the speaker's attitude towards detox products?",
+     "options": [
+      "Mildly amused by their popularity",
+      "Dismissive, since the body already performs this function",
+      "Concerned that they may be dangerous",
+      "Undecided until more research is done"
+     ],
+     "answer": 1,
+     "explanation": "The liver and kidneys 'do this... rather well, and no product has been shown to improve on them'."
+    },
+    {
+     "q": "What does the example of low-fat products illustrate?",
+     "options": [
+      "Fat is more harmful than researchers once thought.",
+      "Manufacturers ignore scientific advice.",
+      "Consumers rarely read food labels.",
+      "Well-meant advice can have unintended consequences."
+     ],
+     "answer": 3,
+     "explanation": "Industry responded with 'low-fat products loaded with sugar'."
+    },
+    {
+     "q": "What does the speaker say about headlines that promise certainty?",
+     "options": [
+      "They should make readers suspicious.",
+      "They usually come from a single large study.",
+      "They are more reliable if sponsored by universities.",
+      "They reflect real progress in nutrition research."
+     ],
+     "answer": 0,
+     "explanation": "'When a headline promises certainty, that should itself raise suspicion.'"
+    },
+    {
+     "q": "Which of the speaker's points does Sofia leave out of her summary?",
+     "options": [
+      "That evidence should be weighed as a whole",
+      "That myths arise from half-truths",
+      "That studies depend on people's unreliable memories of their diet",
+      "That the fat advice backfired"
+     ],
+     "answer": 2,
+     "explanation": "Sofia does not mention that participants misremember what they ate."
+    }
+   ]
+  },
+  {
+   "type": "talk",
+   "title": "The placebo effect",
+   "context": "A pharmacologist gives a short talk about the placebo effect; a colleague then responds.",
+   "plays": 1,
+   "previewSeconds": 30,
+   "speakers": [
+    {
+     "name": "Dr Quinn",
+     "voice": "female"
+    },
+    {
+     "name": "Ben",
+     "voice": "male"
+    }
+   ],
+   "script": [
+    {
+     "speaker": "Dr Quinn",
+     "text": "Placebo is a word we tend to use as a mild insult. 'Oh, it's just a placebo', as if nothing at all were happening. I'd like to suggest that this is rather misleading. Something is happening; it simply isn't the pharmacological action of the pill. In trials of pain relief, a substantial proportion of patients given a dummy tablet report genuine improvement, and brain imaging shows that their pain pathways really do quieten. Even more striking, when researchers give a drug that blocks the body's natural opioids, naloxone, the placebo effect on pain largely disappears. So the body is producing its own painkillers in response to the expectation of relief."
+    },
+    {
+     "speaker": "Dr Quinn",
+     "text": "What shapes that expectation is revealing. Larger pills work better than small ones, injections better than tablets, and a branded packet better than a plain one. Even the manner of the clinician counts: a doctor who listens and speaks confidently produces measurably better outcomes than one who seems rushed. None of this is magic; it's the brain interpreting signals about how serious a treatment is."
+    },
+    {
+     "speaker": "Dr Quinn",
+     "text": "The most surprising development, to my mind, is the so-called open-label placebo. Patients with irritable bowel syndrome have been told, quite honestly, that they were receiving inert pills, and yet many still improved. That rather undermines the assumption that deception is essential, and it eases some of the ethical objections that have always hovered over placebo prescribing."
+    },
+    {
+     "speaker": "Dr Quinn",
+     "text": "But we should keep this in proportion. Placebos change how patients feel, their pain, their nausea, their fatigue. They do not shrink tumours or clear infections. The danger lies in confusing relief of symptoms with treatment of disease. The sensible conclusion, I think, is not to prescribe sugar pills, but to take the context of care seriously: how we explain treatment, and how much we listen, is part of the treatment itself. Thank you."
+    },
+    {
+     "speaker": "Ben",
+     "text": "Thanks, that was fascinating. I suppose what struck me is that the placebo effect is less a trick than a form of communication between doctor and patient. I'm persuaded by the opioid evidence, though I do wonder whether, if open-label placebos became routine, patients might come to feel they were being fobbed off, and that could erode trust rather than build it. But I take your point that the real lesson is about how care is delivered."
+    }
+   ],
+   "questions": [
+    {
+     "q": "What is the speaker's criticism of how the word 'placebo' is used?",
+     "options": [
+      "It implies that patients are being deceived.",
+      "It suggests that nothing is actually happening.",
+      "It is applied to treatments that do work.",
+      "It is only used in trials about pain."
+     ],
+     "answer": 1,
+     "explanation": "'As if nothing at all were happening. I'd like to suggest that this is rather misleading.'"
+    },
+    {
+     "q": "What does the naloxone finding show?",
+     "options": [
+      "Drug trials are often badly designed.",
+      "Placebos work better than painkillers.",
+      "The placebo effect has a physical mechanism in the body.",
+      "Patients cannot tell real pills from dummy ones."
+     ],
+     "answer": 2,
+     "explanation": "When opioids are blocked the placebo effect largely disappears: 'the body is producing its own painkillers'."
+    },
+    {
+     "q": "Why does the speaker mention larger pills, injections and branded packets?",
+     "options": [
+      "To show how expectation is influenced by the way treatment is presented",
+      "To criticise pharmaceutical advertising",
+      "To explain why some drugs are more expensive",
+      "To argue that small doses are ineffective"
+     ],
+     "answer": 0,
+     "explanation": "These details shape 'that expectation'."
+    },
+    {
+     "q": "What does the speaker find most surprising about open-label placebos?",
+     "options": [
+      "They are cheaper than ordinary drugs.",
+      "They reduce the need for clinical trials.",
+      "They only work for pain.",
+      "They can help even when patients know they are inert."
+     ],
+     "answer": 3,
+     "explanation": "Patients were told 'quite honestly' they were taking inert pills 'and yet many still improved'."
+    },
+    {
+     "q": "What is the speaker's view of placebos in serious illness?",
+     "options": [
+      "They can help with symptoms but do not treat the disease itself.",
+      "They should be used in place of standard drugs.",
+      "They have been shown to shrink tumours.",
+      "They are dangerous because they raise false hope."
+     ],
+     "answer": 0,
+     "explanation": "'They do not shrink tumours or clear infections.'"
+    },
+    {
+     "q": "What reservation does Ben express?",
+     "options": [
+      "That the opioid evidence is unconvincing",
+      "That routine open-label placebos might damage patients' trust",
+      "That doctors lack time to listen to patients",
+      "That placebo trials are unethical"
+     ],
+     "answer": 1,
+     "explanation": "He wonders whether patients 'might come to feel they were being fobbed off, and that could erode trust'."
+    }
+   ]
+  }
+ ],
+ "reading": [
+  {
+   "type": "single",
+   "title": "The tyranny of eight hours",
+   "genre": "article",
+   "text": "Few numbers in public health have enjoyed such uncritical devotion as eight. Eight hours of sleep, we are told, is the dose at which the human machine functions best, and anything less is a debt that will, sooner or later, be called in. The prescription has a seductive tidiness. It also rests on rather less evidence than its devotees imagine.\n\nConsider the historian Roger Ekirch's well-known argument that, before artificial lighting, many Europeans slept in two segments, separated by an hour or so of quiet wakefulness. Diaries and court records mention a 'first sleep' and a 'second sleep' without any hint of embarrassment. Whether this was ever the universal pattern is disputed, but the finding has a liberating effect on the modern insomniac who wakes at three in the morning, convinced that something has gone wrong with her biology. Perhaps nothing has; perhaps she is simply out of step with a norm that is only a couple of centuries old.\n\nStudies of communities without electricity, among them hunter-gatherer groups in Tanzania and Bolivia, complicate the picture further. Their members sleep, on average, between six and a half and seven and a half hours, rather less than the textbook figure, and they report few of the sleep complaints that bedevil industrialised societies. The lesson is not that we can all get by on six hours; it is that need varies, and that the quality, timing and regularity of sleep may count for as much as sheer duration.\n\nNone of this licenses complacency. Large studies consistently link chronic short sleep with raised risks of heart disease, depression and accidents, and the sleep-deprived are notoriously poor judges of their own impairment, a fact that makes self-assessment unreliable. The danger of the eight-hour rule, then, is not that it is wrong but that it is blunt. For people who sleep soundly and wake refreshed after seven hours, anxiety about the missing sixty minutes may be the most damaging element of the whole arrangement. Worry about sleep is, ironically, one of the most dependable ways of losing it.",
+   "questions": [
+    {
+     "q": "What is the writer's purpose in the second paragraph?",
+     "options": [
+      "To prove that people once slept less than they do now",
+      "To criticise historians who rely on diaries",
+      "To show that modern sleep expectations are not timeless",
+      "To recommend a new sleep pattern for insomniacs"
+     ],
+     "answer": 2,
+     "explanation": "Ekirch's argument suggests the single eight-hour block is 'a norm that is only a couple of centuries old'."
+    },
+    {
+     "q": "What does the writer conclude from the studies of communities without electricity?",
+     "options": [
+      "Modern societies sleep too little.",
+      "Sleep needs differ and duration is not the only factor that matters.",
+      "Six hours is enough for most adults.",
+      "Electric light is the main cause of insomnia."
+     ],
+     "answer": 1,
+     "explanation": "'Need varies, and... quality, timing and regularity of sleep may count for as much as sheer duration.'"
+    },
+    {
+     "q": "What does the writer mean by saying the eight-hour rule is 'blunt'?",
+     "options": [
+      "It is too harsh on people with insomnia.",
+      "It is useful as an average but too crude to apply to individuals.",
+      "It is based on out-of-date research.",
+      "It is widely ignored by the public."
+     ],
+     "answer": 1,
+     "explanation": "It is 'not that it is wrong but that it is blunt', i.e. imprecise for people who feel fine on seven hours."
+    },
+    {
+     "q": "Why does the writer use the word 'ironically' in the final sentence?",
+     "options": [
+      "To suggest that sleep research is contradictory",
+      "To mock people who worry about sleep",
+      "To point out that fretting about sleep can cause the very problem feared",
+      "To show that short sleepers are healthier"
+     ],
+     "answer": 2,
+     "explanation": "Worry about sleep 'is... one of the most dependable ways of losing it'."
+    }
+   ]
+  },
+  {
+   "type": "single",
+   "title": "Marginal gains and their discontents",
+   "genre": "article",
+   "text": "A decade ago the phrase 'marginal gains' migrated from the velodrome to the boardroom, and it has been quoted with evangelical zeal ever since. The idea, popularised by a dominant British cycling team, is that if you improve every component of performance by one per cent, from tyre pressure to pillow choice, the accumulated improvement will be formidable. It makes for a wonderfully motivating story. It also deserves rather more scepticism than it usually receives.\n\nThe first difficulty is arithmetic. The compounding calculation assumes that each small improvement is independent of the others and that they simply add up. In a living body they rarely do. A nutritional tweak that sharpens one training session may impair recovery for the next; a gadget that shaves a second off a time trial may leave the rider more anxious and therefore less rested. Interactions, trade-offs and diminishing returns are the rule, not the exception, and a list of tiny optimisations can easily describe a system that has been tuned into incoherence.\n\nA second problem concerns individuality. Exercise physiologists have long reported that athletes put on identical training programmes improve by wildly different amounts, with a supposed minority of 'non-responders' barely improving at all. More recent work suggests that many of these so-called non-responders are statistical mirages: when the same athletes are tested repeatedly, the day-to-day variation in a single person's results turns out to be as large as the differences between people. What looked like a biological category may be little more than measurement noise.\n\nNone of this means that attention to detail is foolish. But the wearable sensors and dashboards that have proliferated in elite sport can produce a surfeit of numbers, and athletes who are asked to track dozens of variables sometimes become paralysed, or start to trust the screen over their own sense of how they feel. The experienced coach, who can read fatigue in a rider's posture, is not made redundant by the data. The real lesson of marginal gains, then, is not accounting but attention: a habit of noticing what actually matters for this particular person, on this particular day.",
+   "questions": [
+    {
+     "q": "What is the writer's attitude to the philosophy of marginal gains?",
+     "options": [
+      "Dismissive of its value in elite sport",
+      "Respectful of the mindset but critical of how it is presented and applied",
+      "Enthusiastic about its adoption by businesses",
+      "Uncertain because the evidence is mixed"
+     ],
+     "answer": 1,
+     "explanation": "It is a 'wonderfully motivating story' that 'deserves rather more scepticism'."
+    },
+    {
+     "q": "What flaw does the writer identify in the 'one per cent' calculation?",
+     "options": [
+      "The improvements are too small to measure.",
+      "It ignores the cost of new equipment.",
+      "Athletes tire of making constant changes.",
+      "It treats improvements as independent when they interact."
+     ],
+     "answer": 3,
+     "explanation": "It 'assumes that each small improvement is independent... In a living body they rarely do.'"
+    },
+    {
+     "q": "Why does the writer describe certain athletes as 'so-called non-responders'?",
+     "options": [
+      "To suggest that the category may not genuinely exist",
+      "To criticise the athletes' lack of effort",
+      "To indicate that the term is outdated slang",
+      "To show that the finding is well established"
+     ],
+     "answer": 0,
+     "explanation": "They may be 'statistical mirages' reflecting 'measurement noise'."
+    },
+    {
+     "q": "What does the writer suggest is the true value of marginal gains?",
+     "options": [
+      "Collecting as much data as possible",
+      "Replacing coaches with sensors",
+      "Paying close attention to what matters for the individual",
+      "Making many changes at the same time"
+     ],
+     "answer": 2,
+     "explanation": "'Not accounting but attention.'"
+    }
+   ]
+  },
+  {
+   "type": "paired",
+   "title": "Living longer: opportunity or burden?",
+   "textA": {
+    "title": "The longevity dividend",
+    "genre": "newspaper article",
+    "text": "For two decades we have been warned of a 'demographic time bomb', as though the fact that people are living longer were a catastrophe rather than perhaps the greatest achievement of modern public health. It is time to retire the metaphor. A population with more older people is not, in itself, a population in decline; it is one holding an asset that most societies have barely begun to use.\n\nConsider what the over-sixties already contribute. In many countries grandparents provide a large proportion of unpaid childcare, enabling their children to work. Older volunteers sustain charities, school reading schemes and village hospitals. And a growing 'silver economy', from travel to adult education, generates jobs that did not exist a generation ago. In Japan, where nearly a third of the population is over sixty-five, a quiet experiment is under way: firms are redesigning roles so that experienced staff can continue part-time rather than vanish into retirement at an arbitrary birthday.\n\nThat last point matters. The old model, in which a person works full-time until sixty-five and then stops completely, was designed for a world in which most people died within a few years of stopping. It suits neither the individual who wants to taper gradually nor the employer who would rather not lose institutional memory overnight. Flexible, phased retirement, together with lifelong learning so that skills do not expire at fifty, could turn longer lives into what economists have started to call a longevity dividend.\n\nDividends, of course, must be earned. They depend on investment in health, retraining and age-friendly workplaces. But the starting assumption should be one of opportunity. A society that regards its elders merely as a bill to be paid will, unsurprisingly, find that it has created a problem it need not have had."
+   },
+   "textB": {
+    "title": "Living longer, living worse?",
+    "genre": "opinion column",
+    "text": "I have some sympathy with those who dislike the phrase 'demographic time bomb'. It is lazy, and it encourages the notion that older people are a problem to be managed. But I confess to a growing unease with the cheerful rebranding that has followed, in which longer lives are announced as a windfall. The windfall is real for some. For many, it is not.\n\nStart with health. Life expectancy has risen impressively, but healthy life expectancy, the number of years lived without serious illness or disability, has not kept pace. In many wealthy countries there is now a gap of roughly a decade between the two, a period often spent managing chronic conditions. It is hard to see this as a 'dividend', and harder still to see how people in poor health will be able to work, volunteer or mind their grandchildren with the vigour that optimistic projections assume.\n\nThen there is inequality. A woman in a prosperous suburb may expect to live well into her late eighties; a man in a deprived former mining town may die more than ten years earlier. Raising the retirement age for everyone, as several governments have done, therefore falls hardest on those who start work youngest, in physically punishing jobs, and who will enjoy the fewest years of the pension they have paid towards. A blanket rule is not neutral; it quietly transfers resources from the short-lived to the long-lived.\n\nFinally, social care. Even the most upbeat account of ageing must reckon with the fact that millions of people will, in their last years, need help with washing and dressing, and that in most countries this is funded patchily, if at all. A narrative of opportunity risks letting governments off the hook. We should talk about older people with respect and without panic, but we should also talk, plainly and soon, about who is going to pay."
+   },
+   "questions": [
+    {
+     "q": "What do both writers agree about the phrase 'demographic time bomb'?",
+     "options": [
+      "It exaggerates the number of older people.",
+      "It has been invented by economists.",
+      "It is an unhelpful way of describing ageing populations.",
+      "It is accurate but should not be said aloud."
+     ],
+     "answer": 2,
+     "explanation": "A: 'It is time to retire the metaphor'; B: 'It is lazy, and it encourages the notion that older people are a problem'."
+    },
+    {
+     "q": "What does the word 'dividend' in Text A suggest about longer lives?",
+     "options": [
+      "They are a benefit that has to be earned through investment.",
+      "They produce guaranteed financial profit.",
+      "They are only valuable to older individuals.",
+      "They are a gift that requires no effort."
+     ],
+     "answer": 0,
+     "explanation": "'Dividends, of course, must be earned. They depend on investment in health, retraining and age-friendly workplaces.'"
+    },
+    {
+     "q": "What is the writer of Text B suggesting with the phrase 'cheerful rebranding'?",
+     "options": [
+      "Positive language about ageing may hide real difficulties.",
+      "Governments have deliberately lied about ageing.",
+      "The writer admires the new optimism.",
+      "Older people prefer to be described positively."
+     ],
+     "answer": 0,
+     "explanation": "Longer lives are 'announced as a windfall. The windfall is real for some. For many, it is not.'"
+    },
+    {
+     "q": "How would the writer of Text A probably respond to Text B's criticism of raising the retirement age?",
+     "options": [
+      "By arguing that everyone should work until seventy",
+      "By saying retirement ages are irrelevant",
+      "By suggesting the issue is inequality, not retirement",
+      "By pointing out that flexible, phased retirement is preferable to a single fixed age"
+     ],
+     "answer": 3,
+     "explanation": "Text A argues the old model 'suits neither the individual who wants to taper gradually nor the employer', favouring 'flexible, phased retirement'."
+    },
+    {
+     "q": "Who would find Text B most useful?",
+     "options": [
+      "An employer planning part-time roles for older staff",
+      "A researcher interested in health inequalities and the funding of elder care",
+      "A student writing about the history of retirement",
+      "A journalist looking for evidence of the silver economy"
+     ],
+     "answer": 1,
+     "explanation": "Text B covers the healthy-life gap, regional inequality and social care funding."
+    }
+   ]
+  },
+  {
+   "type": "paired",
+   "title": "Tracking our own bodies",
+   "textA": {
+    "title": "Ninety days with a ring",
+    "genre": "blog post",
+    "text": "I should declare my bias up front: I am the sort of person who reads instruction manuals for fun. So when I strapped, or rather slid, a sensor ring onto my finger three months ago, I was always going to take it seriously. Every morning it delivered a 'readiness score' out of a hundred, along with a breakdown of my sleep stages, my resting heart rate and something called heart rate variability, which I still only half understand, though I can recite its definition if you ask nicely. My friends have stopped asking.\n\nThe early results were genuinely useful. I discovered that my resting heart rate crept up by several beats after even a single glass of wine, and that it stayed up all night. I had always insisted that a drink 'helped me sleep'. The ring, politely but firmly, begged to differ. I stopped drinking on weeknights, moved my last coffee to noon, and started going to bed at the same time every evening. By week six I was waking up feeling better than I had in years.\n\nI would be dishonest, however, if I pretended it was all serene. There were mornings when an unimpressive score of 62 soured my mood before I had even put the kettle on, and I caught myself lying awake calculating how much deep sleep I was 'losing'. My partner has taken to calling the ring a gentle tyrant. She has a point. The irony of an object designed to help me sleep keeping me up with worry has not escaped me.\n\nWould I recommend one? Yes, with a caveat: use it to notice patterns, not to grade yourself. The moment the number starts to dictate how you feel about the day, take the thing off for a week."
+   },
+   "textB": {
+    "title": "Quantified, but to what end?",
+    "genre": "research report extract",
+    "text": "Consumer sleep and activity trackers are now owned by tens of millions of people, yet independent evidence of their accuracy remains thin. Validation studies in which devices are compared against laboratory polysomnography suggest a mixed picture. Measurements of heart rate, and of broad sleep versus wake periods, are reasonably reliable. By contrast, the division of sleep into light, deep and REM stages, which is the feature most heavily promoted, is considerably less dependable, with devices frequently misclassifying stages by a wide margin. Because the underlying algorithms are proprietary, are updated without notice and are seldom accompanied by any published evidence of their performance, researchers cannot easily judge how far results from one version apply to the next.\n\nA second concern is behavioural. Evidence that tracking produces lasting change is modest: in several trials, increases in physical activity faded within a few months once novelty wore off. Clinicians have also described a phenomenon they call 'orthosomnia', in which patients become so preoccupied with achieving ideal sleep scores that the preoccupation itself worsens their sleep. Such patients may arrive at clinics with printouts of data that, however carefully presented, do not match what a laboratory would record, and clinicians then face the delicate task of reassuring them without dismissing their concerns altogether.\n\nWe do not conclude that these devices are without value. Used to observe broad patterns, such as the effect of alcohol or late exercise on resting heart rate, they can prompt sensible changes. We recommend, however, that users treat sleep-stage figures as rough estimates, that manufacturers publish validation data, and that anyone who finds themselves distressed by their scores should stop tracking and consult a professional."
+   },
+   "questions": [
+    {
+     "q": "What does the writer of Text A admit about the ring?",
+     "options": [
+      "That it did not improve sleep",
+      "That it gave inaccurate readings",
+      "That it sometimes made him or her anxious",
+      "That it was too complicated to use"
+     ],
+     "answer": 2,
+     "explanation": "'An unimpressive score of 62 soured my mood' and 'keeping me up with worry'."
+    },
+    {
+     "q": "What is the main purpose of Text B?",
+     "options": [
+      "To advertise a new sleep monitoring device",
+      "To describe how a sensor ring works",
+      "To weigh the evidence for consumer trackers and advise caution",
+      "To argue that tracking should be banned"
+     ],
+     "answer": 2,
+     "explanation": "It reviews validation studies and behavioural evidence and offers recommendations."
+    },
+    {
+     "q": "Which idea appears in both texts?",
+     "options": [
+      "Trackers measure deep sleep precisely.",
+      "Tracking can harm sleep through preoccupation with the data.",
+      "Alcohol has no effect on heart rate.",
+      "Trackers are only useful to clinicians."
+     ],
+     "answer": 1,
+     "explanation": "A: lying awake calculating 'deep sleep I was losing'; B: 'orthosomnia'."
+    },
+    {
+     "q": "How would the authors of Text B probably react to the writer of Text A's discovery about wine?",
+     "options": [
+      "They would reject it because trackers cannot measure heart rate.",
+      "They would find it plausible, since heart rate is among the more reliable measurements.",
+      "They would say it contradicts laboratory findings.",
+      "They would claim it proves sleep stages are accurate."
+     ],
+     "answer": 1,
+     "explanation": "B: heart rate is 'reasonably reliable' and the effect of alcohol on resting heart rate is a sensible use."
+    },
+    {
+     "q": "Why does the writer of Text A report that the partner calls the ring 'a gentle tyrant'?",
+     "options": [
+      "To suggest the ring is aggressively marketed",
+      "To illustrate how the device came to exert control over his or her mood",
+      "To complain about the partner's attitude",
+      "To argue that the ring should be switched off at night"
+     ],
+     "answer": 2,
+     "explanation": "The number started to dictate how the writer felt, hence the 'irony' of worry keeping the writer awake."
+    }
+   ]
+  }
+ ],
+ "writing": {
+  "t1": {
+   "version": "forum",
+   "platform": "Course discussion board - Module 4: Health and Society",
+   "instructions": "You are taking part in an online discussion on your course forum. Read the messages and write your own post. In your post you should:",
+   "bullets": [
+    "give your view on whether doctors should be able to prescribe activities such as exercise classes or volunteering instead of medication",
+    "respond to a point made by one of the other contributors"
+   ],
+   "thread": [
+    {
+     "author": "Dr Hall",
+     "role": "Tutor",
+     "text": "This week we are looking at 'social prescribing', where GPs refer patients with mild depression, loneliness or long-term conditions to community activities rather than, or alongside, medication. Should publicly funded health systems pay for it?"
+    },
+    {
+     "author": "Leila",
+     "role": "Student",
+     "text": "I think it's a great idea. Pills treat symptoms, but isolation is often the real cause. A walking group could do more for an elderly patient than another prescription."
+    },
+    {
+     "author": "Marcus",
+     "role": "Student",
+     "text": "I'm not so sure. Money is tight, and there's very little hard evidence that these schemes work. I'd rather the health service spent its budget on proven treatments."
+    }
+   ]
+  },
+  "t2": {
+   "genre": "essay",
+   "title": "Essay: Can we trust health advice online?",
+   "instructions": "Your university's Health Sciences department is running a seminar series. Write an essay in response to the following statement: 'Ordinary people can no longer tell reliable health advice from misinformation online, so social media platforms should be responsible for removing it.' To what extent do you agree? Write 200-250 words. You MUST use ideas from the texts AND your own ideas. You MUST NOT copy from the texts.",
+   "sources": [
+    {
+     "label": "A",
+     "title": "Reading between the likes",
+     "type": "survey summary",
+     "text": "A survey of 2,000 adults in the UK found that 61 per cent had looked for health information on social media in the previous year, and that 44 per cent had changed a habit as a result, such as taking a supplement or cutting out a food group. Younger respondents were most likely to say they trusted personalities with large followings, while older respondents were more likely to trust official health websites. However, when asked to identify which of six sample claims were supported by evidence, only 23 per cent of all respondents got five or more right, and confidence in their own judgement bore almost no relationship to accuracy. Researchers concluded that people are poor at assessing their own ability to spot unreliable advice."
+    },
+    {
+     "label": "B",
+     "title": "'I'm not trying to replace your doctor'",
+     "type": "interview",
+     "text": "Dr Amara Okafor is a hospital physician with 800,000 followers. 'I started posting because my patients kept arriving with misinformation they had absorbed online, and I thought: if I can't beat it, I'll join it. A thirty-second video can't cover nuance, and that's the problem. Platforms reward certainty and outrage, so the loudest voices are rarely the best qualified. But I'm wary of removing content wholesale. Who decides what counts as false, and on whose authority? Science changes, and it should. Ten years ago some advice we now accept was considered fringe. I'd rather see platforms promote qualified voices and label sources clearly than delete posts and drive people towards forums where nobody can respond. Frankly, that worries me more than any single viral video.'"
+    },
+    {
+     "label": "C",
+     "title": "Teach the sceptics, not the censors",
+     "type": "blog post",
+     "text": "Every time a health scare goes viral, as one does almost every month, someone demands that tech companies 'do something'. But moderation always lags behind the next rumour and the one after that, and heavy-handed removal tends to confirm the suspicions of those who already distrust institutions. A more durable answer is education. Schools in Finland have taught pupils for years to check sources, spot emotional manipulation and ask who profits from a claim, and studies suggest that such training makes people measurably better at rejecting false stories. It is slower and less satisfying than a ban, but it equips people for the misinformation that has not been invented yet, and, crucially, it treats them as capable adults rather than as targets to be protected."
+    }
+   ]
+  }
+ }
+}

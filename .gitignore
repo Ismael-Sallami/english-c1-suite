@@ -7,3 +7,13 @@
 # Stray logs or node artifacts
 node_modules/
 *.log
+server/.venv/
+server/data/
+__pycache__/
+.playwright-mcp/
+# Material oficial de Trinity: solo en local (lo usa el corrector)
+server/rubrics/*.txt
+docs/booklet.txt
+docs/ejemplo_c1c2.txt
+# Audios: se suben cuando termine la generación
+site/ise-digital/audio/

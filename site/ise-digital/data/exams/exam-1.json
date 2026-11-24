@@ -1,0 +1,1057 @@
+{
+  "id": "exam-1",
+  "title": "Mock Exam 1",
+  "theme": "Technology and work: hybrid working, the gig economy, digital detox, automation, cybersecurity, AI in education and the workplace, online learning, older workers and technology, social media and recruitment, coding in schools",
+  "levelling": [
+    {
+      "type": "synonym",
+      "prompt": "candid",
+      "options": [
+        "cheerful",
+        "naive",
+        "silent",
+        "frank"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "synonym",
+      "prompt": "reluctant",
+      "options": [
+        "unwilling",
+        "eager",
+        "exhausted",
+        "nervous"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "synonym",
+      "prompt": "mitigate",
+      "options": [
+        "worsen",
+        "predict",
+        "alleviate",
+        "overlook"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "synonym",
+      "prompt": "ubiquitous",
+      "options": [
+        "scarce",
+        "costly",
+        "omnipresent",
+        "outdated"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "synonym",
+      "prompt": "ephemeral",
+      "options": [
+        "short-lived",
+        "fragile",
+        "mysterious",
+        "ancient"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "synonym",
+      "prompt": "scrutinise",
+      "options": [
+        "ignore",
+        "summarise",
+        "applaud",
+        "examine closely"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "synonym",
+      "prompt": "pernicious",
+      "options": [
+        "subtle",
+        "harmful",
+        "contagious",
+        "sudden"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "synonym",
+      "prompt": "obdurate",
+      "options": [
+        "generous",
+        "stubborn",
+        "cunning",
+        "fragile"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "complete",
+      "prompt": "Had I known about the deadline, I ___ the report much earlier.",
+      "options": [
+        "would submit",
+        "had submitted",
+        "will have submitted",
+        "would have submitted"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "complete",
+      "prompt": "She insisted ___ paid in advance for the freelance work.",
+      "options": [
+        "on being",
+        "to be",
+        "for being",
+        "that she is"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "complete",
+      "prompt": "No sooner ___ logged on than the whole system crashed.",
+      "options": [
+        "I had",
+        "did I",
+        "had I",
+        "have I"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "complete",
+      "prompt": "The new policy is thought ___ stress levels considerably since its introduction last year.",
+      "options": [
+        "reducing",
+        "to reduce",
+        "to have reduced",
+        "having reduced"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "complete",
+      "prompt": "I'd rather you ___ my password with anyone, even colleagues.",
+      "options": [
+        "didn't share",
+        "don't share",
+        "won't share",
+        "haven't shared"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "complete",
+      "prompt": "___ the traffic, we would have arrived at the client's office on time.",
+      "options": [
+        "Unless",
+        "Despite",
+        "Provided",
+        "But for"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "complete",
+      "prompt": "It's high time the company ___ its data-protection procedures.",
+      "options": [
+        "reviews",
+        "reviewed",
+        "will review",
+        "is reviewing"
+      ],
+      "answer": 1
+    }
+  ],
+  "speaking": {
+    "t1": {
+      "questions": [
+        "How do you usually keep in touch with friends or colleagues who live far away, and do you think technology has made those relationships easier to maintain?",
+        "Some people say they work better at home, others in a shared space. Where do you concentrate best, and why?",
+        "To what extent do you think we have become too dependent on our phones and on the internet in general?"
+      ]
+    },
+    "t2": {
+      "followups": [
+        "What would you say is the most common misunderstanding people have about the subject you have just presented?",
+        "How might attitudes towards this topic change over the next decade?",
+        "Is there a point you would have liked to explore in more depth if you had more time, and why?"
+      ]
+    },
+    "t3": {
+      "partner": "your team leader",
+      "situation": "You work in the marketing department of a medium-sized company. A colleague has proposed using an AI tool that records team meetings and automatically produces summaries. You think it could save time, but you have a few reservations. You have been asked to meet your team leader to give your view on whether the team should try the tool for a month.",
+      "partnerLine": "Thanks for making time. I hear you've been looking at this AI note-taking tool that Marcus suggested. What's your honest view, and do you think we should trial it?",
+      "newInfo": "That's useful, thank you. There is a complication, though. Legal has just told me the tool stores recordings on servers outside the country, and two people in the team have said they would feel uncomfortable being recorded at all. I'd still like a decision by Friday.",
+      "newTask": "React to this new information and suggest how the team could move forward."
+    },
+    "t4": {
+      "title": "Older workers and new technology",
+      "instructions": "Listen to two people talking about older employees and new workplace technology. Summarise the main points: What difficulties do older employees face when new technology is introduced? What solutions do the speakers suggest?",
+      "speakers": [
+        {
+          "name": "Elaine",
+          "voice": "female"
+        },
+        {
+          "name": "Rob",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Elaine",
+          "text": "So, I've been reading about companies rolling out new software every year or two, and apparently it's older employees who struggle most. Is it really an age thing, though?"
+        },
+        {
+          "speaker": "Rob",
+          "text": "Well, I'd be careful with that. In my experience it's less about age and more about how the training's delivered. My father-in-law's sixty-eight, and he's the first one in the family to master every new app. But he's been taught properly, one-to-one, by someone patient."
+        },
+        {
+          "speaker": "Elaine",
+          "text": "That's a fair point. In my office the training was a forty-minute webinar on a Friday afternoon. Honestly, I got lost halfway through, and I'm thirty-four."
+        },
+        {
+          "speaker": "Rob",
+          "text": "Ha! Right. So the real issue might be the assumption that everybody learns at the same speed, in the same format."
+        },
+        {
+          "speaker": "Elaine",
+          "text": "Though there's something else, isn't there? Confidence. Some of my older colleagues won't ask questions because they worry it'll look as though they're past it. So they quietly develop workarounds, printing everything out, keeping paper notes, and that ends up slowing the whole team down."
+        },
+        {
+          "speaker": "Rob",
+          "text": "Mm. And that's where a bit of reverse mentoring could help. You pair a young graduate with a senior manager. The graduate teaches the software, and the manager shares what they know about clients, or how the industry actually works. It flips the hierarchy, but both sides gain something."
+        },
+        {
+          "speaker": "Elaine",
+          "text": "I like that. It makes it a swap rather than a favour. Although it does depend on the younger person having some patience, which isn't guaranteed."
+        },
+        {
+          "speaker": "Rob",
+          "text": "True, true. And I think companies should involve staff much earlier, before the software's even chosen. If the people using it every day say, 'this interface is a nightmare', well, that's valuable information, and it saves you the whole retraining headache later."
+        },
+        {
+          "speaker": "Elaine",
+          "text": "Right, design it with people rather than impose it on them. Which would help everyone, frankly, not just the over-fifties."
+        },
+        {
+          "speaker": "Rob",
+          "text": "Exactly. It's a bit like a canary in the coal mine. If older workers can't use a tool, it's probably badly designed."
+        },
+        {
+          "speaker": "Elaine",
+          "text": "Ha, I'll remember that next time IT sends round a 'simple' new system."
+        }
+      ],
+      "followup": "Do you think employers have a responsibility to keep their staff's digital skills up to date, or should that be left to individuals?"
+    }
+  },
+  "listening": [
+    {
+      "type": "conversation",
+      "title": "Back to the office?",
+      "context": "Two colleagues, Daniel and Priya, are discussing their company's new office attendance policy.",
+      "plays": 2,
+      "previewSeconds": 25,
+      "speakers": [
+        {
+          "name": "Daniel",
+          "voice": "male"
+        },
+        {
+          "name": "Priya",
+          "voice": "female"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Daniel",
+          "text": "Right, so, did you see the email from HR? They want us all in three days a week from January."
+        },
+        {
+          "speaker": "Priya",
+          "text": "I did, yeah. Honestly, I wasn't surprised. They've been dropping hints since the summer, haven't they?"
+        },
+        {
+          "speaker": "Daniel",
+          "text": "Hints? It was more like a sledgehammer. 'Collaboration thrives on proximity.' I mean, come on. We've delivered the Hartley project from our kitchen tables for two years and nobody's complained about the results."
+        },
+        {
+          "speaker": "Priya",
+          "text": "Well, to be fair, I think the results are only half the story for them. Leadership keeps going on about culture, and I can see where they're coming from. Since Callum joined in March I've barely spoken to him except through a screen, and I've no idea whether he's coping or drowning."
+        },
+        {
+          "speaker": "Daniel",
+          "text": "Sure, but that's a management problem, not a location problem. If someone's drowning you'd hope their line manager would notice, wherever they happen to be sitting."
+        },
+        {
+          "speaker": "Priya",
+          "text": "Mm, but would you? It's so much easier to miss things on a video call. Someone's camera's off, they say 'fine, fine', and you move on. In an office you'd catch the sigh, the untouched lunch..."
+        },
+        {
+          "speaker": "Daniel",
+          "text": "Hmm. Okay, that's fair, I'll give you that. But what about the commute? Ninety minutes each way for me. That's three hours of my day gone, and for what? So I can sit in a room and message the person two desks away?"
+        },
+        {
+          "speaker": "Priya",
+          "text": "Ha! Okay, I'm not going to defend the commute. Mine's shorter, so I'm biased. What I'd actually like is some say in which days. If it's Monday, Wednesday, Friday for everyone, the office will be heaving on those days and deserted on the others, which rather defeats the point."
+        },
+        {
+          "speaker": "Daniel",
+          "text": "Right, and that's the bit that really gets me. Nobody's been consulted. Apparently there's a 'feedback window' open until Friday, but I suspect the decision's already been made."
+        },
+        {
+          "speaker": "Priya",
+          "text": "Perhaps. Still, I think it's worth putting something in writing. If enough of us suggest staggered days, or anchor days for each team, they might budge. It's cheaper than losing people."
+        },
+        {
+          "speaker": "Daniel",
+          "text": "You're more optimistic than I am. But all right, I'll draft something tonight. You'll look it over?"
+        },
+        {
+          "speaker": "Priya",
+          "text": "Course. Just keep it constructive. If it reads like a rant, it'll go straight in the bin."
+        }
+      ],
+      "questions": [
+        {
+          "q": "How does Daniel respond to Priya's concern about Callum?",
+          "options": [
+            "He admits that remote working has left some staff isolated.",
+            "He claims Callum is performing well enough to need no support.",
+            "He argues that supervision, rather than where people work, is what matters.",
+            "He suggests HR should monitor new starters more closely."
+          ],
+          "answer": 2,
+          "explanation": "Daniel: 'that's a management problem, not a location problem... you'd hope their line manager would notice, wherever they happen to be sitting.'"
+        },
+        {
+          "q": "What point does Priya make about video calls?",
+          "options": [
+            "Signs that a colleague is struggling are easier to overlook.",
+            "They tire people out more than face-to-face meetings.",
+            "Employees tend to hide poor performance on camera.",
+            "They make it harder to build trust with new colleagues."
+          ],
+          "answer": 0,
+          "explanation": "Priya: 'It's so much easier to miss things on a video call... In an office you'd catch the sigh, the untouched lunch.'"
+        },
+        {
+          "q": "What does Priya mean when she says fixed days 'rather defeats the point'?",
+          "options": [
+            "Staff would simply refuse to attend on the fixed days.",
+            "The policy would be too expensive to enforce on all three days.",
+            "The office would be too crowded for anyone to work effectively.",
+            "A rigid schedule would undermine the collaboration the policy is meant to encourage."
+          ],
+          "answer": 3,
+          "explanation": "If everyone attends the same days, 'the office will be heaving on those days and deserted on the others', so the benefits of being together are lost on the other days."
+        },
+        {
+          "q": "What does Priya recommend doing about the policy?",
+          "options": [
+            "Refuse to comply until HR consults the team.",
+            "Submit a measured written response proposing alternatives.",
+            "Wait to see whether the decision is reversed.",
+            "Ask Callum to raise the issue with management."
+          ],
+          "answer": 1,
+          "explanation": "Priya: 'it's worth putting something in writing... staggered days, or anchor days... Just keep it constructive. If it reads like a rant, it'll go straight in the bin.'"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "title": "The gig economy: freedom or fiction?",
+      "context": "A radio host talks to a labour-market researcher and a former delivery courier about platform work.",
+      "plays": 2,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Helen",
+          "voice": "female"
+        },
+        {
+          "name": "Marcus",
+          "voice": "male"
+        },
+        {
+          "name": "Sofia",
+          "voice": "female"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Helen",
+          "text": "Welcome to Working Lives. Today, the gig economy, a term that's been stretched so far it now covers everything from food couriers to freelance copywriters. With me are Marcus Okafor, who researches labour markets, and Sofia Reyes, who spent six years delivering by bike and now coordinates a couriers' association. Marcus, let's begin with you. Is 'flexibility' the right word for what these platforms offer?"
+        },
+        {
+          "speaker": "Marcus",
+          "text": "It's the right word, but it's often only half the sentence. Flexibility for whom? Yes, a driver can log on at ten at night or at six in the morning, and surveys consistently show people value that. But the platform's algorithm flexes too. It adjusts pay, allocates jobs, penalises declined orders, all in ways the worker can't see. So the freedom is real, it's just lopsided."
+        },
+        {
+          "speaker": "Helen",
+          "text": "Sofia, does that match your experience?"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Entirely. I'd add that the freedom to choose your hours is a bit hollow when the busiest, best-paid slots go to people with the highest ratings. So you end up working Friday night in the rain to protect your score. Nobody orders you to, but, well, you do it."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "That's what we'd call managed autonomy. Nominally independent, practically supervised."
+        },
+        {
+          "speaker": "Helen",
+          "text": "Which brings us to the legal question. Several courts in Europe have ruled that some of these workers are, in effect, employees. Marcus, is reclassification the answer?"
+        },
+        {
+          "speaker": "Marcus",
+          "text": "It's an answer, not the answer. Reclassification brings sick pay, a minimum wage, pension contributions, all of which matter enormously. But the platforms warn it will mean fewer jobs, and I don't think we should dismiss that outright. After Spain's rider law, a number of firms did trim their workforce. On the other hand, the evidence is nowhere near conclusive, and some of those firms were simply shifting costs onto workers' shoulders."
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Can I come in here? I get tired of hearing 'fewer jobs' as though they were jobs worth having. Once you subtract fuel, repairs and the unpaid waiting between orders, many of us were earning below the minimum. A smaller number of properly paid roles isn't obviously worse."
+        },
+        {
+          "speaker": "Helen",
+          "text": "But some workers do want to stay self-employed, don't they?"
+        },
+        {
+          "speaker": "Sofia",
+          "text": "Of course, and that's what many campaigners overlook. Plenty of students and parents use the apps as a stopgap and don't want a contract. What they want is transparency. Tell me how you calculate my pay, tell me why I was deactivated, and let me appeal to a human being."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "I'd go further. A middle category, a sort of 'dependent contractor' status with basic protections but retained flexibility, exists in Canada and has been floated in the UK."
+        },
+        {
+          "speaker": "Helen",
+          "text": "Doesn't that risk creating a loophole, though?"
+        },
+        {
+          "speaker": "Marcus",
+          "text": "There's always a risk. Firms will test the boundaries, which is why enforcement matters at least as much as the definition itself."
+        },
+        {
+          "speaker": "Sofia",
+          "text": "And why workers need to organise. Legislation is just paper if nobody holds the platforms to it."
+        },
+        {
+          "speaker": "Helen",
+          "text": "A final thought from each of you. Where do you see this in ten years?"
+        },
+        {
+          "speaker": "Marcus",
+          "text": "Honestly? I think the model spreads. Not just couriers, but nursing agencies, legal work, even teaching. So the rules we write now will set the precedent."
+        },
+        {
+          "speaker": "Sofia",
+          "text": "I hope it's properly regulated by then. Otherwise we'll have a generation who've never had a single day of paid holiday."
+        },
+        {
+          "speaker": "Helen",
+          "text": "Thank you both."
+        }
+      ],
+      "questions": [
+        {
+          "q": "What is Marcus's main point about the flexibility platforms offer?",
+          "options": [
+            "It is largely an illusion that workers quickly see through.",
+            "It benefits the platform at least as much as it benefits the worker.",
+            "It has been exaggerated by surveys of satisfied drivers.",
+            "It is valued only by workers with other sources of income."
+          ],
+          "answer": 1,
+          "explanation": "'the platform's algorithm flexes too... So the freedom is real, it's just lopsided.'"
+        },
+        {
+          "q": "Why does Sofia mention working on Friday nights in the rain?",
+          "options": [
+            "To explain why couriers prefer evening work.",
+            "To argue that couriers deserve higher pay for bad weather.",
+            "To criticise customers who leave poor ratings.",
+            "To show how rating systems can pressure workers into accepting unattractive shifts."
+          ],
+          "answer": 3,
+          "explanation": "The best slots go to high-rated workers, 'so you end up working Friday night in the rain to protect your score. Nobody orders you to, but... you do it.'"
+        },
+        {
+          "q": "What does Marcus mean by 'managed autonomy'?",
+          "options": [
+            "Workers are formally independent but in practice steered by the platform.",
+            "Workers manage their own schedules with little oversight.",
+            "Platforms allow workers to supervise one another.",
+            "Managers are given limited freedom over how algorithms operate."
+          ],
+          "answer": 0,
+          "explanation": "'Nominally independent, practically supervised.'"
+        },
+        {
+          "q": "How does Marcus view the platforms' warning that reclassification will cut jobs?",
+          "options": [
+            "He regards it as a deliberate exaggeration.",
+            "He accepts it as proven by the Spanish experience.",
+            "He considers it worth taking seriously, though the evidence is far from settled.",
+            "He thinks it matters less than the benefits employees would gain."
+          ],
+          "answer": 2,
+          "explanation": "'I don't think we should dismiss that outright... the evidence is nowhere near conclusive.'"
+        },
+        {
+          "q": "What is Sofia's objection to the argument that reclassification means fewer jobs?",
+          "options": [
+            "Most platform workers would find employment elsewhere easily.",
+            "Platforms would simply recruit workers from abroad.",
+            "Many of the jobs concerned did not pay decently once costs were taken into account.",
+            "Fewer jobs would at least reduce competition for orders."
+          ],
+          "answer": 2,
+          "explanation": "'Once you subtract fuel, repairs and the unpaid waiting... many of us were earning below the minimum.'"
+        },
+        {
+          "q": "What do Sofia and Marcus agree on towards the end?",
+          "options": [
+            "Rules will achieve little unless they are actively enforced.",
+            "The platform model will disappear within ten years.",
+            "The employee-freelancer distinction should be abolished.",
+            "Campaigners have been too focused on transparency."
+          ],
+          "answer": 0,
+          "explanation": "Marcus: 'enforcement matters at least as much as the definition'; Sofia: 'Legislation is just paper if nobody holds the platforms to it.'"
+        }
+      ]
+    },
+    {
+      "type": "talk",
+      "title": "Rethinking the digital detox",
+      "context": "A psychologist gives a talk on digital detoxes, followed by a comment from the event chair.",
+      "plays": 1,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Dr Brandt",
+          "voice": "female"
+        },
+        {
+          "name": "Tom",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Dr Brandt",
+          "text": "Good afternoon. I'd like to talk about the digital detox, a phrase that has become so fashionable that it is now sold to us as weekend packages at lakeside retreats, ironically at a premium. My argument today is that the idea captures something real, but frames it in a misleading way."
+        },
+        {
+          "speaker": "Dr Brandt",
+          "text": "Let me begin with what we know. Studies in which people abstain from social media for a few weeks generally report modest improvements in mood and a reduction in anxiety. But notice the word 'modest'. Several larger trials found effects so small that they barely survived statistical scrutiny, and a notable proportion of participants reported feeling left out, which cancels some of the benefit. In other words, the detox is no miracle cure."
+        },
+        {
+          "speaker": "Dr Brandt",
+          "text": "The deeper problem, I'd suggest, is the metaphor. 'Detox' implies that technology is a toxin, something to be purged from the body. But nobody seriously proposes purging email from working life, or maps from our journeys. What actually distinguishes people who feel in control of their devices from those who don't is not quantity of use, but intention. Someone who spends three hours video-calling a distant grandmother is in a very different position from someone who spends three hours scrolling, half-asleep, through content they will have forgotten by breakfast."
+        },
+        {
+          "speaker": "Dr Brandt",
+          "text": "This is why I'm sceptical of heroic, one-off abstinence. It resembles crash dieting: dramatic, short-lived, and followed by a rebound. Participants in one study I'll mention returned to their previous screen time within a fortnight. Far more promising, in my view, are small structural changes: switching off non-essential notifications, keeping the phone out of the bedroom, designating certain hours as unreachable. Employers have a role here too. If a company expects replies at ten p.m., an individual's willpower hardly stands a chance."
+        },
+        {
+          "speaker": "Dr Brandt",
+          "text": "So, to conclude: instead of asking 'how do I escape my phone?', ask 'what do I want my phone to do for me, and what has it quietly been doing instead?' Thank you."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Thanks, that was thought-provoking. So if I've understood correctly, Dr Brandt isn't denying that people feel better with less screen time, but she's saying the evidence for dramatic detoxes is thin, and that the toxin metaphor misses the point, which is whether use is deliberate or compulsive. She compares a retreat to a crash diet, which I thought was telling, because people slip straight back into old habits. What she'd prefer is modest, lasting adjustments, and she's notably keen that employers shoulder some responsibility rather than leaving everything to personal discipline. I'd add that I'm slightly less convinced by the notifications advice; for some jobs, being reachable is simply the job. But her closing question is one I'll be asking myself tonight."
+        }
+      ],
+      "questions": [
+        {
+          "q": "What does Dr Brandt find misleading about the word 'detox'?",
+          "options": [
+            "It implies the effects of social media are temporary.",
+            "It exaggerates how much time people spend online.",
+            "It makes abstinence sound easier than it really is.",
+            "It wrongly suggests that technology itself is the harmful substance."
+          ],
+          "answer": 3,
+          "explanation": "'Detox implies that technology is a toxin... What actually distinguishes people... is not quantity of use, but intention.'"
+        },
+        {
+          "q": "Why does she mention video-calling a grandmother?",
+          "options": [
+            "To argue that older people benefit most from technology.",
+            "To show that the same amount of screen time can be used in quite different ways.",
+            "To suggest that video calls are healthier than social media.",
+            "To illustrate how habits form in childhood."
+          ],
+          "answer": 1,
+          "explanation": "She contrasts three hours with a grandmother with three hours of half-asleep scrolling to make the point that intention matters."
+        },
+        {
+          "q": "What did the larger trials of social media abstinence find?",
+          "options": [
+            "Participants' anxiety increased during the experiment.",
+            "Any benefits were small and partly offset by feelings of exclusion.",
+            "The results were too inconsistent to draw any conclusion.",
+            "Mood improved significantly only among heavy users."
+          ],
+          "answer": 1,
+          "explanation": "'effects so small that they barely survived statistical scrutiny, and a notable proportion... reported feeling left out.'"
+        },
+        {
+          "q": "Why does she compare detoxes to crash dieting?",
+          "options": [
+            "Both are promoted mainly by companies that profit from them.",
+            "Both can damage health if continued for too long.",
+            "Both require expert supervision to be effective.",
+            "Both produce dramatic but short-lived change followed by a return to old habits."
+          ],
+          "answer": 3,
+          "explanation": "'dramatic, short-lived, and followed by a rebound... returned to their previous screen time within a fortnight.'"
+        },
+        {
+          "q": "What does she say about the responsibility of employers?",
+          "options": [
+            "Their expectations can make individual effort to disconnect futile.",
+            "They should ban out-of-hours messages altogether.",
+            "They should pay for staff to attend retreats.",
+            "They are mostly unaware of how much staff use their phones."
+          ],
+          "answer": 0,
+          "explanation": "'If a company expects replies at ten p.m., an individual's willpower hardly stands a chance.'"
+        },
+        {
+          "q": "What reservation does Tom express?",
+          "options": [
+            "Dr Brandt underestimates how addictive social media is.",
+            "The crash-dieting comparison is unfair to participants.",
+            "Switching off notifications may be unrealistic in some occupations.",
+            "Employers are unlikely to accept any responsibility."
+          ],
+          "answer": 2,
+          "explanation": "Tom: 'I'm slightly less convinced by the notifications advice; for some jobs, being reachable is simply the job.'"
+        }
+      ]
+    },
+    {
+      "type": "talk",
+      "title": "Will robots take our jobs?",
+      "context": "An economist gives a talk on automation and employment, followed by a response from a conference organiser.",
+      "plays": 1,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Professor Menon",
+          "voice": "male"
+        },
+        {
+          "name": "Laura",
+          "voice": "female"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Professor Menon",
+          "text": "Every few years a headline announces that robots are coming for half of all jobs, and every few years the prediction is quietly revised. I'd like to suggest that this oscillation tells us something: that we are consistently better at imagining what technology will destroy than what it will create."
+        },
+        {
+          "speaker": "Professor Menon",
+          "text": "Take the much-cited study from 2013 which estimated that nearly half of occupations in the United States were at high risk of computerisation. It was widely quoted and rarely read. What it actually assessed was whether tasks could technically be automated, not whether employers would find it profitable, legal or socially acceptable to do so. Later analyses, looking at tasks rather than whole occupations, arrived at a figure closer to one in ten."
+        },
+        {
+          "speaker": "Professor Menon",
+          "text": "That's my first point: jobs are bundles of tasks. A radiologist doesn't only read scans. She consults with surgeons, reassures anxious patients, and decides what to do when an image is ambiguous. Software may absorb the first activity while the job itself shifts and, in some cases, expands. Think of bank tellers. When cash machines arrived, many predicted their disappearance. In fact, for two decades the number of tellers in the United States held steady, because cheaper branches meant more branches, and the work moved towards advice and sales."
+        },
+        {
+          "speaker": "Professor Menon",
+          "text": "I don't want to be glib, though. My second point is distribution. Aggregate numbers can hide enormous pain. A warehouse worker in her fifties whose role is automated does not become a data analyst simply because the economy has, on average, created analyst roles. The costs of transition fall on specific people in specific places, and history, from the handloom weavers onwards, suggests those costs can last a generation."
+        },
+        {
+          "speaker": "Professor Menon",
+          "text": "So the policy question isn't whether work will vanish. It's who pays for the shift, and how quickly retraining can be made real rather than rhetorical. If we get that wrong, the optimists will have been right about the economy and wrong about society. Thank you."
+        },
+        {
+          "speaker": "Laura",
+          "text": "Thank you, Professor Menon. That was a useful corrective. What I took from it is that the frightening numbers come from confusing what's technically possible with what will actually happen, and that thinking in terms of tasks rather than whole jobs gives a much less dramatic picture. The bank tellers example was interesting, since the machines changed the job rather than ending it. But he was careful to add that averages are cold comfort for individuals, particularly older workers, who bear the cost of change. I suppose what's left unanswered is what meaningful retraining would look like in practice, and I'd have liked to hear more on that."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Why does the speaker mention the repeatedly revised headlines?",
+          "options": [
+            "To show that journalists exaggerate scientific findings.",
+            "To argue that automation has never threatened employment.",
+            "To suggest that predictions tend to overlook the jobs new technology creates.",
+            "To explain why governments ignore expert forecasts."
+          ],
+          "answer": 2,
+          "explanation": "'we are consistently better at imagining what technology will destroy than what it will create.'"
+        },
+        {
+          "q": "What criticism does he make of the 2013 study?",
+          "options": [
+            "It measured technical possibility, not whether firms would actually automate.",
+            "Its sample of occupations was too small.",
+            "It was based on outdated information about technology.",
+            "Its authors exaggerated the figures to attract attention."
+          ],
+          "answer": 0,
+          "explanation": "It 'assessed whether tasks could technically be automated, not whether employers would find it profitable, legal or socially acceptable.'"
+        },
+        {
+          "q": "What is the purpose of the radiologist example?",
+          "options": [
+            "To prove that medical professions are safe from automation.",
+            "To argue that scanning software is unreliable.",
+            "To illustrate how patients prefer human doctors.",
+            "To show that a single job contains several tasks, only some of which can be automated."
+          ],
+          "answer": 3,
+          "explanation": "'A radiologist doesn't only read scans... Software may absorb the first activity while the job itself shifts.'"
+        },
+        {
+          "q": "Why did the number of bank tellers hold steady?",
+          "options": [
+            "Banks were legally required to keep tellers.",
+            "Cheaper branches multiplied, and the work changed in character.",
+            "Customers distrusted cash machines.",
+            "Tellers moved into jobs in other industries."
+          ],
+          "answer": 1,
+          "explanation": "'cheaper branches meant more branches, and the work moved towards advice and sales.'"
+        },
+        {
+          "q": "What does he mean by saying optimists could be 'right about the economy and wrong about society'?",
+          "options": [
+            "The economy will grow but at a slower rate than predicted.",
+            "Overall growth might coexist with serious hardship for particular groups.",
+            "Society will benefit although the economy will suffer.",
+            "Economists and sociologists will disagree about the outcome."
+          ],
+          "answer": 1,
+          "explanation": "'Aggregate numbers can hide enormous pain... The costs of transition fall on specific people in specific places.'"
+        },
+        {
+          "q": "What does Laura feel was missing from the talk?",
+          "options": [
+            "Evidence on which jobs are most at risk.",
+            "A discussion of the history of automation.",
+            "Any acknowledgement of the costs to older workers.",
+            "Concrete detail on how retraining could work."
+          ],
+          "answer": 3,
+          "explanation": "Laura: 'what's left unanswered is what meaningful retraining would look like in practice, and I'd have liked to hear more on that.'"
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "type": "single",
+      "title": "Cybersecurity: the weakest link is rarely where you think",
+      "genre": "article",
+      "text": "Ask a chief security officer what keeps her awake at night and you might expect talk of state-sponsored hackers or exotic malware. More often the answer is a sticky note. Despite billions spent on firewalls and encryption, an overwhelming share of breaches still begins with a human being doing something perfectly understandable: reusing a password, clicking a convincing link, holding a door open for a stranger carrying coffee.\n\nFor years the standard response was to lecture. Annual training modules, heavy with warnings, were ticked off by employees at speed so that they could return to what they were actually paid to do. Researchers who tracked such programmes found that the effect on behaviour faded within months, and in some cases the training bred a kind of fatalism: if attackers are this sophisticated, what is the point of my small precautions?\n\nA growing school of thought argues that the problem lies not with users but with design. Take passwords. Organisations demanded complexity, forced monthly changes and then professed surprise when staff produced 'Summer2024!' followed by 'Summer2025!'. Guidance from several national agencies has now reversed course, recommending long passphrases that change only when compromise is suspected, ideally paired with a password manager. The aim is to make the secure choice the easy one.\n\nThat does not mean vigilance is redundant. Phishing messages have grown disconcertingly polished, and the old advice to look out for clumsy grammar is increasingly obsolete, particularly now that generative tools can produce flawless prose in any language. The more reliable habit, according to security trainers, is procedural rather than perceptual: never act on an urgent request for money or credentials through the channel it arrived by. Ring the person back on a number you already hold.\n\nPerhaps the most striking shift is cultural. At firms with the best records, employees who report a mistake are thanked rather than disciplined. One analyst likened it to the difference between a smoke alarm and a fire inspector: the first is valued precisely because it makes a noise, whereas the second is resented for finding fault. When people fear blame, they conceal errors, and a concealed error can fester for months. Security, in this view, is less a wall than a habit of candour.",
+      "questions": [
+        {
+          "q": "What is the purpose of the first paragraph?",
+          "options": [
+            "To suggest that ordinary human behaviour is the main source of security breaches.",
+            "To show that security officers underestimate sophisticated attackers.",
+            "To argue that spending on technology has been wasted.",
+            "To explain why passwords are inherently insecure."
+          ],
+          "answer": 0,
+          "explanation": "Despite spending on firewalls, breaches 'still begin with a human being doing something perfectly understandable'."
+        },
+        {
+          "q": "Why does the writer quote 'Summer2024!' followed by 'Summer2025!'?",
+          "options": [
+            "To illustrate how easily attackers can guess any password.",
+            "To criticise staff for lazy attitudes to security.",
+            "To show how rigid rules lead to predictable and weak behaviour.",
+            "To demonstrate the value of seasonal password changes."
+          ],
+          "answer": 2,
+          "explanation": "Organisations 'forced monthly changes and then professed surprise' when staff produced near-identical passwords."
+        },
+        {
+          "q": "According to security trainers, what is the most dependable defence against phishing?",
+          "options": [
+            "Scanning messages for errors in grammar.",
+            "Using software that detects generated text.",
+            "Confirming urgent requests through a separate, known channel.",
+            "Refusing to act on any request involving money."
+          ],
+          "answer": 2,
+          "explanation": "'never act on an urgent request... through the channel it arrived by. Ring the person back on a number you already hold.'"
+        },
+        {
+          "q": "What does the smoke alarm comparison suggest about reporting mistakes?",
+          "options": [
+            "Staff who raise problems should be valued even though they bring bad news.",
+            "Mistakes are best handled by specialist inspectors.",
+            "Employees should be monitored continuously for errors.",
+            "Loud warnings are more effective than quiet ones."
+          ],
+          "answer": 0,
+          "explanation": "The alarm is 'valued precisely because it makes a noise', unlike the inspector who is 'resented for finding fault'; firms thank staff who report errors."
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "The essay is dead. Long live the essay?",
+      "genre": "opinion column",
+      "text": "When a teacher friend of mine recently set a take-home essay on the causes of the First World War, she received thirty submissions of such uniform, bloodless competence that she could have laminated them. Nobody had cheated, exactly; the school's rules about AI were vague enough to drive a bus through. But something had gone out of the exercise, and she knew it.\n\nThe reflex response in many schools has been prohibition, accompanied by detection software of dubious reliability. I find this doomed on two counts. First, the detectors produce false accusations, and it is disproportionately students writing in a second language whose prose is flagged, since fluent but simple English resembles machine output. Second, a ban treats the symptom. If a task can be completed convincingly by a chatbot in eight seconds, we should ask what exactly we thought we were measuring.\n\nThe more interesting question is what writing is for. Much of its value lies not in the product but in the struggle: the discovery, halfway through a paragraph, that you don't actually believe what you set out to argue. Outsourcing the draft means outsourcing that discovery. Yet I would be wary of the opposite nostalgia, in which the unaided essay becomes a sacred rite. Calculators did not abolish mathematics; they moved the difficulty somewhere else.\n\nWhere, then, might the difficulty move? Some of the most promising experiments I have seen ask students to critique machine-generated answers, hunting for the invented citation, the confident non sequitur, the argument that is plausible only until it is pressed. This demands precisely the knowledge a lazy shortcut would skip. Others restore the spoken word: a five-minute viva on one's own submission is hard to fake and, incidentally, pleasantly human.\n\nNone of this is cheap. It demands smaller classes, more teacher time and, frankly, more trust in teachers' judgement than recent policy has shown. But the alternative is an arms race that schools cannot win and a generation that learns to see education as a game of evasion. If that happens, the damage will not be to the essay but to the idea that thinking is worth doing slowly.",
+      "questions": [
+        {
+          "q": "Why does the writer say the essays could have been 'laminated'?",
+          "options": [
+            "To suggest the essays were worth preserving.",
+            "To imply that the teacher intended to display them.",
+            "To criticise the quality of the students' presentation.",
+            "To stress how lifeless and identical the submissions were."
+          ],
+          "answer": 3,
+          "explanation": "Thirty submissions of 'uniform, bloodless competence' - the image underlines their sameness and lack of life."
+        },
+        {
+          "q": "What is the writer's second objection to banning AI?",
+          "options": [
+            "It is impossible to enforce in a fair way.",
+            "It addresses the symptom without questioning what the assignment assesses.",
+            "It discriminates against students who write in a second language.",
+            "It prevents students from learning useful skills."
+          ],
+          "answer": 1,
+          "explanation": "'a ban treats the symptom. If a task can be completed convincingly by a chatbot in eight seconds, we should ask what exactly we thought we were measuring.'"
+        },
+        {
+          "q": "What does the writer imply by the calculator comparison?",
+          "options": [
+            "Students will eventually stop needing to write essays.",
+            "New tools change where the challenge lies rather than eliminating the need for skill.",
+            "AI will prove as easy to regulate as calculators.",
+            "Mathematics teaching has been harmed by technology."
+          ],
+          "answer": 1,
+          "explanation": "'Calculators did not abolish mathematics; they moved the difficulty somewhere else.'"
+        },
+        {
+          "q": "What is the writer's attitude to the alternatives she describes?",
+          "options": [
+            "Doubtful that any of them could succeed.",
+            "Convinced that they would be quick to introduce.",
+            "Indifferent as long as cheating is detected.",
+            "Encouraged by their potential but frank about what they would cost."
+          ],
+          "answer": 3,
+          "explanation": "'Some of the most promising experiments...' but 'None of this is cheap. It demands smaller classes, more teacher time...'"
+        }
+      ]
+    },
+    {
+      "type": "paired",
+      "title": "Artificial intelligence at work",
+      "textA": {
+        "title": "Your algorithmic boss",
+        "genre": "column",
+        "text": "At a distribution centre I visited last spring, a handheld scanner counted down the seconds allowed for each pick, and a red bar crept across the screen when a worker fell behind. Nobody was shouting. There was no supervisor in sight. Management, in the traditional sense, had been replaced by a dashboard. This is what the technology industry calls 'algorithmic management', a phrase whose blandness conceals its reach: software now allocates shifts, rates performance and, increasingly, flags people for dismissal.\n\nProponents claim efficiency and fairness. The machine, they say, has no favourites and no bad moods. But fairness presumes that the criteria are visible and open to challenge, and here they rarely are. A worker whose productivity score drops cannot ask why; the model cannot explain itself, and the human who might have done so has been 'streamlined' away. I spoke to one driver who was deactivated for 'irregular patterns' and never found out what the pattern was.\n\nThen there is what is not measured. The colleague who spends twenty minutes calming a distressed customer, the engineer who quietly prevents a disaster by asking an awkward question: neither generates a data point. What gets measured gets managed, and what gets managed gets done, but at the expense of everything else. I am not a Luddite, and used carefully, data can expose genuine inequities in who is promoted and who is passed over. Defenders of the technology often reply that human managers were never transparent either, and that is true, but a bad manager can at least be argued with, embarrassed or outlasted. A model cannot, and the people it governs are rarely told when its rules change. My concern is that we are quickly building systems of control with the moral accountability of a vending machine."
+      },
+      "textB": {
+        "title": "The augmented employee",
+        "genre": "feature article",
+        "text": "Not every deployment of AI at work resembles a surveillance experiment, and it would be a pity if the dystopian examples crowded out the rest. At a mid-sized law firm I recently profiled, junior associates once spent their first two years reviewing documents line by line. Now software handles the first sift, and the associates, to their surprise, are drafting arguments and sitting in client meetings by their second year. Satisfaction scores have risen; so, interestingly, have error rates in the early months, as people learn to double-check what the tool produces.\n\nThat last detail matters. The firms getting the most from these tools tend to treat them as colleagues of uncertain reliability rather than oracles. Staff are trained to interrogate outputs and, crucially, were consulted before the tools were chosen. Where that has been neglected, resentment follows swiftly. One manager told me that her team initially refused to use a scheduling assistant because they assumed it was reporting on them. A fortnight spent explaining what data it did and did not retain turned things around.\n\nCritics are right that algorithmic oversight can be dehumanising, and some regulation is overdue, notably a right to a human explanation for any automated decision affecting pay or employment. But I would resist the idea that the technology is inherently coercive. Whether it narrows or widens a person's working life depends largely on whose purposes it serves, and on whether those on the receiving end have a voice in how it is used. At the law firm, a monthly forum lets associates challenge how the software is configured, and several of its settings have been changed as a result. That is a modest mechanism, but it is more than most workers under an automated regime are offered."
+      },
+      "questions": [
+        {
+          "q": "Why does the writer of Text A open with the scene in the distribution centre?",
+          "options": [
+            "To illustrate management that operates without any visible human presence.",
+            "To show that warehouse work has become safer.",
+            "To criticise a particular company's treatment of staff.",
+            "To explain why scanners are inefficient."
+          ],
+          "answer": 0,
+          "explanation": "'Nobody was shouting. There was no supervisor in sight. Management... had been replaced by a dashboard.'"
+        },
+        {
+          "q": "What is implied by 'the moral accountability of a vending machine'?",
+          "options": [
+            "Such systems are cheap but unreliable.",
+            "Such systems respond mechanically to customer demands.",
+            "Such systems exercise power without anyone taking responsibility for their decisions.",
+            "Such systems are too simple to cause serious harm."
+          ],
+          "answer": 2,
+          "explanation": "A vending machine can't be held to account; likewise the model 'cannot explain itself' and the human who might 'has been streamlined away'."
+        },
+        {
+          "q": "Which view do both writers share?",
+          "options": [
+            "Algorithmic management should be banned in warehouses.",
+            "Monitoring software usually improves job satisfaction.",
+            "Employees affected by automated decisions should be able to understand them.",
+            "Workers rarely object to new technology at first."
+          ],
+          "answer": 2,
+          "explanation": "A: criteria should be 'visible and open to challenge'; B: 'a right to a human explanation for any automated decision'."
+        },
+        {
+          "q": "How would the writer of Text B probably react to the deactivated driver in Text A?",
+          "options": [
+            "By accepting it as a valid concern while denying it typifies all uses of AI.",
+            "By arguing that the driver should have been consulted.",
+            "By dismissing it as a rare technical error.",
+            "By suggesting the driver misunderstood the system."
+          ],
+          "answer": 0,
+          "explanation": "B grants 'Critics are right that algorithmic oversight can be dehumanising' but rejects 'that the technology is inherently coercive'."
+        },
+        {
+          "q": "Why does the writer of Text B mention that error rates rose?",
+          "options": [
+            "To argue that AI tools are unreliable in legal work.",
+            "To explain why satisfaction scores increased.",
+            "To warn that associates are not suitably trained.",
+            "To show that benefits come with a learning period requiring human scrutiny."
+          ],
+          "answer": 3,
+          "explanation": "Errors rose 'as people learn to double-check what the tool produces' - firms treat tools 'as colleagues of uncertain reliability rather than oracles'."
+        }
+      ]
+    },
+    {
+      "type": "paired",
+      "title": "Learning online",
+      "textA": {
+        "title": "Learning online: how I got there",
+        "genre": "blog post",
+        "text": "Two years ago I couldn't write a line of code. Last month I started a job as a junior data analyst, and I owe it, bizarrely, to a laptop on my kitchen table and about sixty pounds a month in subscriptions. I realise this sounds like an advertisement, and I assure you nobody is paying me. I know that's the kind of sentence that makes people roll their eyes at 'transformative online learning', so let me be careful about what actually worked.\n\nIt wasn't the platforms themselves. Plenty of courses I bought sat in my library like unread novels. What worked was a structure I imposed: two hours before breakfast, a small project at the end of every module, and a chat group of four strangers who held each other to account. The platforms supplied the content; the humans supplied the reason to turn up.\n\nI should also admit what I couldn't get online. Feedback, mostly. Automated quizzes tell you that you're wrong; they rarely tell you why your whole approach is clumsy. It took a retired engineer I met through a local meet-up to point out, in about ten minutes, habits that months of video lectures had never touched. So if you're considering this route, my advice is to treat the courses as raw material and go hunting for a person who will read your work and be unkind in a useful way. Honestly, the cheapest course I took was the least valuable and the most expensive thing I did was buy a stranger lunch in exchange for an hour of her time. That hour was worth more than any subscription, and I would make the same trade again without hesitation."
+      },
+      "textB": {
+        "title": "Completion and support in open online courses",
+        "genre": "research report",
+        "text": "Since the first wave of massive open online courses, completion rates have been the field's uncomfortable statistic. Across the platforms examined in this review, fewer than one in six enrolled learners finished a course, and the figure was lower still among those without prior higher education, the very group such provision is often said to serve. It would be easy to conclude that online learning has failed to deliver on its promise. Providers, for their part, tend to point to the sheer number of people reached, a figure that flatters but says little about whether anything was learned.\n\nThat conclusion, however, rests on a questionable premise. Many enrolees never intended to complete; they sampled a module, took what they needed, and left. When completion is measured against stated intention, the figures improve markedly. More troubling is the pattern behind genuine drop-out. Learners who left reported isolation and a lack of responsive feedback far more often than difficulty of content. Courses incorporating cohort-based schedules, peer review or even brief weekly contact with a tutor retained two to three times as many participants.\n\nThe implication for providers is that the technology of delivery has outpaced the pedagogy of support. Recorded lectures scale at almost no cost; attention and encouragement do not. Policymakers should be wary of treating online platforms as a low-cost substitute for institutions, since the evidence suggests they work best for motivated, already well-resourced learners, and risk widening the gap they are meant to narrow. Future research should track not merely who finishes, but who goes on to use what they learned, since the latter is the outcome that justifies public investment."
+      },
+      "questions": [
+        {
+          "q": "What does the blogger mean by courses that 'sat in my library like unread novels'?",
+          "options": [
+            "They were too difficult to understand.",
+            "They were purchased with good intentions but never actually used.",
+            "They were enjoyable but irrelevant to her goals.",
+            "They were recommended by people she did not trust."
+          ],
+          "answer": 1,
+          "explanation": "Plenty of courses she bought 'sat in my library' - bought, but unopened."
+        },
+        {
+          "q": "According to the blogger, what made the biggest difference to her progress?",
+          "options": [
+            "The quality of the course materials.",
+            "A routine she set herself and the accountability of other learners.",
+            "Automated quizzes that tested her knowledge.",
+            "The low cost of the subscriptions."
+          ],
+          "answer": 1,
+          "explanation": "'What worked was a structure I imposed... a chat group of four strangers who held each other to account.'"
+        },
+        {
+          "q": "What is the report writer's view of low completion figures?",
+          "options": [
+            "They prove that online courses are ineffective.",
+            "They are entirely explained by learners' lack of interest.",
+            "They are lower than they should be only for graduates.",
+            "They may be misleading in part, though they hide a genuine problem."
+          ],
+          "answer": 3,
+          "explanation": "'That conclusion... rests on a questionable premise... More troubling is the pattern behind genuine drop-out.'"
+        },
+        {
+          "q": "Which idea is common to both texts?",
+          "options": [
+            "Online learners need human contact and responsive feedback.",
+            "Online courses should be cheaper than they currently are.",
+            "Learners benefit most from studying in the morning.",
+            "Course content matters more than how it is delivered."
+          ],
+          "answer": 0,
+          "explanation": "A: 'the humans supplied the reason to turn up' and needed a person for feedback; B: drop-out linked to 'isolation and a lack of responsive feedback'."
+        },
+        {
+          "q": "How would the report writer probably regard the blogger's success?",
+          "options": [
+            "As proof that low completion rates are exaggerated.",
+            "As evidence that platforms should abandon cohorts.",
+            "As typical of motivated learners who had support available to them.",
+            "As an unusual case of an unmotivated learner succeeding."
+          ],
+          "answer": 2,
+          "explanation": "The report says platforms 'work best for motivated, already well-resourced learners' and that support retains participants; the blogger built her own support network."
+        }
+      ]
+    }
+  ],
+  "writing": {
+    "t1": {
+      "version": "forum",
+      "platform": "Careers and Professional Skills course: discussion board, Module 6",
+      "instructions": "You are taking part in an online discussion for a course on professional skills. Read the messages below and write a post (about 120-150 words) contributing to the discussion. In your post you should respond to the points raised and give your own view on whether employers should look at candidates' social media profiles.",
+      "bullets": [
+        "Say whether you think employers are justified in checking candidates' social media profiles.",
+        "Suggest how job applicants could manage their online presence."
+      ],
+      "thread": [
+        {
+          "author": "Dr Ellis",
+          "role": "Course tutor",
+          "text": "This week's question: increasingly, recruiters admit to checking applicants' social media before offering an interview. Is this sensible due diligence or an intrusion into private life?"
+        },
+        {
+          "author": "Nadia",
+          "role": "Student",
+          "text": "I think it's fair game. If a profile is public, it's public. A candidate who posts offensive jokes is showing me how they'd represent the company."
+        },
+        {
+          "author": "Jonas",
+          "role": "Student",
+          "text": "I disagree. What you do in your free time says very little about how you'd perform at work, and recruiters may be influenced by things they have no right to consider, like religion or health."
+        }
+      ]
+    },
+    "t2": {
+      "genre": "essay",
+      "title": "Should coding be a compulsory subject in secondary schools?",
+      "instructions": "Your class has been studying the role of technology in education. Write an essay (about 200-250 words) for your teacher discussing whether coding should be a compulsory subject in secondary schools. You MUST use ideas from the texts AND your own ideas. You MUST NOT copy from the texts.",
+      "sources": [
+        {
+          "label": "A",
+          "title": "The skills employers cannot find",
+          "type": "article",
+          "text": "Across the technology sector, vacancies for software developers outnumber qualified applicants by a margin that has widened every year for the past decade. Employers say the problem starts early: most graduates first meet programming at university, by which point a large share of their peers have already decided it is not for them. Introducing coding at secondary level, supporters argue, would not only fill future vacancies but would demystify the technology that shapes daily life. A teenager who has built even a simple app is less likely to regard software as magic, and more likely to ask who writes the rules a program follows, and whose interests they serve. Several countries that made computing compulsory a decade ago now report that more pupils, and a more diverse group of pupils, choose it at the age of sixteen."
+        },
+        {
+          "label": "B",
+          "title": "Another subject on an overcrowded timetable",
+          "type": "blog post",
+          "text": "As a secondary teacher I am all in favour of children learning to code, but compulsion worries me. Our timetable is already stretched, and every new compulsory subject squeezes out something else, usually art, music or a second language. Worse, many schools lack teachers qualified to teach programming; in my own department the 'computing specialist' is a geography teacher who completed a weekend course. A badly taught coding lesson doesn't inspire anyone. It simply convinces thirteen-year-olds that the subject is dull and confusing. Policymakers love announcing new compulsory subjects because they cost nothing to announce, whereas training teachers takes years and a good deal of money. I would rather see well-resourced optional courses than a compulsory subject delivered with no expertise."
+        },
+        {
+          "label": "C",
+          "title": "Digital skills survey summary",
+          "type": "survey summary",
+          "text": "A survey of 1,200 employers found that 71% valued 'computational thinking', the ability to break down problems and design step-by-step solutions, more highly than knowledge of any specific programming language. Respondents noted that languages change every few years, whereas logical reasoning remains useful across careers from engineering to marketing. However, only 34% believed that school leavers currently demonstrated this skill. Employers also remarked that candidates who could explain their reasoning aloud impressed them more than those with certificates alone. Among 800 students surveyed, 58% said coding lessons had made them more confident about using technology, though a quarter reported that the lessons felt unconnected to anything they wanted to do in future. Teachers interviewed for the study said the most effective lessons linked coding to projects students cared about, such as music, games or school sports statistics."
+        }
+      ]
+    }
+  }
+}

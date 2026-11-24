@@ -1,0 +1,1039 @@
+{
+  "id": "exam-5",
+  "title": "Mock Exam 5",
+  "theme": "Culture and media: music streaming and artists' pay, overtourism, bilingualism and language learning, misinformation and media literacy, influencers, the vinyl revival, repatriation of museum artefacts, machine translation",
+  "levelling": [
+    {
+      "type": "synonym",
+      "prompt": "ephemeral",
+      "options": [
+        "short-lived",
+        "valuable",
+        "ancient",
+        "hidden"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "synonym",
+      "prompt": "candid",
+      "options": [
+        "polite",
+        "frank",
+        "reluctant",
+        "hesitant"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "synonym",
+      "prompt": "mitigate",
+      "options": [
+        "worsen",
+        "postpone",
+        "alleviate",
+        "ignore"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "synonym",
+      "prompt": "ubiquitous",
+      "options": [
+        "controversial",
+        "rare",
+        "expensive",
+        "omnipresent"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "synonym",
+      "prompt": "disparage",
+      "options": [
+        "belittle",
+        "reward",
+        "imitate",
+        "discover"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "synonym",
+      "prompt": "obstinate",
+      "options": [
+        "generous",
+        "flexible",
+        "stubborn",
+        "anxious"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "synonym",
+      "prompt": "paramount",
+      "options": [
+        "optional",
+        "of supreme importance",
+        "surprising",
+        "gradual"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "synonym",
+      "prompt": "disseminate",
+      "options": [
+        "conceal",
+        "dissolve",
+        "summarise",
+        "spread"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "complete",
+      "prompt": "By the time the curator arrived, the protesters ___ the entrance for two hours.",
+      "options": [
+        "blocked",
+        "had been blocking",
+        "were blocking",
+        "have blocked"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "complete",
+      "prompt": "I'd rather you ___ the article before it was published.",
+      "options": [
+        "didn't share",
+        "don't share",
+        "hadn't shared",
+        "won't share"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "complete",
+      "prompt": "Not until the algorithm changed ___ how much of her income depended on it.",
+      "options": [
+        "she realised",
+        "did she realise",
+        "she had realised",
+        "realised she"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "complete",
+      "prompt": "The festival, ___ attendance has doubled since 2019, is struggling to cope with the crowds.",
+      "options": [
+        "which",
+        "whose",
+        "that",
+        "of which"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "complete",
+      "prompt": "Had the council ___ the warnings, the old quarter might still be liveable for its residents.",
+      "options": [
+        "heeded",
+        "heed",
+        "been heeding",
+        "to heed"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "complete",
+      "prompt": "She spoke so quietly that I could hardly make ___ what she was saying.",
+      "options": [
+        "up",
+        "over",
+        "out",
+        "off"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "complete",
+      "prompt": "It is high time the industry ___ artists a fairer share of the revenue.",
+      "options": [
+        "gives",
+        "will give",
+        "has given",
+        "gave"
+      ],
+      "answer": 3
+    }
+  ],
+  "speaking": {
+    "t1": {
+      "questions": [
+        "How do you usually keep up with the news, and how far do you trust what you read online?",
+        "Some people say that learning a language is easier when you are young. What is your own experience of learning languages?",
+        "Do you think people spend too much time on their phones nowadays? Why, or why not?"
+      ]
+    },
+    "t2": {
+      "followups": [
+        "What made you choose to talk about that topic in particular?",
+        "How do you think attitudes to this topic will change over the next ten years?",
+        "Is there anything about this topic that people commonly misunderstand?"
+      ]
+    },
+    "t3": {
+      "partner": "the director of a small local museum where you work part-time",
+      "situation": "You work part-time at a small museum in your town. The museum has just announced a new weekend exhibition, but only a handful of visitors have booked tickets. The director, who is keen to hear staff ideas, has asked to speak to you. You should discuss why bookings are low and suggest practical ways of attracting a younger audience without spending much money.",
+      "partnerLine": "Thanks for making time. As you know, the weekend exhibition has had very disappointing bookings so far, and I'm worried we'll have to cancel it. I'd really like to hear what you think is going wrong, and whether you have any ideas for reaching younger visitors.",
+      "newInfo": "That's helpful, thank you. There's one more thing, though. I've just heard that the town council can only offer us a very small grant this year, so we can't pay for any advertising. On the other hand, a local influencer with a large following has offered to visit the exhibition for free, as long as she can film there. I'm not sure whether that would suit the museum's image.",
+      "newTask": "React to the director's new information and give your opinion on whether the museum should accept the influencer's offer."
+    },
+    "t4": {
+      "title": "Do influencers deserve their influence?",
+      "instructions": "Listen to two people talking about social media influencers. Summarise the main points: What reasons does each speaker give for their view? What do they agree on?",
+      "speakers": [
+        {
+          "name": "Hannah",
+          "voice": "female"
+        },
+        {
+          "name": "Rafael",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Hannah",
+          "text": "I'll be honest, Rafael, I find the whole influencer phenomenon a bit hard to take seriously. Somebody films themselves unboxing a pair of trainers and suddenly they're treated as an authority on style, or fitness, or even politics."
+        },
+        {
+          "speaker": "Rafael",
+          "text": "Well, I'd push back on that a little. I mean, yes, some of it is frivolous, but you can't dismiss an entire profession just because the most visible examples are a bit shallow. My cousin, for instance, runs a channel about repairing old bicycles. She has about four hundred thousand followers, and she's genuinely taught people to fix things rather than throw them away."
+        },
+        {
+          "speaker": "Hannah",
+          "text": "Okay, fair enough, that's a lovely example. But for every person like your cousin there must be fifty people promoting detox teas without a shred of evidence. And the trouble is that audiences, especially younger ones, don't always distinguish between the two."
+        },
+        {
+          "speaker": "Rafael",
+          "text": "That's true, that is a problem. Although, to be fair, I'd say the blame doesn't lie only with the influencers. The platforms reward whatever gets the most reaction, and that's rarely the most careful or accurate content."
+        },
+        {
+          "speaker": "Hannah",
+          "text": "Right, so the system pushes everyone towards the loud and the sensational. And then there's the question of honesty. Half the time you can't tell whether a recommendation is sincere or whether they've been paid to say it, even with those little 'ad' labels, which, let's face it, are often tucked away at the bottom."
+        },
+        {
+          "speaker": "Rafael",
+          "text": "Mm. I think regulation has been slow to catch up there. In some countries they've started fining people who don't disclose sponsorship properly, which seems sensible to me. It doesn't ban anything, it simply gives the audience the information they need to judge for themselves."
+        },
+        {
+          "speaker": "Hannah",
+          "text": "Fair enough, that seems sensible. So, where does that leave us? Perhaps that influence in itself isn't the problem, but influence without accountability is."
+        },
+        {
+          "speaker": "Rafael",
+          "text": "Exactly. I'd happily follow someone who earns my trust and is open about how they make money. It's the opacity I object to, not the idea itself."
+        },
+        {
+          "speaker": "Hannah",
+          "text": "Fine. Then we're in agreement, more or less, which I must say is a first for us."
+        },
+        {
+          "speaker": "Rafael",
+          "text": "Mark the date."
+        }
+      ],
+      "followup": "Do you think people are right to trust influencers' recommendations? Why, or why not?"
+    }
+  },
+  "listening": [
+    {
+      "type": "conversation",
+      "title": "Playing for pennies",
+      "context": "Two friends, one of whom is a musician, are chatting about money and music streaming.",
+      "plays": 2,
+      "previewSeconds": 25,
+      "speakers": [
+        {
+          "name": "Mark",
+          "voice": "male"
+        },
+        {
+          "name": "Julia",
+          "voice": "female"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Julia",
+          "text": "So how did the gig go on Saturday? Did anyone actually turn up?"
+        },
+        {
+          "speaker": "Mark",
+          "text": "Ha, yes, more than I expected, actually. About sixty people, which for a Tuesday-night crowd in a tiny venue is brilliant. The odd thing is, I checked my streaming statistics afterwards and I'd had thousands of plays that week, and the payout for the whole month came to about the price of a sandwich."
+        },
+        {
+          "speaker": "Julia",
+          "text": "Oh, come on, that can't be right."
+        },
+        {
+          "speaker": "Mark",
+          "text": "I'm not exaggerating. I get something like a third of a penny per play, and then the label and the distributor take their cut before it gets to me. So really, streaming is more of a shop window than an income."
+        },
+        {
+          "speaker": "Julia",
+          "text": "Well, isn't that how it's always been, though? I mean, bands in the seventies didn't make money from records either, did they? They toured."
+        },
+        {
+          "speaker": "Mark",
+          "text": "Mm, some did, but not like this. Back then if somebody liked your album, they bought it, and that was a transaction. Now somebody can play my song fifty times on a run and I've earned practically nothing, whereas the platform has their subscription fee regardless."
+        },
+        {
+          "speaker": "Julia",
+          "text": "Right. Although you could argue the platforms have given people like you a way to be heard in the first place. You'd never have got an audience in Poland otherwise, would you?"
+        },
+        {
+          "speaker": "Mark",
+          "text": "That's the bit I can't deny. Somebody in Kraków messaged me last month to say they'd found my music through a playlist, and that's lovely. I'd have had no route to that person ten years ago."
+        },
+        {
+          "speaker": "Julia",
+          "text": "So it's a trade-off."
+        },
+        {
+          "speaker": "Mark",
+          "text": "It is, though I do wish people understood it. Most listeners assume the money goes straight to the artist. A few of us have started selling downloads directly through our own websites, and, well, if you want to support someone, buying one album outright does more than a year of streams."
+        },
+        {
+          "speaker": "Julia",
+          "text": "I'd never have guessed. Honestly, I'll buy yours this evening."
+        },
+        {
+          "speaker": "Mark",
+          "text": "You don't have to, you know. Though I won't stop you."
+        },
+        {
+          "speaker": "Julia",
+          "text": "Then consider it done. Is it on that site you mentioned, the one where you pay what you like?"
+        },
+        {
+          "speaker": "Mark",
+          "text": "That's the one. Pay what you like, with a minimum, so I can at least cover the mastering costs."
+        },
+        {
+          "speaker": "Julia",
+          "text": "Perfect. Send me the link and I'll do it before I forget."
+        }
+      ],
+      "questions": [
+        {
+          "q": "How does Mark feel about the amount he earns from streaming?",
+          "options": [
+            "He is surprised that it varies so much.",
+            "He thinks it barely reflects how popular his music is.",
+            "He accepts it as fair for an unknown artist.",
+            "He believes the label is keeping too much of it."
+          ],
+          "answer": 1,
+          "explanation": "He had thousands of plays but the month's payout 'came to about the price of a sandwich'. He does mention the label's cut, but his main point is the mismatch with popularity."
+        },
+        {
+          "q": "Why does Julia mention bands in the seventies?",
+          "options": [
+            "to suggest that Mark is exaggerating his difficulties",
+            "to argue that musicians used to earn more from records",
+            "to show that audiences have become less loyal",
+            "to imply that live performance has always been the main source of income"
+          ],
+          "answer": 3,
+          "explanation": "She says 'bands in the seventies didn't make money from records either... They toured', implying that it is not a new situation."
+        },
+        {
+          "q": "What positive aspect of streaming does Mark admit?",
+          "options": [
+            "It reaches listeners he could not otherwise find.",
+            "It makes touring unnecessary.",
+            "It brings in a steady monthly income.",
+            "It encourages people to buy albums."
+          ],
+          "answer": 0,
+          "explanation": "A listener in Kraków found him through a playlist: 'I'd have had no route to that person ten years ago.'"
+        },
+        {
+          "q": "What does Mark suggest listeners should do to support artists?",
+          "options": [
+            "attend more small gigs",
+            "subscribe to more than one platform",
+            "buy music directly from the artist",
+            "play songs repeatedly on playlists"
+          ],
+          "answer": 2,
+          "explanation": "'Buying one album outright does more than a year of streams.'"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "title": "The limits of tourism",
+      "context": "A radio presenter leads a discussion on overtourism with an academic and a guesthouse owner.",
+      "plays": 2,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Chair",
+          "voice": "female"
+        },
+        {
+          "name": "Elena",
+          "voice": "female"
+        },
+        {
+          "name": "Tomas",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Chair",
+          "text": "Good evening, everyone, and welcome to this evening's discussion on the future of tourism in our old town. With me are Dr Elena Marsh, an urban geographer, and Tomas Reyes, who runs a family guesthouse in the historic quarter. Elena, perhaps you could start us off by saying what you mean by overtourism, because the word gets used rather loosely."
+        },
+        {
+          "speaker": "Elena",
+          "text": "Certainly. It isn't simply a matter of large numbers. A city can host millions of visitors and cope perfectly well if they are spread out through the year and across many districts. Overtourism describes the point at which visitors start to degrade the place for those who live there, so you see rents rise, shops that serve locals replaced by souvenir stands, and ordinary residents leaving. The crucial indicator, in my view, is not footfall but displacement."
+        },
+        {
+          "speaker": "Tomas",
+          "text": "Can I come in there? Because I accept that, but from where I stand it's a little unfair to treat us as villains. My family has run that guesthouse for forty years. Without visitors, half the street would be boarded up, and I'm not sure the neighbours who complain would be any happier living among empty shops."
+        },
+        {
+          "speaker": "Elena",
+          "text": "I don't doubt that, Tomas, and I wouldn't paint small operators as the problem. The difficulty has changed over the last decade, because a great many flats have been taken off the housing market altogether and turned into short-term lets, often by investors who don't even live in the country."
+        },
+        {
+          "speaker": "Tomas",
+          "text": "That I can agree with. Those aren't guesthouses, they're hotels without staff or accountability. I'd have no objection to tighter rules on them."
+        },
+        {
+          "speaker": "Chair",
+          "text": "So are we saying that it's the type of tourism that matters rather than the quantity? Elena?"
+        },
+        {
+          "speaker": "Elena",
+          "text": "Partly. But quantity does matter at certain times. If twelve thousand people try to squeeze through one medieval street at noon in August, no amount of good behaviour will prevent damage to the fabric of the place. Which is why some cities have introduced timed tickets for certain sites, or small entry fees for day visitors. The evidence on fees is mixed, mind you. They raise money, but they haven't noticeably reduced numbers."
+        },
+        {
+          "speaker": "Tomas",
+          "text": "And that worries me, because a fee puts off precisely the wrong people. Families on a budget stay away, while the cruise passengers who spend six hours ashore and buy nothing carry on regardless."
+        },
+        {
+          "speaker": "Elena",
+          "text": "That's a fair point, and it's why I'd argue for limiting cruise-ship landings, which have more impact than almost any other single factor, rather than charging everyone."
+        },
+        {
+          "speaker": "Chair",
+          "text": "Tomas, would you support that?"
+        },
+        {
+          "speaker": "Tomas",
+          "text": "Honestly, yes. If I had to choose, I'd far rather lose a few cruise days than lose the neighbourhood. What I'd want in return, though, is some say in how the money gets spent. At the moment, the tourist tax disappears into the general budget and I never see a bin or a bench to show for it."
+        },
+        {
+          "speaker": "Elena",
+          "text": "There I think we've got a genuine area of agreement. The most successful schemes I've studied are the ones where revenue is visibly reinvested locally, and residents are consulted before decisions are made rather than after."
+        },
+        {
+          "speaker": "Chair",
+          "text": "Which sounds like a sensible note to leave on. Elena, Tomas, thank you both."
+        }
+      ],
+      "questions": [
+        {
+          "q": "According to Elena, what is the key sign that a place suffers from overtourism?",
+          "options": [
+            "complaints from residents about noise",
+            "the total number of visitors per year",
+            "local people being pushed out of their own neighbourhood",
+            "damage to historic buildings"
+          ],
+          "answer": 2,
+          "explanation": "'The crucial indicator, in my view, is not footfall but displacement.'"
+        },
+        {
+          "q": "Why does Tomas interrupt Elena's opening remarks?",
+          "options": [
+            "to defend small businesses like his against criticism",
+            "to ask for a clearer definition",
+            "to propose a solution",
+            "to correct a factual error"
+          ],
+          "answer": 0,
+          "explanation": "He says it is 'a little unfair to treat us as villains' and describes his family's guesthouse."
+        },
+        {
+          "q": "What do Elena and Tomas agree about short-term holiday lets?",
+          "options": [
+            "They should be banned outright.",
+            "They are less harmful than hotels.",
+            "They are mostly run by local families.",
+            "They have contributed to the housing shortage and need stricter rules."
+          ],
+          "answer": 3,
+          "explanation": "Elena notes flats taken off the housing market; Tomas calls them 'hotels without staff or accountability' and supports tighter rules."
+        },
+        {
+          "q": "What reservation does Tomas have about entry fees for day visitors?",
+          "options": [
+            "They would be unpopular with residents.",
+            "They might deter the wrong kind of visitor.",
+            "They would harm his guesthouse bookings.",
+            "They would be too expensive to collect."
+          ],
+          "answer": 1,
+          "explanation": "'A fee puts off precisely the wrong people' - budget families - while cruise passengers carry on."
+        },
+        {
+          "q": "What does Elena imply by saying 'The evidence on fees is mixed, mind you'?",
+          "options": [
+            "She thinks fees are unfair to residents.",
+            "She is unsure whether fees raise any revenue.",
+            "She is cautioning against assuming fees are a complete solution.",
+            "She wants to move on to another topic."
+          ],
+          "answer": 2,
+          "explanation": "Fees 'raise money, but they haven't noticeably reduced numbers', so she qualifies her earlier suggestion."
+        },
+        {
+          "q": "What do the speakers agree would make tourism schemes more successful?",
+          "options": [
+            "visible local reinvestment and consultation with residents",
+            "fewer visitors in August",
+            "higher taxes on guesthouses",
+            "more timed tickets"
+          ],
+          "answer": 0,
+          "explanation": "Elena: schemes work where 'revenue is visibly reinvested locally, and residents are consulted'; Tomas wants a say in spending."
+        }
+      ]
+    },
+    {
+      "type": "talk",
+      "title": "What speaking two languages does to the mind",
+      "context": "A university lecturer gives a short public talk on bilingualism, followed by a comment from the host.",
+      "plays": 1,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Dr Okafor",
+          "voice": "female"
+        },
+        {
+          "name": "Host",
+          "voice": "male"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Dr Okafor",
+          "text": "Good afternoon. I'd like to talk for a few minutes about what multilingualism actually does to the mind, because there's a lot of popular myth in this area. For decades, bilingual children were thought to be at a disadvantage. Teachers worried that two languages would compete for space, and some parents were even advised to drop their home language. We now know that advice was misguided."
+        },
+        {
+          "speaker": "Dr Okafor",
+          "text": "The picture emerging from research is more subtle. Bilingual speakers do tend to be better at what psychologists call executive control, which is the ability to switch attention, ignore distractions and hold information in mind. The explanation is fairly intuitive. If you speak two languages, both are active in your brain whenever you speak, and you constantly have to suppress the one you don't need. That's a kind of daily mental workout."
+        },
+        {
+          "speaker": "Dr Okafor",
+          "text": "However, I should add a note of caution. Some of the early studies were small, and when larger ones were carried out the advantage in everyday tasks turned out to be modest, or in some cases impossible to detect. So I'd resist anyone who tells you that learning Spanish will make you cleverer. What is better supported is the finding that, among people who develop dementia, those who've used two languages for most of their lives show symptoms, on average, a few years later. The brain isn't protected from the disease, but it seems to compensate for longer."
+        },
+        {
+          "speaker": "Dr Okafor",
+          "text": "Now, what about adults who start from scratch? It's often assumed that after puberty the door closes. In fact, adults learn grammar and vocabulary faster than children in the early stages, because they can use analytical strategies children haven't developed. Where children win is in pronunciation and in the effortless, intuitive command of the sounds. But accent isn't the same as fluency, and plenty of highly proficient speakers have an accent."
+        },
+        {
+          "speaker": "Dr Okafor",
+          "text": "What matters most, I'd say, is not age but exposure and motivation. People who need a language to build a life, to talk to a partner or to find work, tend to progress further than those who study it purely as a hobby. Which, I suppose, is why apps alone rarely produce fluency. They keep you practising, but they seldom push you into the uncomfortable situation of having to make yourself understood, and that discomfort seems to be where the learning happens."
+        },
+        {
+          "speaker": "Dr Okafor",
+          "text": "So the message is hopeful, though not magical. Languages are good for you, but mostly because they connect you to people, not because they train your brain. Thank you."
+        },
+        {
+          "speaker": "Host",
+          "text": "Thank you, Dr Okafor. That was refreshingly honest. I think what stands out for me is that the myth about confusion has been completely overturned, but the myth about superpowers is being treated with equal scepticism. Perhaps the key takeaway for parents is that there's no need to worry about raising children with two languages, while for adults it's never too late to begin, provided they put themselves in real conversations rather than relying on an app. It's a pleasing conclusion that learning a language is as much a social act as an intellectual one."
+        }
+      ],
+      "questions": [
+        {
+          "q": "What does the speaker say about the early advice given to bilingual families?",
+          "options": [
+            "It has since been shown to be wrong.",
+            "It is still followed in some schools.",
+            "It only applied to certain languages.",
+            "It was based on reliable evidence at the time."
+          ],
+          "answer": 0,
+          "explanation": "'We now know that advice was misguided.'"
+        },
+        {
+          "q": "Why does the speaker say that bilinguals develop better executive control?",
+          "options": [
+            "They study more than monolingual people.",
+            "They remember vocabulary more easily.",
+            "They tend to come from more educated families.",
+            "They have to keep suppressing the language they are not using."
+          ],
+          "answer": 3,
+          "explanation": "Both languages are active, so 'you constantly have to suppress the one you don't need'."
+        },
+        {
+          "q": "What is the speaker's attitude to the claim that learning a language makes you cleverer?",
+          "options": [
+            "hostile, as it discourages adults",
+            "sceptical, because larger studies found modest or no advantage",
+            "indifferent, as the topic is too complex",
+            "enthusiastic, as the evidence is overwhelming"
+          ],
+          "answer": 1,
+          "explanation": "Larger studies found the advantage 'modest, or ... impossible to detect', and she says she would 'resist anyone' making the claim."
+        },
+        {
+          "q": "What does the speaker say is the finding better supported by evidence?",
+          "options": [
+            "Bilinguals recover faster from illness.",
+            "Bilinguals read more quickly.",
+            "Bilinguals are slower to suffer symptoms of dementia.",
+            "Bilinguals are less likely to develop dementia."
+          ],
+          "answer": 2,
+          "explanation": "Bilingual dementia patients show symptoms 'a few years later'; the brain is not protected from the disease but 'compensates for longer'."
+        },
+        {
+          "q": "In what area do children have an advantage over adult learners?",
+          "options": [
+            "speed of early progress",
+            "intuitive command of pronunciation",
+            "building vocabulary",
+            "learning grammar rules"
+          ],
+          "answer": 1,
+          "explanation": "'Where children win is in pronunciation and in the effortless, intuitive command of the sounds.'"
+        },
+        {
+          "q": "How does the host's summary differ from the talk?",
+          "options": [
+            "The host disagrees with the speaker about myths.",
+            "The host emphasises the intellectual benefits more than the speaker did.",
+            "The host overstates the role of apps in language learning.",
+            "The host adds a point about parents that the speaker did not make directly."
+          ],
+          "answer": 3,
+          "explanation": "The host draws a practical conclusion for parents ('no need to worry about raising children with two languages'), which Dr Okafor implied but did not say as advice to parents. He does not overstate apps or disagree with her."
+        }
+      ]
+    },
+    {
+      "type": "talk",
+      "title": "Beyond 'fake news'",
+      "context": "A media researcher gives a talk on misinformation, followed by a response from the moderator.",
+      "plays": 1,
+      "previewSeconds": 30,
+      "speakers": [
+        {
+          "name": "Dr Vance",
+          "voice": "male"
+        },
+        {
+          "name": "Moderator",
+          "voice": "female"
+        }
+      ],
+      "script": [
+        {
+          "speaker": "Dr Vance",
+          "text": "Thank you. I want to challenge the way we usually talk about fake news, because I think the phrase itself has become part of the problem. It lumps together very different things: deliberate disinformation, honest mistakes, satire taken literally, and, increasingly, any report a politician simply dislikes. If we want to respond sensibly, we have to separate them."
+        },
+        {
+          "speaker": "Dr Vance",
+          "text": "Let's begin with an uncomfortable finding. Studies tracking how falsehoods travel suggest that false stories spread faster and further than true ones. The reason is not, as many assume, that automated accounts push them. Mostly it's ordinary people, who share items that provoke surprise or outrage. Novelty and emotion are what travel well, and the truth is often rather dull by comparison."
+        },
+        {
+          "speaker": "Dr Vance",
+          "text": "This has led to a lot of enthusiasm for fact-checking, and I'm all in favour of it. But we should be realistic. A correction rarely reaches the people who saw the original claim, and, perhaps more worrying, repeating a false claim in order to debunk it can sometimes make it more memorable. What does seem to work better is what researchers call prebunking: warning people in advance about the tricks that manipulators use, such as fake experts, emotional language and cherry-picked statistics, so that they spot the technique rather than a specific lie."
+        },
+        {
+          "speaker": "Dr Vance",
+          "text": "In schools, the conventional advice has been to teach pupils to check the source, and to look at the author, the date and the website. That's not wrong, but it turns out that professional fact-checkers do something different. They rarely linger on a page; they leave it and open other tabs to see what others say about it. Lateral reading, they call it. A polished-looking site is no guarantee of anything, and spending a long time scrutinising one can actually leave you more convinced."
+        },
+        {
+          "speaker": "Dr Vance",
+          "text": "There is, finally, a danger in overcorrecting. If we teach young people to distrust everything, we don't produce critical thinkers; we produce cynics, who conclude that nothing can be known and therefore that any claim is as good as another. That, to my mind, is exactly the outcome that serious disinformation campaigns are hoping for. The goal of media literacy should be calibrated trust, not blanket suspicion. Thank you."
+        },
+        {
+          "speaker": "Moderator",
+          "text": "That was thought-provoking, thank you. I'd like to pick up the last point, because I think it's the one people often miss. We tend to assume the aim of propaganda is to make us believe something false, when its more modest ambition may be to leave us exhausted and unsure whom to believe. So media literacy courses that simply teach pupils to be suspicious could end up serving the very people they're meant to guard against. A more useful approach would show students how to find reliable information, rather than simply how to spot the unreliable."
+        }
+      ],
+      "questions": [
+        {
+          "q": "Why does the speaker object to the phrase 'fake news'?",
+          "options": [
+            "It was invented by politicians.",
+            "It exaggerates the scale of the problem.",
+            "It is too technical for most audiences.",
+            "It covers several different things that need separate responses."
+          ],
+          "answer": 3,
+          "explanation": "It 'lumps together very different things' and 'we have to separate them'."
+        },
+        {
+          "q": "According to the speaker, why do false stories spread so fast?",
+          "options": [
+            "Journalists repeat them without checking.",
+            "People share material that provokes strong reactions.",
+            "They are better written than true stories.",
+            "Automated accounts promote them."
+          ],
+          "answer": 1,
+          "explanation": "'Mostly it's ordinary people, who share items that provoke surprise or outrage.'"
+        },
+        {
+          "q": "What reservation does the speaker express about fact-checking?",
+          "options": [
+            "It tends to reach fewer people than the original claim and can reinforce it.",
+            "It is mainly used by politicians.",
+            "It focuses too much on statistics.",
+            "It is too expensive to carry out."
+          ],
+          "answer": 0,
+          "explanation": "A correction 'rarely reaches the people who saw the original claim' and repeating a falsehood 'can sometimes make it more memorable'."
+        },
+        {
+          "q": "What is distinctive about the way professional fact-checkers work?",
+          "options": [
+            "They spend a long time analysing a single website.",
+            "They avoid websites that look professional.",
+            "They compare what other sources say about a page instead of staying on it.",
+            "They check the author's qualifications first."
+          ],
+          "answer": 2,
+          "explanation": "They 'leave it and open other tabs' - lateral reading."
+        },
+        {
+          "q": "What does the speaker mean by 'calibrated trust'?",
+          "options": [
+            "trusting sources to the extent that they deserve it",
+            "believing nothing without personal experience",
+            "trusting the majority opinion",
+            "trusting only official institutions"
+          ],
+          "answer": 0,
+          "explanation": "The contrast is with 'blanket suspicion': trust should be proportional, avoiding cynicism."
+        },
+        {
+          "q": "What point does the moderator add to the speaker's argument?",
+          "options": [
+            "Fact-checkers are unreliable.",
+            "Pupils are more sceptical than adults.",
+            "Propaganda often aims to create confusion rather than belief in a particular lie.",
+            "Schools should stop teaching media literacy."
+          ],
+          "answer": 2,
+          "explanation": "The moderator says propaganda's 'more modest ambition may be to leave us exhausted and unsure whom to believe'."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "type": "single",
+      "title": "The appeal of the awkward",
+      "genre": "article",
+      "text": "There is a particular ritual that anyone who owns a record player will recognise. You slide the disc from its sleeve, hold it by the edges as if it were a hot plate, lower the stylus, and then, quite deliberately, sit down. Nobody, as far as I know, has ever done the washing-up to a vinyl album, because the format itself resists multitasking. Side A lasts about twenty minutes; if you want something else, you must get up and make it happen.\n\nIt is precisely this inconvenience that seems to be driving one of the stranger commercial stories of the past two decades. Vinyl, pronounced dead when compact discs arrived, now outsells CDs in several markets, and pressing plants, which many assumed would be scrapped, have waiting lists stretching into the following year. The buyers are not, as cynics tend to suppose, grey-haired collectors rebuying their youth. A substantial share are under thirty, people who have never known a world without instant access to practically every recording ever made.\n\nWhy would they bother? The nostalgia explanation is the easiest, and the least convincing, since you cannot be nostalgic for something you never experienced. A more plausible account is that abundance has made listening cheap in every sense. When a skip of the thumb summons any song, the song is worth about as much as the effort it took, which is to say nothing. A record, by contrast, costs money, takes up space and demands attention, and those very constraints lend it weight.\n\nNone of this should be romanticised. Pressing is expensive, the environmental footprint of the plastic is considerable, and a good many of the records sold today are never played at all, merely displayed, like trophies on a shelf. Yet the sound quality debate rather misses the point. People who buy turntables are seldom chasing fidelity; they are chasing a certain relationship with music, one in which listening is an act rather than a background condition.\n\nWhich may explain why the revival has spread beyond records to cassette tapes, film cameras and even paper diaries. Whatever you think of the fashion, it hints at something genuine: a fatigue with frictionless living, and a suspicion that some things are better for being a little bit difficult.",
+      "questions": [
+        {
+          "q": "What point does the writer make in the first paragraph?",
+          "options": [
+            "Vinyl records are easy to damage.",
+            "The ritual of handling records has become less common.",
+            "Playing a record requires more attention than other formats.",
+            "People enjoy household chores more when listening to music."
+          ],
+          "answer": 2,
+          "explanation": "'The format itself resists multitasking' - you must get up and make the change yourself."
+        },
+        {
+          "q": "What does the writer suggest about people who buy vinyl today?",
+          "options": [
+            "Many are young listeners with no memory of the format.",
+            "They tend to own several record players.",
+            "They are mainly interested in sound quality.",
+            "Most are older people recapturing their youth."
+          ],
+          "answer": 0,
+          "explanation": "'A substantial share are under thirty... who have never known a world without instant access.'"
+        },
+        {
+          "q": "What does the writer mean by 'the song is worth about as much as the effort it took'?",
+          "options": [
+            "Songs have become shorter.",
+            "Streaming services pay artists very little.",
+            "Listeners choose songs without thinking.",
+            "Music that is easy to obtain is valued less."
+          ],
+          "answer": 3,
+          "explanation": "When any song is a thumb-skip away, effort is nil and so the song's value is 'nothing'; constraints give a record 'weight'."
+        },
+        {
+          "q": "Why does the writer include the comment about records 'displayed, like trophies on a shelf'?",
+          "options": [
+            "to argue that collectors are dishonest",
+            "to qualify an otherwise positive account of the vinyl market",
+            "to criticise the quality of modern pressings",
+            "to show that the revival is entirely a passing trend"
+          ],
+          "answer": 1,
+          "explanation": "The paragraph begins 'None of this should be romanticised' - it adds reservations to the positive picture without rejecting it."
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "title": "Life in the frame",
+      "genre": "review",
+      "text": "When I started reading about influencers, I assumed I was in for a gentle anthropological study of vanity. Instead, Marguerite Dane's debut book, *The Ring Light Economy*, turned out to be something more unsettling and a good deal more interesting: an account of what it feels like to turn your own life into a product.\n\nDane, a former brand strategist, spent three years following a dozen content creators, from teenage gamers to a sixty-year-old woman whose gardening videos have become an unlikely hit. Her sympathy for them is evident, but never uncritical. She is at her best when describing the daily arithmetic of the job: the posting schedule dictated by the algorithm, the sponsor who vanishes after one lukewarm review, the follower count watched like a patient's pulse. One interviewee confesses that she has not eaten a meal off camera in two years, and the remark lands with all the more force because Dane resists the temptation to comment on it.\n\nWhere the book is less convincing is in its argument that influencers have fundamentally altered the nature of trust. Dane maintains that audiences place faith in creators precisely because they seem ordinary, unlike celebrities, and that this perceived intimacy is the real commodity being sold. It is a neat thesis, and there is something in it, but she offers little evidence beyond anecdote, and she is surprisingly incurious about the audiences themselves. We hear a great deal about those who make the videos and almost nothing from those who watch them, which leaves the central claim hovering somewhere between insight and assertion.\n\nThere are also stretches where the prose slackens into marketing jargon, a hazard, perhaps, for someone who spent a decade in the industry she is examining. Phrases like 'authentic engagement journeys' sit awkwardly beside the genuinely moving reportage that surrounds them.\n\nStill, these are quibbles. The book's great strength is that it refuses both easy contempt and easy admiration. Dane's creators are neither fools nor saints; they are workers in an economy so new that its rules are being written while they play. Anyone who has ever wondered why a stranger's breakfast is of interest to half a million people will find this a lively place to begin, if not a final answer.",
+      "questions": [
+        {
+          "q": "What is the reviewer's attitude to the book's first-hand reporting?",
+          "options": [
+            "critical, as it relies on teenage gamers",
+            "mixed, as the writer is too sympathetic",
+            "dismissive, because the subjects are unrepresentative",
+            "admiring, especially where the author lets the details speak for themselves"
+          ],
+          "answer": 3,
+          "explanation": "'Dane resists the temptation to comment', and the confession about never eating off camera 'lands with all the more force'."
+        },
+        {
+          "q": "What is the reviewer's main criticism of Dane's argument about trust?",
+          "options": [
+            "It applies only to older creators.",
+            "It lacks evidence and ignores the viewers' perspective.",
+            "It contradicts the evidence presented elsewhere.",
+            "It is too obvious to be worth making."
+          ],
+          "answer": 1,
+          "explanation": "'She offers little evidence beyond anecdote... almost nothing from those who watch them.'"
+        },
+        {
+          "q": "Why does the reviewer quote the phrase 'authentic engagement journeys'?",
+          "options": [
+            "to illustrate the jargon that weakens parts of the writing",
+            "to praise the author's inventive language",
+            "to show that the interviewees use marketing language",
+            "to suggest the book is aimed at professionals"
+          ],
+          "answer": 0,
+          "explanation": "The prose 'slackens into marketing jargon' and such phrases 'sit awkwardly'."
+        },
+        {
+          "q": "What does the reviewer mean by 'these are quibbles'?",
+          "options": [
+            "The criticisms are unfair to the author.",
+            "The book is too short to be taken seriously.",
+            "The book's flaws are minor compared with its strengths.",
+            "The author has ignored earlier criticism."
+          ],
+          "answer": 2,
+          "explanation": "The next sentences praise the book's balance, implying the faults are of limited importance."
+        }
+      ]
+    },
+    {
+      "type": "paired",
+      "title": "Should museums return their collections?",
+      "textA": {
+        "title": "Time to send them home",
+        "genre": "opinion piece",
+        "text": "Every few months, another museum receives a letter that makes its directors wince. It asks, politely but firmly, for an object to be sent home, and the usual response, a cautious statement about 'ongoing dialogue', gives little away. Having covered the subject for years, I think the era of evasion is ending, and not before time.\n\nThe old arguments are wearing thin. We are told that great museums offer a universal view of human achievement, which sounds noble until you ask who decided which objects were gathered into that universe, and under what circumstances. Many of the pieces in question were taken during military campaigns or colonial administrations, when the people who owned them had no meaningful power to refuse. To call this 'acquisition' is a euphemism that deceives nobody.\n\nNor does the claim that artefacts are safer abroad survive scrutiny. It may once have been plausible; today countries seeking the return of their heritage have built purpose-designed galleries, trained conservators and, in some cases, a better security record than the institutions holding their property. Meanwhile, a bronze or a mask displayed in a gallery thousands of kilometres from its origin is stripped of the context that gave it meaning. A young person in the country of origin may never see the work of her own ancestors, whereas a tourist can wander past it on a wet afternoon.\n\nI do not claim every case is simple. Some objects have been disputed for generations, and some have no single rightful owner. But complexity cannot be an alibi for permanent delay. The principle should be that the burden of proof lies with the holder, not the claimant. Museums that act promptly will, I suspect, find that the public respects them more, not less. The ones that cling on will end up looking like the defendants in a case they have already lost."
+      },
+      "textB": {
+        "title": "Why returning everything would be a mistake",
+        "genre": "letter to the editor",
+        "text": "Reading your columnist's recent piece on repatriation, I found myself agreeing with the moral instinct and disagreeing with almost everything built on it. As a curator of thirty years' standing, I have seen at first hand what is lost when a debate becomes a slogan.\n\nOf course some objects should go back. Human remains and sacred items taken without consent are obvious examples, and the institutions that resisted returning them for so long have little to be proud of. But to suggest that the burden of proof should always fall on the holder is to replace one rigid rule with another. History is rarely so tidy. Collections were built through purchase, exchange, scientific expedition and, yes, plunder, and sometimes all four within a single object's career. Distinguishing between them demands patient research, not a presumption of guilt.\n\nMoreover, your writer treats museums as if they were warehouses for stolen goods, ignoring what they actually do. A great deal of knowledge about the world's cultures exists because specialists can compare objects from different civilisations under one roof. Disperse the collections entirely and that comparative work becomes far harder, while smaller countries, which cannot afford to house everything, may end up with treasures they lack the means to protect.\n\nA more constructive path, I believe, lies in shared custody: long-term loans, joint exhibitions and digital access, so that communities of origin can study and display their heritage without forcing a binary choice between keeping and returning. It is less satisfying than a headline, certainly, but it is more likely to produce lasting agreements than a verdict delivered from the high ground of a newspaper column."
+      },
+      "questions": [
+        {
+          "q": "What is the writer of Text A's attitude to the phrase 'ongoing dialogue'?",
+          "options": [
+            "She sees it as a genuine attempt at cooperation.",
+            "She regards it as a way of avoiding a decision.",
+            "She thinks it is used only by smaller museums.",
+            "She believes it describes recent progress accurately."
+          ],
+          "answer": 1,
+          "explanation": "The statement 'gives little away' and the 'era of evasion' is ending."
+        },
+        {
+          "q": "Why does the writer of Text A use the word 'acquisition' in inverted commas?",
+          "options": [
+            "to show that the term is technical",
+            "to indicate uncertainty about the facts",
+            "to quote a museum director directly",
+            "to suggest that it disguises what really happened"
+          ],
+          "answer": 3,
+          "explanation": "She calls it 'a euphemism that deceives nobody'."
+        },
+        {
+          "q": "What do both writers accept?",
+          "options": [
+            "Some objects have a stronger case for return than others.",
+            "Public opinion is irrelevant to the debate.",
+            "Digital access is a satisfactory substitute.",
+            "Museums should never keep contested objects."
+          ],
+          "answer": 0,
+          "explanation": "A admits 'not every case is simple'; B says 'of course some objects should go back' (remains, sacred items)."
+        },
+        {
+          "q": "How would the writer of Text B probably respond to the claim in Text A that the burden of proof should lie with the holder?",
+          "options": [
+            "by suggesting it is an issue for lawyers rather than curators",
+            "by agreeing that museums have lost the public's trust",
+            "by pointing out that it replaces one fixed rule with another",
+            "by arguing that claimants should always provide proof"
+          ],
+          "answer": 2,
+          "explanation": "B: 'to replace one rigid rule with another'."
+        },
+        {
+          "q": "What is the main purpose of Text B?",
+          "options": [
+            "to describe the history of a particular collection",
+            "to report on a new law about repatriation",
+            "to defend museums against every claim",
+            "to question Text A's position and propose a compromise"
+          ],
+          "answer": 3,
+          "explanation": "B agrees with the 'moral instinct' but disagrees with the conclusions and proposes shared custody."
+        }
+      ]
+    },
+    {
+      "type": "paired",
+      "title": "Translation technology and language learning",
+      "textA": {
+        "title": "The machine will see you now",
+        "genre": "magazine article",
+        "text": "A few years ago, a friend of mine returned from a conference in Osaka with the air of someone who had witnessed a miracle. She had spent a week in meetings with colleagues whose language she could not speak, and everything, she said, had worked. She held up her phone and showed me a translation app which, within a second or two, rendered speech from one language into another with astonishing accuracy.\n\nI think she was right to be impressed. The tools now available can turn a restaurant menu, a legal letter or a conversation in a taxi into passable English, for free and in seconds. For the traveller, the migrant filling in forms or the small business seeking customers abroad, that is a real liberation, and I find it hard to be snobbish about it, having muddled through enough holidays on gestures alone. Anyone who has stood helpless in a foreign pharmacy will know the value of a working translator.\n\nWhat I do question is the conclusion many people now draw: that learning languages is therefore a quaint relic, like learning to shoe horses. Language is not merely a code in which information is packaged. It carries humour, courtesy, hierarchy and doubt, much of which is conveyed by what is left unsaid, and an app has no way of knowing when a polite refusal is really a flat 'no'. Nor will it notice that a joke has been mistaken for an insult.\n\nI suspect the most significant consequence will be social rather than technical. If everyone can understand everyone, the incentive to make the effort of learning diminishes, and with it the particular goodwill that effort produces. People are touched when a stranger tries, however clumsily, to speak their language. A translating machine can inform; it can hardly flatter in the same way."
+      },
+      "textB": {
+        "title": "Why I stopped trusting the shortcut",
+        "genre": "blog post",
+        "text": "I should say at the outset that I am not a technophobe. I use translation software every week, often more than I would care to admit, mostly for emails from suppliers in countries I will never visit. But I have also learned a lesson the hard way, and it is that machine translation is at its most dangerous precisely when it is at its most fluent.\n\nLast spring I negotiated a contract with a firm in Lisbon, using an app to bridge my non-existent Portuguese. The text read beautifully. It was also, as I discovered after a lawyer glanced over it, wrong in a crucial clause, where a word meaning 'may' had been rendered as 'must'. Nothing about the sentence looked suspicious, which is exactly the problem. A clumsy translation announces its own unreliability; a smooth one does not.\n\nThat experience nudged me to start lessons, and, to my surprise, I have found them absorbing. I will never be fluent, but even at an elementary level I can now follow the shape of a sentence, notice when something is odd, and ask a sensible question. The app has become a useful assistant instead of an unquestioned authority.\n\nI do not think the future belongs to those who learn languages instead of using machines, or the reverse. It belongs to people who know enough to tell when the machine is guessing, and that, in practice, requires some knowledge of the language in question, however slight. The shortcut is excellent, so long as you can recognise the cliff."
+      },
+      "questions": [
+        {
+          "q": "What is the writer of Text A's attitude to translation apps?",
+          "options": [
+            "mostly positive, but doubtful that they make language learning unnecessary",
+            "indifferent to their social effects",
+            "enthusiastic about replacing language classes",
+            "dismissive, as they cannot translate humour"
+          ],
+          "answer": 0,
+          "explanation": "She admires them ('a real liberation') but 'question[s] the conclusion' that learning languages is a relic."
+        },
+        {
+          "q": "Why does the writer of Text A mention horses?",
+          "options": [
+            "to describe a personal hobby",
+            "to compare apps with an outdated technology",
+            "to illustrate that language learning is no longer thought valuable",
+            "to suggest that translation is as slow as travelling by horse"
+          ],
+          "answer": 2,
+          "explanation": "People think learning languages is 'a quaint relic, like learning to shoe horses': the comparison conveys a belief that it is obsolete."
+        },
+        {
+          "q": "What does the writer of Text B mean by 'a smooth one does not'?",
+          "options": [
+            "Fluent translations are less accurate than clumsy ones.",
+            "Smooth translations are easier to check.",
+            "Good translations are always costly.",
+            "A fluent translation gives no warning that it may contain errors."
+          ],
+          "answer": 3,
+          "explanation": "'A clumsy translation announces its own unreliability'; a smooth one hides its errors."
+        },
+        {
+          "q": "Which idea is shared by both writers?",
+          "options": [
+            "Machine translation is rarely accurate enough to be useful.",
+            "Understanding the language still matters even when technology is available.",
+            "Learning a language is mainly useful for tourists.",
+            "Contracts should never be translated by software."
+          ],
+          "answer": 1,
+          "explanation": "A stresses meaning conveyed by what is unsaid; B argues you need 'some knowledge of the language' to tell when the machine is guessing."
+        },
+        {
+          "q": "How might the writer of Text A react to the final paragraph of Text B?",
+          "options": [
+            "She would argue that contracts are a special case.",
+            "She would object that apps should not be used at all.",
+            "She would probably agree that learners use technology better.",
+            "She would think the writer's lessons were a waste of time."
+          ],
+          "answer": 2,
+          "explanation": "Both see machine and human knowledge as complementary; A would likely welcome B's conclusion."
+        }
+      ]
+    }
+  ],
+  "writing": {
+    "t1": {
+      "version": "email",
+      "platform": "Email: Community arts centre volunteer group",
+      "instructions": "You are a volunteer at your local arts centre. The organiser has emailed volunteers to ask for ideas for an 'Analogue Day', a free event celebrating non-digital hobbies such as vinyl records, film photography and handwritten letters. Write a reply of 100-120 words. In your email you should: respond to the organiser's request and say what you would like to contribute; explain how the event could attract people who normally spend most of their free time online.",
+      "bullets": [
+        "say what you would like to contribute to the event",
+        "explain how the event could attract people who normally spend most of their free time online"
+      ],
+      "thread": [
+        {
+          "author": "Priya Nair",
+          "role": "Volunteer organiser, Riverside Arts Centre",
+          "text": "Hi all, we've got the main hall booked for an Analogue Day on the first Saturday of next month, and I'd love to make it something people actually talk about. The idea is to show off hobbies that don't involve a screen: records, film cameras, calligraphy, that sort of thing. I'm still short of ideas and short of hands. Could you let me know what you'd like to do on the day? And, since most of our usual visitors are glued to their phones, I'd value your thoughts on how to get them through the door. Thanks, Priya"
+        }
+      ]
+    },
+    "t2": {
+      "genre": "essay",
+      "title": "Should popular destinations limit the number of visitors?",
+      "instructions": "Read the three texts below. Write an essay of 200-250 words for your university's travel and society magazine, discussing whether popular destinations should limit the number of visitors they receive. You MUST use ideas from the texts AND your own ideas. You MUST NOT copy from the texts.",
+      "sources": [
+        {
+          "label": "A",
+          "title": "Crowded out",
+          "type": "survey summary",
+          "text": "A survey of 2,400 residents in five popular European cities found that 61% believed visitor numbers were 'too high' during the summer months, and 38% said they had considered moving away from their neighbourhood in the past five years. Among those living within the historic centre, the figure rose to 52%. Yet 70% of respondents also said that tourism provided jobs for family or friends. Researchers noted that residents were far more critical of short-term holiday rentals and cruise-ship day visitors than of hotel guests or visitors staying several nights. The authors concluded that opinion is not simply for or against tourism, but about the form it takes and who benefits from it. Several respondents added that the benefits of tourism were rarely visible in their own streets."
+        },
+        {
+          "label": "B",
+          "title": "Do not close the gate",
+          "type": "blog post",
+          "text": "I run a small hotel in a coastal town, and every summer I hear the same phrase: 'We need to cap the numbers.' It sounds sensible until you ask who decides who stays out. Quotas tend to favour those who can book early and pay more, and they punish the people who rely on the season for the whole year's income. My town has no other industry; the fishing fleet shrank decades ago. Instead of limiting visitors, we should encourage them to come outside July and August, build better transport so that they spread out, and tax the businesses that profit most. A gate is a blunt tool; a well-designed calendar and a fair levy would do more good, and fewer people would be left behind."
+        },
+        {
+          "label": "C",
+          "title": "What the old quarter has lost",
+          "type": "interview",
+          "text": "'I grew up in this street,' says Maria Costa, 68, a retired teacher. 'My neighbours were bakers, tailors, a man who repaired clocks. Now there are three shops selling the same fridge magnets and a hostel above the bakery that closed. I'm not against visitors. I like meeting people from all over the world. But the street is no longer a place to live; it's a stage set. When the council introduced a limit on tour groups in the main square, noise dropped and a few local cafes reopened. So yes, limits can work, but only if the town truly wants to keep its residents and not just their rent.' I just wish the people in charge would ask us before deciding."
+        }
+      ]
+    }
+  }
+}
