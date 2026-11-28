@@ -61,9 +61,11 @@ async function hub() {
     <h2 class="section-title">Examen completo <span class="muted">105 min · Levelling → Speaking → Listening → Reading → Writing · solo hacia delante</span></h2>
     <div class="grid">${idx.map((e, i) => {
       const lm = lastMock(e.id);
+      const sv = loadMock(e.id);
+      const svLabel = sv && (sv.idx >= ORDER.length ? "Correcciones pendientes" : `A medias: vas por ${MOD_NAME[ORDER[sv.idx]]} · ${fmtTime(sv.left)}`);
       return `<div class="card exam-card"><div class="num">${i + 1}</div><h3>${esc(e.title)}</h3>
-        <div class="meta">${esc(e.theme.split(":")[0])}<br>Writing: ${esc(e.t1)} + ${esc(e.t2)}${lm ? `<br><b>Último: ${esc(lm.cefr)} (${lm.minScore}/150)</b>` : ""}</div>
-        <div class="row"><a class="btn primary small" href="#/mock/${e.id}">Empezar examen</a></div></div>`;
+        <div class="meta">${esc(e.theme.split(":")[0])}<br>Writing: ${esc(e.t1)} + ${esc(e.t2)}${lm ? `<br><b>Último: ${esc(lm.cefr)} (${lm.minScore}/150)</b>` : ""}${sv ? `<br><b style="color:var(--tr-purple-2)">${esc(svLabel)}</b>` : ""}</div>
+        <div class="row"><a class="btn primary small" href="#/mock/${e.id}">${sv ? "Continuar" : "Empezar examen"}</a></div></div>`;
     }).join("")}</div>
 
     <h2 class="section-title">Práctica por partes <span class="muted">elige módulo o tarea suelta, con su tiempo oficial</span></h2>
@@ -99,6 +101,48 @@ const PRACTICE_TIME = {
   speaking: () => 1200,
 };
 
+const ORDER = ["levelling", "speaking", "listening", "reading", "writing"];
+const MOD_NAME = { levelling: "Levelling test", speaking: "Speaking", listening: "Listening", reading: "Reading", writing: "Writing" };
+const SKILL_OF_TASK = (t) => (t.startsWith("writing") ? "Writing" : "Speaking");
+
+// ---------------------------------------------------------------- notas y nivel
+
+/** Notas por módulo (0–150) a partir de lo corregido. Pesos oficiales en Speaking y Writing. */
+function moduleScores(autos = {}, graded = []) {
+  const sc = (t) => graded.find((g) => g.task === t && g.result)?.result.estimatedScore;
+  const weighted = (pairs) => {
+    const got = pairs.filter(([t]) => sc(t) != null);
+    if (!got.length) return null;
+    return Math.round(got.reduce((n, [t, w]) => n + sc(t) * w, 0) / got.reduce((n, [, w]) => n + w, 0));
+  };
+  const out = {};
+  const s = weighted([["speaking-t1", 1], ["speaking-t2", 1], ["speaking-t3", 1.5], ["speaking-t4", 1.5]]);
+  if (s != null) out.Speaking = s;
+  if (autos.listening) out.Listening = scaled(autos.listening.correct, autos.listening.total);
+  if (autos.reading) out.Reading = scaled(autos.reading.correct, autos.reading.total);
+  const w = weighted([["writing-t1", 1], ["writing-t2", 1.5]]);
+  if (w != null) out.Writing = w;
+  return out;
+}
+
+/** Marcador: nota y nivel de cada destreza + nivel certificable (el mínimo). */
+function levelBar({ autos = {}, graded = [], pending = [] }, title = "Tu nivel hasta ahora") {
+  const mods = moduleScores(autos, graded);
+  const skills = ["Speaking", "Listening", "Reading", "Writing"];
+  const pend = new Set(pending.map((p) => SKILL_OF_TASK(p.task)));
+  const vals = Object.values(mods);
+  const min = vals.length ? Math.min(...vals) : null;
+  return `<section class="card flat stack"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline"><h3>${esc(title)}</h3>
+    ${min != null ? `<span>Nivel certificable${vals.length < 4 ? " provisional" : ""}: <span class="cefr ${min >= 105 ? "pass" : "fail"}">${cefrFromScore(min)}</span> <b>${min}</b>/150</span>` : ""}</div>
+    <div class="module-scores">${skills.map((s) => mods[s] != null
+      ? `<div class="mscore"><span class="small muted">${s}</span><b>${mods[s]}</b><span class="cefr ${mods[s] >= 105 ? "pass" : "fail"}">${cefrFromScore(mods[s])}</span></div>`
+      : `<div class="mscore"><span class="small muted">${s}</span><b class="muted">—</b><span class="small muted">${pend.has(s) ? "se corrige al final" : "pendiente"}</span></div>`).join("")}
+      ${autos.levelling ? `<div class="mscore"><span class="small muted">Levelling (no puntúa)</span><b>${autos.levelling.correct}/${autos.levelling.total}</b></div>` : ""}</div>
+    <p class="small muted">Para el C1 necesitas ≥ 105 en cada destreza (cuenta la más baja). Speaking = (T1 + T2 + 1,5·T3 + 1,5·T4) / 5 · Writing = (T1 + 1,5·T2) / 2,5 · Reading/Listening: estimación lineal (70 % ≈ 105).</p></section>`;
+}
+
+// ---------------------------------------------------------------- práctica
+
 async function practice(examId, module, part) {
   const exam = await loadExam(examId);
   const back = "#/";
@@ -106,6 +150,13 @@ async function practice(examId, module, part) {
   const mod = MODULES.find((m) => m.id === module);
   const partLabel = part ? ` · ${mod.tasks.find(([t]) => t === part)?.[1] || part}` : "";
   const ui = chrome(`${mod.name}${partLabel}`, { clock, practice: true });
+  // Solución al terminar cada tarea (antes de pasar a la siguiente), con el reloj en pausa.
+  const onTaskDone = async (t, answers, kind) => {
+    clock.pause();
+    ui.page(taskReviewHTML(exam, t, answers, kind));
+    await ui.waitNext({ confirm: false, label: "Siguiente tarea ›" });
+    clock.resume();
+  };
   try {
     if (module === "levelling") {
       const r = await runLevelling(exam, ui);
@@ -115,7 +166,7 @@ async function practice(examId, module, part) {
     }
     if (module === "reading" || module === "listening") {
       const only = part ? Number(part) - 1 : null;
-      const r = await (module === "reading" ? runReading(exam, ui, only) : runListening(exam, ui, only));
+      const r = await (module === "reading" ? runReading(exam, ui, only, { onTaskDone }) : runListening(exam, ui, only, { onTaskDone }));
       clock.stop();
       r.part = part || "";
       await saveAuto(exam, r);
@@ -161,7 +212,7 @@ async function speakingItems(exam, r, { silentNoServer = false } = {}) {
       <a class="btn" href="#/">Volver</a></div>`;
     return null;
   }
-  $("#app").innerHTML = `<div class="marking"><div class="box"><div class="spinner"></div><h2>Processing your recordings…</h2><p id="tp" style="opacity:.85">Transcribing with Whisper (local GPU)</p></div></div>`;
+  $("#app").innerHTML = `<div class="marking"><div class="box"><div class="spinner"></div><h2>Processing your recordings…</h2><p id="tp" style="opacity:.85">Transcribing with Whisper</p></div></div>`;
   let k = 0;
   for (const rec of recsAll) {
     k++;
@@ -170,15 +221,16 @@ async function speakingItems(exam, r, { silentNoServer = false } = {}) {
     try {
       const resp = await fetch("/api/transcribe", { method: "POST", headers: { "Content-Type": rec.blob.type || "audio/webm" }, body: rec.blob });
       const d = await resp.json();
-      rec.text = d.text || "";
-      if (d.error) rec.text = "";
+      rec.text = d.error ? "" : d.text || "";
     } catch { rec.text = ""; }
   }
-  return tasks.map((t) => {
-    const recs = r[t].recs;
-    const response = recs.map((x) => `[${x.label}] (spoke ${x.seconds || 0}s)\n${x.text || "(no speech detected)"}`).join("\n\n");
-    return { task: `speaking-${t}`, context: speakingContext(exam, t, r[t]), response, recordings: recs };
-  });
+  return tasks
+    .filter((t) => r[t].recs.some((x) => x.blob && x.blob.size > 1000))
+    .map((t) => {
+      const recs = r[t].recs;
+      const response = recs.map((x) => `[${x.label}] (spoke ${x.seconds || 0}s)\n${x.text || "(no speech detected)"}`).join("\n\n");
+      return { task: `speaking-${t}`, context: speakingContext(exam, t, r[t]), response, recordings: recs };
+    });
 }
 
 async function saveAuto(exam, r) {
@@ -198,150 +250,265 @@ function reviewQuestions(questions, chosenOf) {
   }).join("");
 }
 
-function reviewAuto(exam, r, back) {
-  const score = scaled(r.correct, r.total);
-  let detail = "";
+function scoreLine(correct, total, label) {
+  const s = scaled(correct, total);
+  return `<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><b>${esc(label)}: ${correct}/${total}</b> <span>${s}/150</span> <span class="cefr ${s >= 105 ? "pass" : "fail"}">${cefrFromScore(s)}</span></div>`;
+}
+
+function sourceHTML(t, kind) {
+  return kind === "listening"
+    ? `<details class="transcript"><summary>Transcripción</summary><div style="margin-top:8px">${t.script.map((l) => `<p><b>${esc(l.speaker)}:</b> ${esc(l.text)}</p>`).join("")}</div></details>`
+    : `<details class="transcript"><summary>Texto</summary><div class="reading-text" style="margin-top:8px">${t.type === "paired" ? `<h3>Text A · ${esc(t.textA.title)}</h3>${paras(t.textA.text)}<h3>Text B · ${esc(t.textB.title)}</h3>${paras(t.textB.text)}` : paras(t.text)}</div></details>`;
+}
+
+/** Solución de una sola tarea (Reading/Listening), para verla al pasar de bloque. */
+function taskReviewHTML(exam, t, answers, kind) {
+  const correct = t.questions.filter((q, k) => answers[`${t.i}-${k}`] === q.answer).length;
+  return `<h2 class="task-head">Solución · ${esc(t.title)}</h2>
+    <section class="card flat stack">${scoreLine(correct, t.questions.length, "Esta tarea")}${sourceHTML(t, kind)}${reviewQuestions(t.questions, (k) => answers[`${t.i}-${k}`])}</section>`;
+}
+
+function reviewAutoHTML(exam, r) {
   if (r.module === "levelling") {
-    detail = `<section class="card flat">${reviewQuestions(exam.levelling.map((it) => ({ q: it.prompt, options: it.options, answer: it.answer })), (k) => r.answers[k])}</section>`;
-  } else {
-    const list = r.module === "reading" ? exam.reading : exam.listening;
-    detail = r.taskIdx.map((i) => {
-      const t = list[i];
-      const src = r.module === "listening"
-        ? `<details class="transcript"><summary>Transcripción</summary><div style="margin-top:8px">${t.script.map((l) => `<p><b>${esc(l.speaker)}:</b> ${esc(l.text)}</p>`).join("")}</div></details>`
-        : `<details class="transcript"><summary>Texto</summary><div class="reading-text" style="margin-top:8px">${t.type === "paired" ? `<h3>Text A · ${esc(t.textA.title)}</h3>${paras(t.textA.text)}<h3>Text B · ${esc(t.textB.title)}</h3>${paras(t.textB.text)}` : paras(t.text)}</div></details>`;
-      return `<section class="card flat stack"><h3>${esc(t.title)}</h3>${src}${reviewQuestions(t.questions, (k) => r.answers[`${i}-${k}`])}</section>`;
-    }).join("");
+    return `<section class="card flat">${reviewQuestions(exam.levelling.map((it) => ({ q: it.prompt, options: it.options, answer: it.answer })), (k) => r.answers[k])}</section>`;
   }
+  const list = r.module === "reading" ? exam.reading : exam.listening;
+  return r.taskIdx.map((i) => {
+    const t = { ...list[i], i };
+    const correct = t.questions.filter((q, k) => r.answers[`${i}-${k}`] === q.answer).length;
+    return `<section class="card flat stack"><h3>${esc(t.title)}</h3>${scoreLine(correct, t.questions.length, "Aciertos")}${sourceHTML(t, r.module)}${reviewQuestions(t.questions, (k) => r.answers[`${i}-${k}`])}</section>`;
+  }).join("");
+}
+
+function autoHeaderHTML(exam, r) {
+  const score = scaled(r.correct, r.total);
+  return `<section class="card flat"><div class="score-hero"><div class="gauge" style="--p:${(score / 150) * 100};--g-col:${score >= 105 ? "var(--ok)" : score >= 80 ? "var(--warn)" : "var(--bad)"}"><div><b>${score}</b><span class="small muted">/ 150</span></div></div>
+    <div><div class="small muted">${esc(exam.title)} · ${esc(r.module)}</div><h2 style="margin:4px 0">${r.correct} / ${r.total} correctas <span class="cefr ${score >= 105 ? "pass" : "fail"}">${cefrFromScore(score)}</span></h2>
+    <p class="small muted">${r.module === "levelling" ? "El levelling no puntúa: solo decide la ruta." : "Estimación lineal (70 % ≈ 105 = inicio de C1). El examen real es adaptativo."}</p></div></div></section>`;
+}
+
+function reviewAuto(exam, r, back) {
   $("#app").innerHTML = `<div class="wrap stack">
     <div class="topbar"><a class="brand" href="#/"><span class="brand-mark">ISE</span>Resultados</a><div class="top-actions"><a class="btn small" href="${back}">Volver</a></div></div>
-    <section class="card flat"><div class="score-hero"><div class="gauge" style="--p:${(score / 150) * 100};--g-col:${score >= 105 ? "var(--ok)" : score >= 80 ? "var(--warn)" : "var(--bad)"}"><div><b>${score}</b><span class="small muted">/ 150</span></div></div>
-      <div><div class="small muted">${esc(exam.title)} · ${esc(r.module)}</div><h2 style="margin:4px 0">${r.correct} / ${r.total} correctas <span class="cefr ${score >= 105 ? "pass" : "fail"}">${cefrFromScore(score)}</span></h2>
-      <p class="small muted">Estimación lineal (70 % ≈ 105 = inicio de C1). El examen real es adaptativo.</p></div></div></section>
-    ${detail}<a class="btn" href="${back}">Volver</a></div>`;
+    ${autoHeaderHTML(exam, r)}${reviewAutoHTML(exam, r)}<a class="btn" href="${back}">Volver</a></div>`;
   window.scrollTo(0, 0);
 }
 
-// ---------------------------------------------------------------- corrección de varias tareas
+// ---------------------------------------------------------------- corrección con Antigravity
 
-async function gradeBundle(exam, items, { back, autos = null, mockMeta = null }) {
+/** Corrige varias tareas a la vez. Devuelve {ok:[…con result], failed:[…con error]}. */
+async function gradeNow(exam, items, title) {
   const h = await health();
-  let results = [];
-  if (h.local && items.length) {
-    const jobs = [];
-    for (const it of items) {
-      try { jobs.push({ ...it, jobId: await startGrade(it.task, it.context, it.response) }); }
-      catch (e) { results.push({ ...it, error: e.message }); }
-    }
-    results = results.concat(await markingScreen(jobs, mockMeta ? "Your exam is being marked" : "Your responses are being marked"));
-  } else {
-    results = items.map((it) => ({ ...it, error: "NO_LOCAL" }));
+  if (!h.local) return { ok: [], failed: items.map((it) => ({ ...it, error: "NO_LOCAL" })) };
+  const jobs = [], failed = [];
+  for (const it of items) {
+    try { jobs.push({ ...it, jobId: await startGrade(it.task, it.context, it.response) }); }
+    catch (e) { failed.push({ ...it, error: e.message }); }
   }
-  const order = ["speaking-t1", "speaking-t2", "speaking-t3", "speaking-t4", "writing-t1", "writing-t2"];
-  results.sort((a, b) => order.indexOf(a.task) - order.indexOf(b.task));
-  for (const r of results) if (r.result) {
-    await saveAttempt({ kind: "graded", task: r.task, examId: exam.id, score: Math.round(r.result.estimatedScore || 0), cefr: r.result.overallCefr, response: r.response, result: r.result, jobId: r.jobId, elapsed: r.elapsed });
+  const results = jobs.length ? await markingScreen(jobs, title) : [];
+  const ok = [];
+  for (const r of results) {
+    if (r.result) {
+      ok.push(r);
+      await saveAttempt({ kind: "graded", task: r.task, examId: exam.id, score: Math.round(r.result.estimatedScore || 0), cefr: r.result.overallCefr, response: r.response, result: r.result, jobId: r.jobId, elapsed: r.elapsed });
+    } else failed.push(r);
   }
+  return { ok, failed };
+}
 
-  const sc = (t) => results.find((r) => r.task === t && r.result)?.result.estimatedScore;
-  const weighted = (pairs) => {
-    const got = pairs.filter(([t]) => sc(t) != null);
-    if (!got.length) return null;
-    return Math.round(got.reduce((n, [t, w]) => n + sc(t) * w, 0) / got.reduce((n, [, w]) => n + w, 0));
-  };
-  const modules = {};
-  const speak = weighted([["speaking-t1", 1], ["speaking-t2", 1], ["speaking-t3", 1.5], ["speaking-t4", 1.5]]);
-  const writ = weighted([["writing-t1", 1], ["writing-t2", 1.5]]);
-  if (speak != null) modules.Speaking = speak;
-  if (autos?.listening) modules.Listening = scaled(autos.listening.correct, autos.listening.total);
-  if (autos?.reading) modules.Reading = scaled(autos.reading.correct, autos.reading.total);
-  if (writ != null) modules.Writing = writ;
-  const vals = Object.values(modules);
-  const min = vals.length ? Math.min(...vals) : null;
+const TASK_ORDER = ["speaking-t1", "speaking-t2", "speaking-t3", "speaking-t4", "writing-t1", "writing-t2"];
+const byTask = (a, b) => TASK_ORDER.indexOf(a.task) - TASK_ORDER.indexOf(b.task);
 
-  if (mockMeta && vals.length) {
-    await saveAttempt({ kind: "mock", examId: exam.id, modules, minScore: min, cefr: cefrFromScore(min), levelling: autos?.levelling ? `${autos.levelling.correct}/${autos.levelling.total}` : null, timeUsed: mockMeta.timeUsed });
-  }
+function gradedSections(list, { openFirst = true } = {}) {
+  return [...list].sort(byTask).map((r, i) => `<details class="card flat" ${openFirst && i === 0 ? "open" : ""}><summary style="cursor:pointer;font-weight:700">${esc(taskLabel(r.task))}${r.result ? ` · <span class="cefr ${(r.result.estimatedScore || 0) >= 105 ? "pass" : "fail"}">${esc(r.result.overallCefr)}</span> ${Math.round(r.result.estimatedScore)}/150` : " · sin corregir"}</summary>
+    <div class="stack" style="margin-top:14px">${r.result ? feedbackHTML(r.task, r.result, r) : `${r.error === "NO_LOCAL" ? noServerHTML() : `<div class="notice">${esc(r.error || "Pendiente de corregir")}</div>`}<div class="prose">${esc(r.response)}</div>`}</div></details>`).join("");
+}
 
-  const sections = results.map((r, i) => `<details class="card flat" ${i === 0 ? "open" : ""}><summary style="cursor:pointer;font-weight:700">${esc(taskLabel(r.task))}${r.result ? ` · <span class="cefr ${(r.result.estimatedScore || 0) >= 105 ? "pass" : "fail"}">${esc(r.result.overallCefr)}</span> ${Math.round(r.result.estimatedScore)}/150` : " · sin corregir"}</summary>
-    <div class="stack" style="margin-top:14px">${r.result ? feedbackHTML(r.task, r.result, r) : `${r.error === "NO_LOCAL" ? noServerHTML() : `<div class="notice">${esc(r.error)}</div>`}<div class="prose">${esc(r.response)}</div>`}</div></details>`).join("");
-
+/** Práctica de un módulo entero de Writing/Speaking: corrige todo y muestra notas. */
+async function gradeBundle(exam, items, { back }) {
+  const { ok, failed } = await gradeNow(exam, items, "Your responses are being marked");
   $("#app").innerHTML = `<div class="wrap stack">
-    <div class="topbar"><a class="brand" href="#/"><span class="brand-mark">ISE</span>${mockMeta ? "Resultados del examen" : "Corrección"}</a><div class="top-actions"><a class="btn small ghost" href="#/history">Historial</a><a class="btn small" href="${back}">Inicio</a></div></div>
+    <div class="topbar"><a class="brand" href="#/"><span class="brand-mark">ISE</span>Corrección</a><div class="top-actions"><a class="btn small ghost" href="#/history">Historial</a><a class="btn small" href="${back}">Inicio</a></div></div>
     <h1>${esc(exam.title)}</h1>
-    ${vals.length ? `<section class="card flat stack"><div class="module-scores">${Object.entries(modules).map(([m, s]) => `<div class="mscore"><span class="small muted">${m}</span><b>${s}</b><span class="cefr ${s >= 105 ? "pass" : "fail"}">${cefrFromScore(s)}</span></div>`).join("")}
-      ${autos?.levelling ? `<div class="mscore"><span class="small muted">Levelling (no puntúa)</span><b>${autos.levelling.correct}/${autos.levelling.total}</b></div>` : ""}</div>
-      ${mockMeta ? `<p><b>Nivel certificable (mínimo de los 4 módulos, criterio UGR/ACLES): <span class="cefr ${min >= 105 ? "pass" : "fail"}">${cefrFromScore(min)}</span> (${min}/150)</b>${vals.length < 4 ? " · faltan módulos por corregir" : ""}</p>` : ""}
-      <p class="small muted">Speaking = (T1 + T2 + 1,5·T3 + 1,5·T4) / 5 · Writing = (T1 + 1,5·T2) / 2,5 · Reading/Listening: estimación lineal. Orientativo.</p></section>` : ""}
-    ${autos ? `<div class="row" style="display:flex;gap:8px;flex-wrap:wrap">${autos.reading ? `<button class="btn small" data-rev="reading">Revisar Reading</button>` : ""}${autos.listening ? `<button class="btn small" data-rev="listening">Revisar Listening</button>` : ""}${autos.levelling ? `<button class="btn small" data-rev="levelling">Revisar Levelling</button>` : ""}</div>` : ""}
-    ${sections}
+    ${ok.length ? levelBar({ graded: ok }, "Nota de este módulo") : ""}
+    ${failed.length && failed[0].error !== "NO_LOCAL" ? `<button class="btn primary" id="retry">Reintentar las ${failed.length} correcciones fallidas</button>` : ""}
+    ${gradedSections([...ok, ...failed])}
     <a class="btn" href="${back}">Volver al inicio</a></div>`;
-  $$("[data-rev]").forEach((b) => (b.onclick = () => {
-    const key = b.dataset.rev;
-    const cached = $("#app").innerHTML;
-    reviewAuto(exam, autos[key], "#/");
-    const back2 = document.createElement("button");
-    back2.className = "btn primary"; back2.textContent = "‹ Volver a los resultados";
-    back2.onclick = () => { $("#app").innerHTML = cached; gradeBundleRebind(exam, autos); };
-    $(".wrap").prepend(back2);
-  }));
+  $("#retry")?.addEventListener("click", () => gradeBundle(exam, failed.map(({ error, ...it }) => it), { back }));
   window.scrollTo(0, 0);
 }
 
-function gradeBundleRebind(exam, autos) {
-  $$("[data-rev]").forEach((b) => (b.onclick = () => { reviewAuto(exam, autos[b.dataset.rev], "#/"); }));
-}
+// ---------------------------------------------------------------- examen completo (modo real / estudio, con guardado)
 
-// ---------------------------------------------------------------- examen completo
+const mockKey = (id) => `mock:${id}`;
+export const loadMock = (id) => store.get(mockKey(id), null);
+const saveMock = (st) => { st.ts = new Date().toISOString(); store.set(mockKey(st.examId), st); };
+const clearMock = (id) => store.set(mockKey(id), null);
+/** Para guardar en el navegador: sin blobs de audio. */
+const stripItem = ({ recordings, ...it }) => ({ ...it, recordings: (recordings || []).map(({ label, seconds, text }) => ({ label, seconds, text })) });
+const liveRecs = new Map(); // grabaciones de esta sesión (para escucharlas en la corrección)
+const withRecs = (it) => ({ ...it, recordings: liveRecs.get(it.task) || [] });
 
 async function mock(examId) {
   const exam = await loadExam(examId);
   const h = await health();
-  $("#app").innerHTML = `<div class="wrap stack" style="max-width:760px">
+  const saved = loadMock(examId);
+  const resumeLabel = saved && (saved.idx >= ORDER.length ? "ver resultados y correcciones pendientes" : `vas por ${MOD_NAME[ORDER[saved.idx]]} · quedan ${fmtTime(saved.left)}`);
+  $("#app").innerHTML = `<div class="wrap stack" style="max-width:780px">
     <div class="topbar"><a class="brand" href="#/"><span class="brand-mark">ISE</span>${esc(exam.title)}</a></div>
-    <div class="lexis"><div class="avatar">L</div><div><h2>Welcome to ISE Digital</h2>
-      <p>This test has five parts: <b>Levelling test, Speaking, Listening, Reading and Writing</b>. You have <b>105 minutes</b> in total, with one clock for the whole test. You will be told when 50, 40 and 10 minutes remain. Start the Writing module with at least 40 minutes left.</p>
-      <p>You can only move forward. When you select <b>Next</b>, you cannot return to the previous page.</p></div></div>
-    ${h.local ? "" : noServerHTML()}
-    <div class="card flat stack"><b>Antes de empezar</b>
-      <ul style="margin-left:18px"><li>Auriculares puestos y micrófono permitido.</li><li>Ten a mano tus <i>topic notes</i> para el Speaking Task 2.</li><li>Sin pausas, como el día del examen. Al acabar, Antigravity corrige Writing y Speaking (unos minutos).</li></ul>
-      <label class="small muted">Nombre en pantalla</label><input class="ex-input" id="cand" value="${esc(store.get("candidate", "Ismael Sallami Moreno"))}"></div>
-    <div style="display:flex;gap:10px"><button class="next-btn" id="go">Start the Test ›</button><a class="btn ghost" href="#/">Cancelar</a></div></div>`;
-  await new Promise((res) => ($("#go").onclick = res));
-  store.set("candidate", $("#cand").value.trim() || "Candidate");
+    ${saved ? `<div class="card stack"><b>Tienes este examen a medias (${saved.mode === "study" ? "modo estudio" : "modo real"})</b><span class="muted">${esc(resumeLabel)}</span>
+      ${levelBar(saved)}<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="next-btn" id="resume">Continuar ›</button><button class="btn ghost" id="restart">Empezar de nuevo</button></div></div>` : ""}
+    <div id="newbox" class="stack ${saved ? "hidden" : ""}">
+      <div class="lexis"><div class="avatar">L</div><div><h2>Welcome to ISE Digital</h2>
+        <p>Five parts: <b>Levelling test, Speaking, Listening, Reading and Writing</b>. <b>105 minutes</b> in total with one clock for the whole test. You will be told when 50, 40 and 10 minutes remain. Start Writing with at least 40 minutes left.</p>
+        <p>You can only move forward. When you select <b>Next</b>, you cannot return to the previous page.</p></div></div>
+      ${h.local ? "" : noServerHTML()}
+      <div class="card flat stack"><b>Modo</b>
+        <label style="display:flex;gap:10px;align-items:flex-start"><input type="radio" name="mode" value="study" checked style="margin-top:5px"><span><b>Modo estudio</b> · al terminar cada módulo el reloj se pausa y ves su nota, tu nivel y las soluciones (Writing y Speaking corregidos por Antigravity en ese momento). Puedes <b>guardar y seguir otro día</b>.</span></label>
+        <label style="display:flex;gap:10px;align-items:flex-start"><input type="radio" name="mode" value="real" style="margin-top:5px"><span><b>Modo real</b> · como el día del examen: sin pausas ni soluciones hasta el final. Si sales, se guarda lo hecho hasta el último módulo terminado.</span></label></div>
+      <div class="card flat stack"><b>Antes de empezar</b>
+        <ul style="margin-left:18px"><li>Auriculares puestos y micrófono permitido.</li><li>Ten a mano tus <i>topic notes</i> para el Speaking Task 2.</li></ul>
+        <label class="small muted">Nombre en pantalla</label><input class="ex-input" id="cand" value="${esc(store.get("candidate", "Ismael Sallami Moreno"))}"></div>
+      <div style="display:flex;gap:10px"><button class="next-btn" id="go">Start the Test ›</button><a class="btn ghost" href="#/">Cancelar</a></div>
+    </div></div>`;
+  $("#restart")?.addEventListener("click", () => { $("#newbox").classList.remove("hidden"); $("#resume").closest(".card").classList.add("hidden"); });
+  const choice = await new Promise((res) => { $("#go").onclick = () => res("new"); $("#resume")?.addEventListener("click", () => res("resume")); });
+  let st;
+  if (choice === "resume") st = saved;
+  else {
+    store.set("candidate", $("#cand").value.trim() || "Candidate");
+    st = { examId, mode: $("input[name=mode]:checked").value, left: 105 * 60, idx: 0, autos: {}, graded: [], pending: [], startedAt: new Date().toISOString() };
+    liveRecs.clear();
+    saveMock(st);
+  }
+  if (st.idx >= ORDER.length) return mockFinal(exam, st);
 
-  const TOTAL = 105 * 60;
-  const clock = new Clock(TOTAL, { warnings: [50, 40, 10], onWarn: (m) => toast(`⏱ ${m} minutes remaining`, 5000), onExpire: () => toast("⏱ Time is up", 5000) });
-  const autos = {};
-  const out = {};
+  const clock = new Clock(st.left, {
+    warnings: [50, 40, 10].filter((w) => w * 60 < st.left),
+    onWarn: (m) => toast(`⏱ ${m} minutes remaining`, 5000),
+    onExpire: () => toast("⏱ Time is up", 5000),
+  });
+  const here = () => location.hash === `#/mock/${examId}`;
   const quit = () => { clock.stop(); stopAudio(); location.hash = "#/"; };
   try {
-    autos.levelling = await runLevelling(exam, chrome("Levelling test", { clock, practice: false, onQuit: quit }));
-    if (location.hash !== `#/mock/${examId}`) return;
-    out.speaking = await runSpeaking(exam, chrome("Speaking", { clock, practice: false, onQuit: quit }), null, { practice: false });
-    if (location.hash !== `#/mock/${examId}`) return;
-    autos.listening = await runListening(exam, chrome("Listening", { clock, practice: false, onQuit: quit }));
-    if (location.hash !== `#/mock/${examId}`) return;
-    autos.reading = await runReading(exam, chrome("Reading", { clock, practice: false, onQuit: quit }));
-    if (location.hash !== `#/mock/${examId}`) return;
-    if (clock.left() < 40 * 60) toast("⚠ Empiezas Writing con menos de 40 minutos", 5000);
-    out.writing = await runWriting(exam, chrome("Writing", { clock, practice: false, onQuit: quit }));
-  } catch (e) {
-    if (!(e instanceof TimeUp)) throw e;
+    while (st.idx < ORDER.length) {
+      const m = ORDER[st.idx];
+      if (m === "writing" && clock.left() < 40 * 60) toast("⚠ Empiezas Writing con menos de 40 minutos", 5000);
+      const ui = chrome(MOD_NAME[m], { clock, practice: false, onQuit: quit });
+      let r;
+      try {
+        if (m === "levelling") r = await runLevelling(exam, ui);
+        else if (m === "speaking") r = await runSpeaking(exam, ui, null, { practice: false });
+        else if (m === "listening") r = await runListening(exam, ui);
+        else if (m === "reading") r = await runReading(exam, ui);
+        else r = await runWriting(exam, ui);
+      } catch (e) { if (!(e instanceof TimeUp)) throw e; r = null; }
+      if (!here()) return;
+      clock.pause();
+      st.left = clock.expired ? 0 : clock.left();
+      if (r) await finishModule(exam, st, m, r);
+      st.idx++;
+      if (clock.expired) st.idx = ORDER.length;
+      saveMock(st);
+      if (!here()) return;
+      if (st.mode === "study" && r) {
+        const go = await moduleResultScreen(exam, st, m, clock);
+        if (go === "exit") { clock.stop(); toast("Progreso guardado. Continúa desde la portada.", 4000); location.hash = "#/"; return; }
+      }
+      clock.resume();
+    }
+  } finally { clock.stop(); }
+  if (here()) return mockFinal(exam, st);
+}
+
+/** Guarda el resultado del módulo. En modo estudio corrige Writing/Speaking al momento. */
+async function finishModule(exam, st, m, r) {
+  if (m === "levelling" || m === "listening" || m === "reading") {
+    st.autos[m] = r;
+    await saveAuto(exam, r);
+    return;
   }
-  const timeUsed = Math.round(TOTAL - clock.left());
-  clock.stop();
-  if (location.hash !== `#/mock/${examId}`) return;
-  $("#app").innerHTML = `<div class="marking"><div class="box"><div class="spinner"></div><h2>Test finished</h2><p>Time used: ${fmtTime(timeUsed)}. Submitting your responses…</p></div></div>`;
-  await sleep(1200);
-  for (const k of ["listening", "reading", "levelling"]) if (autos[k]) await saveAuto(exam, autos[k]);
-  const items = [];
-  if (out.speaking) {
-    const sp = await speakingItems(exam, out.speaking, { silentNoServer: true });
-    if (sp) items.push(...sp.filter((i) => i.recordings.some((x) => x.blob && x.blob.size > 1000)));
+  const items = m === "speaking" ? (await speakingItems(exam, r, { silentNoServer: true })) || [] : writingItems(exam, r);
+  for (const it of items) if (it.recordings) liveRecs.set(it.task, it.recordings);
+  if (!items.length) return;
+  if (st.mode === "study") {
+    const { ok, failed } = await gradeNow(exam, items, `Your ${m} is being marked`);
+    st.graded.push(...ok.map(stripItem));
+    st.pending.push(...failed.map(stripItem));
+  } else {
+    st.pending.push(...items.map(stripItem));
   }
-  if (out.writing) items.push(...writingItems(exam, out.writing));
-  return gradeBundle(exam, items, { back: "#/", autos, mockMeta: { timeUsed } });
+}
+
+/** Pantalla de resultado de un módulo (modo estudio). Resuelve "go" o "exit". */
+function moduleResultScreen(exam, st, m, clock) {
+  const last = st.idx >= ORDER.length;
+  const nextName = last ? "" : MOD_NAME[ORDER[st.idx]];
+  let body = "";
+  if (st.autos[m] && (m === "levelling" || m === "listening" || m === "reading")) {
+    body = autoHeaderHTML(exam, st.autos[m]) + reviewAutoHTML(exam, st.autos[m]);
+  } else {
+    const prefix = m === "speaking" ? "speaking" : "writing";
+    const mine = [...st.graded, ...st.pending].filter((x) => x.task.startsWith(prefix)).map(withRecs);
+    const failedHere = st.pending.filter((x) => x.task.startsWith(prefix) && x.error && x.error !== "NO_LOCAL");
+    body = (mine.length ? gradedSections(mine) : `<div class="notice">No hay respuestas que corregir en este módulo.</div>`)
+      + (failedHere.length ? `<p class="small muted">Las que no se pudieron corregir se reintentan al final del examen.</p>` : "");
+  }
+  $("#app").innerHTML = `<div class="wrap stack">
+    <div class="topbar"><span class="brand"><span class="brand-mark">ISE</span>${esc(exam.title)} · modo estudio</span>
+      <span class="chip">⏸ Reloj en pausa · quedan ${fmtTime(st.left)}</span></div>
+    <h1>Resultado de ${esc(MOD_NAME[m])}</h1>
+    ${levelBar(st)}
+    ${body}
+    <div class="sticky-actions">
+      <button class="next-btn" id="cont">${last ? "Ver resultados finales ›" : `Continuar con ${esc(nextName)} ›`}</button>
+      ${last ? "" : `<button class="btn" id="exit">Guardar y salir</button>`}</div></div>`;
+  window.scrollTo(0, 0);
+  return new Promise((res) => {
+    $("#cont").onclick = () => res("go");
+    $("#exit")?.addEventListener("click", () => res("exit"));
+  });
+}
+
+/** Final del examen: corrige lo pendiente, muestra notas y guarda el intento. */
+async function mockFinal(exam, st, { regrade = true } = {}) {
+  const h = await health();
+  if (regrade && st.pending.length && h.local) {
+    $("#app").innerHTML = `<div class="marking"><div class="box"><div class="spinner"></div><h2>Test finished</h2><p>Submitting your responses…</p></div></div>`;
+    await sleep(800);
+    const { ok, failed } = await gradeNow(exam, st.pending.map(({ error, ...it }) => it), "Your exam is being marked");
+    st.graded.push(...ok.map(stripItem));
+    st.pending = failed.map(stripItem);
+    saveMock(st);
+  }
+  const mods = moduleScores(st.autos, st.graded);
+  const vals = Object.values(mods);
+  const min = vals.length ? Math.min(...vals) : null;
+  if (!st.pending.length) {
+    if (vals.length && !st.recorded) {
+      await saveAttempt({ kind: "mock", examId: exam.id, mode: st.mode, modules: mods, minScore: min, cefr: cefrFromScore(min), levelling: st.autos.levelling ? `${st.autos.levelling.correct}/${st.autos.levelling.total}` : null, timeUsed: Math.round(105 * 60 - st.left) });
+      st.recorded = true;
+    }
+    clearMock(exam.id);
+  }
+  const autos = st.autos;
+  $("#app").innerHTML = `<div class="wrap stack">
+    <div class="topbar"><a class="brand" href="#/"><span class="brand-mark">ISE</span>Resultados del examen</a><div class="top-actions"><a class="btn small ghost" href="#/history">Historial</a><a class="btn small" href="#/">Inicio</a></div></div>
+    <h1>${esc(exam.title)}</h1>
+    ${levelBar(st, "Resultado final")}
+    ${st.pending.length ? `<div class="notice">${st.pending.length} tarea(s) sin corregir${st.pending[0].error && st.pending[0].error !== "NO_LOCAL" ? `: ${esc(st.pending[0].error)}` : ""}. Quedan guardadas; puedes reintentarlo ahora o desde la portada.</div>
+      ${h.local ? `<button class="btn primary" id="retry">Reintentar corrección pendiente</button>` : noServerHTML()}` : ""}
+    <div style="display:flex;gap:8px;flex-wrap:wrap">${["reading", "listening", "levelling"].filter((k) => autos[k]).map((k) => `<button class="btn small" data-rev="${k}">Revisar ${MOD_NAME[k]}</button>`).join("")}</div>
+    ${gradedSections([...st.graded, ...st.pending].map(withRecs))}
+    <a class="btn" href="#/">Volver al inicio</a></div>`;
+  $("#retry")?.addEventListener("click", () => mockFinal(exam, st));
+  $$("[data-rev]").forEach((b) => (b.onclick = () => {
+    const r = autos[b.dataset.rev];
+    $("#app").innerHTML = `<div class="wrap stack"><button class="btn primary" id="backres">‹ Volver a los resultados</button>${autoHeaderHTML(exam, r)}${reviewAutoHTML(exam, r)}</div>`;
+    $("#backres").onclick = () => mockFinal(exam, st, { regrade: false });
+    window.scrollTo(0, 0);
+  }));
+  window.scrollTo(0, 0);
 }
 
 // ---------------------------------------------------------------- historial

@@ -28,6 +28,13 @@ export class Clock {
   }
   expireFns = new Set();
   stop() { clearInterval(this.timer); }
+  /** Pausa (p. ej. mientras revisas soluciones en modo estudio). */
+  pause() { if (this.paused || this.expired) return; this.paused = this.left(); clearInterval(this.timer); }
+  resume() {
+    if (this.paused == null || this.expired) return;
+    this.deadline = Date.now() + this.paused * 1000; this.paused = null;
+    clearInterval(this.timer); this.timer = setInterval(() => this.tick(), 500);
+  }
 }
 
 // ---------------------------------------------------------------- chrome
@@ -57,7 +64,7 @@ export function chrome(moduleName, { clock, onQuit, practice = true } = {}) {
     clock.expireFns.add(() => expiredReject && expiredReject(new TimeUp()));
   }
   $("#quit").onclick = async () => {
-    if (await confirmModal({ title: "¿Salir del examen?", body: "Se perderá lo que no hayas entregado.", ok: "Salir", cancel: "Seguir" })) {
+    if (await confirmModal({ title: "¿Salir del examen?", body: practice ? "Se perderá lo que no hayas entregado." : "Se guarda todo hasta el último módulo terminado; podrás continuar desde la portada.", ok: "Salir", cancel: "Seguir" })) {
       stopAudio(); clock?.stop(); onQuit ? onQuit() : (location.hash = "#/");
     }
   };
@@ -143,7 +150,7 @@ export async function runLevelling(exam, ui) {
 
 // ---------------------------------------------------------------- READING
 
-export async function runReading(exam, ui, only = null) {
+export async function runReading(exam, ui, only = null, { onTaskDone } = {}) {
   const tasks = exam.reading.map((t, i) => ({ ...t, i })).filter((t) => only == null || t.i === only);
   const total = tasks.reduce((n, t) => n + t.questions.length, 0);
   await intro(ui, "Reading", `<p>There are ${tasks.length} reading task${tasks.length > 1 ? "s" : ""} and ${total} questions. The texts are on the left and the questions on the right.</p><p class="small">Click an option to choose it. <b>Right-click</b> an option to cross it out. You cannot go back to a previous task.</p>`);
@@ -167,6 +174,7 @@ export async function runReading(exam, ui, only = null) {
     bindMC(ui.body, answers, upd); upd();
     try { await ui.waitNext(); } catch (e) { if (e instanceof TimeUp) break; throw e; }
     done++;
+    if (onTaskDone && done < tasks.length) await onTaskDone(t, answers, "reading");
   }
   return gradeMC("reading", tasks, answers, exam);
 }
@@ -186,7 +194,7 @@ function gradeMC(module, tasks, answers) {
 
 const L_NAMES = { conversation: "Listening to a conversation", discussion: "Listening to a discussion", talk: "Listening to a talk", description: "Listening to a description" };
 
-export async function runListening(exam, ui, only = null) {
+export async function runListening(exam, ui, only = null, { onTaskDone } = {}) {
   const tasks = exam.listening.map((t, i) => ({ ...t, i })).filter((t) => only == null || t.i === only);
   const total = tasks.reduce((n, t) => n + t.questions.length, 0);
   await intro(ui, "Listening", `<p>There are ${tasks.length} listening task${tasks.length > 1 ? "s" : ""} and ${total} questions.</p>
@@ -214,6 +222,7 @@ export async function runListening(exam, ui, only = null) {
       st.textContent = "Recording finished. Check your answers.";
       await ui.waitNext();
     } catch (e) { stopAudio(); if (e instanceof TimeUp) break; throw e; }
+    if (onTaskDone && t !== tasks[tasks.length - 1]) await onTaskDone(t, answers, "listening");
   }
   return gradeMC("listening", tasks, answers);
 }
